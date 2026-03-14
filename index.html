@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Summoner Wars — Faction Rankings Bracket</title>
+<title>Faction Masters Season 8</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
@@ -11,18 +11,18 @@
 <style>
   /* ── Design system ── */
   :root {
-    --gold:        #c9a84c;
-    --gold-light:  #e8cf87;
-    --gold-dim:    #7a5f28;
-    --crimson:     #8b1a1a;
-    --crimson-dim: #4a0e0e;
-    --bg-deep:     #0a0806;
-    --bg-card:     #12100d;
-    --bg-card2:    #1a1712;
-    --text:        #e8dfc8;
-    --text-dim:    #8a7e68;
-    --bye-color:   #2a2520;
-    --connector:   #3a3020;
+    --gold:        #d4a843;
+    --gold-light:  #f0d878;
+    --gold-dim:    #a07830;
+    --crimson:     #c0392b;
+    --crimson-dim: #7a1a1a;
+    --bg-deep:     #1c1a14;
+    --bg-card:     #2a2620;
+    --bg-card2:    #343028;
+    --text:        #f0e8d0;
+    --text-dim:    #b0a080;
+    --bye-color:   #242018;
+    --connector:   #5a5040;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -75,13 +75,22 @@
     line-height: 1.2;
   }
 
-  .subtitle {
+  .not-final {
     font-family: 'Cinzel', serif;
-    font-size: 0.85rem;
-    color: var(--text-dim);
+    font-size: 1rem;
+    color: var(--crimson);
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    margin-top: 0.5rem;
+    margin-top: 0.6rem;
+    font-weight: 600;
+  }
+
+  .subtitle {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1rem;
+    color: var(--text-dim);
+    font-style: italic;
+    margin-top: 0.3rem;
   }
 
   .divider {
@@ -173,13 +182,13 @@
   .slot {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     background: var(--bg-card);
-    border: 1px solid #2a2318;
-    border-radius: 3px;
-    padding: 5px 8px;
-    min-width: 148px;
-    max-width: 148px;
+    border: 2px solid #4a4030;
+    border-radius: 4px;
+    padding: 6px 10px;
+    min-width: 160px;
+    max-width: 160px;
     transition: border-color 0.2s, background 0.2s;
     position: relative;
     overflow: hidden;
@@ -204,7 +213,7 @@
 
   .slot.bye {
     background: var(--bye-color);
-    border-color: #1e1a14;
+    border-color: #2e2a20;
     cursor: default;
   }
 
@@ -213,11 +222,12 @@
 
   .seed {
     font-family: 'Cinzel', serif;
-    font-size: 0.55rem;
-    color: var(--gold-dim);
-    min-width: 16px;
+    font-size: 0.7rem;
+    color: var(--gold);
+    min-width: 18px;
     text-align: right;
     flex-shrink: 0;
+    font-weight: 600;
   }
 
   .slot-info {
@@ -227,23 +237,25 @@
     flex: 1;
   }
 
-  .faction-name {
-    font-family: 'Cinzel', serif;
-    font-size: 0.6rem;
-    color: var(--gold-light);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 1.2;
-  }
-
   .player-name {
-    font-size: 0.75rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.72rem;
+    font-weight: 600;
     color: var(--text);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 1.3;
+  }
+
+  .faction-name {
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+    font-style: italic;
   }
 
   .slot.bye .faction-name,
@@ -255,16 +267,16 @@
 
   /* Match separator line */
   .match-sep {
-    height: 1px;
-    background: #2a2318;
-    margin: 0 4px;
+    height: 2px;
+    background: #5a5040;
+    margin: 0 2px;
   }
 
   /* Round labels */
   .round-label {
     font-family: 'Cinzel', serif;
-    font-size: 0.55rem;
-    color: var(--text-dim);
+    font-size: 0.65rem;
+    color: var(--gold);
     letter-spacing: 0.15em;
     text-transform: uppercase;
     text-align: center;
@@ -345,8 +357,9 @@
 
   <header>
     <div class="crest">⚔️</div>
-    <h1>Summoner Wars</h1>
-    <p class="subtitle">Faction Championship Bracket</p>
+    <h1>Faction Masters Season 8</h1>
+    <p class="not-final">NOT FINAL RANKINGS</p>
+    <p class="subtitle">This would be the bracket if the season ended today.</p>
     <div class="divider"></div>
     <p id="season-label">Loading season…</p>
     <p id="fetched-label"></p>
@@ -409,8 +422,8 @@ function makeSlot(player) {
   name.textContent = isBye ? "" : player.username;
   name.title = isBye ? "" : player.username;
 
-  info.appendChild(faction);
   info.appendChild(name);
+  info.appendChild(faction);
   div.appendChild(seedEl);
   div.appendChild(info);
   return div;
