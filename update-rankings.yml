@@ -1,0 +1,51 @@
+# .github/workflows/update-rankings.yml
+#
+# This workflow runs once a day, fetches the latest Summoner Wars rankings,
+# and commits the updated rankings.json file back to the repository.
+# GitHub Pages then serves the updated file automatically.
+
+name: Update Rankings
+
+on:
+  schedule:
+    # Runs every day at 06:00 UTC (adjust as you like — cron format)
+    # Helpful tool to build cron schedules: https://crontab.guru
+    - cron: "0 6 * * *"
+
+  # Also lets you trigger it manually from the GitHub Actions tab
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Check out your repository
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      # 2. Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # 3. Install the requests library
+      - name: Install dependencies
+        run: pip install requests
+
+      # 4. Run the scraper (credentials come from GitHub Secrets — see README)
+      - name: Fetch rankings
+        env:
+          PHG_EMAIL:    ${{ secrets.PHG_EMAIL }}
+          PHG_PASSWORD: ${{ secrets.PHG_PASSWORD }}
+        run: python fetch_rankings.py
+
+      # 5. Commit and push the updated rankings.json if it changed
+      - name: Commit updated rankings
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add rankings.json
+          git diff --cached --quiet || git commit -m "chore: update rankings [skip ci]"
+          git push

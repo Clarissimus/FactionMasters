@@ -1,0 +1,166 @@
+{
+  "season": "Season 8",
+  "top_players": [
+    {
+      "faction": "Spectral Conclave",
+      "username": "Kezbatron",
+      "elo": 1544
+    },
+    {
+      "faction": "The Forged",
+      "username": "excile2127",
+      "elo": 1526
+    },
+    {
+      "faction": "Crimson Order",
+      "username": "Monk3ylord",
+      "elo": 1466
+    },
+    {
+      "faction": "Guild Dwarves",
+      "username": "GuildMaster",
+      "elo": 1460
+    },
+    {
+      "faction": "Fallen Kingdom",
+      "username": "Dark-Thomy",
+      "elo": 1425
+    },
+    {
+      "faction": "Drakesun Rebellion",
+      "username": "AstroWild",
+      "elo": 1417
+    },
+    {
+      "faction": "The Filth",
+      "username": "excile2127",
+      "elo": 1413
+    },
+    {
+      "faction": "Wayfarers",
+      "username": "DeadSans",
+      "elo": 1402
+    },
+    {
+      "faction": "Cloaks",
+      "username": "DrWolf",
+      "elo": 1394
+    },
+    {
+      "faction": "Tundra Orcs",
+      "username": "Nesle",
+      "elo": 1387
+    },
+    {
+      "faction": "Chosen Grove",
+      "username": "Solitaire",
+      "elo": 1381
+    },
+    {
+      "faction": "Cave Goblins",
+      "username": "DeadSans",
+      "elo": 1367
+    },
+    {
+      "faction": "Polar Dwarves",
+      "username": "Elyk",
+      "elo": 1364
+    },
+    {
+      "faction": "Sand Goblins",
+      "username": "homeworld",
+      "elo": 1362
+    },
+    {
+      "faction": "Eternal Council",
+      "username": "KLANE",
+      "elo": 1359
+    },
+    {
+      "faction": "Swamp Orcs",
+      "username": "CH4MP",
+      "elo": 1348
+    },
+    {
+      "faction": "Shimmersea Fae",
+      "username": "excile2127",
+      "elo": 1348
+    },
+    {
+      "faction": "Phoenix Elves",
+      "username": "CH4MP",
+      "elo": 1340
+    },
+    {
+      "faction": "Shadow Elves",
+      "username": "DrWolf",
+      "elo": 1340
+    },
+    {
+      "faction": "Fungal Dwarves",
+      "username": "Solitaire",
+      "elo": 1331
+    },
+    {
+      "faction": "Skyspear Avians",
+      "username": "GuildMaster",
+      "elo": 1321
+    },
+    {
+      "faction": "Savanna Elves",
+      "username": "198279533",
+      "elo": 1316
+    },
+    {
+      "faction": "Deepwood Groaks",
+      "username": "Solitaire",
+      "elo": 1310
+    },
+    {
+      "faction": "Isle Vekkid",
+      "username": "Nesle",
+      "elo": 1305
+    },
+    {
+      "faction": "Storm Goblins",
+      "username": "DeadSans",
+      "elo": 1300
+    },
+    {
+      "faction": "Mountain Vargath",
+      "username": "Fikitti",
+      "elo": 1276
+    },
+    {
+      "faction": "Obsidian Dwarves",
+      "username": "david.long.974",
+      "elo": 1253
+    },
+    {
+      "faction": "Vanguards",
+      "username": "homeworld",
+      "elo": 1227
+    },
+    {
+      "faction": "Breakers",
+      "username": "DeadSans",
+      "elo": 1200
+    },
+    {
+      "faction": "High Elves",
+      "username": "bengo",
+      "elo": 1150
+    },
+    {
+      "faction": "BYE",
+      "username": "BYE",
+      "elo": 0
+    },
+    {
+      "faction": "BYE",
+      "username": "BYE",
+      "elo": 0
+    }
+  ],
+  "fetched_at": "2026-03-14 06:00 UTC"
+}

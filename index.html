@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Summoner Wars — Faction Rankings Bracket</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+<style>
+  /* ── Design system ── */
+  :root {
+    --gold:        #c9a84c;
+    --gold-light:  #e8cf87;
+    --gold-dim:    #7a5f28;
+    --crimson:     #8b1a1a;
+    --crimson-dim: #4a0e0e;
+    --bg-deep:     #0a0806;
+    --bg-card:     #12100d;
+    --bg-card2:    #1a1712;
+    --text:        #e8dfc8;
+    --text-dim:    #8a7e68;
+    --bye-color:   #2a2520;
+    --connector:   #3a3020;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg-deep);
+    color: var(--text);
+    font-family: 'Crimson Pro', serif;
+    min-height: 100vh;
+    overflow-x: auto;
+  }
+
+  /* Background texture */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(139,26,26,0.08) 0%, transparent 70%),
+      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .page-wrap {
+    position: relative;
+    z-index: 1;
+    padding: 2rem 1rem 4rem;
+  }
+
+  /* ── Header ── */
+  header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .crest {
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 0 12px rgba(201,168,76,0.4));
+  }
+
+  h1 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: var(--gold);
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 30px rgba(201,168,76,0.3);
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+  }
+
+  .divider {
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+    margin: 1rem auto;
+  }
+
+  #season-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    color: var(--gold-dim);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  #fetched-label {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    margin-top: 0.25rem;
+    font-style: italic;
+  }
+
+  /* ── Bracket layout ── */
+  /*
+    32-team single-elimination bracket.
+    Left side:  seeds 1,4,5,8,9,12,13,16 (top half of left)
+                seeds 17,20,21,24,25,28,29,32 (bottom half of left)
+    Right side: seeds 2,3,6,7,10,11,14,15 (top half of right)
+                seeds 18,19,22,23,26,27,30,31 (bottom half of right)
+
+    We render it as 5 rounds left + 5 rounds right + champion center.
+  */
+
+  .bracket-outer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .bracket-side {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .bracket-side.right {
+    flex-direction: row-reverse;
+  }
+
+  .bracket-round {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 6px;
+  }
+
+  /* Champion column */
+  .champion-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+    min-width: 140px;
+  }
+
+  .champion-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    color: var(--gold);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  /* ── Match card ── */
+  .match {
+    display: flex;
+    flex-direction: column;
+    margin: 4px 0;
+    position: relative;
+  }
+
+  .slot {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--bg-card);
+    border: 1px solid #2a2318;
+    border-radius: 3px;
+    padding: 5px 8px;
+    min-width: 148px;
+    max-width: 148px;
+    transition: border-color 0.2s, background 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slot::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--gold-dim);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .slot:hover {
+    border-color: var(--gold-dim);
+    background: var(--bg-card2);
+  }
+
+  .slot:hover::before { opacity: 1; }
+
+  .slot.bye {
+    background: var(--bye-color);
+    border-color: #1e1a14;
+    cursor: default;
+  }
+
+  .slot.bye:hover { border-color: #1e1a14; background: var(--bye-color); }
+  .slot.bye:hover::before { opacity: 0; }
+
+  .seed {
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    color: var(--gold-dim);
+    min-width: 16px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  .slot-info {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex: 1;
+  }
+
+  .faction-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    color: var(--gold-light);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+  }
+
+  .player-name {
+    font-size: 0.75rem;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+  }
+
+  .slot.bye .faction-name,
+  .slot.bye .player-name {
+    color: #3a3228;
+  }
+
+  .slot.bye .seed { color: #2a2218; }
+
+  /* Match separator line */
+  .match-sep {
+    height: 1px;
+    background: #2a2318;
+    margin: 0 4px;
+  }
+
+  /* Round labels */
+  .round-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    color: var(--text-dim);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  /* ── Champion slot ── */
+  .champion-slot {
+    background: linear-gradient(135deg, #1e1608, #2a1e08);
+    border: 1px solid var(--gold-dim);
+    border-radius: 4px;
+    padding: 10px 14px;
+    text-align: center;
+    min-width: 130px;
+    box-shadow: 0 0 20px rgba(201,168,76,0.15), inset 0 0 20px rgba(201,168,76,0.05);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .champion-slot::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.08), transparent 70%);
+    pointer-events: none;
+  }
+
+  .champion-crown { font-size: 1.5rem; display: block; margin-bottom: 4px; }
+
+  .champion-faction {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+  }
+
+  .champion-player {
+    font-size: 1rem;
+    color: var(--gold-light);
+    font-weight: 300;
+    margin-top: 2px;
+  }
+
+  /* ── Loading / error ── */
+  #loading {
+    text-align: center;
+    padding: 4rem;
+    font-family: 'Cinzel', serif;
+    color: var(--gold-dim);
+    letter-spacing: 0.2em;
+  }
+
+  #error-msg {
+    display: none;
+    text-align: center;
+    padding: 2rem;
+    color: var(--crimson);
+    font-family: 'Cinzel', serif;
+  }
+
+  /* ── Responsive note ── */
+  .scroll-hint {
+    text-align: center;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    font-style: italic;
+    margin-top: 1.5rem;
+    display: none;
+  }
+
+  @media (max-width: 900px) {
+    .scroll-hint { display: block; }
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <header>
+    <div class="crest">⚔️</div>
+    <h1>Summoner Wars</h1>
+    <p class="subtitle">Faction Championship Bracket</p>
+    <div class="divider"></div>
+    <p id="season-label">Loading season…</p>
+    <p id="fetched-label"></p>
+  </header>
+
+  <div id="loading">Summoning the rankings…</div>
+  <div id="error-msg">Could not load rankings data.</div>
+
+  <div class="bracket-outer" id="bracket" style="display:none"></div>
+
+  <p class="scroll-hint">← Scroll horizontally to view full bracket →</p>
+
+</div>
+
+<script>
+// ── Seeding arrangement for a 32-team bracket ──────────────────────────────
+// Standard bracket seeding so #1 and #2 are on opposite sides and can only
+// meet in the final. Each "match" pair: [seedA, seedB]
+// Left side rounds (R1→R4) then right side rounds (R1→R4)
+
+const LEFT_SEEDS = [
+  // Round 1 matches, top half
+  [1,32],[16,17],[8,25],[9,24],
+  // Round 1 matches, bottom half
+  [4,29],[13,20],[5,28],[12,21],
+];
+
+const RIGHT_SEEDS = [
+  // Round 1 matches, top half
+  [2,31],[15,18],[7,26],[10,23],
+  // Round 1 matches, bottom half
+  [3,30],[14,19],[6,27],[11,22],
+];
+
+// Round labels
+const ROUND_LABELS_LEFT  = ["Round of 32", "Round of 16", "Quarterfinal", "Semifinal", "Final"];
+const ROUND_LABELS_RIGHT = ["Round of 32", "Round of 16", "Quarterfinal", "Semifinal", "Final"];
+
+// ── Helpers ────────────────────────────────────────────────────────────────
+
+function makeSlot(player) {
+  const isBye = player.username === "BYE";
+  const div = document.createElement("div");
+  div.className = "slot" + (isBye ? " bye" : "");
+
+  const seedEl = document.createElement("span");
+  seedEl.className = "seed";
+  seedEl.textContent = isBye ? "—" : player.seed;
+
+  const info = document.createElement("div");
+  info.className = "slot-info";
+
+  const faction = document.createElement("span");
+  faction.className = "faction-name";
+  faction.textContent = isBye ? "BYE" : player.faction;
+  faction.title = isBye ? "" : player.faction;
+
+  const name = document.createElement("span");
+  name.className = "player-name";
+  name.textContent = isBye ? "" : player.username;
+  name.title = isBye ? "" : player.username;
+
+  info.appendChild(faction);
+  info.appendChild(name);
+  div.appendChild(seedEl);
+  div.appendChild(info);
+  return div;
+}
+
+function makeMatch(playerA, playerB) {
+  const match = document.createElement("div");
+  match.className = "match";
+  match.appendChild(makeSlot(playerA));
+  const sep = document.createElement("div");
+  sep.className = "match-sep";
+  match.appendChild(sep);
+  match.appendChild(makeSlot(playerB));
+  return match;
+}
+
+function makeRound(matches, label, numRounds) {
+  const col = document.createElement("div");
+  col.className = "bracket-round";
+
+  const lbl = document.createElement("div");
+  lbl.className = "round-label";
+  lbl.textContent = label;
+  col.appendChild(lbl);
+
+  // Scale slot height so rounds line up vertically
+  const spacer = 14 * Math.pow(2, numRounds - 1);
+  col.style.justifyContent = "space-around";
+  col.style.minHeight = (spacer * matches.length * 2 + 80) + "px";
+
+  matches.forEach(m => col.appendChild(m));
+  return col;
+}
+
+// ── Build bracket rounds from seeded players ───────────────────────────────
+
+function buildRounds(seedPairs, players) {
+  // Round 1: actual seed matchups
+  const r1matches = seedPairs.map(([a, b]) => {
+    const pa = players[a - 1] || { faction: "BYE", username: "BYE", elo: 0, seed: a };
+    const pb = players[b - 1] || { faction: "BYE", username: "BYE", elo: 0, seed: b };
+    return makeMatch(pa, pb);
+  });
+
+  // Rounds 2–4: placeholder TBD slots (bracket structure only)
+  function placeholderSlot() {
+    const p = { faction: "TBD", username: "—", elo: 0, seed: "?" };
+    const div = document.createElement("div");
+    div.className = "slot";
+    div.style.opacity = "0.35";
+    const info = document.createElement("div");
+    info.className = "slot-info";
+    const fn = document.createElement("span");
+    fn.className = "faction-name";
+    fn.textContent = "TBD";
+    const pn = document.createElement("span");
+    pn.className = "player-name";
+    pn.textContent = "—";
+    info.appendChild(fn); info.appendChild(pn);
+    const sd = document.createElement("span");
+    sd.className = "seed"; sd.textContent = "?";
+    div.appendChild(sd); div.appendChild(info);
+    return div;
+  }
+
+  function placeholderMatch() {
+    const m = document.createElement("div");
+    m.className = "match";
+    m.appendChild(placeholderSlot());
+    const sep = document.createElement("div"); sep.className = "match-sep";
+    m.appendChild(sep);
+    m.appendChild(placeholderSlot());
+    return m;
+  }
+
+  const r2matches = Array.from({ length: r1matches.length / 2 }, placeholderMatch);
+  const r3matches = Array.from({ length: r1matches.length / 4 }, placeholderMatch);
+  const r4matches = Array.from({ length: r1matches.length / 8 }, placeholderMatch);
+
+  return [r1matches, r2matches, r3matches, r4matches];
+}
+
+// ── Main render ────────────────────────────────────────────────────────────
+
+async function loadAndRender() {
+  try {
+    const resp = await fetch("rankings.json");
+    if (!resp.ok) throw new Error("HTTP " + resp.status);
+    const data = await resp.json();
+
+    document.getElementById("season-label").textContent = data.season || "";
+    document.getElementById("fetched-label").textContent = "Updated: " + (data.fetched_at || "");
+    document.getElementById("loading").style.display = "none";
+
+    const players = data.top_players.map((p, i) => ({ ...p, seed: i + 1 }));
+
+    // ── Left side ──────────────────────────────────────────────
+    const leftSide = document.createElement("div");
+    leftSide.className = "bracket-side left";
+
+    const leftRounds = buildRounds(LEFT_SEEDS, players);
+    const leftLabels = ["Round of 32", "Round of 16", "Quarterfinal", "Semifinal"];
+    leftRounds.forEach((matches, i) => {
+      leftSide.appendChild(makeRound(matches, leftLabels[i], i + 1));
+    });
+
+    // ── Champion center ────────────────────────────────────────
+    const champCol = document.createElement("div");
+    champCol.className = "champion-col";
+
+    const champLabel = document.createElement("div");
+    champLabel.className = "champion-label";
+    champLabel.textContent = "Champion";
+    champCol.appendChild(champLabel);
+
+    const champSlot = document.createElement("div");
+    champSlot.className = "champion-slot";
+    champSlot.innerHTML = `
+      <span class="champion-crown">👑</span>
+      <div class="champion-faction">Top Seed</div>
+      <div class="champion-player">${players[0]?.username || "—"}</div>
+    `;
+    champCol.appendChild(champSlot);
+
+    // ── Right side ─────────────────────────────────────────────
+    const rightSide = document.createElement("div");
+    rightSide.className = "bracket-side right";
+
+    const rightRounds = buildRounds(RIGHT_SEEDS, players);
+    const rightLabels = ["Round of 32", "Round of 16", "Quarterfinal", "Semifinal"];
+    rightRounds.forEach((matches, i) => {
+      rightSide.appendChild(makeRound(matches, rightLabels[i], i + 1));
+    });
+
+    // ── Assemble ───────────────────────────────────────────────
+    const bracket = document.getElementById("bracket");
+    bracket.appendChild(leftSide);
+    bracket.appendChild(champCol);
+    bracket.appendChild(rightSide);
+    bracket.style.display = "flex";
+
+  } catch (err) {
+    document.getElementById("loading").style.display = "none";
+    const errEl = document.getElementById("error-msg");
+    errEl.textContent = "Could not load rankings.json — " + err.message;
+    errEl.style.display = "block";
+    console.error(err);
+  }
+}
+
+loadAndRender();
+</script>
+</body>
+</html>
