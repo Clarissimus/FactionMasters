@@ -4,7 +4,7 @@
     {
       "faction": "Spectral Conclave",
       "username": "Kezbatron",
-      "elo": 1544
+      "elo": 1561
     },
     {
       "faction": "The Forged",
@@ -24,7 +24,12 @@
     {
       "faction": "Fallen Kingdom",
       "username": "Dark-Thomy",
-      "elo": 1425
+      "elo": 1435
+    },
+    {
+      "faction": "Wayfarers",
+      "username": "DeadSans",
+      "elo": 1426
     },
     {
       "faction": "Drakesun Rebellion",
@@ -37,9 +42,9 @@
       "elo": 1413
     },
     {
-      "faction": "Wayfarers",
+      "faction": "Cave Goblins",
       "username": "DeadSans",
-      "elo": 1402
+      "elo": 1397
     },
     {
       "faction": "Cloaks",
@@ -57,11 +62,6 @@
       "elo": 1381
     },
     {
-      "faction": "Cave Goblins",
-      "username": "DeadSans",
-      "elo": 1367
-    },
-    {
       "faction": "Polar Dwarves",
       "username": "Elyk",
       "elo": 1364
@@ -77,6 +77,11 @@
       "elo": 1359
     },
     {
+      "faction": "Phoenix Elves",
+      "username": "CH4MP",
+      "elo": 1348
+    },
+    {
       "faction": "Swamp Orcs",
       "username": "CH4MP",
       "elo": 1348
@@ -87,8 +92,8 @@
       "elo": 1348
     },
     {
-      "faction": "Phoenix Elves",
-      "username": "CH4MP",
+      "faction": "Fungal Dwarves",
+      "username": "Solitaire",
       "elo": 1340
     },
     {
@@ -97,19 +102,9 @@
       "elo": 1340
     },
     {
-      "faction": "Fungal Dwarves",
-      "username": "Solitaire",
-      "elo": 1331
-    },
-    {
       "faction": "Skyspear Avians",
       "username": "GuildMaster",
       "elo": 1321
-    },
-    {
-      "faction": "Savanna Elves",
-      "username": "198279533",
-      "elo": 1316
     },
     {
       "faction": "Deepwood Groaks",
@@ -122,6 +117,11 @@
       "elo": 1305
     },
     {
+      "faction": "Savanna Elves",
+      "username": "DrWolf",
+      "elo": 1304
+    },
+    {
       "faction": "Storm Goblins",
       "username": "DeadSans",
       "elo": 1300
@@ -132,19 +132,19 @@
       "elo": 1276
     },
     {
-      "faction": "Obsidian Dwarves",
-      "username": "david.long.974",
-      "elo": 1253
+      "faction": "Vanguards",
+      "username": "VALKEIN",
+      "elo": 1242
     },
     {
-      "faction": "Vanguards",
-      "username": "homeworld",
-      "elo": 1227
+      "faction": "Obsidian Dwarves",
+      "username": "david.long.974",
+      "elo": 1224
     },
     {
       "faction": "Breakers",
-      "username": "DeadSans",
-      "elo": 1200
+      "username": "keither65",
+      "elo": 1172
     },
     {
       "faction": "High Elves",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-03-14 05:09 UTC"
+  "fetched_at": "2026-03-14 10:23 UTC"
 }
