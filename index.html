@@ -303,7 +303,8 @@ const SEP_H     = 2;                // separator between the two rows
 const MATCH_H   = SLOT_H * 2 + SEP_H;
 const LABEL_H   = 28;               // round-label row height
 const N_R1      = 8;                // first-round matches per side
-const BRACKET_H = N_R1 * MATCH_H * 2; // total height of the positioned area
+const MATCH_GAP = 10;               // small gap between first-round matches
+const BRACKET_H = N_R1 * (MATCH_H + MATCH_GAP); // tight total height
 
 const LEFT_SEEDS = [
   [1,32],[16,17],[8,25],[9,24],
@@ -423,7 +424,14 @@ async function loadAndRender() {
     const data = await resp.json();
 
     document.getElementById("season-label").textContent = data.season || "";
-    document.getElementById("fetched-label").textContent = "Updated: " + (data.fetched_at || "");
+    const rawDate = data.fetched_at || "";
+    // Parse "YYYY-MM-DD HH:MM UTC" and reformat to "Updated Month Day"
+    const datePart = rawDate.split(" ")[0]; // "YYYY-MM-DD"
+    const dateObj  = datePart ? new Date(datePart + "T00:00:00") : null;
+    const formatted = dateObj
+      ? "Updated " + dateObj.toLocaleDateString("en-US", { month: "long", day: "numeric" })
+      : "";
+    document.getElementById("fetched-label").textContent = formatted;
     document.getElementById("loading").style.display = "none";
 
     const players = data.top_players.map((p, i) => ({ ...p, seed: i + 1 }));
@@ -446,14 +454,7 @@ async function loadAndRender() {
     finalWrap.style.height = BRACKET_H + "px";
 
     // Final match box
-    const finalMatch = document.createElement("div");
-    finalMatch.className = "final-match";
-    finalMatch.appendChild(makeSlot("", "", "?", "tbd"));
-    finalMatch.appendChild(makeSep());
-    finalMatch.appendChild(makeSlot("", "", "?", "tbd"));
-    finalWrap.appendChild(finalMatch);
-
-    // Champion box
+    // Champion box first
     const crownWrap = document.createElement("div");
     crownWrap.className = "champion-crown-wrap";
     crownWrap.innerHTML = `
@@ -461,6 +462,14 @@ async function loadAndRender() {
       <div class="champion-slot"><div class="champion-tbd">Champion TBD</div></div>
     `;
     finalWrap.appendChild(crownWrap);
+
+    // Final match below
+    const finalMatch = document.createElement("div");
+    finalMatch.className = "final-match";
+    finalMatch.appendChild(makeSlot("", "", "?", "tbd"));
+    finalMatch.appendChild(makeSep());
+    finalMatch.appendChild(makeSlot("", "", "?", "tbd"));
+    finalWrap.appendChild(finalMatch);
     champCol.appendChild(finalWrap);
 
     const bracket = document.getElementById("bracket");
