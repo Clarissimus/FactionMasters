@@ -412,15 +412,15 @@ function makeSlot(player) {
   const info = document.createElement("div");
   info.className = "slot-info";
 
-  const faction = document.createElement("span");
-  faction.className = "faction-name";
-  faction.textContent = isBye ? "BYE" : player.faction;
-  faction.title = isBye ? "" : player.faction;
-
   const name = document.createElement("span");
   name.className = "player-name";
-  name.textContent = isBye ? "" : player.username;
+  name.textContent = isBye ? "BYE" : player.username;
   name.title = isBye ? "" : player.username;
+
+  const faction = document.createElement("span");
+  faction.className = "faction-name";
+  faction.textContent = isBye ? "" : player.faction;
+  faction.title = isBye ? "" : player.faction;
 
   info.appendChild(name);
   info.appendChild(faction);
@@ -543,8 +543,7 @@ async function loadAndRender() {
     champSlot.className = "champion-slot";
     champSlot.innerHTML = `
       <span class="champion-crown">👑</span>
-      <div class="champion-faction">Top Seed</div>
-      <div class="champion-player">${players[0]?.username || "—"}</div>
+      <div class="champion-faction">TBD</div>
     `;
     champCol.appendChild(champSlot);
 
