@@ -270,13 +270,12 @@
     color: var(--crimson); font-family: 'Cinzel', serif;
   }
 
-  .scroll-hint {
-    text-align: center; font-size: 0.7rem;
-    color: var(--text-dim); font-style: italic;
-    margin-top: 1.5rem; display: none;
+  .bracket-outer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
   }
-
-  @media (max-width: 900px) { .scroll-hint { display: block; } }
 </style>
 </head>
 <body>
@@ -295,7 +294,6 @@
   <div id="loading">Summoning the rankings…</div>
   <div id="error-msg">Could not load rankings data.</div>
   <div class="bracket-outer" id="bracket" style="display:none"></div>
-  <p class="scroll-hint">← Scroll horizontally to view full bracket →</p>
 
 </div>
 <script>
@@ -471,6 +469,8 @@ async function loadAndRender() {
     bracket.appendChild(rightSide);
     bracket.style.display = "flex";
     bracket.style.alignItems = "flex-start";
+    // Explicitly set bracket height so the page expands to contain it
+    bracket.style.height = (BRACKET_H + LABEL_H) + "px";
 
   } catch (err) {
     document.getElementById("loading").style.display = "none";
