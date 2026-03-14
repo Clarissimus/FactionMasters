@@ -9,20 +9,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 
 <style>
-  /* ── Design system ── */
   :root {
     --gold:        #d4a843;
     --gold-light:  #f0d878;
     --gold-dim:    #a07830;
     --crimson:     #c0392b;
-    --crimson-dim: #7a1a1a;
     --bg-deep:     #1c1a14;
     --bg-card:     #2a2620;
     --bg-card2:    #343028;
     --text:        #f0e8d0;
     --text-dim:    #b0a080;
     --bye-color:   #242018;
-    --connector:   #5a5040;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -35,43 +32,18 @@
     overflow-x: auto;
   }
 
-  /* Background texture */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image:
-      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(139,26,26,0.08) 0%, transparent 70%),
-      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .page-wrap {
-    position: relative;
-    z-index: 1;
-    padding: 2rem 1rem 4rem;
-  }
+  .page-wrap { padding: 2rem 1rem 4rem; }
 
   /* ── Header ── */
-  header {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
+  header { text-align: center; margin-bottom: 3rem; }
 
-  .crest {
-    font-size: 2.5rem;
-    line-height: 1;
-    margin-bottom: 0.5rem;
-    filter: drop-shadow(0 0 12px rgba(201,168,76,0.4));
-  }
+  .crest { font-size: 2.5rem; line-height: 1; margin-bottom: 0.5rem; }
 
   h1 {
     font-family: 'Cinzel Decorative', cursive;
     font-size: clamp(1.2rem, 3vw, 2rem);
     color: var(--gold);
     letter-spacing: 0.05em;
-    text-shadow: 0 0 30px rgba(201,168,76,0.3);
     line-height: 1.2;
   }
 
@@ -94,8 +66,7 @@
   }
 
   .divider {
-    width: 200px;
-    height: 1px;
+    width: 200px; height: 1px;
     background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
     margin: 1rem auto;
   }
@@ -115,68 +86,50 @@
     font-style: italic;
   }
 
-  /* ── Bracket layout ── */
-  /*
-    32-team single-elimination bracket.
-    Left side:  seeds 1,4,5,8,9,12,13,16 (top half of left)
-                seeds 17,20,21,24,25,28,29,32 (bottom half of left)
-    Right side: seeds 2,3,6,7,10,11,14,15 (top half of right)
-                seeds 18,19,22,23,26,27,30,31 (bottom half of right)
-
-    We render it as 5 rounds left + 5 rounds right + champion center.
-  */
-
+  /* ── Bracket ── */
   .bracket-outer {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    gap: 0;
     width: 100%;
     overflow-x: auto;
   }
 
-  .bracket-side {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-  }
-
-  .bracket-side.right {
-    flex-direction: row-reverse;
-  }
+  .bracket-side       { display: flex; flex-direction: row; }
+  .bracket-side.right { flex-direction: row-reverse; }
 
   .bracket-round {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    flex-shrink: 0;
     padding: 0 6px;
   }
 
-  /* Champion column */
-  .champion-col {
+  .round-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: center;
+    height: 28px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 12px;
-    min-width: 140px;
+    flex-shrink: 0;
   }
 
-  .champion-label {
-    font-family: 'Cinzel', serif;
-    font-size: 0.6rem;
-    color: var(--gold);
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    margin-bottom: 6px;
+  .round-body {
+    position: relative;
+    flex: 1;
   }
 
-  /* ── Match card ── */
+  /* ── Match ── */
   .match {
+    position: absolute;
+    left: 0;
     display: flex;
     flex-direction: column;
-    margin: 4px 0;
-    position: relative;
   }
 
   .slot {
@@ -187,8 +140,7 @@
     border: 2px solid #4a4030;
     border-radius: 4px;
     padding: 6px 10px;
-    min-width: 160px;
-    max-width: 160px;
+    width: 164px;
     transition: border-color 0.2s, background 0.2s;
     position: relative;
     overflow: hidden;
@@ -204,21 +156,16 @@
     transition: opacity 0.2s;
   }
 
-  .slot:hover {
-    border-color: var(--gold-dim);
-    background: var(--bg-card2);
-  }
+  .slot:hover                { border-color: var(--gold-dim); background: var(--bg-card2); }
+  .slot:hover::before        { opacity: 1; }
 
-  .slot:hover::before { opacity: 1; }
+  .slot.bye                  { background: var(--bye-color); border-color: #2e2a20; cursor: default; }
+  .slot.bye:hover            { border-color: #2e2a20; background: var(--bye-color); }
+  .slot.bye:hover::before    { opacity: 0; }
 
-  .slot.bye {
-    background: var(--bye-color);
-    border-color: #2e2a20;
-    cursor: default;
-  }
-
-  .slot.bye:hover { border-color: #1e1a14; background: var(--bye-color); }
-  .slot.bye:hover::before { opacity: 0; }
+  .slot.tbd                  { opacity: 0.4; cursor: default; }
+  .slot.tbd:hover            { border-color: #4a4030; background: var(--bg-card); }
+  .slot.tbd:hover::before    { opacity: 0; }
 
   .seed {
     font-family: 'Cinzel', serif;
@@ -230,12 +177,7 @@
     font-weight: 600;
   }
 
-  .slot-info {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    flex: 1;
-  }
+  .slot-info { display: flex; flex-direction: column; overflow: hidden; flex: 1; }
 
   .player-name {
     font-family: 'Cinzel', serif;
@@ -258,98 +200,83 @@
     font-style: italic;
   }
 
-  .slot.bye .player-name {
-    color: var(--text-dim);
-    font-style: italic;
+  .slot.bye .player-name { color: var(--text-dim); font-style: italic; }
+  .slot.bye .seed        { color: var(--text-dim); }
+
+  .match-sep { height: 2px; background: #5a5040; margin: 0 2px; }
+
+  /* ── Champion / Final column ── */
+  .champion-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 0 14px;
   }
 
-  .slot.bye .seed { color: var(--text-dim); }
-
-  /* Match separator line */
-  .match-sep {
-    height: 2px;
-    background: #5a5040;
-    margin: 0 2px;
-  }
-
-  /* Round labels */
-  .round-label {
+  .champion-label {
     font-family: 'Cinzel', serif;
     font-size: 0.65rem;
     color: var(--gold);
-    letter-spacing: 0.15em;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 8px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  /* ── Champion slot ── */
+  .final-match-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  /* Final match uses same .slot styling but override width to match */
+  .final-match { display: flex; flex-direction: column; }
+
+  .champion-crown-wrap { text-align: center; }
+  .champion-crown      { font-size: 1.8rem; display: block; margin-bottom: 4px; }
+
   .champion-slot {
-    background: linear-gradient(135deg, #1e1608, #2a1e08);
-    border: 1px solid var(--gold-dim);
+    background: linear-gradient(135deg, #22180a, #2e2010);
+    border: 2px solid var(--gold-dim);
     border-radius: 4px;
     padding: 10px 14px;
     text-align: center;
-    min-width: 130px;
-    box-shadow: 0 0 20px rgba(201,168,76,0.15), inset 0 0 20px rgba(201,168,76,0.05);
-    position: relative;
-    overflow: hidden;
+    width: 164px;
+    box-shadow: 0 0 20px rgba(201,168,76,0.15);
   }
 
-  .champion-slot::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.08), transparent 70%);
-    pointer-events: none;
-  }
-
-  .champion-crown { font-size: 1.5rem; display: block; margin-bottom: 4px; }
-
-  .champion-faction {
+  .champion-tbd {
     font-family: 'Cinzel', serif;
-    font-size: 0.65rem;
-    color: var(--gold);
+    font-size: 0.8rem;
+    color: var(--gold-dim);
     letter-spacing: 0.1em;
-  }
-
-  .champion-player {
-    font-size: 1rem;
-    color: var(--gold-light);
-    font-weight: 300;
-    margin-top: 2px;
   }
 
   /* ── Loading / error ── */
   #loading {
-    text-align: center;
-    padding: 4rem;
+    text-align: center; padding: 4rem;
     font-family: 'Cinzel', serif;
-    color: var(--gold-dim);
-    letter-spacing: 0.2em;
+    color: var(--gold-dim); letter-spacing: 0.2em;
   }
 
   #error-msg {
-    display: none;
-    text-align: center;
-    padding: 2rem;
-    color: var(--crimson);
-    font-family: 'Cinzel', serif;
+    display: none; text-align: center; padding: 2rem;
+    color: var(--crimson); font-family: 'Cinzel', serif;
   }
 
-  /* ── Responsive note ── */
   .scroll-hint {
-    text-align: center;
-    font-size: 0.7rem;
-    color: var(--text-dim);
-    font-style: italic;
-    margin-top: 1.5rem;
-    display: none;
+    text-align: center; font-size: 0.7rem;
+    color: var(--text-dim); font-style: italic;
+    margin-top: 1.5rem; display: none;
   }
 
-  @media (max-width: 900px) {
-    .scroll-hint { display: block; }
-  }
+  @media (max-width: 900px) { .scroll-hint { display: block; } }
 </style>
 </head>
 <body>
@@ -367,147 +294,130 @@
 
   <div id="loading">Summoning the rankings…</div>
   <div id="error-msg">Could not load rankings data.</div>
-
   <div class="bracket-outer" id="bracket" style="display:none"></div>
-
   <p class="scroll-hint">← Scroll horizontally to view full bracket →</p>
 
 </div>
-
 <script>
-// ── Seeding arrangement for a 32-team bracket ──────────────────────────────
-// Standard bracket seeding so #1 and #2 are on opposite sides and can only
-// meet in the final. Each "match" pair: [seedA, seedB]
-// Left side rounds (R1→R4) then right side rounds (R1→R4)
+// ── Constants ──────────────────────────────────────────────────────────────
+const SLOT_H    = 46;               // height of one player row (px)
+const SEP_H     = 2;                // separator between the two rows
+const MATCH_H   = SLOT_H * 2 + SEP_H;
+const LABEL_H   = 28;               // round-label row height
+const N_R1      = 8;                // first-round matches per side
+const BRACKET_H = N_R1 * MATCH_H * 2; // total height of the positioned area
 
 const LEFT_SEEDS = [
-  // Round 1 matches, top half
   [1,32],[16,17],[8,25],[9,24],
-  // Round 1 matches, bottom half
   [4,29],[13,20],[5,28],[12,21],
 ];
-
 const RIGHT_SEEDS = [
-  // Round 1 matches, top half
   [2,31],[15,18],[7,26],[10,23],
-  // Round 1 matches, bottom half
   [3,30],[14,19],[6,27],[11,22],
 ];
+const ROUND_LABELS = ["First Round", "Second Round", "Quarterfinal", "Semifinal"];
 
-// Round labels
-const ROUND_LABELS_LEFT  = ["Round of 32", "Round of 16", "Quarterfinal", "Semifinal", "Final"];
-const ROUND_LABELS_RIGHT = ["Round of 32", "Round of 16", "Quarterfinal", "Semifinal", "Final"];
-
-// ── Helpers ────────────────────────────────────────────────────────────────
-
-function makeSlot(player) {
-  const isBye = player.username === "BYE";
+// ── Slot / Match builders ──────────────────────────────────────────────────
+function makeSlot(username, faction, seed, type) {
   const div = document.createElement("div");
-  div.className = "slot" + (isBye ? " bye" : "");
+  div.className = "slot" + (type === "bye" ? " bye" : type === "tbd" ? " tbd" : "");
 
   const seedEl = document.createElement("span");
   seedEl.className = "seed";
-  seedEl.textContent = isBye ? "—" : player.seed;
+  seedEl.textContent = type === "tbd" ? "?" : (type === "bye" ? "—" : seed);
 
   const info = document.createElement("div");
   info.className = "slot-info";
 
-  const name = document.createElement("span");
-  name.className = "player-name";
-  name.textContent = isBye ? "BYE" : player.username;
-  name.title = isBye ? "" : player.username;
+  const nameEl = document.createElement("span");
+  nameEl.className = "player-name";
+  nameEl.textContent = type === "bye" ? "BYE" : (type === "tbd" ? "TBD" : username);
+  if (username) nameEl.title = username;
 
-  const faction = document.createElement("span");
-  faction.className = "faction-name";
-  faction.textContent = isBye ? "" : player.faction;
-  faction.title = isBye ? "" : player.faction;
+  const factEl = document.createElement("span");
+  factEl.className = "faction-name";
+  factEl.textContent = type === "normal" ? faction : "";
 
-  info.appendChild(name);
-  info.appendChild(faction);
+  info.appendChild(nameEl);
+  info.appendChild(factEl);
   div.appendChild(seedEl);
   div.appendChild(info);
   return div;
 }
 
-function makeMatch(playerA, playerB) {
-  const match = document.createElement("div");
-  match.className = "match";
-  match.appendChild(makeSlot(playerA));
-  const sep = document.createElement("div");
-  sep.className = "match-sep";
-  match.appendChild(sep);
-  match.appendChild(makeSlot(playerB));
-  return match;
+function makeSep() {
+  const s = document.createElement("div");
+  s.className = "match-sep";
+  return s;
 }
 
-function makeRound(matches, label, numRounds) {
-  const col = document.createElement("div");
-  col.className = "bracket-round";
-
-  const lbl = document.createElement("div");
-  lbl.className = "round-label";
-  lbl.textContent = label;
-  col.appendChild(lbl);
-
-  // Scale slot height so rounds line up vertically
-  const spacer = 14 * Math.pow(2, numRounds - 1);
-  col.style.justifyContent = "space-around";
-  col.style.minHeight = (spacer * matches.length * 2 + 80) + "px";
-
-  matches.forEach(m => col.appendChild(m));
-  return col;
+function makeNormalMatch(pA, pB) {
+  const wrap = document.createElement("div");
+  wrap.className = "match";
+  wrap.appendChild(makeSlot(pA.username, pA.faction, pA.seed, pA.username === "BYE" ? "bye" : "normal"));
+  wrap.appendChild(makeSep());
+  wrap.appendChild(makeSlot(pB.username, pB.faction, pB.seed, pB.username === "BYE" ? "bye" : "normal"));
+  return wrap;
 }
 
-// ── Build bracket rounds from seeded players ───────────────────────────────
+function makeTbdMatch() {
+  const wrap = document.createElement("div");
+  wrap.className = "match";
+  wrap.appendChild(makeSlot("", "", "?", "tbd"));
+  wrap.appendChild(makeSep());
+  wrap.appendChild(makeSlot("", "", "?", "tbd"));
+  return wrap;
+}
 
-function buildRounds(seedPairs, players) {
-  // Round 1: actual seed matchups
-  const r1matches = seedPairs.map(([a, b]) => {
-    const pa = players[a - 1] || { faction: "BYE", username: "BYE", elo: 0, seed: a };
-    const pb = players[b - 1] || { faction: "BYE", username: "BYE", elo: 0, seed: b };
-    return makeMatch(pa, pb);
-  });
+// ── Build one bracket side ─────────────────────────────────────────────────
+// In round r (0-indexed), there are N_R1/2^r matches.
+// Each match gets a vertical slot of BRACKET_H / nMatches px.
+// The match is centred within that slot.
+function buildSide(seedPairs, players) {
+  const side = document.createElement("div");
+  side.className = "bracket-side";
 
-  // Rounds 2–4: placeholder TBD slots (bracket structure only)
-  function placeholderSlot() {
-    const p = { faction: "TBD", username: "—", elo: 0, seed: "?" };
-    const div = document.createElement("div");
-    div.className = "slot";
-    div.style.opacity = "0.35";
-    const info = document.createElement("div");
-    info.className = "slot-info";
-    const fn = document.createElement("span");
-    fn.className = "faction-name";
-    fn.textContent = "TBD";
-    const pn = document.createElement("span");
-    pn.className = "player-name";
-    pn.textContent = "—";
-    info.appendChild(fn); info.appendChild(pn);
-    const sd = document.createElement("span");
-    sd.className = "seed"; sd.textContent = "?";
-    div.appendChild(sd); div.appendChild(info);
-    return div;
+  for (let r = 0; r < 4; r++) {
+    const nMatches = N_R1 / Math.pow(2, r);
+    const slotH    = BRACKET_H / nMatches;
+
+    const col = document.createElement("div");
+    col.className = "bracket-round";
+
+    const lbl = document.createElement("div");
+    lbl.className = "round-label";
+    lbl.textContent = ROUND_LABELS[r];
+    col.appendChild(lbl);
+
+    const body = document.createElement("div");
+    body.className = "round-body";
+    body.style.height = BRACKET_H + "px";
+    body.style.width  = (164 + 12) + "px";
+
+    for (let m = 0; m < nMatches; m++) {
+      let matchEl;
+      if (r === 0) {
+        const [sA, sB] = seedPairs[m];
+        const pA = { ...(players[sA - 1] || { username: "BYE", faction: "", elo: 0 }), seed: sA };
+        const pB = { ...(players[sB - 1] || { username: "BYE", faction: "", elo: 0 }), seed: sB };
+        matchEl = makeNormalMatch(pA, pB);
+      } else {
+        matchEl = makeTbdMatch();
+      }
+      const topPx = m * slotH + (slotH - MATCH_H) / 2;
+      matchEl.style.top  = topPx + "px";
+      matchEl.style.left = "6px";
+      body.appendChild(matchEl);
+    }
+
+    col.appendChild(body);
+    side.appendChild(col);
   }
 
-  function placeholderMatch() {
-    const m = document.createElement("div");
-    m.className = "match";
-    m.appendChild(placeholderSlot());
-    const sep = document.createElement("div"); sep.className = "match-sep";
-    m.appendChild(sep);
-    m.appendChild(placeholderSlot());
-    return m;
-  }
-
-  const r2matches = Array.from({ length: r1matches.length / 2 }, placeholderMatch);
-  const r3matches = Array.from({ length: r1matches.length / 4 }, placeholderMatch);
-  const r4matches = Array.from({ length: r1matches.length / 8 }, placeholderMatch);
-
-  return [r1matches, r2matches, r3matches, r4matches];
+  return side;
 }
 
-// ── Main render ────────────────────────────────────────────────────────────
-
+// ── Main ───────────────────────────────────────────────────────────────────
 async function loadAndRender() {
   try {
     const resp = await fetch("rankings.json");
@@ -520,49 +430,47 @@ async function loadAndRender() {
 
     const players = data.top_players.map((p, i) => ({ ...p, seed: i + 1 }));
 
-    // ── Left side ──────────────────────────────────────────────
-    const leftSide = document.createElement("div");
-    leftSide.className = "bracket-side left";
+    const leftSide  = buildSide(LEFT_SEEDS,  players);
+    const rightSide = buildSide(RIGHT_SEEDS, players);
+    rightSide.classList.add("right");
 
-    const leftRounds = buildRounds(LEFT_SEEDS, players);
-    const leftLabels = ["Round of 32", "Round of 16", "Quarterfinal", "Semifinal"];
-    leftRounds.forEach((matches, i) => {
-      leftSide.appendChild(makeRound(matches, leftLabels[i], i + 1));
-    });
-
-    // ── Champion center ────────────────────────────────────────
+    // Centre column: Final label + Final match + Champion box
     const champCol = document.createElement("div");
     champCol.className = "champion-col";
 
-    const champLabel = document.createElement("div");
-    champLabel.className = "champion-label";
-    champLabel.textContent = "Champion";
-    champCol.appendChild(champLabel);
+    const champLbl = document.createElement("div");
+    champLbl.className = "champion-label";
+    champLbl.textContent = "Final";
+    champCol.appendChild(champLbl);
 
-    const champSlot = document.createElement("div");
-    champSlot.className = "champion-slot";
-    champSlot.innerHTML = `
+    const finalWrap = document.createElement("div");
+    finalWrap.className = "final-match-wrap";
+    finalWrap.style.height = BRACKET_H + "px";
+
+    // Final match box
+    const finalMatch = document.createElement("div");
+    finalMatch.className = "final-match";
+    finalMatch.appendChild(makeSlot("", "", "?", "tbd"));
+    finalMatch.appendChild(makeSep());
+    finalMatch.appendChild(makeSlot("", "", "?", "tbd"));
+    finalWrap.appendChild(finalMatch);
+
+    // Champion box
+    const crownWrap = document.createElement("div");
+    crownWrap.className = "champion-crown-wrap";
+    crownWrap.innerHTML = `
       <span class="champion-crown">👑</span>
-      <div class="champion-faction">TBD</div>
+      <div class="champion-slot"><div class="champion-tbd">Champion TBD</div></div>
     `;
-    champCol.appendChild(champSlot);
+    finalWrap.appendChild(crownWrap);
+    champCol.appendChild(finalWrap);
 
-    // ── Right side ─────────────────────────────────────────────
-    const rightSide = document.createElement("div");
-    rightSide.className = "bracket-side right";
-
-    const rightRounds = buildRounds(RIGHT_SEEDS, players);
-    const rightLabels = ["Round of 32", "Round of 16", "Quarterfinal", "Semifinal"];
-    rightRounds.forEach((matches, i) => {
-      rightSide.appendChild(makeRound(matches, rightLabels[i], i + 1));
-    });
-
-    // ── Assemble ───────────────────────────────────────────────
     const bracket = document.getElementById("bracket");
     bracket.appendChild(leftSide);
     bracket.appendChild(champCol);
     bracket.appendChild(rightSide);
     bracket.style.display = "flex";
+    bracket.style.alignItems = "flex-start";
 
   } catch (err) {
     document.getElementById("loading").style.display = "none";
