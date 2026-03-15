@@ -4,7 +4,7 @@
     {
       "faction": "Spectral Conclave",
       "username": "Kezbatron",
-      "elo": 1561
+      "elo": 1541
     },
     {
       "faction": "The Forged",
@@ -67,16 +67,6 @@
       "elo": 1364
     },
     {
-      "faction": "Sand Goblins",
-      "username": "homeworld",
-      "elo": 1362
-    },
-    {
-      "faction": "Eternal Council",
-      "username": "KLANE",
-      "elo": 1359
-    },
-    {
       "faction": "Phoenix Elves",
       "username": "CH4MP",
       "elo": 1348
@@ -102,9 +92,29 @@
       "elo": 1340
     },
     {
+      "faction": "Obsidian Dwarves",
+      "username": "Misty",
+      "elo": 1328
+    },
+    {
       "faction": "Skyspear Avians",
       "username": "GuildMaster",
       "elo": 1321
+    },
+    {
+      "faction": "Eternal Council",
+      "username": "KLANE",
+      "elo": 1318
+    },
+    {
+      "faction": "Isle Vekkid",
+      "username": "Nesle",
+      "elo": 1317
+    },
+    {
+      "faction": "Savanna Elves",
+      "username": "DrWolf",
+      "elo": 1311
     },
     {
       "faction": "Deepwood Groaks",
@@ -112,19 +122,14 @@
       "elo": 1310
     },
     {
-      "faction": "Isle Vekkid",
-      "username": "Nesle",
-      "elo": 1305
-    },
-    {
-      "faction": "Savanna Elves",
-      "username": "DrWolf",
-      "elo": 1304
-    },
-    {
       "faction": "Storm Goblins",
       "username": "DeadSans",
       "elo": 1300
+    },
+    {
+      "faction": "Sand Goblins",
+      "username": "MajesticOnions",
+      "elo": 1279
     },
     {
       "faction": "Mountain Vargath",
@@ -132,24 +137,19 @@
       "elo": 1276
     },
     {
+      "faction": "Breakers",
+      "username": "DeadSans",
+      "elo": 1246
+    },
+    {
       "faction": "Vanguards",
       "username": "VALKEIN",
       "elo": 1242
     },
     {
-      "faction": "Obsidian Dwarves",
-      "username": "david.long.974",
-      "elo": 1224
-    },
-    {
-      "faction": "Breakers",
-      "username": "keither65",
-      "elo": 1172
-    },
-    {
       "faction": "High Elves",
-      "username": "bengo",
-      "elo": 1150
+      "username": "198279533",
+      "elo": 1178
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-03-14 10:23 UTC"
+  "fetched_at": "2026-03-15 10:23 UTC"
 }
