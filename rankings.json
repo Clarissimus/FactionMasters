@@ -2,14 +2,14 @@
   "season": "Season 8",
   "top_players": [
     {
-      "faction": "Spectral Conclave",
-      "username": "Kezbatron",
-      "elo": 1541
-    },
-    {
       "faction": "The Forged",
       "username": "excile2127",
       "elo": 1526
+    },
+    {
+      "faction": "Spectral Conclave",
+      "username": "Kezbatron",
+      "elo": 1503
     },
     {
       "faction": "Crimson Order",
@@ -67,6 +67,11 @@
       "elo": 1364
     },
     {
+      "faction": "Eternal Council",
+      "username": "KLANE",
+      "elo": 1354
+    },
+    {
       "faction": "Phoenix Elves",
       "username": "CH4MP",
       "elo": 1348
@@ -92,29 +97,19 @@
       "elo": 1340
     },
     {
-      "faction": "Obsidian Dwarves",
-      "username": "Misty",
-      "elo": 1328
+      "faction": "Savanna Elves",
+      "username": "198279533",
+      "elo": 1336
+    },
+    {
+      "faction": "Isle Vekkid",
+      "username": "Nesle",
+      "elo": 1327
     },
     {
       "faction": "Skyspear Avians",
       "username": "GuildMaster",
       "elo": 1321
-    },
-    {
-      "faction": "Eternal Council",
-      "username": "KLANE",
-      "elo": 1318
-    },
-    {
-      "faction": "Isle Vekkid",
-      "username": "Nesle",
-      "elo": 1317
-    },
-    {
-      "faction": "Savanna Elves",
-      "username": "DrWolf",
-      "elo": 1311
     },
     {
       "faction": "Deepwood Groaks",
@@ -127,9 +122,9 @@
       "elo": 1300
     },
     {
-      "faction": "Sand Goblins",
-      "username": "MajesticOnions",
-      "elo": 1279
+      "faction": "Breakers",
+      "username": "DeadSans",
+      "elo": 1290
     },
     {
       "faction": "Mountain Vargath",
@@ -137,9 +132,9 @@
       "elo": 1276
     },
     {
-      "faction": "Breakers",
-      "username": "DeadSans",
-      "elo": 1246
+      "faction": "Sand Goblins",
+      "username": "MajesticOnions",
+      "elo": 1273
     },
     {
       "faction": "Vanguards",
@@ -147,9 +142,14 @@
       "elo": 1242
     },
     {
+      "faction": "Obsidian Dwarves",
+      "username": "Misty",
+      "elo": 1238
+    },
+    {
       "faction": "High Elves",
       "username": "198279533",
-      "elo": 1178
+      "elo": 1176
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-03-15 10:23 UTC"
+  "fetched_at": "2026-03-16 10:49 UTC"
 }
