@@ -9,7 +9,7 @@
     {
       "faction": "Spectral Conclave",
       "username": "Kezbatron",
-      "elo": 1503
+      "elo": 1473
     },
     {
       "faction": "Crimson Order",
@@ -57,6 +57,11 @@
       "elo": 1387
     },
     {
+      "faction": "Obsidian Dwarves",
+      "username": "Misty",
+      "elo": 1383
+    },
+    {
       "faction": "Chosen Grove",
       "username": "Solitaire",
       "elo": 1381
@@ -64,7 +69,7 @@
     {
       "faction": "Polar Dwarves",
       "username": "Elyk",
-      "elo": 1364
+      "elo": 1378
     },
     {
       "faction": "Eternal Council",
@@ -97,11 +102,6 @@
       "elo": 1340
     },
     {
-      "faction": "Savanna Elves",
-      "username": "198279533",
-      "elo": 1336
-    },
-    {
       "faction": "Isle Vekkid",
       "username": "Nesle",
       "elo": 1327
@@ -117,14 +117,19 @@
       "elo": 1310
     },
     {
+      "faction": "Breakers",
+      "username": "DeadSans",
+      "elo": 1309
+    },
+    {
+      "faction": "Savanna Elves",
+      "username": "198279533",
+      "elo": 1304
+    },
+    {
       "faction": "Storm Goblins",
       "username": "DeadSans",
       "elo": 1300
-    },
-    {
-      "faction": "Breakers",
-      "username": "DeadSans",
-      "elo": 1290
     },
     {
       "faction": "Mountain Vargath",
@@ -142,14 +147,9 @@
       "elo": 1242
     },
     {
-      "faction": "Obsidian Dwarves",
-      "username": "Misty",
-      "elo": 1238
-    },
-    {
       "faction": "High Elves",
       "username": "198279533",
-      "elo": 1176
+      "elo": 1178
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-03-16 10:49 UTC"
+  "fetched_at": "2026-03-17 10:44 UTC"
 }
