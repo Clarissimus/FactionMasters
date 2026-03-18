@@ -4,22 +4,17 @@
     {
       "faction": "The Forged",
       "username": "excile2127",
-      "elo": 1526
+      "elo": 1534
     },
     {
       "faction": "Spectral Conclave",
       "username": "Kezbatron",
-      "elo": 1473
+      "elo": 1480
     },
     {
       "faction": "Crimson Order",
-      "username": "Monk3ylord",
-      "elo": 1466
-    },
-    {
-      "faction": "Guild Dwarves",
-      "username": "GuildMaster",
-      "elo": 1460
+      "username": "DarkerM",
+      "elo": 1475
     },
     {
       "faction": "Fallen Kingdom",
@@ -29,6 +24,11 @@
     {
       "faction": "Wayfarers",
       "username": "DeadSans",
+      "elo": 1426
+    },
+    {
+      "faction": "Guild Dwarves",
+      "username": "GuildMaster",
       "elo": 1426
     },
     {
@@ -57,24 +57,29 @@
       "elo": 1387
     },
     {
-      "faction": "Obsidian Dwarves",
-      "username": "Misty",
-      "elo": 1383
-    },
-    {
-      "faction": "Chosen Grove",
-      "username": "Solitaire",
-      "elo": 1381
-    },
-    {
       "faction": "Polar Dwarves",
       "username": "Elyk",
       "elo": 1378
     },
     {
+      "faction": "Shimmersea Fae",
+      "username": "excile2127",
+      "elo": 1362
+    },
+    {
       "faction": "Eternal Council",
       "username": "KLANE",
       "elo": 1354
+    },
+    {
+      "faction": "Fungal Dwarves",
+      "username": "Solitaire",
+      "elo": 1349
+    },
+    {
+      "faction": "Chosen Grove",
+      "username": "Solitaire",
+      "elo": 1349
     },
     {
       "faction": "Phoenix Elves",
@@ -87,14 +92,9 @@
       "elo": 1348
     },
     {
-      "faction": "Shimmersea Fae",
-      "username": "excile2127",
-      "elo": 1348
-    },
-    {
-      "faction": "Fungal Dwarves",
-      "username": "Solitaire",
-      "elo": 1340
+      "faction": "Breakers",
+      "username": "DeadSans",
+      "elo": 1343
     },
     {
       "faction": "Shadow Elves",
@@ -107,24 +107,24 @@
       "elo": 1327
     },
     {
+      "faction": "Deepwood Groaks",
+      "username": "Solitaire",
+      "elo": 1326
+    },
+    {
       "faction": "Skyspear Avians",
       "username": "GuildMaster",
       "elo": 1321
     },
     {
-      "faction": "Deepwood Groaks",
-      "username": "Solitaire",
-      "elo": 1310
-    },
-    {
-      "faction": "Breakers",
-      "username": "DeadSans",
-      "elo": 1309
-    },
-    {
       "faction": "Savanna Elves",
-      "username": "198279533",
-      "elo": 1304
+      "username": "DrWolf",
+      "elo": 1319
+    },
+    {
+      "faction": "Obsidian Dwarves",
+      "username": "Misty",
+      "elo": 1319
     },
     {
       "faction": "Storm Goblins",
@@ -133,8 +133,8 @@
     },
     {
       "faction": "Mountain Vargath",
-      "username": "Fikitti",
-      "elo": 1276
+      "username": "excile2127",
+      "elo": 1281
     },
     {
       "faction": "Sand Goblins",
@@ -149,7 +149,7 @@
     {
       "faction": "High Elves",
       "username": "198279533",
-      "elo": 1178
+      "elo": 1176
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-03-17 10:44 UTC"
+  "fetched_at": "2026-03-18 10:45 UTC"
 }
