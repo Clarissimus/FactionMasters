@@ -7,19 +7,14 @@
       "elo": 1534
     },
     {
-      "faction": "Spectral Conclave",
-      "username": "Kezbatron",
+      "faction": "Crimson Order",
+      "username": "DarkerM",
       "elo": 1480
     },
     {
-      "faction": "Crimson Order",
-      "username": "DarkerM",
-      "elo": 1475
-    },
-    {
-      "faction": "Fallen Kingdom",
-      "username": "Dark-Thomy",
-      "elo": 1435
+      "faction": "Spectral Conclave",
+      "username": "Kezbatron",
+      "elo": 1480
     },
     {
       "faction": "Wayfarers",
@@ -37,14 +32,9 @@
       "elo": 1417
     },
     {
-      "faction": "The Filth",
-      "username": "excile2127",
-      "elo": 1413
-    },
-    {
-      "faction": "Cave Goblins",
-      "username": "DeadSans",
-      "elo": 1397
+      "faction": "Fallen Kingdom",
+      "username": "Dark-Thomy",
+      "elo": 1411
     },
     {
       "faction": "Cloaks",
@@ -62,9 +52,24 @@
       "elo": 1378
     },
     {
+      "faction": "The Filth",
+      "username": "excile2127",
+      "elo": 1373
+    },
+    {
       "faction": "Shimmersea Fae",
       "username": "excile2127",
       "elo": 1362
+    },
+    {
+      "faction": "Chosen Grove",
+      "username": "Solitaire",
+      "elo": 1357
+    },
+    {
+      "faction": "Cave Goblins",
+      "username": "DeadSans",
+      "elo": 1356
     },
     {
       "faction": "Eternal Council",
@@ -73,11 +78,6 @@
     },
     {
       "faction": "Fungal Dwarves",
-      "username": "Solitaire",
-      "elo": 1349
-    },
-    {
-      "faction": "Chosen Grove",
       "username": "Solitaire",
       "elo": 1349
     },
@@ -102,6 +102,11 @@
       "elo": 1340
     },
     {
+      "faction": "Obsidian Dwarves",
+      "username": "Misty",
+      "elo": 1338
+    },
+    {
       "faction": "Isle Vekkid",
       "username": "Nesle",
       "elo": 1327
@@ -122,24 +127,19 @@
       "elo": 1319
     },
     {
-      "faction": "Obsidian Dwarves",
-      "username": "Misty",
-      "elo": 1319
-    },
-    {
       "faction": "Storm Goblins",
       "username": "DeadSans",
       "elo": 1300
     },
     {
-      "faction": "Mountain Vargath",
-      "username": "excile2127",
-      "elo": 1281
-    },
-    {
       "faction": "Sand Goblins",
       "username": "MajesticOnions",
-      "elo": 1273
+      "elo": 1295
+    },
+    {
+      "faction": "Mountain Vargath",
+      "username": "Fikitti",
+      "elo": 1276
     },
     {
       "faction": "Vanguards",
@@ -149,7 +149,7 @@
     {
       "faction": "High Elves",
       "username": "198279533",
-      "elo": 1176
+      "elo": 1179
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-03-18 10:45 UTC"
+  "fetched_at": "2026-03-19 10:35 UTC"
 }
