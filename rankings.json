@@ -57,6 +57,11 @@
       "elo": 1373
     },
     {
+      "faction": "Eternal Council",
+      "username": "KLANE",
+      "elo": 1368
+    },
+    {
       "faction": "Shimmersea Fae",
       "username": "excile2127",
       "elo": 1362
@@ -70,11 +75,6 @@
       "faction": "Cave Goblins",
       "username": "DeadSans",
       "elo": 1356
-    },
-    {
-      "faction": "Eternal Council",
-      "username": "KLANE",
-      "elo": 1354
     },
     {
       "faction": "Fungal Dwarves",
@@ -102,14 +102,14 @@
       "elo": 1340
     },
     {
-      "faction": "Obsidian Dwarves",
-      "username": "Misty",
-      "elo": 1338
-    },
-    {
       "faction": "Isle Vekkid",
       "username": "Nesle",
       "elo": 1327
+    },
+    {
+      "faction": "Obsidian Dwarves",
+      "username": "Misty",
+      "elo": 1326
     },
     {
       "faction": "Deepwood Groaks",
@@ -117,14 +117,14 @@
       "elo": 1326
     },
     {
+      "faction": "Savanna Elves",
+      "username": "198279533",
+      "elo": 1324
+    },
+    {
       "faction": "Skyspear Avians",
       "username": "GuildMaster",
       "elo": 1321
-    },
-    {
-      "faction": "Savanna Elves",
-      "username": "DrWolf",
-      "elo": 1319
     },
     {
       "faction": "Storm Goblins",
@@ -138,8 +138,8 @@
     },
     {
       "faction": "Mountain Vargath",
-      "username": "Fikitti",
-      "elo": 1276
+      "username": "excile2127",
+      "elo": 1292
     },
     {
       "faction": "Vanguards",
@@ -149,7 +149,7 @@
     {
       "faction": "High Elves",
       "username": "198279533",
-      "elo": 1179
+      "elo": 1177
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-03-19 10:35 UTC"
+  "fetched_at": "2026-03-20 10:33 UTC"
 }
