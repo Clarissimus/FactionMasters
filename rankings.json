@@ -7,13 +7,13 @@
       "elo": 1534
     },
     {
-      "faction": "Crimson Order",
-      "username": "DarkerM",
-      "elo": 1480
-    },
-    {
       "faction": "Spectral Conclave",
       "username": "Kezbatron",
+      "elo": 1489
+    },
+    {
+      "faction": "Crimson Order",
+      "username": "DarkerM",
       "elo": 1480
     },
     {
@@ -107,24 +107,24 @@
       "elo": 1327
     },
     {
-      "faction": "Obsidian Dwarves",
-      "username": "Misty",
-      "elo": 1326
-    },
-    {
       "faction": "Deepwood Groaks",
       "username": "Solitaire",
       "elo": 1326
     },
     {
-      "faction": "Savanna Elves",
-      "username": "198279533",
-      "elo": 1324
-    },
-    {
       "faction": "Skyspear Avians",
       "username": "GuildMaster",
       "elo": 1321
+    },
+    {
+      "faction": "Savanna Elves",
+      "username": "DrWolf",
+      "elo": 1319
+    },
+    {
+      "faction": "Obsidian Dwarves",
+      "username": "Misty",
+      "elo": 1315
     },
     {
       "faction": "Storm Goblins",
@@ -138,8 +138,8 @@
     },
     {
       "faction": "Mountain Vargath",
-      "username": "excile2127",
-      "elo": 1292
+      "username": "Fikitti",
+      "elo": 1276
     },
     {
       "faction": "Vanguards",
@@ -149,7 +149,7 @@
     {
       "faction": "High Elves",
       "username": "198279533",
-      "elo": 1177
+      "elo": 1206
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-03-20 10:33 UTC"
+  "fetched_at": "2026-03-21 10:21 UTC"
 }
