@@ -47,6 +47,11 @@
       "elo": 1387
     },
     {
+      "faction": "Eternal Council",
+      "username": "KLANE",
+      "elo": 1381
+    },
+    {
       "faction": "Polar Dwarves",
       "username": "Elyk",
       "elo": 1378
@@ -57,19 +62,9 @@
       "elo": 1373
     },
     {
-      "faction": "Eternal Council",
-      "username": "KLANE",
-      "elo": 1368
-    },
-    {
       "faction": "Shimmersea Fae",
       "username": "excile2127",
       "elo": 1362
-    },
-    {
-      "faction": "Chosen Grove",
-      "username": "Solitaire",
-      "elo": 1357
     },
     {
       "faction": "Cave Goblins",
@@ -122,8 +117,8 @@
       "elo": 1319
     },
     {
-      "faction": "Obsidian Dwarves",
-      "username": "Misty",
+      "faction": "Chosen Grove",
+      "username": "Solitaire",
       "elo": 1315
     },
     {
@@ -142,6 +137,11 @@
       "elo": 1276
     },
     {
+      "faction": "Obsidian Dwarves",
+      "username": "Misty",
+      "elo": 1259
+    },
+    {
       "faction": "Vanguards",
       "username": "VALKEIN",
       "elo": 1242
@@ -149,7 +149,7 @@
     {
       "faction": "High Elves",
       "username": "198279533",
-      "elo": 1206
+      "elo": 1189
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-03-21 10:21 UTC"
+  "fetched_at": "2026-03-22 10:21 UTC"
 }
