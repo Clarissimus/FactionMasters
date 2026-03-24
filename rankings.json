@@ -9,7 +9,7 @@
     {
       "faction": "Crimson Order",
       "username": "DarkerM",
-      "elo": 1495
+      "elo": 1498
     },
     {
       "faction": "Spectral Conclave",
@@ -57,6 +57,11 @@
       "elo": 1378
     },
     {
+      "faction": "Savanna Elves",
+      "username": "198279533",
+      "elo": 1374
+    },
+    {
       "faction": "The Filth",
       "username": "excile2127",
       "elo": 1373
@@ -70,11 +75,6 @@
       "faction": "Cave Goblins",
       "username": "DeadSans",
       "elo": 1356
-    },
-    {
-      "faction": "Savanna Elves",
-      "username": "198279533",
-      "elo": 1354
     },
     {
       "faction": "Fungal Dwarves",
@@ -102,6 +102,11 @@
       "elo": 1340
     },
     {
+      "faction": "Chosen Grove",
+      "username": "Solitaire",
+      "elo": 1335
+    },
+    {
       "faction": "Isle Vekkid",
       "username": "Nesle",
       "elo": 1327
@@ -117,14 +122,9 @@
       "elo": 1321
     },
     {
-      "faction": "Chosen Grove",
-      "username": "Solitaire",
-      "elo": 1315
-    },
-    {
       "faction": "Mountain Vargath",
       "username": "excile2127",
-      "elo": 1306
+      "elo": 1303
     },
     {
       "faction": "Storm Goblins",
@@ -149,7 +149,7 @@
     {
       "faction": "High Elves",
       "username": "198279533",
-      "elo": 1190
+      "elo": 1191
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-03-23 10:48 UTC"
+  "fetched_at": "2026-03-24 10:45 UTC"
 }
