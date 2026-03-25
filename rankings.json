@@ -4,26 +4,21 @@
     {
       "faction": "The Forged",
       "username": "excile2127",
-      "elo": 1534
+      "elo": 1543
     },
     {
       "faction": "Crimson Order",
       "username": "DarkerM",
-      "elo": 1498
+      "elo": 1504
     },
     {
       "faction": "Spectral Conclave",
       "username": "Kezbatron",
-      "elo": 1489
+      "elo": 1454
     },
     {
       "faction": "Wayfarers",
       "username": "DeadSans",
-      "elo": 1426
-    },
-    {
-      "faction": "Guild Dwarves",
-      "username": "GuildMaster",
       "elo": 1426
     },
     {
@@ -37,9 +32,9 @@
       "elo": 1411
     },
     {
-      "faction": "Tundra Orcs",
-      "username": "GuildMaster",
-      "elo": 1397
+      "faction": "Guild Dwarves",
+      "username": "MajesticOnions",
+      "elo": 1409
     },
     {
       "faction": "Cloaks",
@@ -52,19 +47,24 @@
       "elo": 1392
     },
     {
-      "faction": "Polar Dwarves",
-      "username": "Elyk",
-      "elo": 1378
+      "faction": "Savanna Elves",
+      "username": "DrWolf",
+      "elo": 1391
     },
     {
-      "faction": "Savanna Elves",
-      "username": "198279533",
-      "elo": 1374
+      "faction": "Tundra Orcs",
+      "username": "Nesle",
+      "elo": 1387
     },
     {
       "faction": "The Filth",
-      "username": "excile2127",
-      "elo": 1373
+      "username": "AstroWild",
+      "elo": 1386
+    },
+    {
+      "faction": "Polar Dwarves",
+      "username": "Elyk",
+      "elo": 1378
     },
     {
       "faction": "Shimmersea Fae",
@@ -75,6 +75,11 @@
       "faction": "Cave Goblins",
       "username": "DeadSans",
       "elo": 1356
+    },
+    {
+      "faction": "Shadow Elves",
+      "username": "CH4MP",
+      "elo": 1354
     },
     {
       "faction": "Fungal Dwarves",
@@ -95,11 +100,6 @@
       "faction": "Breakers",
       "username": "DeadSans",
       "elo": 1343
-    },
-    {
-      "faction": "Shadow Elves",
-      "username": "DrWolf",
-      "elo": 1340
     },
     {
       "faction": "Chosen Grove",
@@ -124,7 +124,7 @@
     {
       "faction": "Mountain Vargath",
       "username": "excile2127",
-      "elo": 1303
+      "elo": 1313
     },
     {
       "faction": "Storm Goblins",
@@ -149,7 +149,7 @@
     {
       "faction": "High Elves",
       "username": "198279533",
-      "elo": 1191
+      "elo": 1190
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-03-24 10:45 UTC"
+  "fetched_at": "2026-03-25 10:43 UTC"
 }
