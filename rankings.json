@@ -12,11 +12,6 @@
       "elo": 1504
     },
     {
-      "faction": "Spectral Conclave",
-      "username": "Kezbatron",
-      "elo": 1454
-    },
-    {
       "faction": "Wayfarers",
       "username": "DeadSans",
       "elo": 1426
@@ -25,6 +20,16 @@
       "faction": "Drakesun Rebellion",
       "username": "AstroWild",
       "elo": 1417
+    },
+    {
+      "faction": "Spectral Conclave",
+      "username": "Kezbatron",
+      "elo": 1413
+    },
+    {
+      "faction": "Eternal Council",
+      "username": "KLANE",
+      "elo": 1411
     },
     {
       "faction": "Fallen Kingdom",
@@ -39,12 +44,7 @@
     {
       "faction": "Cloaks",
       "username": "DrWolf",
-      "elo": 1394
-    },
-    {
-      "faction": "Eternal Council",
-      "username": "KLANE",
-      "elo": 1392
+      "elo": 1404
     },
     {
       "faction": "Savanna Elves",
@@ -67,6 +67,11 @@
       "elo": 1378
     },
     {
+      "faction": "Shadow Elves",
+      "username": "DrWolf",
+      "elo": 1364
+    },
+    {
       "faction": "Shimmersea Fae",
       "username": "excile2127",
       "elo": 1362
@@ -75,11 +80,6 @@
       "faction": "Cave Goblins",
       "username": "DeadSans",
       "elo": 1356
-    },
-    {
-      "faction": "Shadow Elves",
-      "username": "CH4MP",
-      "elo": 1354
     },
     {
       "faction": "Fungal Dwarves",
@@ -127,14 +127,14 @@
       "elo": 1313
     },
     {
+      "faction": "Sand Goblins",
+      "username": "MajesticOnions",
+      "elo": 1310
+    },
+    {
       "faction": "Storm Goblins",
       "username": "DeadSans",
       "elo": 1300
-    },
-    {
-      "faction": "Sand Goblins",
-      "username": "MajesticOnions",
-      "elo": 1295
     },
     {
       "faction": "Obsidian Dwarves",
@@ -149,7 +149,7 @@
     {
       "faction": "High Elves",
       "username": "198279533",
-      "elo": 1190
+      "elo": 1187
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-03-25 10:43 UTC"
+  "fetched_at": "2026-03-26 10:48 UTC"
 }
