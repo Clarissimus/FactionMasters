@@ -9,7 +9,7 @@
     {
       "faction": "Crimson Order",
       "username": "DarkerM",
-      "elo": 1504
+      "elo": 1507
     },
     {
       "faction": "Wayfarers",
@@ -67,14 +67,19 @@
       "elo": 1378
     },
     {
+      "faction": "Shimmersea Fae",
+      "username": "excile2127",
+      "elo": 1372
+    },
+    {
       "faction": "Shadow Elves",
       "username": "DrWolf",
       "elo": 1364
     },
     {
-      "faction": "Shimmersea Fae",
-      "username": "excile2127",
-      "elo": 1362
+      "faction": "Fungal Dwarves",
+      "username": "Solitaire",
+      "elo": 1361
     },
     {
       "faction": "Cave Goblins",
@@ -82,9 +87,9 @@
       "elo": 1356
     },
     {
-      "faction": "Fungal Dwarves",
+      "faction": "Chosen Grove",
       "username": "Solitaire",
-      "elo": 1349
+      "elo": 1350
     },
     {
       "faction": "Phoenix Elves",
@@ -100,11 +105,6 @@
       "faction": "Breakers",
       "username": "DeadSans",
       "elo": 1343
-    },
-    {
-      "faction": "Chosen Grove",
-      "username": "Solitaire",
-      "elo": 1335
     },
     {
       "faction": "Isle Vekkid",
@@ -139,7 +139,7 @@
     {
       "faction": "Obsidian Dwarves",
       "username": "Misty",
-      "elo": 1284
+      "elo": 1262
     },
     {
       "faction": "Vanguards",
@@ -149,7 +149,7 @@
     {
       "faction": "High Elves",
       "username": "198279533",
-      "elo": 1187
+      "elo": 1183
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-03-26 10:48 UTC"
+  "fetched_at": "2026-03-27 10:42 UTC"
 }
