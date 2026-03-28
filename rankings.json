@@ -9,7 +9,7 @@
     {
       "faction": "Crimson Order",
       "username": "DarkerM",
-      "elo": 1507
+      "elo": 1510
     },
     {
       "faction": "Wayfarers",
@@ -32,14 +32,14 @@
       "elo": 1411
     },
     {
-      "faction": "Fallen Kingdom",
-      "username": "Dark-Thomy",
-      "elo": 1411
-    },
-    {
       "faction": "Guild Dwarves",
       "username": "MajesticOnions",
       "elo": 1409
+    },
+    {
+      "faction": "Fallen Kingdom",
+      "username": "tyt123",
+      "elo": 1405
     },
     {
       "faction": "Cloaks",
@@ -67,14 +67,14 @@
       "elo": 1378
     },
     {
+      "faction": "Shadow Elves",
+      "username": "DrWolf",
+      "elo": 1374
+    },
+    {
       "faction": "Shimmersea Fae",
       "username": "excile2127",
       "elo": 1372
-    },
-    {
-      "faction": "Shadow Elves",
-      "username": "DrWolf",
-      "elo": 1364
     },
     {
       "faction": "Fungal Dwarves",
@@ -107,19 +107,24 @@
       "elo": 1343
     },
     {
+      "faction": "Deepwood Groaks",
+      "username": "Solitaire",
+      "elo": 1337
+    },
+    {
       "faction": "Isle Vekkid",
       "username": "Nesle",
       "elo": 1327
     },
     {
-      "faction": "Deepwood Groaks",
-      "username": "Solitaire",
-      "elo": 1326
-    },
-    {
       "faction": "Skyspear Avians",
       "username": "GuildMaster",
       "elo": 1321
+    },
+    {
+      "faction": "Storm Goblins",
+      "username": "Milbo",
+      "elo": 1318
     },
     {
       "faction": "Mountain Vargath",
@@ -130,11 +135,6 @@
       "faction": "Sand Goblins",
       "username": "MajesticOnions",
       "elo": 1310
-    },
-    {
-      "faction": "Storm Goblins",
-      "username": "DeadSans",
-      "elo": 1300
     },
     {
       "faction": "Obsidian Dwarves",
@@ -149,7 +149,7 @@
     {
       "faction": "High Elves",
       "username": "198279533",
-      "elo": 1183
+      "elo": 1182
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-03-27 10:42 UTC"
+  "fetched_at": "2026-03-28 10:26 UTC"
 }
