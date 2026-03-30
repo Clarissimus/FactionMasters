@@ -9,7 +9,7 @@
     {
       "faction": "Crimson Order",
       "username": "PowerMove",
-      "elo": 1510
+      "elo": 1512
     },
     {
       "faction": "Wayfarers",
@@ -47,6 +47,11 @@
       "elo": 1404
     },
     {
+      "faction": "The Filth",
+      "username": "AstroWild",
+      "elo": 1392
+    },
+    {
       "faction": "Savanna Elves",
       "username": "DrWolf",
       "elo": 1391
@@ -55,11 +60,6 @@
       "faction": "Tundra Orcs",
       "username": "Nesle",
       "elo": 1387
-    },
-    {
-      "faction": "The Filth",
-      "username": "AstroWild",
-      "elo": 1386
     },
     {
       "faction": "Polar Dwarves",
@@ -137,19 +137,19 @@
       "elo": 1310
     },
     {
-      "faction": "Obsidian Dwarves",
-      "username": "Misty",
-      "elo": 1262
-    },
-    {
       "faction": "Vanguards",
       "username": "VALKEIN",
       "elo": 1242
     },
     {
+      "faction": "Obsidian Dwarves",
+      "username": "Misty",
+      "elo": 1235
+    },
+    {
       "faction": "High Elves",
       "username": "198279533",
-      "elo": 1182
+      "elo": 1180
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-03-29 10:27 UTC"
+  "fetched_at": "2026-03-30 10:57 UTC"
 }
