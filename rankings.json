@@ -9,12 +9,12 @@
     {
       "faction": "Crimson Order",
       "username": "PowerMove",
-      "elo": 1522
+      "elo": 1500
     },
     {
-      "faction": "Savanna Elves",
-      "username": "TastyTeddyBear",
-      "elo": 1429
+      "faction": "Spectral Conclave",
+      "username": "Kezbatron",
+      "elo": 1455
     },
     {
       "faction": "Wayfarers",
@@ -25,11 +25,6 @@
       "faction": "Drakesun Rebellion",
       "username": "ChipperColeen",
       "elo": 1417
-    },
-    {
-      "faction": "Spectral Conclave",
-      "username": "Kezbatron",
-      "elo": 1413
     },
     {
       "faction": "Guild Dwarves",
@@ -52,19 +47,29 @@
       "elo": 1392
     },
     {
+      "faction": "Savanna Elves",
+      "username": "DrWolf",
+      "elo": 1391
+    },
+    {
+      "faction": "Cave Goblins",
+      "username": "pineappleonpizza",
+      "elo": 1389
+    },
+    {
       "faction": "Tundra Orcs",
       "username": "Nesle",
       "elo": 1387
     },
     {
+      "faction": "Eternal Council",
+      "username": "KLANE",
+      "elo": 1384
+    },
+    {
       "faction": "Polar Dwarves",
       "username": "Elyk",
       "elo": 1378
-    },
-    {
-      "faction": "Eternal Council",
-      "username": "KLANE",
-      "elo": 1377
     },
     {
       "faction": "Shadow Elves",
@@ -80,11 +85,6 @@
       "faction": "Fungal Dwarves",
       "username": "Solitaire",
       "elo": 1361
-    },
-    {
-      "faction": "Cave Goblins",
-      "username": "DeadSans",
-      "elo": 1356
     },
     {
       "faction": "Chosen Grove",
@@ -112,6 +112,11 @@
       "elo": 1337
     },
     {
+      "faction": "Breakers",
+      "username": "DeadSans",
+      "elo": 1333
+    },
+    {
       "faction": "Isle Vekkid",
       "username": "Nesle",
       "elo": 1327
@@ -120,11 +125,6 @@
       "faction": "Skyspear Avians",
       "username": "GuildMaster",
       "elo": 1321
-    },
-    {
-      "faction": "Breakers",
-      "username": "DeadSans",
-      "elo": 1318
     },
     {
       "faction": "Mountain Vargath",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-03-31 10:49 UTC"
+  "fetched_at": "2026-04-01 10:50 UTC"
 }
