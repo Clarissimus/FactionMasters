@@ -8,8 +8,8 @@
     },
     {
       "faction": "Crimson Order",
-      "username": "PowerMove",
-      "elo": 1500
+      "username": "Monk3ylord",
+      "elo": 1466
     },
     {
       "faction": "Spectral Conclave",
@@ -24,7 +24,7 @@
     {
       "faction": "Drakesun Rebellion",
       "username": "ChipperColeen",
-      "elo": 1417
+      "elo": 1424
     },
     {
       "faction": "Guild Dwarves",
@@ -42,6 +42,11 @@
       "elo": 1404
     },
     {
+      "faction": "Cave Goblins",
+      "username": "pineappleonpizza",
+      "elo": 1399
+    },
+    {
       "faction": "The Filth",
       "username": "AstroWild",
       "elo": 1392
@@ -50,11 +55,6 @@
       "faction": "Savanna Elves",
       "username": "DrWolf",
       "elo": 1391
-    },
-    {
-      "faction": "Cave Goblins",
-      "username": "pineappleonpizza",
-      "elo": 1389
     },
     {
       "faction": "Tundra Orcs",
@@ -92,6 +92,11 @@
       "elo": 1350
     },
     {
+      "faction": "Breakers",
+      "username": "DeadSans",
+      "elo": 1349
+    },
+    {
       "faction": "Phoenix Elves",
       "username": "CH4MP",
       "elo": 1348
@@ -112,19 +117,14 @@
       "elo": 1337
     },
     {
-      "faction": "Breakers",
-      "username": "DeadSans",
+      "faction": "Skyspear Avians",
+      "username": "freestyle90",
       "elo": 1333
     },
     {
       "faction": "Isle Vekkid",
-      "username": "Nesle",
-      "elo": 1327
-    },
-    {
-      "faction": "Skyspear Avians",
-      "username": "GuildMaster",
-      "elo": 1321
+      "username": "MajesticOnions",
+      "elo": 1332
     },
     {
       "faction": "Mountain Vargath",
@@ -149,7 +149,7 @@
     {
       "faction": "High Elves",
       "username": "198279533",
-      "elo": 1178
+      "elo": 1208
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-01 10:50 UTC"
+  "fetched_at": "2026-04-02 10:47 UTC"
 }
