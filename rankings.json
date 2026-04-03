@@ -8,13 +8,13 @@
     },
     {
       "faction": "Crimson Order",
-      "username": "Monk3ylord",
-      "elo": 1466
+      "username": "PowerMove",
+      "elo": 1491
     },
     {
       "faction": "Spectral Conclave",
       "username": "Kezbatron",
-      "elo": 1455
+      "elo": 1443
     },
     {
       "faction": "Wayfarers",
@@ -42,14 +42,9 @@
       "elo": 1404
     },
     {
-      "faction": "Cave Goblins",
-      "username": "pineappleonpizza",
-      "elo": 1399
-    },
-    {
       "faction": "The Filth",
       "username": "AstroWild",
-      "elo": 1392
+      "elo": 1399
     },
     {
       "faction": "Savanna Elves",
@@ -62,14 +57,14 @@
       "elo": 1387
     },
     {
-      "faction": "Eternal Council",
-      "username": "KLANE",
-      "elo": 1384
-    },
-    {
       "faction": "Polar Dwarves",
       "username": "Elyk",
       "elo": 1378
+    },
+    {
+      "faction": "Cave Goblins",
+      "username": "pineappleonpizza",
+      "elo": 1374
     },
     {
       "faction": "Shadow Elves",
@@ -92,11 +87,6 @@
       "elo": 1350
     },
     {
-      "faction": "Breakers",
-      "username": "DeadSans",
-      "elo": 1349
-    },
-    {
       "faction": "Phoenix Elves",
       "username": "CH4MP",
       "elo": 1348
@@ -110,6 +100,11 @@
       "faction": "Storm Goblins",
       "username": "Milbo",
       "elo": 1346
+    },
+    {
+      "faction": "Eternal Council",
+      "username": "KLANE",
+      "elo": 1343
     },
     {
       "faction": "Deepwood Groaks",
@@ -127,6 +122,11 @@
       "elo": 1332
     },
     {
+      "faction": "Breakers",
+      "username": "DeadSans",
+      "elo": 1314
+    },
+    {
       "faction": "Mountain Vargath",
       "username": "excile2127",
       "elo": 1313
@@ -137,19 +137,19 @@
       "elo": 1310
     },
     {
+      "faction": "Obsidian Dwarves",
+      "username": "Nozy",
+      "elo": 1243
+    },
+    {
       "faction": "Vanguards",
       "username": "VALKEIN",
       "elo": 1242
     },
     {
-      "faction": "Obsidian Dwarves",
-      "username": "CH4MP",
-      "elo": 1227
-    },
-    {
       "faction": "High Elves",
       "username": "198279533",
-      "elo": 1208
+      "elo": 1211
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-02 10:47 UTC"
+  "fetched_at": "2026-04-03 10:38 UTC"
 }
