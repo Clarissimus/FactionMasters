@@ -7,14 +7,14 @@
       "elo": 1543
     },
     {
+      "faction": "Spectral Conclave",
+      "username": "Kezbatron",
+      "elo": 1493
+    },
+    {
       "faction": "Crimson Order",
       "username": "PowerMove",
       "elo": 1491
-    },
-    {
-      "faction": "Spectral Conclave",
-      "username": "Kezbatron",
-      "elo": 1443
     },
     {
       "faction": "Wayfarers",
@@ -82,6 +82,11 @@
       "elo": 1361
     },
     {
+      "faction": "Breakers",
+      "username": "SneezingMerilious",
+      "elo": 1357
+    },
+    {
       "faction": "Chosen Grove",
       "username": "Solitaire",
       "elo": 1350
@@ -118,13 +123,8 @@
     },
     {
       "faction": "Isle Vekkid",
-      "username": "MajesticOnions",
-      "elo": 1332
-    },
-    {
-      "faction": "Breakers",
-      "username": "DeadSans",
-      "elo": 1314
+      "username": "Nesle",
+      "elo": 1333
     },
     {
       "faction": "Mountain Vargath",
@@ -139,7 +139,7 @@
     {
       "faction": "Obsidian Dwarves",
       "username": "Nozy",
-      "elo": 1243
+      "elo": 1252
     },
     {
       "faction": "Vanguards",
@@ -149,7 +149,7 @@
     {
       "faction": "High Elves",
       "username": "198279533",
-      "elo": 1211
+      "elo": 1179
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-03 10:38 UTC"
+  "fetched_at": "2026-04-04 10:28 UTC"
 }
