@@ -9,7 +9,7 @@
     {
       "faction": "Spectral Conclave",
       "username": "Kezbatron",
-      "elo": 1493
+      "elo": 1501
     },
     {
       "faction": "Crimson Order",
@@ -72,19 +72,14 @@
       "elo": 1374
     },
     {
-      "faction": "Shimmersea Fae",
-      "username": "excile2127",
-      "elo": 1372
+      "faction": "Breakers",
+      "username": "SneezingMerilious",
+      "elo": 1365
     },
     {
       "faction": "Fungal Dwarves",
       "username": "Solitaire",
       "elo": 1361
-    },
-    {
-      "faction": "Breakers",
-      "username": "SneezingMerilious",
-      "elo": 1357
     },
     {
       "faction": "Chosen Grove",
@@ -112,6 +107,11 @@
       "elo": 1343
     },
     {
+      "faction": "Shimmersea Fae",
+      "username": "excile2127",
+      "elo": 1339
+    },
+    {
       "faction": "Deepwood Groaks",
       "username": "Solitaire",
       "elo": 1337
@@ -127,19 +127,19 @@
       "elo": 1333
     },
     {
-      "faction": "Mountain Vargath",
-      "username": "excile2127",
-      "elo": 1313
-    },
-    {
       "faction": "Sand Goblins",
       "username": "MajesticOnions",
       "elo": 1310
     },
     {
+      "faction": "Mountain Vargath",
+      "username": "Fikitti",
+      "elo": 1276
+    },
+    {
       "faction": "Obsidian Dwarves",
-      "username": "Nozy",
-      "elo": 1252
+      "username": "CH4MP",
+      "elo": 1274
     },
     {
       "faction": "Vanguards",
@@ -149,7 +149,7 @@
     {
       "faction": "High Elves",
       "username": "198279533",
-      "elo": 1179
+      "elo": 1181
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-04 10:28 UTC"
+  "fetched_at": "2026-04-05 10:28 UTC"
 }
