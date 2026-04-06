@@ -19,7 +19,7 @@
     {
       "faction": "Wayfarers",
       "username": "DeadSans",
-      "elo": 1426
+      "elo": 1451
     },
     {
       "faction": "Drakesun Rebellion",
@@ -47,14 +47,14 @@
       "elo": 1399
     },
     {
+      "faction": "Tundra Orcs",
+      "username": "Nesle",
+      "elo": 1394
+    },
+    {
       "faction": "Savanna Elves",
       "username": "DrWolf",
       "elo": 1391
-    },
-    {
-      "faction": "Tundra Orcs",
-      "username": "Nesle",
-      "elo": 1387
     },
     {
       "faction": "Polar Dwarves",
@@ -117,13 +117,13 @@
       "elo": 1337
     },
     {
-      "faction": "Skyspear Avians",
-      "username": "freestyle90",
-      "elo": 1333
-    },
-    {
       "faction": "Isle Vekkid",
       "username": "Nesle",
+      "elo": 1337
+    },
+    {
+      "faction": "Skyspear Avians",
+      "username": "freestyle90",
       "elo": 1333
     },
     {
@@ -133,13 +133,13 @@
     },
     {
       "faction": "Mountain Vargath",
-      "username": "Fikitti",
-      "elo": 1276
+      "username": "excile2127",
+      "elo": 1302
     },
     {
       "faction": "Obsidian Dwarves",
       "username": "CH4MP",
-      "elo": 1274
+      "elo": 1295
     },
     {
       "faction": "Vanguards",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-05 10:28 UTC"
+  "fetched_at": "2026-04-06 10:51 UTC"
 }
