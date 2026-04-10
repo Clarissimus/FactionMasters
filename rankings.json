@@ -9,22 +9,27 @@
     {
       "faction": "Spectral Conclave",
       "username": "Kezbatron",
-      "elo": 1515
+      "elo": 1532
     },
     {
       "faction": "Crimson Order",
       "username": "PowerMove",
-      "elo": 1503
+      "elo": 1526
     },
     {
       "faction": "Wayfarers",
       "username": "DeadSans",
-      "elo": 1462
+      "elo": 1473
+    },
+    {
+      "faction": "Savanna Elves",
+      "username": "TastyTeddyBear",
+      "elo": 1452
     },
     {
       "faction": "Drakesun Rebellion",
-      "username": "ChipperColeen",
-      "elo": 1424
+      "username": "DemiAce",
+      "elo": 1432
     },
     {
       "faction": "Guild Dwarves",
@@ -40,11 +45,6 @@
       "faction": "Cloaks",
       "username": "DrWolf",
       "elo": 1404
-    },
-    {
-      "faction": "Savanna Elves",
-      "username": "TastyTeddyBear",
-      "elo": 1401
     },
     {
       "faction": "Tundra Orcs",
@@ -92,11 +92,6 @@
       "elo": 1358
     },
     {
-      "faction": "Mountain Vargath",
-      "username": "excile2127",
-      "elo": 1351
-    },
-    {
       "faction": "Chosen Grove",
       "username": "Solitaire",
       "elo": 1350
@@ -112,11 +107,6 @@
       "elo": 1348
     },
     {
-      "faction": "Skyspear Avians",
-      "username": "freestyle90",
-      "elo": 1339
-    },
-    {
       "faction": "Shimmersea Fae",
       "username": "excile2127",
       "elo": 1339
@@ -125,6 +115,16 @@
       "faction": "Isle Vekkid",
       "username": "Nesle",
       "elo": 1337
+    },
+    {
+      "faction": "Skyspear Avians",
+      "username": "GuildMaster",
+      "elo": 1321
+    },
+    {
+      "faction": "Mountain Vargath",
+      "username": "excile2127",
+      "elo": 1318
     },
     {
       "faction": "Sand Goblins",
@@ -144,12 +144,12 @@
     {
       "faction": "Vanguards",
       "username": "VALKEIN",
-      "elo": 1261
+      "elo": 1281
     },
     {
       "faction": "High Elves",
-      "username": "RoopleDoops",
-      "elo": 1182
+      "username": "198279533",
+      "elo": 1185
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-09 10:54 UTC"
+  "fetched_at": "2026-04-10 10:49 UTC"
 }
