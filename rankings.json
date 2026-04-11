@@ -19,7 +19,7 @@
     {
       "faction": "Wayfarers",
       "username": "DeadSans",
-      "elo": 1473
+      "elo": 1488
     },
     {
       "faction": "Savanna Elves",
@@ -28,8 +28,8 @@
     },
     {
       "faction": "Drakesun Rebellion",
-      "username": "DemiAce",
-      "elo": 1432
+      "username": "ChipperColeen",
+      "elo": 1424
     },
     {
       "faction": "Guild Dwarves",
@@ -72,14 +72,19 @@
       "elo": 1374
     },
     {
-      "faction": "Breakers",
-      "username": "DeadSans",
-      "elo": 1365
+      "faction": "Mountain Vargath",
+      "username": "excile2127",
+      "elo": 1373
     },
     {
-      "faction": "Eternal Council",
-      "username": "KLANE",
-      "elo": 1362
+      "faction": "Isle Vekkid",
+      "username": "Nesle",
+      "elo": 1370
+    },
+    {
+      "faction": "Breakers",
+      "username": "SneezingMerilious",
+      "elo": 1365
     },
     {
       "faction": "Fungal Dwarves",
@@ -97,11 +102,6 @@
       "elo": 1350
     },
     {
-      "faction": "Storm Goblins",
-      "username": "DeadSans",
-      "elo": 1349
-    },
-    {
       "faction": "Swamp Orcs",
       "username": "CH4MP",
       "elo": 1348
@@ -112,9 +112,9 @@
       "elo": 1339
     },
     {
-      "faction": "Isle Vekkid",
-      "username": "Nesle",
-      "elo": 1337
+      "faction": "Eternal Council",
+      "username": "KLANE",
+      "elo": 1329
     },
     {
       "faction": "Skyspear Avians",
@@ -122,14 +122,14 @@
       "elo": 1321
     },
     {
-      "faction": "Mountain Vargath",
-      "username": "excile2127",
-      "elo": 1318
-    },
-    {
       "faction": "Sand Goblins",
       "username": "MajesticOnions",
       "elo": 1310
+    },
+    {
+      "faction": "Storm Goblins",
+      "username": "DeadSans",
+      "elo": 1307
     },
     {
       "faction": "Deepwood Groaks",
@@ -149,7 +149,7 @@
     {
       "faction": "High Elves",
       "username": "198279533",
-      "elo": 1185
+      "elo": 1186
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-10 10:49 UTC"
+  "fetched_at": "2026-04-11 10:29 UTC"
 }
