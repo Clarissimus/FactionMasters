@@ -57,6 +57,11 @@
       "elo": 1399
     },
     {
+      "faction": "Shadow Elves",
+      "username": "CH4MP",
+      "elo": 1392
+    },
+    {
       "faction": "Polar Dwarves",
       "username": "Elyk",
       "elo": 1378
@@ -67,23 +72,18 @@
       "elo": 1374
     },
     {
-      "faction": "Shadow Elves",
-      "username": "DrWolf",
-      "elo": 1374
-    },
-    {
       "faction": "Mountain Vargath",
       "username": "excile2127",
       "elo": 1373
     },
     {
-      "faction": "Isle Vekkid",
-      "username": "Nesle",
-      "elo": 1370
-    },
-    {
       "faction": "Breakers",
       "username": "SneezingMerilious",
+      "elo": 1365
+    },
+    {
+      "faction": "Isle Vekkid",
+      "username": "Nesle",
       "elo": 1365
     },
     {
@@ -95,6 +95,11 @@
       "faction": "Phoenix Elves",
       "username": "beanseasly",
       "elo": 1358
+    },
+    {
+      "faction": "Storm Goblins",
+      "username": "Milbo",
+      "elo": 1353
     },
     {
       "faction": "Chosen Grove",
@@ -122,14 +127,14 @@
       "elo": 1321
     },
     {
+      "faction": "Vanguards",
+      "username": "LCANELA",
+      "elo": 1313
+    },
+    {
       "faction": "Sand Goblins",
       "username": "MajesticOnions",
       "elo": 1310
-    },
-    {
-      "faction": "Storm Goblins",
-      "username": "DeadSans",
-      "elo": 1307
     },
     {
       "faction": "Deepwood Groaks",
@@ -142,14 +147,9 @@
       "elo": 1295
     },
     {
-      "faction": "Vanguards",
-      "username": "VALKEIN",
-      "elo": 1281
-    },
-    {
       "faction": "High Elves",
-      "username": "198279533",
-      "elo": 1186
+      "username": "MajesticOnions",
+      "elo": 1220
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-11 10:29 UTC"
+  "fetched_at": "2026-04-12 10:34 UTC"
 }
