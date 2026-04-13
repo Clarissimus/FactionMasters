@@ -9,12 +9,12 @@
     {
       "faction": "Spectral Conclave",
       "username": "Kezbatron",
-      "elo": 1532
+      "elo": 1541
     },
     {
       "faction": "Crimson Order",
       "username": "PowerMove",
-      "elo": 1526
+      "elo": 1536
     },
     {
       "faction": "Wayfarers",
@@ -33,8 +33,8 @@
     },
     {
       "faction": "Guild Dwarves",
-      "username": "MajesticOnions",
-      "elo": 1409
+      "username": "Askyriel",
+      "elo": 1410
     },
     {
       "faction": "Fallen Kingdom",
@@ -77,13 +77,13 @@
       "elo": 1373
     },
     {
-      "faction": "Breakers",
-      "username": "SneezingMerilious",
-      "elo": 1365
-    },
-    {
       "faction": "Isle Vekkid",
       "username": "Nesle",
+      "elo": 1372
+    },
+    {
+      "faction": "Breakers",
+      "username": "SneezingMerilious",
       "elo": 1365
     },
     {
@@ -117,19 +117,24 @@
       "elo": 1339
     },
     {
+      "faction": "Skyspear Avians",
+      "username": "freestyle90",
+      "elo": 1336
+    },
+    {
       "faction": "Eternal Council",
       "username": "KLANE",
       "elo": 1329
     },
     {
-      "faction": "Skyspear Avians",
-      "username": "GuildMaster",
+      "faction": "Vanguards",
+      "username": "LCANELA",
       "elo": 1321
     },
     {
-      "faction": "Vanguards",
-      "username": "LCANELA",
-      "elo": 1313
+      "faction": "Obsidian Dwarves",
+      "username": "CH4MP",
+      "elo": 1315
     },
     {
       "faction": "Sand Goblins",
@@ -142,14 +147,9 @@
       "elo": 1305
     },
     {
-      "faction": "Obsidian Dwarves",
-      "username": "CH4MP",
-      "elo": 1295
-    },
-    {
       "faction": "High Elves",
       "username": "MajesticOnions",
-      "elo": 1220
+      "elo": 1234
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-12 10:34 UTC"
+  "fetched_at": "2026-04-13 11:13 UTC"
 }
