@@ -2,14 +2,14 @@
   "season": "Season 8",
   "top_players": [
     {
+      "faction": "Spectral Conclave",
+      "username": "Kezbatron",
+      "elo": 1545
+    },
+    {
       "faction": "The Forged",
       "username": "excile2127",
       "elo": 1543
-    },
-    {
-      "faction": "Spectral Conclave",
-      "username": "Kezbatron",
-      "elo": 1541
     },
     {
       "faction": "Crimson Order",
@@ -19,7 +19,7 @@
     {
       "faction": "Wayfarers",
       "username": "DeadSans",
-      "elo": 1488
+      "elo": 1507
     },
     {
       "faction": "Savanna Elves",
@@ -118,13 +118,8 @@
     },
     {
       "faction": "Skyspear Avians",
-      "username": "freestyle90",
-      "elo": 1336
-    },
-    {
-      "faction": "Eternal Council",
-      "username": "KLANE",
-      "elo": 1329
+      "username": "GuildMaster",
+      "elo": 1321
     },
     {
       "faction": "Vanguards",
@@ -142,14 +137,19 @@
       "elo": 1310
     },
     {
+      "faction": "Eternal Council",
+      "username": "KLANE",
+      "elo": 1292
+    },
+    {
       "faction": "Deepwood Groaks",
       "username": "Solitaire",
-      "elo": 1305
+      "elo": 1287
     },
     {
       "faction": "High Elves",
       "username": "MajesticOnions",
-      "elo": 1234
+      "elo": 1196
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-13 11:13 UTC"
+  "fetched_at": "2026-04-14 10:58 UTC"
 }
