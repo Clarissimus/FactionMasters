@@ -4,7 +4,7 @@
     {
       "faction": "Spectral Conclave",
       "username": "Kezbatron",
-      "elo": 1545
+      "elo": 1553
     },
     {
       "faction": "The Forged",
@@ -14,7 +14,7 @@
     {
       "faction": "Crimson Order",
       "username": "PowerMove",
-      "elo": 1536
+      "elo": 1538
     },
     {
       "faction": "Wayfarers",
@@ -33,8 +33,13 @@
     },
     {
       "faction": "Guild Dwarves",
-      "username": "Askyriel",
-      "elo": 1410
+      "username": "MajesticOnions",
+      "elo": 1409
+    },
+    {
+      "faction": "The Filth",
+      "username": "excile2127",
+      "elo": 1408
     },
     {
       "faction": "Fallen Kingdom",
@@ -50,11 +55,6 @@
       "faction": "Tundra Orcs",
       "username": "Nesle",
       "elo": 1401
-    },
-    {
-      "faction": "The Filth",
-      "username": "AstroWild",
-      "elo": 1399
     },
     {
       "faction": "Shadow Elves",
@@ -117,6 +117,11 @@
       "elo": 1339
     },
     {
+      "faction": "Sand Goblins",
+      "username": "MajesticOnions",
+      "elo": 1327
+    },
+    {
       "faction": "Skyspear Avians",
       "username": "GuildMaster",
       "elo": 1321
@@ -130,11 +135,6 @@
       "faction": "Obsidian Dwarves",
       "username": "CH4MP",
       "elo": 1315
-    },
-    {
-      "faction": "Sand Goblins",
-      "username": "MajesticOnions",
-      "elo": 1310
     },
     {
       "faction": "Eternal Council",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-14 10:58 UTC"
+  "fetched_at": "2026-04-15 10:54 UTC"
 }
