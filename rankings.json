@@ -7,19 +7,19 @@
       "elo": 1553
     },
     {
+      "faction": "Crimson Order",
+      "username": "PowerMove",
+      "elo": 1548
+    },
+    {
       "faction": "The Forged",
       "username": "excile2127",
       "elo": 1543
     },
     {
-      "faction": "Crimson Order",
-      "username": "PowerMove",
-      "elo": 1538
-    },
-    {
       "faction": "Wayfarers",
       "username": "DeadSans",
-      "elo": 1507
+      "elo": 1522
     },
     {
       "faction": "Savanna Elves",
@@ -87,14 +87,14 @@
       "elo": 1365
     },
     {
+      "faction": "Phoenix Elves",
+      "username": "CH4MP",
+      "elo": 1365
+    },
+    {
       "faction": "Fungal Dwarves",
       "username": "Solitaire",
       "elo": 1361
-    },
-    {
-      "faction": "Phoenix Elves",
-      "username": "beanseasly",
-      "elo": 1358
     },
     {
       "faction": "Storm Goblins",
@@ -149,7 +149,7 @@
     {
       "faction": "High Elves",
       "username": "MajesticOnions",
-      "elo": 1196
+      "elo": 1253
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-15 10:54 UTC"
+  "fetched_at": "2026-04-16 10:58 UTC"
 }
