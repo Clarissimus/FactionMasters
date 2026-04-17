@@ -2,14 +2,14 @@
   "season": "Season 8",
   "top_players": [
     {
+      "faction": "Crimson Order",
+      "username": "PowerMove",
+      "elo": 1573
+    },
+    {
       "faction": "Spectral Conclave",
       "username": "Kezbatron",
       "elo": 1553
-    },
-    {
-      "faction": "Crimson Order",
-      "username": "PowerMove",
-      "elo": 1548
     },
     {
       "faction": "The Forged",
@@ -137,19 +137,19 @@
       "elo": 1315
     },
     {
-      "faction": "Eternal Council",
-      "username": "KLANE",
-      "elo": 1292
-    },
-    {
       "faction": "Deepwood Groaks",
       "username": "Solitaire",
-      "elo": 1287
+      "elo": 1309
+    },
+    {
+      "faction": "Eternal Council",
+      "username": "KLANE",
+      "elo": 1257
     },
     {
       "faction": "High Elves",
       "username": "MajesticOnions",
-      "elo": 1253
+      "elo": 1233
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-16 10:58 UTC"
+  "fetched_at": "2026-04-17 10:50 UTC"
 }
