@@ -9,7 +9,7 @@
     {
       "faction": "Spectral Conclave",
       "username": "Kezbatron",
-      "elo": 1553
+      "elo": 1562
     },
     {
       "faction": "The Forged",
@@ -62,9 +62,19 @@
       "elo": 1392
     },
     {
+      "faction": "Isle Vekkid",
+      "username": "Nesle",
+      "elo": 1389
+    },
+    {
       "faction": "Polar Dwarves",
       "username": "Elyk",
       "elo": 1378
+    },
+    {
+      "faction": "Phoenix Elves",
+      "username": "CH4MP",
+      "elo": 1376
     },
     {
       "faction": "Cave Goblins",
@@ -77,18 +87,8 @@
       "elo": 1373
     },
     {
-      "faction": "Isle Vekkid",
-      "username": "Nesle",
-      "elo": 1372
-    },
-    {
       "faction": "Breakers",
       "username": "SneezingMerilious",
-      "elo": 1365
-    },
-    {
-      "faction": "Phoenix Elves",
-      "username": "CH4MP",
       "elo": 1365
     },
     {
@@ -117,11 +117,6 @@
       "elo": 1339
     },
     {
-      "faction": "Sand Goblins",
-      "username": "MajesticOnions",
-      "elo": 1327
-    },
-    {
       "faction": "Skyspear Avians",
       "username": "GuildMaster",
       "elo": 1321
@@ -137,6 +132,11 @@
       "elo": 1315
     },
     {
+      "faction": "Sand Goblins",
+      "username": "MajesticOnions",
+      "elo": 1309
+    },
+    {
       "faction": "Deepwood Groaks",
       "username": "Solitaire",
       "elo": 1309
@@ -149,7 +149,7 @@
     {
       "faction": "High Elves",
       "username": "MajesticOnions",
-      "elo": 1233
+      "elo": 1245
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-17 10:50 UTC"
+  "fetched_at": "2026-04-18 10:35 UTC"
 }
