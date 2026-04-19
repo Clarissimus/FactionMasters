@@ -9,7 +9,7 @@
     {
       "faction": "Spectral Conclave",
       "username": "Kezbatron",
-      "elo": 1562
+      "elo": 1573
     },
     {
       "faction": "The Forged",
@@ -67,14 +67,14 @@
       "elo": 1389
     },
     {
+      "faction": "Phoenix Elves",
+      "username": "CH4MP",
+      "elo": 1384
+    },
+    {
       "faction": "Polar Dwarves",
       "username": "Elyk",
       "elo": 1378
-    },
-    {
-      "faction": "Phoenix Elves",
-      "username": "CH4MP",
-      "elo": 1376
     },
     {
       "faction": "Cave Goblins",
@@ -148,8 +148,8 @@
     },
     {
       "faction": "High Elves",
-      "username": "MajesticOnions",
-      "elo": 1245
+      "username": "RoopleDoops",
+      "elo": 1217
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-18 10:35 UTC"
+  "fetched_at": "2026-04-19 10:34 UTC"
 }
