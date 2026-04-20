@@ -7,14 +7,14 @@
       "elo": 1573
     },
     {
-      "faction": "Spectral Conclave",
-      "username": "Kezbatron",
-      "elo": 1573
-    },
-    {
       "faction": "The Forged",
       "username": "excile2127",
       "elo": 1543
+    },
+    {
+      "faction": "Spectral Conclave",
+      "username": "Kezbatron",
+      "elo": 1530
     },
     {
       "faction": "Wayfarers",
@@ -57,14 +57,14 @@
       "elo": 1401
     },
     {
+      "faction": "Isle Vekkid",
+      "username": "Nesle",
+      "elo": 1396
+    },
+    {
       "faction": "Shadow Elves",
       "username": "CH4MP",
       "elo": 1392
-    },
-    {
-      "faction": "Isle Vekkid",
-      "username": "Nesle",
-      "elo": 1389
     },
     {
       "faction": "Phoenix Elves",
@@ -132,24 +132,24 @@
       "elo": 1315
     },
     {
-      "faction": "Sand Goblins",
-      "username": "MajesticOnions",
-      "elo": 1309
-    },
-    {
       "faction": "Deepwood Groaks",
       "username": "Solitaire",
       "elo": 1309
     },
     {
-      "faction": "Eternal Council",
-      "username": "KLANE",
-      "elo": 1257
+      "faction": "Sand Goblins",
+      "username": "MajesticOnions",
+      "elo": 1302
     },
     {
       "faction": "High Elves",
       "username": "RoopleDoops",
       "elo": 1217
+    },
+    {
+      "faction": "Eternal Council",
+      "username": "198279533",
+      "elo": 1207
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-19 10:34 UTC"
+  "fetched_at": "2026-04-20 11:16 UTC"
 }
