@@ -12,14 +12,14 @@
       "elo": 1543
     },
     {
-      "faction": "Spectral Conclave",
-      "username": "Kezbatron",
-      "elo": 1530
-    },
-    {
       "faction": "Wayfarers",
       "username": "DeadSans",
-      "elo": 1522
+      "elo": 1540
+    },
+    {
+      "faction": "Spectral Conclave",
+      "username": "Kezbatron",
+      "elo": 1460
     },
     {
       "faction": "Savanna Elves",
@@ -27,14 +27,14 @@
       "elo": 1452
     },
     {
+      "faction": "Guild Dwarves",
+      "username": "Askyriel",
+      "elo": 1436
+    },
+    {
       "faction": "Drakesun Rebellion",
       "username": "ChipperColeen",
       "elo": 1424
-    },
-    {
-      "faction": "Guild Dwarves",
-      "username": "MajesticOnions",
-      "elo": 1409
     },
     {
       "faction": "The Filth",
@@ -139,7 +139,7 @@
     {
       "faction": "Sand Goblins",
       "username": "MajesticOnions",
-      "elo": 1302
+      "elo": 1276
     },
     {
       "faction": "High Elves",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-20 11:16 UTC"
+  "fetched_at": "2026-04-21 11:01 UTC"
 }
