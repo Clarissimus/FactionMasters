@@ -7,14 +7,14 @@
       "elo": 1573
     },
     {
+      "faction": "Wayfarers",
+      "username": "DeadSans",
+      "elo": 1550
+    },
+    {
       "faction": "The Forged",
       "username": "excile2127",
       "elo": 1543
-    },
-    {
-      "faction": "Wayfarers",
-      "username": "DeadSans",
-      "elo": 1540
     },
     {
       "faction": "Spectral Conclave",
@@ -97,6 +97,11 @@
       "elo": 1361
     },
     {
+      "faction": "Shimmersea Fae",
+      "username": "Nozy",
+      "elo": 1353
+    },
+    {
       "faction": "Storm Goblins",
       "username": "Milbo",
       "elo": 1353
@@ -110,11 +115,6 @@
       "faction": "Swamp Orcs",
       "username": "CH4MP",
       "elo": 1348
-    },
-    {
-      "faction": "Shimmersea Fae",
-      "username": "excile2127",
-      "elo": 1339
     },
     {
       "faction": "Skyspear Avians",
@@ -142,14 +142,14 @@
       "elo": 1276
     },
     {
-      "faction": "High Elves",
-      "username": "RoopleDoops",
-      "elo": 1217
+      "faction": "Eternal Council",
+      "username": "SneezingMerilious",
+      "elo": 1221
     },
     {
-      "faction": "Eternal Council",
-      "username": "198279533",
-      "elo": 1207
+      "faction": "High Elves",
+      "username": "RoopleDoops",
+      "elo": 1218
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-21 11:01 UTC"
+  "fetched_at": "2026-04-22 10:59 UTC"
 }
