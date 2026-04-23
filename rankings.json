@@ -9,7 +9,7 @@
     {
       "faction": "Wayfarers",
       "username": "DeadSans",
-      "elo": 1550
+      "elo": 1554
     },
     {
       "faction": "The Forged",
@@ -57,11 +57,6 @@
       "elo": 1401
     },
     {
-      "faction": "Isle Vekkid",
-      "username": "Nesle",
-      "elo": 1396
-    },
-    {
       "faction": "Shadow Elves",
       "username": "CH4MP",
       "elo": 1392
@@ -92,14 +87,19 @@
       "elo": 1365
     },
     {
+      "faction": "Shimmersea Fae",
+      "username": "Nozy",
+      "elo": 1364
+    },
+    {
       "faction": "Fungal Dwarves",
       "username": "Solitaire",
       "elo": 1361
     },
     {
-      "faction": "Shimmersea Fae",
-      "username": "Nozy",
-      "elo": 1353
+      "faction": "Isle Vekkid",
+      "username": "Nesle",
+      "elo": 1357
     },
     {
       "faction": "Storm Goblins",
@@ -139,17 +139,17 @@
     {
       "faction": "Sand Goblins",
       "username": "MajesticOnions",
-      "elo": 1276
-    },
-    {
-      "faction": "Eternal Council",
-      "username": "SneezingMerilious",
-      "elo": 1221
+      "elo": 1297
     },
     {
       "faction": "High Elves",
       "username": "RoopleDoops",
       "elo": 1218
+    },
+    {
+      "faction": "Eternal Council",
+      "username": "198279533",
+      "elo": 1207
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-22 10:59 UTC"
+  "fetched_at": "2026-04-23 11:03 UTC"
 }
