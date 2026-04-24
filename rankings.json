@@ -34,7 +34,7 @@
     {
       "faction": "Drakesun Rebellion",
       "username": "ChipperColeen",
-      "elo": 1424
+      "elo": 1430
     },
     {
       "faction": "The Filth",
@@ -49,6 +49,11 @@
     {
       "faction": "Cloaks",
       "username": "DrWolf",
+      "elo": 1404
+    },
+    {
+      "faction": "Shimmersea Fae",
+      "username": "excile2127",
       "elo": 1404
     },
     {
@@ -87,19 +92,9 @@
       "elo": 1365
     },
     {
-      "faction": "Shimmersea Fae",
-      "username": "Nozy",
-      "elo": 1364
-    },
-    {
       "faction": "Fungal Dwarves",
       "username": "Solitaire",
-      "elo": 1361
-    },
-    {
-      "faction": "Isle Vekkid",
-      "username": "Nesle",
-      "elo": 1357
+      "elo": 1365
     },
     {
       "faction": "Storm Goblins",
@@ -115,6 +110,11 @@
       "faction": "Swamp Orcs",
       "username": "CH4MP",
       "elo": 1348
+    },
+    {
+      "faction": "Sand Goblins",
+      "username": "MajesticOnions",
+      "elo": 1329
     },
     {
       "faction": "Skyspear Avians",
@@ -137,9 +137,9 @@
       "elo": 1309
     },
     {
-      "faction": "Sand Goblins",
-      "username": "MajesticOnions",
-      "elo": 1297
+      "faction": "Isle Vekkid",
+      "username": "Nesle",
+      "elo": 1305
     },
     {
       "faction": "High Elves",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-23 11:03 UTC"
+  "fetched_at": "2026-04-24 11:02 UTC"
 }
