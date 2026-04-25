@@ -9,7 +9,7 @@
     {
       "faction": "Wayfarers",
       "username": "DeadSans",
-      "elo": 1554
+      "elo": 1559
     },
     {
       "faction": "The Forged",
@@ -52,11 +52,6 @@
       "elo": 1404
     },
     {
-      "faction": "Shimmersea Fae",
-      "username": "excile2127",
-      "elo": 1404
-    },
-    {
       "faction": "Tundra Orcs",
       "username": "Nesle",
       "elo": 1401
@@ -70,6 +65,11 @@
       "faction": "Phoenix Elves",
       "username": "CH4MP",
       "elo": 1384
+    },
+    {
+      "faction": "Shimmersea Fae",
+      "username": "excile2127",
+      "elo": 1380
     },
     {
       "faction": "Polar Dwarves",
@@ -114,16 +114,16 @@
     {
       "faction": "Sand Goblins",
       "username": "MajesticOnions",
-      "elo": 1329
+      "elo": 1343
+    },
+    {
+      "faction": "Vanguards",
+      "username": "glokta",
+      "elo": 1327
     },
     {
       "faction": "Skyspear Avians",
       "username": "GuildMaster",
-      "elo": 1321
-    },
-    {
-      "faction": "Vanguards",
-      "username": "LCANELA",
       "elo": 1321
     },
     {
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-24 11:02 UTC"
+  "fetched_at": "2026-04-25 10:38 UTC"
 }
