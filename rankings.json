@@ -68,7 +68,12 @@
     },
     {
       "faction": "Phoenix Elves",
-      "username": "CH4MP",
+      "username": "beanseasly",
+      "elo": 1387
+    },
+    {
+      "faction": "Vanguards",
+      "username": "glokta",
       "elo": 1384
     },
     {
@@ -110,11 +115,6 @@
       "faction": "Chosen Grove",
       "username": "Solitaire",
       "elo": 1350
-    },
-    {
-      "faction": "Vanguards",
-      "username": "glokta",
-      "elo": 1348
     },
     {
       "faction": "Swamp Orcs",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-26 10:40 UTC"
+  "fetched_at": "2026-04-27 11:41 UTC"
 }
