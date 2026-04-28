@@ -18,8 +18,8 @@
     },
     {
       "faction": "Spectral Conclave",
-      "username": "Kezbatron",
-      "elo": 1460
+      "username": "DeadSans",
+      "elo": 1467
     },
     {
       "faction": "Savanna Elves",
@@ -27,14 +27,14 @@
       "elo": 1452
     },
     {
-      "faction": "Guild Dwarves",
-      "username": "Askyriel",
-      "elo": 1436
-    },
-    {
       "faction": "Drakesun Rebellion",
       "username": "ChipperColeen",
       "elo": 1430
+    },
+    {
+      "faction": "Guild Dwarves",
+      "username": "MajesticOnions",
+      "elo": 1425
     },
     {
       "faction": "The Filth",
@@ -44,6 +44,16 @@
     {
       "faction": "Fallen Kingdom",
       "username": "tyt123",
+      "elo": 1405
+    },
+    {
+      "faction": "Vanguards",
+      "username": "glokta",
+      "elo": 1405
+    },
+    {
+      "faction": "Shadow Elves",
+      "username": "DrWolf",
       "elo": 1405
     },
     {
@@ -57,11 +67,6 @@
       "elo": 1401
     },
     {
-      "faction": "Shadow Elves",
-      "username": "CH4MP",
-      "elo": 1392
-    },
-    {
       "faction": "Shimmersea Fae",
       "username": "excile2127",
       "elo": 1388
@@ -70,11 +75,6 @@
       "faction": "Phoenix Elves",
       "username": "beanseasly",
       "elo": 1387
-    },
-    {
-      "faction": "Vanguards",
-      "username": "glokta",
-      "elo": 1384
     },
     {
       "faction": "Polar Dwarves",
@@ -92,13 +92,13 @@
       "elo": 1373
     },
     {
-      "faction": "Breakers",
-      "username": "SneezingMerilious",
-      "elo": 1365
+      "faction": "Fungal Dwarves",
+      "username": "Orange Lazarus",
+      "elo": 1366
     },
     {
-      "faction": "Fungal Dwarves",
-      "username": "Solitaire",
+      "faction": "Breakers",
+      "username": "SneezingMerilious",
       "elo": 1365
     },
     {
@@ -122,6 +122,11 @@
       "elo": 1348
     },
     {
+      "faction": "Deepwood Groaks",
+      "username": "DrWolf",
+      "elo": 1339
+    },
+    {
       "faction": "Skyspear Avians",
       "username": "GuildMaster",
       "elo": 1321
@@ -130,11 +135,6 @@
       "faction": "Obsidian Dwarves",
       "username": "CH4MP",
       "elo": 1315
-    },
-    {
-      "faction": "Deepwood Groaks",
-      "username": "Solitaire",
-      "elo": 1309
     },
     {
       "faction": "Isle Vekkid",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-27 11:41 UTC"
+  "fetched_at": "2026-04-28 11:42 UTC"
 }
