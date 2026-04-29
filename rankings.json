@@ -47,11 +47,6 @@
       "elo": 1405
     },
     {
-      "faction": "Vanguards",
-      "username": "glokta",
-      "elo": 1405
-    },
-    {
       "faction": "Shadow Elves",
       "username": "DrWolf",
       "elo": 1405
@@ -62,6 +57,11 @@
       "elo": 1404
     },
     {
+      "faction": "Phoenix Elves",
+      "username": "CH4MP",
+      "elo": 1402
+    },
+    {
       "faction": "Tundra Orcs",
       "username": "Nesle",
       "elo": 1401
@@ -70,11 +70,6 @@
       "faction": "Shimmersea Fae",
       "username": "excile2127",
       "elo": 1388
-    },
-    {
-      "faction": "Phoenix Elves",
-      "username": "beanseasly",
-      "elo": 1387
     },
     {
       "faction": "Polar Dwarves",
@@ -100,6 +95,11 @@
       "faction": "Breakers",
       "username": "SneezingMerilious",
       "elo": 1365
+    },
+    {
+      "faction": "Vanguards",
+      "username": "LCANELA",
+      "elo": 1358
     },
     {
       "faction": "Sand Goblins",
@@ -143,13 +143,13 @@
     },
     {
       "faction": "High Elves",
-      "username": "RoopleDoops",
-      "elo": 1218
+      "username": "Orange Lazarus",
+      "elo": 1225
     },
     {
       "faction": "Eternal Council",
-      "username": "198279533",
-      "elo": 1207
+      "username": "SneezingMerilious",
+      "elo": 1218
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-28 11:42 UTC"
+  "fetched_at": "2026-04-29 11:25 UTC"
 }
