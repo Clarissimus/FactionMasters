@@ -33,8 +33,8 @@
     },
     {
       "faction": "Guild Dwarves",
-      "username": "MajesticOnions",
-      "elo": 1425
+      "username": "GuildMaster",
+      "elo": 1430
     },
     {
       "faction": "The Filth",
@@ -68,8 +68,8 @@
     },
     {
       "faction": "Shimmersea Fae",
-      "username": "excile2127",
-      "elo": 1388
+      "username": "Nozy",
+      "elo": 1389
     },
     {
       "faction": "Polar Dwarves",
@@ -102,6 +102,11 @@
       "elo": 1358
     },
     {
+      "faction": "Chosen Grove",
+      "username": "Nozy",
+      "elo": 1354
+    },
+    {
       "faction": "Sand Goblins",
       "username": "MajesticOnions",
       "elo": 1353
@@ -110,11 +115,6 @@
       "faction": "Storm Goblins",
       "username": "Milbo",
       "elo": 1353
-    },
-    {
-      "faction": "Chosen Grove",
-      "username": "Solitaire",
-      "elo": 1350
     },
     {
       "faction": "Swamp Orcs",
@@ -127,6 +127,11 @@
       "elo": 1339
     },
     {
+      "faction": "Isle Vekkid",
+      "username": "excile2127",
+      "elo": 1333
+    },
+    {
       "faction": "Skyspear Avians",
       "username": "GuildMaster",
       "elo": 1321
@@ -137,19 +142,14 @@
       "elo": 1315
     },
     {
-      "faction": "Isle Vekkid",
-      "username": "Nesle",
-      "elo": 1305
+      "faction": "Eternal Council",
+      "username": "SneezingMerilious",
+      "elo": 1226
     },
     {
       "faction": "High Elves",
       "username": "Orange Lazarus",
       "elo": 1225
-    },
-    {
-      "faction": "Eternal Council",
-      "username": "SneezingMerilious",
-      "elo": 1218
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-04-29 11:25 UTC"
+  "fetched_at": "2026-04-30 11:24 UTC"
 }
