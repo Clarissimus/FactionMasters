@@ -67,14 +67,19 @@
       "elo": 1402
     },
     {
+      "faction": "Shimmersea Fae",
+      "username": "excile2127",
+      "elo": 1394
+    },
+    {
       "faction": "Vanguards",
       "username": "LCANELA",
       "elo": 1390
     },
     {
-      "faction": "Shimmersea Fae",
-      "username": "Nozy",
-      "elo": 1389
+      "faction": "Isle Vekkid",
+      "username": "excile2127",
+      "elo": 1384
     },
     {
       "faction": "Polar Dwarves",
@@ -90,16 +95,6 @@
       "faction": "Mountain Vargath",
       "username": "excile2127",
       "elo": 1373
-    },
-    {
-      "faction": "Chosen Grove",
-      "username": "Nozy",
-      "elo": 1368
-    },
-    {
-      "faction": "Isle Vekkid",
-      "username": "excile2127",
-      "elo": 1368
     },
     {
       "faction": "Fungal Dwarves",
@@ -122,6 +117,11 @@
       "elo": 1353
     },
     {
+      "faction": "Chosen Grove",
+      "username": "Solitaire",
+      "elo": 1350
+    },
+    {
       "faction": "Swamp Orcs",
       "username": "CH4MP",
       "elo": 1348
@@ -134,7 +134,7 @@
     {
       "faction": "Skyspear Avians",
       "username": "GuildMaster",
-      "elo": 1321
+      "elo": 1334
     },
     {
       "faction": "Obsidian Dwarves",
@@ -144,7 +144,7 @@
     {
       "faction": "Eternal Council",
       "username": "freestyle90",
-      "elo": 1220
+      "elo": 1228
     },
     {
       "faction": "High Elves",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-01 11:03 UTC"
+  "fetched_at": "2026-05-02 10:44 UTC"
 }
