@@ -27,6 +27,11 @@
       "elo": 1452
     },
     {
+      "faction": "Tundra Orcs",
+      "username": "GuildMaster",
+      "elo": 1440
+    },
+    {
       "faction": "Guild Dwarves",
       "username": "GuildMaster",
       "elo": 1439
@@ -35,11 +40,6 @@
       "faction": "Drakesun Rebellion",
       "username": "ChipperColeen",
       "elo": 1430
-    },
-    {
-      "faction": "Tundra Orcs",
-      "username": "GuildMaster",
-      "elo": 1420
     },
     {
       "faction": "The Filth",
@@ -77,11 +77,6 @@
       "elo": 1390
     },
     {
-      "faction": "Isle Vekkid",
-      "username": "excile2127",
-      "elo": 1384
-    },
-    {
       "faction": "Polar Dwarves",
       "username": "Elyk",
       "elo": 1378
@@ -95,6 +90,11 @@
       "faction": "Mountain Vargath",
       "username": "excile2127",
       "elo": 1373
+    },
+    {
+      "faction": "Isle Vekkid",
+      "username": "excile2127",
+      "elo": 1372
     },
     {
       "faction": "Fungal Dwarves",
@@ -127,14 +127,14 @@
       "elo": 1348
     },
     {
+      "faction": "Skyspear Avians",
+      "username": "freestyle90",
+      "elo": 1340
+    },
+    {
       "faction": "Deepwood Groaks",
       "username": "DrWolf",
       "elo": 1339
-    },
-    {
-      "faction": "Skyspear Avians",
-      "username": "GuildMaster",
-      "elo": 1334
     },
     {
       "faction": "Obsidian Dwarves",
@@ -142,14 +142,14 @@
       "elo": 1315
     },
     {
-      "faction": "Eternal Council",
-      "username": "freestyle90",
-      "elo": 1228
+      "faction": "High Elves",
+      "username": "Orange Lazarus",
+      "elo": 1222
     },
     {
-      "faction": "High Elves",
-      "username": "RoopleDoops",
-      "elo": 1218
+      "faction": "Eternal Council",
+      "username": "KLANE",
+      "elo": 1217
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-02 10:44 UTC"
+  "fetched_at": "2026-05-03 10:50 UTC"
 }
