@@ -22,24 +22,24 @@
       "elo": 1467
     },
     {
+      "faction": "Guild Dwarves",
+      "username": "GuildMaster",
+      "elo": 1456
+    },
+    {
       "faction": "Savanna Elves",
       "username": "TastyTeddyBear",
       "elo": 1452
     },
     {
-      "faction": "Tundra Orcs",
-      "username": "GuildMaster",
-      "elo": 1440
-    },
-    {
-      "faction": "Guild Dwarves",
-      "username": "GuildMaster",
-      "elo": 1439
-    },
-    {
       "faction": "Drakesun Rebellion",
       "username": "ChipperColeen",
       "elo": 1430
+    },
+    {
+      "faction": "Tundra Orcs",
+      "username": "GuildMaster",
+      "elo": 1415
     },
     {
       "faction": "The Filth",
@@ -68,13 +68,18 @@
     },
     {
       "faction": "Shimmersea Fae",
-      "username": "excile2127",
-      "elo": 1394
+      "username": "Nozy",
+      "elo": 1398
     },
     {
       "faction": "Vanguards",
       "username": "LCANELA",
       "elo": 1390
+    },
+    {
+      "faction": "Isle Vekkid",
+      "username": "excile2127",
+      "elo": 1386
     },
     {
       "faction": "Polar Dwarves",
@@ -87,24 +92,24 @@
       "elo": 1374
     },
     {
+      "faction": "Fungal Dwarves",
+      "username": "Orange Lazarus",
+      "elo": 1373
+    },
+    {
       "faction": "Mountain Vargath",
       "username": "excile2127",
       "elo": 1373
     },
     {
-      "faction": "Isle Vekkid",
-      "username": "excile2127",
-      "elo": 1372
-    },
-    {
-      "faction": "Fungal Dwarves",
-      "username": "Orange Lazarus",
-      "elo": 1366
-    },
-    {
       "faction": "Breakers",
       "username": "SneezingMerilious",
       "elo": 1365
+    },
+    {
+      "faction": "Chosen Grove",
+      "username": "Nozy",
+      "elo": 1356
     },
     {
       "faction": "Sand Goblins",
@@ -115,11 +120,6 @@
       "faction": "Storm Goblins",
       "username": "Milbo",
       "elo": 1353
-    },
-    {
-      "faction": "Chosen Grove",
-      "username": "Solitaire",
-      "elo": 1350
     },
     {
       "faction": "Swamp Orcs",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-03 10:50 UTC"
+  "fetched_at": "2026-05-04 11:43 UTC"
 }
