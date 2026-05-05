@@ -24,7 +24,7 @@
     {
       "faction": "Guild Dwarves",
       "username": "GuildMaster",
-      "elo": 1456
+      "elo": 1465
     },
     {
       "faction": "Savanna Elves",
@@ -68,8 +68,13 @@
     },
     {
       "faction": "Shimmersea Fae",
-      "username": "Nozy",
-      "elo": 1398
+      "username": "excile2127",
+      "elo": 1401
+    },
+    {
+      "faction": "Breakers",
+      "username": "DeadSans",
+      "elo": 1390
     },
     {
       "faction": "Vanguards",
@@ -87,6 +92,11 @@
       "elo": 1378
     },
     {
+      "faction": "Skyspear Avians",
+      "username": "freestyle90",
+      "elo": 1376
+    },
+    {
       "faction": "Cave Goblins",
       "username": "pineappleonpizza",
       "elo": 1374
@@ -102,14 +112,9 @@
       "elo": 1373
     },
     {
-      "faction": "Breakers",
-      "username": "SneezingMerilious",
-      "elo": 1365
-    },
-    {
       "faction": "Chosen Grove",
       "username": "Nozy",
-      "elo": 1356
+      "elo": 1360
     },
     {
       "faction": "Sand Goblins",
@@ -127,11 +132,6 @@
       "elo": 1348
     },
     {
-      "faction": "Skyspear Avians",
-      "username": "freestyle90",
-      "elo": 1340
-    },
-    {
       "faction": "Deepwood Groaks",
       "username": "DrWolf",
       "elo": 1339
@@ -142,14 +142,14 @@
       "elo": 1315
     },
     {
-      "faction": "High Elves",
-      "username": "Orange Lazarus",
-      "elo": 1222
+      "faction": "Eternal Council",
+      "username": "freestyle90",
+      "elo": 1270
     },
     {
-      "faction": "Eternal Council",
-      "username": "KLANE",
-      "elo": 1217
+      "faction": "High Elves",
+      "username": "Orange Lazarus",
+      "elo": 1238
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-04 11:43 UTC"
+  "fetched_at": "2026-05-05 11:13 UTC"
 }
