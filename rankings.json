@@ -17,14 +17,14 @@
       "elo": 1543
     },
     {
+      "faction": "Guild Dwarves",
+      "username": "GuildMaster",
+      "elo": 1476
+    },
+    {
       "faction": "Spectral Conclave",
       "username": "DeadSans",
       "elo": 1467
-    },
-    {
-      "faction": "Guild Dwarves",
-      "username": "GuildMaster",
-      "elo": 1465
     },
     {
       "faction": "Savanna Elves",
@@ -37,14 +37,14 @@
       "elo": 1430
     },
     {
-      "faction": "Tundra Orcs",
-      "username": "GuildMaster",
-      "elo": 1415
-    },
-    {
       "faction": "The Filth",
       "username": "excile2127",
       "elo": 1408
+    },
+    {
+      "faction": "Shimmersea Fae",
+      "username": "Nozy",
+      "elo": 1407
     },
     {
       "faction": "Fallen Kingdom",
@@ -67,8 +67,8 @@
       "elo": 1402
     },
     {
-      "faction": "Shimmersea Fae",
-      "username": "excile2127",
+      "faction": "Tundra Orcs",
+      "username": "Nesle",
       "elo": 1401
     },
     {
@@ -82,6 +82,11 @@
       "elo": 1390
     },
     {
+      "faction": "Skyspear Avians",
+      "username": "freestyle90",
+      "elo": 1386
+    },
+    {
       "faction": "Isle Vekkid",
       "username": "excile2127",
       "elo": 1386
@@ -90,11 +95,6 @@
       "faction": "Polar Dwarves",
       "username": "Elyk",
       "elo": 1378
-    },
-    {
-      "faction": "Skyspear Avians",
-      "username": "freestyle90",
-      "elo": 1376
     },
     {
       "faction": "Cave Goblins",
@@ -142,14 +142,14 @@
       "elo": 1315
     },
     {
-      "faction": "Eternal Council",
-      "username": "freestyle90",
-      "elo": 1270
-    },
-    {
       "faction": "High Elves",
       "username": "Orange Lazarus",
       "elo": 1238
+    },
+    {
+      "faction": "Eternal Council",
+      "username": "freestyle90",
+      "elo": 1220
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-05 11:13 UTC"
+  "fetched_at": "2026-05-06 11:44 UTC"
 }
