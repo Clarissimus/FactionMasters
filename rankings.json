@@ -82,11 +82,6 @@
       "elo": 1390
     },
     {
-      "faction": "Skyspear Avians",
-      "username": "freestyle90",
-      "elo": 1386
-    },
-    {
       "faction": "Isle Vekkid",
       "username": "excile2127",
       "elo": 1386
@@ -110,6 +105,11 @@
       "faction": "Mountain Vargath",
       "username": "excile2127",
       "elo": 1373
+    },
+    {
+      "faction": "Skyspear Avians",
+      "username": "freestyle90",
+      "elo": 1372
     },
     {
       "faction": "Chosen Grove",
@@ -148,8 +148,8 @@
     },
     {
       "faction": "Eternal Council",
-      "username": "freestyle90",
-      "elo": 1220
+      "username": "SneezingMerilious",
+      "elo": 1232
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-06 11:44 UTC"
+  "fetched_at": "2026-05-07 11:43 UTC"
 }
