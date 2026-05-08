@@ -19,7 +19,7 @@
     {
       "faction": "Guild Dwarves",
       "username": "GuildMaster",
-      "elo": 1476
+      "elo": 1492
     },
     {
       "faction": "Spectral Conclave",
@@ -107,11 +107,6 @@
       "elo": 1373
     },
     {
-      "faction": "Skyspear Avians",
-      "username": "freestyle90",
-      "elo": 1372
-    },
-    {
       "faction": "Chosen Grove",
       "username": "Nozy",
       "elo": 1360
@@ -142,14 +137,19 @@
       "elo": 1315
     },
     {
-      "faction": "High Elves",
-      "username": "Orange Lazarus",
-      "elo": 1238
+      "faction": "Skyspear Avians",
+      "username": "GuildMaster",
+      "elo": 1314
     },
     {
       "faction": "Eternal Council",
       "username": "SneezingMerilious",
-      "elo": 1232
+      "elo": 1267
+    },
+    {
+      "faction": "High Elves",
+      "username": "Orange Lazarus",
+      "elo": 1238
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-07 11:43 UTC"
+  "fetched_at": "2026-05-08 11:07 UTC"
 }
