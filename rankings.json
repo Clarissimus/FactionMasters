@@ -37,14 +37,14 @@
       "elo": 1430
     },
     {
+      "faction": "Shimmersea Fae",
+      "username": "excile2127",
+      "elo": 1419
+    },
+    {
       "faction": "The Filth",
       "username": "excile2127",
       "elo": 1408
-    },
-    {
-      "faction": "Shimmersea Fae",
-      "username": "Nozy",
-      "elo": 1407
     },
     {
       "faction": "Fallen Kingdom",
@@ -144,7 +144,7 @@
     {
       "faction": "Eternal Council",
       "username": "SneezingMerilious",
-      "elo": 1267
+      "elo": 1295
     },
     {
       "faction": "High Elves",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-08 11:07 UTC"
+  "fetched_at": "2026-05-09 10:52 UTC"
 }
