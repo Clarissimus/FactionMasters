@@ -9,7 +9,7 @@
     {
       "faction": "Wayfarers",
       "username": "DeadSans",
-      "elo": 1564
+      "elo": 1568
     },
     {
       "faction": "The Forged",
@@ -19,7 +19,7 @@
     {
       "faction": "Guild Dwarves",
       "username": "GuildMaster",
-      "elo": 1492
+      "elo": 1513
     },
     {
       "faction": "Spectral Conclave",
@@ -132,19 +132,19 @@
       "elo": 1339
     },
     {
+      "faction": "Skyspear Avians",
+      "username": "freestyle90",
+      "elo": 1322
+    },
+    {
       "faction": "Obsidian Dwarves",
       "username": "CH4MP",
       "elo": 1315
     },
     {
-      "faction": "Skyspear Avians",
-      "username": "GuildMaster",
-      "elo": 1314
-    },
-    {
       "faction": "Eternal Council",
-      "username": "SneezingMerilious",
-      "elo": 1295
+      "username": "excile2127",
+      "elo": 1263
     },
     {
       "faction": "High Elves",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-09 10:52 UTC"
+  "fetched_at": "2026-05-10 10:57 UTC"
 }
