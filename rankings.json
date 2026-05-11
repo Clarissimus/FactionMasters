@@ -72,11 +72,6 @@
       "elo": 1401
     },
     {
-      "faction": "Breakers",
-      "username": "DeadSans",
-      "elo": 1390
-    },
-    {
       "faction": "Vanguards",
       "username": "LCANELA",
       "elo": 1390
@@ -107,6 +102,11 @@
       "elo": 1373
     },
     {
+      "faction": "Breakers",
+      "username": "DeadSans",
+      "elo": 1366
+    },
+    {
       "faction": "Chosen Grove",
       "username": "Nozy",
       "elo": 1360
@@ -133,8 +133,8 @@
     },
     {
       "faction": "Skyspear Avians",
-      "username": "freestyle90",
-      "elo": 1322
+      "username": "GuildMaster",
+      "elo": 1333
     },
     {
       "faction": "Obsidian Dwarves",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-10 10:57 UTC"
+  "fetched_at": "2026-05-11 12:36 UTC"
 }
