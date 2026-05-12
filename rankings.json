@@ -7,14 +7,14 @@
       "elo": 1573
     },
     {
-      "faction": "Wayfarers",
-      "username": "DeadSans",
-      "elo": 1568
-    },
-    {
       "faction": "The Forged",
       "username": "excile2127",
       "elo": 1543
+    },
+    {
+      "faction": "Wayfarers",
+      "username": "DeadSans",
+      "elo": 1526
     },
     {
       "faction": "Guild Dwarves",
@@ -23,8 +23,8 @@
     },
     {
       "faction": "Spectral Conclave",
-      "username": "DeadSans",
-      "elo": 1467
+      "username": "Kezbatron",
+      "elo": 1460
     },
     {
       "faction": "Savanna Elves",
@@ -77,6 +77,11 @@
       "elo": 1390
     },
     {
+      "faction": "Breakers",
+      "username": "DeadSans",
+      "elo": 1387
+    },
+    {
       "faction": "Isle Vekkid",
       "username": "excile2127",
       "elo": 1386
@@ -100,11 +105,6 @@
       "faction": "Mountain Vargath",
       "username": "excile2127",
       "elo": 1373
-    },
-    {
-      "faction": "Breakers",
-      "username": "DeadSans",
-      "elo": 1366
     },
     {
       "faction": "Chosen Grove",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-11 12:36 UTC"
+  "fetched_at": "2026-05-12 11:49 UTC"
 }
