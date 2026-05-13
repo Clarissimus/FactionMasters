@@ -12,14 +12,14 @@
       "elo": 1543
     },
     {
-      "faction": "Wayfarers",
-      "username": "DeadSans",
-      "elo": 1526
-    },
-    {
       "faction": "Guild Dwarves",
       "username": "GuildMaster",
       "elo": 1513
+    },
+    {
+      "faction": "Wayfarers",
+      "username": "DeadSans",
+      "elo": 1494
     },
     {
       "faction": "Spectral Conclave",
@@ -43,8 +43,8 @@
     },
     {
       "faction": "The Filth",
-      "username": "excile2127",
-      "elo": 1408
+      "username": "AstroWild",
+      "elo": 1409
     },
     {
       "faction": "Fallen Kingdom",
@@ -72,14 +72,19 @@
       "elo": 1401
     },
     {
-      "faction": "Vanguards",
-      "username": "LCANELA",
-      "elo": 1390
+      "faction": "Cave Goblins",
+      "username": "DeadSans",
+      "elo": 1396
     },
     {
       "faction": "Breakers",
-      "username": "DeadSans",
-      "elo": 1387
+      "username": "SneezingMerilious",
+      "elo": 1395
+    },
+    {
+      "faction": "Vanguards",
+      "username": "LCANELA",
+      "elo": 1390
     },
     {
       "faction": "Isle Vekkid",
@@ -90,11 +95,6 @@
       "faction": "Polar Dwarves",
       "username": "Elyk",
       "elo": 1378
-    },
-    {
-      "faction": "Cave Goblins",
-      "username": "pineappleonpizza",
-      "elo": 1374
     },
     {
       "faction": "Fungal Dwarves",
@@ -148,8 +148,8 @@
     },
     {
       "faction": "High Elves",
-      "username": "Orange Lazarus",
-      "elo": 1238
+      "username": "rdebruys83",
+      "elo": 1248
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-12 11:49 UTC"
+  "fetched_at": "2026-05-13 11:59 UTC"
 }
