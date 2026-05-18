@@ -122,6 +122,11 @@
       "elo": 1353
     },
     {
+      "faction": "Skyspear Avians",
+      "username": "Devlinfish",
+      "elo": 1352
+    },
+    {
       "faction": "Swamp Orcs",
       "username": "CH4MP",
       "elo": 1348
@@ -132,11 +137,6 @@
       "elo": 1339
     },
     {
-      "faction": "Skyspear Avians",
-      "username": "GuildMaster",
-      "elo": 1333
-    },
-    {
       "faction": "Obsidian Dwarves",
       "username": "CH4MP",
       "elo": 1315
@@ -144,7 +144,7 @@
     {
       "faction": "Eternal Council",
       "username": "SneezingMerilious",
-      "elo": 1282
+      "elo": 1303
     },
     {
       "faction": "High Elves",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-17 11:00 UTC"
+  "fetched_at": "2026-05-18 13:40 UTC"
 }
