@@ -47,6 +47,11 @@
       "elo": 1419
     },
     {
+      "faction": "Phoenix Elves",
+      "username": "beanseasly",
+      "elo": 1409
+    },
+    {
       "faction": "The Filth",
       "username": "AstroWild",
       "elo": 1409
@@ -70,11 +75,6 @@
       "faction": "Cloaks",
       "username": "DrWolf",
       "elo": 1404
-    },
-    {
-      "faction": "Phoenix Elves",
-      "username": "CH4MP",
-      "elo": 1402
     },
     {
       "faction": "Cave Goblins",
@@ -122,11 +122,6 @@
       "elo": 1353
     },
     {
-      "faction": "Skyspear Avians",
-      "username": "Devlinfish",
-      "elo": 1352
-    },
-    {
       "faction": "Swamp Orcs",
       "username": "CH4MP",
       "elo": 1348
@@ -135,6 +130,11 @@
       "faction": "Deepwood Groaks",
       "username": "DrWolf",
       "elo": 1339
+    },
+    {
+      "faction": "Skyspear Avians",
+      "username": "GuildMaster",
+      "elo": 1333
     },
     {
       "faction": "Obsidian Dwarves",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-18 13:40 UTC"
+  "fetched_at": "2026-05-19 12:35 UTC"
 }
