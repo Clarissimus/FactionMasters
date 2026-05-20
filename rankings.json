@@ -47,6 +47,11 @@
       "elo": 1419
     },
     {
+      "faction": "Cloaks",
+      "username": "Celestice",
+      "elo": 1410
+    },
+    {
       "faction": "Phoenix Elves",
       "username": "beanseasly",
       "elo": 1409
@@ -70,11 +75,6 @@
       "faction": "Shadow Elves",
       "username": "DrWolf",
       "elo": 1405
-    },
-    {
-      "faction": "Cloaks",
-      "username": "DrWolf",
-      "elo": 1404
     },
     {
       "faction": "Cave Goblins",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-19 12:35 UTC"
+  "fetched_at": "2026-05-20 12:18 UTC"
 }
