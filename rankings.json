@@ -112,6 +112,11 @@
       "elo": 1360
     },
     {
+      "faction": "Skyspear Avians",
+      "username": "Burning_BULLETS",
+      "elo": 1355
+    },
+    {
       "faction": "Sand Goblins",
       "username": "MajesticOnions",
       "elo": 1353
@@ -130,11 +135,6 @@
       "faction": "Deepwood Groaks",
       "username": "DrWolf",
       "elo": 1339
-    },
-    {
-      "faction": "Skyspear Avians",
-      "username": "GuildMaster",
-      "elo": 1333
     },
     {
       "faction": "Obsidian Dwarves",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-21 12:41 UTC"
+  "fetched_at": "2026-05-22 12:14 UTC"
 }
