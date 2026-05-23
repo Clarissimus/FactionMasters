@@ -42,14 +42,14 @@
       "elo": 1429
     },
     {
+      "faction": "Phoenix Elves",
+      "username": "CH4MP",
+      "elo": 1420
+    },
+    {
       "faction": "Shimmersea Fae",
       "username": "excile2127",
       "elo": 1419
-    },
-    {
-      "faction": "Phoenix Elves",
-      "username": "beanseasly",
-      "elo": 1409
     },
     {
       "faction": "The Filth",
@@ -148,8 +148,8 @@
     },
     {
       "faction": "High Elves",
-      "username": "Orange Lazarus",
-      "elo": 1272
+      "username": "rdebruys83",
+      "elo": 1283
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-22 12:14 UTC"
+  "fetched_at": "2026-05-23 11:06 UTC"
 }
