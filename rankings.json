@@ -43,8 +43,8 @@
     },
     {
       "faction": "Phoenix Elves",
-      "username": "CH4MP",
-      "elo": 1420
+      "username": "beanseasly",
+      "elo": 1419
     },
     {
       "faction": "Shimmersea Fae",
@@ -53,8 +53,8 @@
     },
     {
       "faction": "The Filth",
-      "username": "AstroWild",
-      "elo": 1409
+      "username": "MajesticOnions",
+      "elo": 1419
     },
     {
       "faction": "Breakers",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-23 11:06 UTC"
+  "fetched_at": "2026-05-24 11:11 UTC"
 }
