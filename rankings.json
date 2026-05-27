@@ -34,7 +34,7 @@
     {
       "faction": "Phoenix Elves",
       "username": "beanseasly",
-      "elo": 1434
+      "elo": 1447
     },
     {
       "faction": "Drakesun Rebellion",
@@ -107,14 +107,14 @@
       "elo": 1373
     },
     {
+      "faction": "Storm Goblins",
+      "username": "Milbo",
+      "elo": 1365
+    },
+    {
       "faction": "Chosen Grove",
       "username": "Nozy",
       "elo": 1360
-    },
-    {
-      "faction": "Storm Goblins",
-      "username": "MajesticOnions",
-      "elo": 1357
     },
     {
       "faction": "Skyspear Avians",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-25 12:57 UTC"
+  "fetched_at": "2026-05-27 12:48 UTC"
 }
