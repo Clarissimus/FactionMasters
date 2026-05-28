@@ -8,304 +8,301 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 <style>
-:root {
-  --gold: #d4a843;
-  --gold-light: #f0d878;
-  --gold-dim: #a07830;
-  --crimson: #c0392b;
-  --green: #4a9e6a;
-  --bg-deep: #1c1a14;
-  --bg-card: #2a2620;
-  --bg-card2: #343028;
-  --bg-winner: #1e2a1a;
-  --bg-loser: #2a2620;
-  --text: #f0e8d0;
-  --text-dim: #b0a080;
-  --border-default: #4a4030;
-  --border-winner: #4a9e6a;
-  --border-hidden: #3a3428;
-}
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  background: var(--bg-deep);
-  color: var(--text);
-  font-family: 'Crimson Pro', serif;
-  min-height: 100vh;
-  overflow-x: auto;
-}
-.page-wrap { padding: 2rem 1rem 4rem; }
+  :root {
+    --gold:       #d4a843;
+    --gold-light: #f0d878;
+    --gold-dim:   #a07830;
+    --crimson:    #c0392b;
+    --green:      #4a9e6a;
+    --bg-deep:    #1c1a14;
+    --bg-card:    #2a2620;
+    --bg-card2:   #343028;
+    --bg-winner:  #1e2a1a;
+    --text:       #f0e8d0;
+    --text-dim:   #b0a080;
+    --bye-color:  #242018;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg-deep);
+    color: var(--text);
+    font-family: 'Crimson Pro', serif;
+    min-height: 100vh;
+    overflow-x: auto;
+  }
+  .page-wrap { padding: 2rem 1rem 4rem; }
 
-/* Nav */
-nav {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-family: 'Cinzel', serif;
-  font-size: 0.75rem;
-  letter-spacing: 0.15em;
-}
-nav a { color: var(--gold-dim); text-decoration: none; margin: 0 0.75rem; }
-nav a:hover { color: var(--gold); }
-nav a.active { color: var(--gold); border-bottom: 1px solid var(--gold); }
+  /* Nav */
+  nav {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+  }
+  nav a { color: var(--gold-dim); text-decoration: none; margin: 0 0.75rem; }
+  nav a:hover { color: var(--gold); }
+  nav a.active { color: var(--gold); border-bottom: 1px solid var(--gold); }
 
-/* Header */
-header { text-align: center; margin-bottom: 2.5rem; }
-.crest { font-size: 2.5rem; line-height: 1; margin-bottom: 0.5rem; }
-h1 {
-  font-family: 'Cinzel Decorative', cursive;
-  font-size: clamp(1.2rem, 3vw, 2rem);
-  color: var(--gold);
-  letter-spacing: 0.05em;
-  line-height: 1.2;
-}
-.divider {
-  width: 200px; height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
-  margin: 1rem auto;
-}
-.champion-banner {
-  display: inline-block;
-  background: linear-gradient(135deg, #22180a, #2e2010);
-  border: 1px solid var(--gold-dim);
-  border-radius: 6px;
-  padding: 0.6rem 1.5rem;
-  margin-top: 0.5rem;
-  font-family: 'Cinzel', serif;
-  font-size: 0.9rem;
-  color: var(--gold);
-  letter-spacing: 0.1em;
-}
-.champion-banner span { color: var(--gold-light); font-weight: 600; }
+  /* Header */
+  header { text-align: center; margin-bottom: 2rem; }
+  .crest { font-size: 2.5rem; line-height: 1; margin-bottom: 0.5rem; }
+  h1 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: var(--gold);
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+  }
+  .divider {
+    width: 200px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+    margin: 1rem auto;
+  }
 
-/* Controls */
-.controls {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-.btn {
-  font-family: 'Cinzel', serif;
-  font-size: 0.7rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding: 0.4rem 1rem;
-  border-radius: 3px;
-  border: 1px solid var(--gold-dim);
-  background: transparent;
-  color: var(--gold-dim);
-  cursor: pointer;
-  transition: all 0.2s;
-}
-.btn:hover { background: var(--gold-dim); color: var(--bg-deep); }
+  /* Controls */
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .btn {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.4rem 1.2rem;
+    border-radius: 3px;
+    border: 1px solid var(--gold-dim);
+    background: transparent;
+    color: var(--gold-dim);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn:hover { background: var(--gold-dim); color: var(--bg-deep); }
 
-/* Bracket */
-.bracket-outer {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  width: 100%;
-  overflow-x: auto;
-  gap: 0;
-}
+  /* Bracket — identical structure to index.html */
+  .bracket-outer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    overflow-x: auto;
+  }
+  .bracket-side       { display: flex; flex-direction: row; }
+  .bracket-side.right { flex-direction: row-reverse; }
+  .bracket-round {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    padding: 0 6px;
+  }
+  .round-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: center;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .round-body {
+    position: relative;
+    flex: 1;
+  }
+  .match {
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+  }
 
-.bracket-side { display: flex; flex-direction: row; }
-.bracket-side.right { flex-direction: row-reverse; }
+  /* Slots — same as index.html base, plus winner/loser states */
+  .slot {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-card);
+    border: 2px solid #4a4030;
+    border-radius: 4px;
+    padding: 6px 10px;
+    width: 164px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .slot::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--gold-dim);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .slot:hover { border-color: var(--gold-dim); background: var(--bg-card2); }
+  .slot:hover::before { opacity: 1; }
 
-.bracket-round {
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  padding: 0 6px;
-}
+  /* Winner: green left bar, green border */
+  .slot.winner {
+    background: var(--bg-winner);
+    border-color: var(--green);
+  }
+  .slot.winner::before { background: var(--green); opacity: 1; }
 
-.round-label {
-  font-family: 'Cinzel', serif;
-  font-size: 0.65rem;
-  color: var(--gold);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  text-align: center;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  /* Loser: dimmed */
+  .slot.loser { opacity: 0.45; }
 
-.round-body {
-  position: relative;
-  flex: 1;
-}
+  /* BYE */
+  .slot.bye { background: var(--bye-color); border-color: #2e2a20; cursor: default; }
+  .slot.bye:hover { border-color: #2e2a20; background: var(--bye-color); }
+  .slot.bye:hover::before { opacity: 0; }
 
-/* Match */
-.match {
-  position: absolute;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-}
+  /* Forfeit / Alliance: neutral, no winner styling */
+  .slot.forfeit { opacity: 0.6; }
 
-.match-yt {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  height: 14px;
-  margin-bottom: 2px;
-}
-.yt-link {
-  font-size: 0.6rem;
-  color: #e05050;
-  text-decoration: none;
-  font-family: 'Cinzel', serif;
-  letter-spacing: 0.05em;
-  opacity: 0.85;
-  transition: opacity 0.2s;
-  white-space: nowrap;
-}
-.yt-link:hover { opacity: 1; }
-.yt-link::before { content: '▶ '; }
+  .seed {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    color: var(--gold);
+    min-width: 18px;
+    text-align: right;
+    flex-shrink: 0;
+    font-weight: 600;
+  }
+  .slot-info { display: flex; flex-direction: column; overflow: hidden; flex: 1; }
+  .player-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+  }
+  .faction-name {
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+    font-style: italic;
+  }
+  .slot.bye .player-name { color: var(--text-dim); font-style: italic; }
+  .slot.bye .seed        { color: var(--text-dim); }
+  .match-sep { height: 2px; background: #5a5040; margin: 0 2px; }
 
-.slot {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--bg-card);
-  border: 2px solid var(--border-default);
-  border-radius: 4px;
-  padding: 5px 10px;
-  width: 172px;
-  position: relative;
-  overflow: hidden;
-}
+  /* YouTube link row — always visible, sits above the match */
+  .match-yt {
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 2px;
+    margin-bottom: 2px;
+  }
+  .yt-link {
+    font-size: 0.58rem;
+    color: #e05050;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.05em;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+  }
+  .yt-link:hover { opacity: 1; text-decoration: underline; }
+  .yt-link::before { content: '▶ '; }
+  .match-note {
+    font-size: 0.58rem;
+    color: var(--text-dim);
+    font-style: italic;
+    font-family: 'Crimson Pro', serif;
+  }
 
-.slot.winner {
-  background: var(--bg-winner);
-  border-color: var(--border-winner);
-}
-.slot.winner::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 0; bottom: 0;
-  width: 3px;
-  background: var(--green);
-}
-.slot.loser { opacity: 0.5; }
-.slot.bye { background: #1e1c16; border-color: #2e2a20; opacity: 0.5; }
-.slot.alliance {
-  border-color: var(--gold-dim);
-  background: #221e10;
-}
-.slot.hidden-result {
-  background: var(--bg-card);
-  border-color: var(--border-hidden);
-  cursor: pointer;
-}
-.slot.hidden-result:hover { border-color: var(--gold-dim); }
+  /* Reveal overlay — covers the slot content with near-opaque bg */
+  .reveal-overlay {
+    position: absolute;
+    inset: 0;
+    background: #1c1a14f0; /* very opaque — text underneath not readable */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.15s;
+    z-index: 2;
+  }
+  .reveal-overlay:hover { background: #2a2620f0; }
+  .reveal-overlay span {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    color: var(--text-dim);
+    letter-spacing: 0.1em;
+    pointer-events: none;
+  }
 
-.seed {
-  font-family: 'Cinzel', serif;
-  font-size: 0.68rem;
-  color: var(--gold);
-  min-width: 18px;
-  text-align: right;
-  flex-shrink: 0;
-  font-weight: 600;
-}
-.slot-info { display: flex; flex-direction: column; overflow: hidden; flex: 1; }
-.player-name {
-  font-family: 'Cinzel', serif;
-  font-size: 0.68rem;
-  font-weight: 600;
-  color: var(--text);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  line-height: 1.3;
-}
-.faction-name {
-  font-size: 0.62rem;
-  color: var(--text-dim);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-style: italic;
-}
-.slot.bye .player-name, .slot.bye .seed { color: var(--text-dim); }
-
-.match-sep { height: 2px; background: #5a5040; margin: 0 2px; }
-
-/* Hidden overlay */
-.hidden-overlay {
-  position: absolute;
-  inset: 0;
-  background: #1c1a14cc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Cinzel', serif;
-  font-size: 0.6rem;
-  color: var(--text-dim);
-  letter-spacing: 0.1em;
-  pointer-events: none;
-}
-
-/* Alliance label */
-.alliance-label {
-  font-size: 0.55rem;
-  color: var(--gold-dim);
-  font-style: italic;
-  text-align: center;
-  padding: 1px 0;
-  letter-spacing: 0.05em;
-}
-
-/* Champion col */
-.champion-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-shrink: 0;
-  padding: 0 14px;
-}
-.champion-label {
-  font-family: 'Cinzel', serif;
-  font-size: 0.65rem;
-  color: var(--gold);
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.final-match-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-.champion-crown-wrap { text-align: center; }
-.champion-crown { font-size: 1.8rem; display: block; margin-bottom: 4px; }
-.champion-slot {
-  background: linear-gradient(135deg, #22180a, #2e2010);
-  border: 2px solid var(--gold-dim);
-  border-radius: 4px;
-  padding: 10px 14px;
-  text-align: center;
-  width: 172px;
-  box-shadow: 0 0 20px rgba(201,168,76,0.15);
-}
-.champion-name {
-  font-family: 'Cinzel', serif;
-  font-size: 0.85rem;
-  color: var(--gold-light);
-  font-weight: 600;
-}
-.champion-faction {
-  font-size: 0.7rem;
-  color: var(--gold-dim);
-  font-style: italic;
-}
+  /* Champion / Final column — identical to index.html */
+  .champion-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 0 14px;
+  }
+  .champion-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    color: var(--gold);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .final-match-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding-top: 33%;
+  }
+  .final-match { display: flex; flex-direction: column; }
+  .champion-crown-wrap { text-align: center; }
+  .champion-crown { font-size: 1.8rem; display: block; margin-bottom: 4px; }
+  .champion-slot {
+    background: linear-gradient(135deg, #22180a, #2e2010);
+    border: 2px solid var(--gold-dim);
+    border-radius: 4px;
+    padding: 10px 14px;
+    text-align: center;
+    width: 164px;
+    box-shadow: 0 0 20px rgba(201,168,76,0.15);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .champion-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    color: var(--gold-light);
+    font-weight: 600;
+  }
+  .champion-faction {
+    font-size: 0.72rem;
+    color: var(--gold-dim);
+    font-style: italic;
+    margin-top: 2px;
+  }
 </style>
 </head>
 <body>
@@ -322,7 +319,6 @@ h1 {
     <div class="crest">⚔️</div>
     <h1>Faction Masters Season 4</h1>
     <div class="divider"></div>
-    <div class="champion-banner">👑 Champion: <span>Vexer — The Forged</span></div>
   </header>
 
   <div class="controls">
@@ -334,129 +330,162 @@ h1 {
 </div>
 
 <script>
-// ── Data ──────────────────────────────────────────────────────────────────
-// Each match: { top, bot, winner, yt, type }
-// type: 'normal' | 'forfeit' | 'alliance'
-// winner: seed number of winner (or null if alliance — both advance)
-
-const FACTIONS = {
-  DG:'Dragon Guild', FD:'The Forged', VG:'Vanguards', FK:'Fallen Kingdom',
-  CO:'Coral Elves', FO:'The Forged', MV:'Mountain Vargath', EC:'Eternal Council',
-  PE:'Phoenix Elves', WF:'Wandering Forged', SO:'Sand Orcs', CL:'Cloaks',
-  PD:'Pugnus Dwarves', CG:'Cave Goblins', TO:'Tundra Orcs', SE:'Savanna Elves',
-  OD:'Obsidian Dwarves', SH:'Shadow Elves', HE:'Havencall Elves', SA:'Sand Acolytes',
-  SG:'Sand Goblins', BR:'Breakers'
+// ── Faction lookup ────────────────────────────────────────────────────────
+const F = {
+  DG:'Dragon Guild',   FD:'The Forged',      VG:'Vanguards',
+  FK:'Fallen Kingdom', CO:'Coral Elves',      FO:'The Forged',
+  MV:'Mountain Vargath',EC:'Eternal Council', PE:'Phoenix Elves',
+  WF:'Wandering Forged',SO:'Sand Orcs',       CL:'Cloaks',
+  PD:'Pugnus Dwarves', CG:'Cave Goblins',     TO:'Tundra Orcs',
+  SE:'Savanna Elves',  OD:'Obsidian Dwarves', SH:'Shadow Elves',
+  HE:'Havencall Elves',SA:'Sand Acolytes',    SG:'Sand Goblins',
+  BR:'Breakers'
 };
-
 function p(seed, player, faction) {
-  return { seed, player, faction, label: `${player} — ${FACTIONS[faction] || faction}` };
+  return { seed, player, faction: F[faction] || faction };
 }
 
-// Round 1 — play-in (seeds 11-22, 6 matches)
+// ── Match data ────────────────────────────────────────────────────────────
+// type: undefined=normal, 'forfeit', 'alliance'
+// winner: seed of winner (both slots shown neutral if alliance)
+// R1: play-in matches — NO reveal needed on either slot (both slots plain)
+// R2+: winner slot gets overlay, loser slot gets loser style
+
 const R1 = [
-  { top: p(11,'ggVGcc','SG'), bot: p(22,'Matiaks','BR'), winner: 22, yt: 'https://youtu.be/ZQpUNzNjBq0' },
-  { top: p(12,'ghhinman','WF'), bot: p(21,'Wrfr','SO'), winner: 12, yt: 'https://youtu.be/0_dzn9mskiI' },
-  { top: p(13,'Sunnybrother','MV'), bot: p(20,'Eydir','EC'), winner: 20, yt: 'https://youtu.be/K8PUvUMJKo8' },
-  { top: p(14,'Shampoo','SH'), bot: p(19,'wwart1020','HE'), winner: 19, yt: 'https://youtu.be/c84sirwvjHI' },
-  { top: p(15,'Fiddleford','PD'), bot: p(18,'Gamebear','CG'), winner: 18, yt: 'https://youtu.be/fbfflQA0PHk' },
-  { top: p(16,'Gamebear','FD'), bot: p(17,'Shampoo','VG'), winner: 16, yt: 'https://youtu.be/o_gfoGQF1G8' },
+  // top half feed (paired with top of R2)
+  { top:p(16,'Gamebear','FD'),   bot:p(17,'Shampoo','VG'),      winner:16, yt:'https://youtu.be/o_gfoGQF1G8' },
+  { top:p(15,'Fiddleford','PD'), bot:p(18,'Gamebear','CG'),     winner:18, yt:'https://youtu.be/fbfflQA0PHk' },
+  { top:p(14,'Shampoo','SH'),    bot:p(19,'wwart1020','HE'),    winner:19, yt:'https://youtu.be/c84sirwvjHI' },
+  { top:p(13,'Sunnybrother','MV'),bot:p(20,'Eydir','EC'),       winner:20, yt:'https://youtu.be/K8PUvUMJKo8' },
+  // bottom half feed
+  { top:p(12,'ghhinman','WF'),   bot:p(21,'Wrfr','SO'),         winner:12, yt:'https://youtu.be/0_dzn9mskiI' },
+  { top:p(11,'ggVGcc','SG'),     bot:p(22,'Matiaks','BR'),      winner:22, yt:'https://youtu.be/ZQpUNzNjBq0' },
 ];
 
-// Round 2 — round of 16 (seeds 1-10 byes + R1 winners)
-const R2 = [
-  { top: p(1,'Magnifico','DG'), bot: p(16,'Gamebear','FD'), winner: 16, yt: 'https://youtu.be/VM_RhX8uEE8' },
-  { top: p(8,'Eerie','FK'), bot: p(9,'Shmeebee','CO'), winner: 9, yt: 'https://youtu.be/QShP53nOgSg' },
-  { top: p(4,'Vexer','FO'), bot: p(20,'Eydir','EC'), winner: 4, yt: 'https://youtu.be/HMoElt-ngv8' },
-  { top: p(5,'dqi','PE'), bot: p(12,'ghhinman','WF'), winner: 5, yt: 'https://youtu.be/HubttW_TZX8' },
-  { top: p(2,'BoldSerpent','CL'), bot: p(18,'Gamebear','CG'), winner: 18, yt: 'https://youtu.be/09BgRRlNWvY' },
-  { top: p(7,'Nesle','TO'), bot: p(10,'PetarPvZ','SE'), winner: 7, yt: null, type: 'forfeit' },
-  { top: p(3,'Jexik','OD'), bot: p(19,'wwart1020','HE'), winner: 3, yt: 'https://youtu.be/eW2HxhsipwE' },
-  { top: p(6,'Devlinfish','SA'), bot: p(22,'Matiaks','BR'), winner: 6, yt: 'https://youtu.be/luoVFuKt9rw' },
+// Round of 16 — left side (top 4 matches) then right side (bottom 4 matches)
+// Organised as: leftMatches[0..3], rightMatches[0..3]
+// Left side top→bottom
+const R2L = [
+  { top:p(1,'Magnifico','DG'),    bot:p(16,'Gamebear','FD'),    winner:16, yt:'https://youtu.be/VM_RhX8uEE8' },
+  { top:p(8,'Eerie','FK'),        bot:p(9,'Shmeebee','CO'),     winner:9,  yt:'https://youtu.be/QShP53nOgSg' },
+  { top:p(4,'Vexer','FO'),        bot:p(20,'Eydir','EC'),       winner:4,  yt:'https://youtu.be/HMoElt-ngv8' },
+  { top:p(5,'dqi','PE'),          bot:p(12,'ghhinman','WF'),    winner:5,  yt:'https://youtu.be/HubttW_TZX8' },
+];
+const R2R = [
+  { top:p(2,'BoldSerpent','CL'),  bot:p(18,'Gamebear','CG'),   winner:18, yt:'https://youtu.be/09BgRRlNWvY' },
+  { top:p(7,'Nesle','TO'),        bot:p(10,'PetarPvZ','SE'),   winner:7,  yt:null, type:'forfeit' },
+  { top:p(3,'Jexik','OD'),        bot:p(19,'wwart1020','HE'),  winner:3,  yt:'https://youtu.be/eW2HxhsipwE' },
+  { top:p(6,'Devlinfish','SA'),   bot:p(22,'Matiaks','BR'),    winner:6,  yt:'https://youtu.be/luoVFuKt9rw' },
 ];
 
 // Quarterfinals
-const R3 = [
-  { top: p(16,'Gamebear','FD'), bot: p(9,'Shmeebee','CO'), winner: 16, yt: 'https://youtu.be/2mq4rNmhHkE' },
-  { top: p(4,'Vexer','FO'), bot: p(20,'Eydir','EC'), winner: 4, yt: 'https://youtu.be/0_QsoEAlXU0' },
-  { top: p(2,'BoldSerpent','CL'), bot: p(7,'Nesle','TO'), winner: 7, yt: 'https://youtu.be/9F2zl-lN74E' },
-  { top: p(19,'wwart1020','HE'), bot: p(22,'Matiaks','BR'), winner: 19, yt: 'https://youtu.be/WBJRoURJFI0' },
+const R3L = [
+  { top:p(16,'Gamebear','FD'),    bot:p(9,'Shmeebee','CO'),    winner:16, yt:'https://youtu.be/2mq4rNmhHkE' },
+  { top:p(4,'Vexer','FO'),        bot:p(20,'Eydir','EC'),      winner:4,  yt:'https://youtu.be/0_QsoEAlXU0' },
+];
+const R3R = [
+  { top:p(2,'BoldSerpent','CL'),  bot:p(7,'Nesle','TO'),       winner:7,  yt:'https://youtu.be/9F2zl-lN74E' },
+  { top:p(19,'wwart1020','HE'),   bot:p(22,'Matiaks','BR'),    winner:19, yt:'https://youtu.be/WBJRoURJFI0' },
 ];
 
 // Semifinals
-const R4 = [
-  { top: p(16,'Gamebear','FD'), bot: p(4,'Vexer','FO'), winner: 4, yt: 'https://youtu.be/lfJ1KTtHZxc' },
-  { top: p(7,'Nesle','TO'), bot: p(19,'wwart1020','HE'), winner: 7, yt: 'https://youtu.be/w_w_krwZ3cs' },
-];
+const R4L = [{ top:p(16,'Gamebear','FD'), bot:p(4,'Vexer','FO'),   winner:4, yt:'https://youtu.be/lfJ1KTtHZxc' }];
+const R4R = [{ top:p(7,'Nesle','TO'),     bot:p(19,'wwart1020','HE'), winner:7, yt:'https://youtu.be/w_w_krwZ3cs' }];
 
 // Final
-const FINAL = { top: p(4,'Vexer','FO'), bot: p(7,'Nesle','TO'), winner: 4, yt: 'https://youtu.be/TUSupAMTZiY' };
+const FINAL = { top:p(4,'Vexer','FO'), bot:p(7,'Nesle','TO'), winner:4, yt:'https://youtu.be/TUSupAMTZiY' };
 
 const CHAMPION = p(4,'Vexer','FO');
 
-// ── Layout constants ──────────────────────────────────────────────────────
-const SLOT_H = 40;
-const SEP_H = 2;
-const YT_H = 16;
-const MATCH_H = YT_H + SLOT_H * 2 + SEP_H;
-const LABEL_H = 28;
+// ── Layout constants (match index.html) ───────────────────────────────────
+const SLOT_H    = 46;
+const SEP_H     = 2;
+const YT_H      = 20;   // height reserved above each match for yt link
+const MATCH_H   = SLOT_H * 2 + SEP_H;
+const MATCH_FULL = YT_H + MATCH_H; // total vertical space per match cell
+const LABEL_H   = 28;
+const N_R1      = 8;    // matches per side in round of 16
+const MATCH_GAP = 10;
+const BRACKET_H = N_R1 * (MATCH_H + MATCH_GAP);
 
-// ── Hidden state ─────────────────────────────────────────────────────────
-// matchId => revealed boolean
-const revealed = {};
-let matchCounter = 0;
+// ── Reveal state ─────────────────────────────────────────────────────────
+const revealState = {}; // matchId -> bool
 
-function makeMatchId() { return 'match-' + (matchCounter++); }
+function applyReveal(matchId) {
+  const shown = revealState[matchId];
+  document.querySelectorAll(`[data-mid="${matchId}"] .reveal-overlay`).forEach(el => {
+    el.style.display = shown ? 'none' : '';
+  });
+}
+function revealAll() {
+  Object.keys(revealState).forEach(id => { revealState[id] = true; applyReveal(id); });
+  // also reveal champion
+  const co = document.querySelector('.champion-slot .reveal-overlay');
+  if (co) co.style.display = 'none';
+  document.getElementById('champ-content').style.visibility = 'visible';
+}
+function hideAll() {
+  Object.keys(revealState).forEach(id => { revealState[id] = false; applyReveal(id); });
+  const co = document.querySelector('.champion-slot .reveal-overlay');
+  if (co) co.style.display = '';
+  document.getElementById('champ-content').style.visibility = 'hidden';
+}
+
+let midCounter = 0;
+function newMid() { return 'mid' + (midCounter++); }
 
 // ── DOM builders ─────────────────────────────────────────────────────────
-function makeSlot(player, isWinner, isLoser, isBye, isAlliance, matchId, isTop) {
+function makeSlotEl(player, role, matchId, needsOverlay) {
+  // role: 'winner' | 'loser' | 'plain' | 'bye'
   const div = document.createElement('div');
   let cls = 'slot';
-  if (isBye) cls += ' bye';
-  else if (isAlliance) cls += ' alliance';
-  else if (isWinner) cls += ' winner hidden-winner'; // will show after reveal
-  else if (isLoser) cls += ' loser hidden-loser';
+  if (role === 'winner') cls += ' winner';
+  else if (role === 'loser') cls += ' loser';
+  else if (role === 'bye') cls += ' bye';
   div.className = cls;
-  div.dataset.matchId = matchId;
-  div.dataset.role = isTop ? 'top' : 'bot';
+  if (matchId) div.dataset.mid = matchId;
 
   const seedEl = document.createElement('span');
   seedEl.className = 'seed';
-  seedEl.textContent = isBye ? '—' : player.seed;
+  seedEl.textContent = role === 'bye' ? '—' : player.seed;
 
   const info = document.createElement('div');
   info.className = 'slot-info';
   const nameEl = document.createElement('span');
   nameEl.className = 'player-name';
-  nameEl.textContent = isBye ? 'BYE' : player.player;
+  nameEl.textContent = role === 'bye' ? 'BYE' : player.player;
   const factEl = document.createElement('span');
   factEl.className = 'faction-name';
-  factEl.textContent = isBye ? '' : (FACTIONS[player.faction] || player.faction);
-
+  factEl.textContent = role === 'bye' ? '' : player.faction;
   info.appendChild(nameEl);
   info.appendChild(factEl);
   div.appendChild(seedEl);
   div.appendChild(info);
 
-  // Hidden overlay for winner/loser slots
-  if (!isBye && !isAlliance && (isWinner || isLoser)) {
-    const overlay = document.createElement('div');
-    overlay.className = 'hidden-overlay';
-    overlay.textContent = '— click to reveal —';
-    overlay.dataset.matchId = matchId;
-    div.appendChild(overlay);
-    div.style.cursor = 'pointer';
-    div.onclick = () => toggleReveal(matchId);
+  if (needsOverlay) {
+    const ov = document.createElement('div');
+    ov.className = 'reveal-overlay';
+    ov.innerHTML = '<span>click to reveal</span>';
+    ov.addEventListener('click', () => {
+      revealState[matchId] = !revealState[matchId];
+      applyReveal(matchId);
+    });
+    div.appendChild(ov);
   }
 
   return div;
 }
 
-function makeMatch(matchData, matchId) {
+function makeMatchEl(matchData, isR1) {
+  // isR1: no overlays needed on either slot
+  const matchId = newMid();
+  revealState[matchId] = false;
+
   const wrap = document.createElement('div');
   wrap.className = 'match';
-  wrap.dataset.matchId = matchId;
+  wrap.dataset.mid = matchId;
 
-  // YouTube link (always visible)
+  // YouTube row (always visible)
   const ytRow = document.createElement('div');
   ytRow.className = 'match-yt';
   if (matchData.yt) {
@@ -469,12 +498,13 @@ function makeMatch(matchData, matchId) {
     ytRow.appendChild(a);
   } else if (matchData.type === 'forfeit') {
     const s = document.createElement('span');
-    s.style.cssText = 'font-size:0.55rem;color:var(--text-dim);font-style:italic;font-family:Crimson Pro,serif;';
-    s.textContent = 'forfeit';
+    s.className = 'match-note';
+    s.textContent = 'forfeit — no video';
     ytRow.appendChild(s);
   } else if (matchData.type === 'alliance') {
     const s = document.createElement('span');
-    s.style.cssText = 'font-size:0.55rem;color:var(--gold-dim);font-style:italic;font-family:Crimson Pro,serif;';
+    s.className = 'match-note';
+    s.style.color = 'var(--gold-dim)';
     s.textContent = 'faction alliance';
     ytRow.appendChild(s);
   }
@@ -484,93 +514,60 @@ function makeMatch(matchData, matchId) {
   const topWins = matchData.winner === matchData.top.seed;
   const botWins = matchData.winner === matchData.bot.seed;
 
-  wrap.appendChild(makeSlot(matchData.top, topWins, botWins && !isAlliance, false, isAlliance, matchId, true));
+  let topRole, botRole;
+  if (isR1 || isAlliance) {
+    topRole = 'plain'; botRole = 'plain';
+  } else {
+    topRole = topWins ? 'winner' : 'loser';
+    botRole = botWins ? 'winner' : 'loser';
+  }
+
+  // Overlays only on winner slots in R2+ (not R1, not loser, not alliance)
+  const topOverlay = !isR1 && !isAlliance && topWins;
+  const botOverlay = !isR1 && !isAlliance && botWins;
+
+  wrap.appendChild(makeSlotEl(matchData.top, topRole, matchId, topOverlay));
   const sep = document.createElement('div');
   sep.className = 'match-sep';
   wrap.appendChild(sep);
-  wrap.appendChild(makeSlot(matchData.bot, botWins, topWins && !isAlliance, false, isAlliance, matchId, false));
+  wrap.appendChild(makeSlotEl(matchData.bot, botRole, matchId, botOverlay));
 
-  return wrap;
+  return { el: wrap, matchId };
 }
 
-function toggleReveal(matchId) {
-  revealed[matchId] = !revealed[matchId];
-  applyReveal(matchId);
-}
-
-function applyReveal(matchId) {
-  const isRev = revealed[matchId];
-  document.querySelectorAll(`.slot[data-match-id="${matchId}"]`).forEach(slot => {
-    const overlay = slot.querySelector('.hidden-overlay');
-    if (overlay) overlay.style.display = isRev ? 'none' : '';
-    if (slot.classList.contains('hidden-winner')) {
-      slot.style.background = isRev ? 'var(--bg-winner)' : 'var(--bg-card)';
-      slot.style.borderColor = isRev ? 'var(--border-winner)' : 'var(--border-hidden)';
-    }
-    if (slot.classList.contains('hidden-loser')) {
-      slot.style.opacity = isRev ? '0.5' : '1';
-    }
-  });
-}
-
-function revealAll() {
-  Object.keys(revealed).forEach(id => revealed[id] = true);
-  // also reveal any not yet in dict
-  document.querySelectorAll('.slot[data-match-id]').forEach(slot => {
-    const id = slot.dataset.matchId;
-    if (!(id in revealed)) revealed[id] = true;
-    applyReveal(id);
-  });
-  document.querySelectorAll('.slot[data-match-id]').forEach(slot => applyReveal(slot.dataset.matchId));
-}
-
-function hideAll() {
-  document.querySelectorAll('.slot[data-match-id]').forEach(slot => {
-    const id = slot.dataset.matchId;
-    revealed[id] = false;
-    applyReveal(id);
-  });
-}
-
-// ── Build bracket side ────────────────────────────────────────────────────
-// rounds: array of arrays of match data, from innermost outward
-// The bracket is displayed with R1 on the outside, Final in the center
-// For left side: R1, R2, R3, R4 left to right
-// For right side: R4, R3, R2, R1 (reversed display, same data order)
-
-function buildSide(rounds) {
+// ── Build a bracket side ──────────────────────────────────────────────────
+// rounds: array of match arrays, outermost first (R1 play-in, R2, R3, R4)
+// labels: array of strings
+// isR1Round: index of the play-in round (those get no overlays)
+function buildSide(roundDataArrays, roundLabels) {
   const side = document.createElement('div');
   side.className = 'bracket-side';
 
-  const N_R1 = rounds[0].length; // matches in first round of this side
-  const BRACKET_H = N_R1 * (MATCH_H + 8); // total height
-
-  rounds.forEach((roundMatches, ri) => {
-    const nMatches = roundMatches.length;
-    const slotH = BRACKET_H / nMatches;
+  roundDataArrays.forEach((matches, ri) => {
+    const nMatches = matches.length;
+    const slotH = BRACKET_H / nMatches; // vertical space per match
 
     const col = document.createElement('div');
     col.className = 'bracket-round';
 
     const lbl = document.createElement('div');
     lbl.className = 'round-label';
-    const labels = ['Play-In', 'Round of 16', 'Quarterfinal', 'Semifinal'];
-    lbl.textContent = labels[ri] || '';
+    lbl.textContent = roundLabels[ri];
     col.appendChild(lbl);
 
     const body = document.createElement('div');
     body.className = 'round-body';
     body.style.height = BRACKET_H + 'px';
-    body.style.width = (172 + 12) + 'px';
+    body.style.width = (164 + 12) + 'px';
 
-    roundMatches.forEach((matchData, mi) => {
-      const matchId = makeMatchId();
-      revealed[matchId] = false;
-      const matchEl = makeMatch(matchData, matchId);
-      const topPx = mi * slotH + (slotH - MATCH_H) / 2;
-      matchEl.style.top = topPx + 'px';
-      matchEl.style.left = '6px';
-      body.appendChild(matchEl);
+    matches.forEach((matchData, mi) => {
+      const isR1 = (ri === 0); // play-in round
+      const { el } = makeMatchEl(matchData, isR1);
+      // Centre the match (with yt row) within its slot
+      const topPx = mi * slotH + (slotH - MATCH_FULL) / 2;
+      el.style.top = topPx + 'px';
+      el.style.left = '6px';
+      body.appendChild(el);
     });
 
     col.appendChild(body);
@@ -584,84 +581,87 @@ function buildSide(rounds) {
 function render() {
   const bracket = document.getElementById('bracket');
 
-  // Left side: top half of bracket
+  // Left side: play-in (R1 top half), R2L, R3L, R4L
+  // R1 has 6 play-in games total; 3 feed left side, 3 feed right side
+  // Left feeds: seeds 13-20 area → R2L matches 2 & 3
+  // Right feeds: seeds 11-22 area → R2R matches 0 & 1... 
+  // Actually R1 matches don't appear as their own round column —
+  // instead show them in a "Play-In" column that only has 4 slots (the 4
+  // that are adjacent to left-side R2 rows 0-3). Rows 0&1 of R2L have bye
+  // feeders (seeds 1,8,4,5 had byes). Only rows 2&3 of R2L had R1 feeders.
+  // So the Play-In column on the left only shows 2 matches (seeds 13v20, 14v19).
+  // Similarly on the right: 2 matches (seeds 15v18, 16v17). And the remaining
+  // 2 R1 matches (11v22, 12v21) fed into R2R rows 2&3.
+  //
+  // To keep alignment clean we use null placeholders and position absolutely.
+
+  // Left side rounds
   const leftRounds = [
-    [R1[5], R1[4], R1[3], R1[2]], // R1 top half (seeds 11-18 area)
-    [R2[0], R2[1], R2[2], R2[3]], // R2 top half
-    [R3[0], R3[1]],               // QF top half
-    [R4[0]],                      // SF top
+    // Play-In col: 4 slots, only positions 2 and 3 have matches
+    // We'll use a sparse array trick with null = empty space
+    [null, null, R1[3], R1[2]],   // null=empty, seeds 13v20 at pos2, 14v19 at pos3
+    R2L,
+    R3L,
+    R4L,
   ];
+  const leftLabels = ['Play-In', 'Round of 16', 'Quarterfinal', 'Semifinal'];
 
-  // Right side: bottom half of bracket
+  // Right side rounds (will be reversed via flex-direction:row-reverse)
   const rightRounds = [
-    [R1[1], R1[0], R1[2], R1[3]], // placeholder — see below
-    [R2[4], R2[5], R2[6], R2[7]],
-    [R3[2], R3[3]],
-    [R4[1]],
+    [null, null, R1[1], R1[0]],   // seeds 15v18 at pos2, 16v17 at pos3
+    R2R,
+    R3R,
+    R4R,
   ];
+  const rightLabels = ['Play-In', 'Round of 16', 'Quarterfinal', 'Semifinal'];
 
-  // Correct right side R1 — bottom half seeds
-  rightRounds[0] = [R1[2], R1[1], R1[0], R1[3]];
+  // Build sides with null-aware version
+  function buildSideNullable(roundDataArrays, roundLabels) {
+    const side = document.createElement('div');
+    side.className = 'bracket-side';
 
-  // Actually let's lay it out simply:
-  // Left side top→bottom: matches 0-3 of each round
-  // Right side top→bottom: matches 4-7 of R2, etc.
-  // R1 has 6 matches — split 3 left, 3 right? No, seeding puts specific seeds together.
-  // Standard bracket: top half seeds 1,8,5,4 and bottom half 3,6,7,2
+    roundDataArrays.forEach((matches, ri) => {
+      const nSlots = matches.length; // total slots including nulls
+      const slotH = BRACKET_H / nSlots;
 
-  const leftR1 = [R1[5], R1[4], R1[3], R1[2]]; // seeds 16v17, 15v18, 14v19, 13v20
-  const rightR1 = [R1[0], R1[1]];               // seeds 11v22, 12v21 — only 2 on right side
+      const col = document.createElement('div');
+      col.className = 'bracket-round';
 
-  // Actually with 22 players, 6 play-in games feed into 16-player bracket
-  // Let me use a simple vertical layout: all 6 R1 matches on left, feeding into R2
-  // Split: left side has top 8 of R2, right side has bottom 8... 
-  // For simplicity and correctness, place all on left side stacked
+      const lbl = document.createElement('div');
+      lbl.className = 'round-label';
+      lbl.textContent = roundLabels[ri];
+      col.appendChild(lbl);
 
-  // Simpler approach: single column layout per round
-  const N_TOTAL = 8; // 8 matches in R2
-  const BRACKET_H = N_TOTAL * (MATCH_H + 8);
+      const body = document.createElement('div');
+      body.className = 'round-body';
+      body.style.height = BRACKET_H + 'px';
+      body.style.width = (164 + 12) + 'px';
 
-  // Build left side (top 4 of R2 + their feeders)
-  const leftSide = document.createElement('div');
-  leftSide.className = 'bracket-side';
+      matches.forEach((matchData, mi) => {
+        if (!matchData) return; // empty slot — leave space
+        const isR1 = (ri === 0);
+        const { el } = makeMatchEl(matchData, isR1);
+        const topPx = mi * slotH + (slotH - MATCH_FULL) / 2;
+        el.style.top = topPx + 'px';
+        el.style.left = '6px';
+        body.appendChild(el);
+      });
 
-  const roundsLeft = [
-    { label: 'Play-In', matches: [null, null, R1[5], R1[4], R1[3], R1[2], null, null] },
-    { label: 'Round of 16', matches: [R2[0], R2[1], R2[2], R2[3], R2[4], R2[5], R2[6], R2[7]] },
-    { label: 'Quarterfinal', matches: [null, R3[0], null, R3[1], null, R3[2], null, R3[3]] },
-    { label: 'Semifinal', matches: [null, null, R4[0], null, null, null, R4[1], null] },
-  ];
-
-  roundsLeft.forEach((round, ri) => {
-    const col = document.createElement('div');
-    col.className = 'bracket-round';
-    const lbl = document.createElement('div');
-    lbl.className = 'round-label';
-    lbl.textContent = round.label;
-    col.appendChild(lbl);
-    const body = document.createElement('div');
-    body.className = 'round-body';
-    body.style.height = BRACKET_H + 'px';
-    body.style.width = (172 + 12) + 'px';
-
-    const slotH = BRACKET_H / 8;
-    round.matches.forEach((matchData, mi) => {
-      if (!matchData) return;
-      const matchId = makeMatchId();
-      revealed[matchId] = false;
-      const matchEl = makeMatch(matchData, matchId);
-      const topPx = mi * slotH + (slotH - MATCH_H) / 2;
-      matchEl.style.top = topPx + 'px';
-      matchEl.style.left = '6px';
-      body.appendChild(matchEl);
+      col.appendChild(body);
+      side.appendChild(col);
     });
-    col.appendChild(body);
-    leftSide.appendChild(col);
-  });
+
+    return side;
+  }
+
+  const leftSide  = buildSideNullable(leftRounds,  leftLabels);
+  const rightSide = buildSideNullable(rightRounds, rightLabels);
+  rightSide.classList.add('right');
 
   // Champion column
   const champCol = document.createElement('div');
   champCol.className = 'champion-col';
+
   const champLbl = document.createElement('div');
   champLbl.className = 'champion-label';
   champLbl.textContent = 'Final';
@@ -671,31 +671,85 @@ function render() {
   finalWrap.className = 'final-match-wrap';
   finalWrap.style.height = BRACKET_H + 'px';
 
-  // Crown
+  // Champion box with overlay
   const crownWrap = document.createElement('div');
   crownWrap.className = 'champion-crown-wrap';
-  crownWrap.innerHTML = `<span class="champion-crown">👑</span>
-    <div class="champion-slot">
-      <div class="champion-name">${CHAMPION.player}</div>
-      <div class="champion-faction">${FACTIONS[CHAMPION.faction]}</div>
-    </div>`;
+  crownWrap.innerHTML = `<span class="champion-crown">👑</span>`;
+
+  const champSlot = document.createElement('div');
+  champSlot.className = 'champion-slot';
+
+  const champContent = document.createElement('div');
+  champContent.id = 'champ-content';
+  champContent.style.visibility = 'hidden';
+  champContent.innerHTML = `
+    <div class="champion-name">${CHAMPION.player}</div>
+    <div class="champion-faction">${CHAMPION.faction}</div>
+  `;
+  champSlot.appendChild(champContent);
+
+  const champOverlay = document.createElement('div');
+  champOverlay.className = 'reveal-overlay';
+  champOverlay.innerHTML = '<span>click to reveal</span>';
+  champOverlay.addEventListener('click', () => {
+    champContent.style.visibility = 'visible';
+    champOverlay.style.display = 'none';
+  });
+  champSlot.appendChild(champOverlay);
+
+  crownWrap.appendChild(champSlot);
   finalWrap.appendChild(crownWrap);
 
-  // Final match
-  const finalId = makeMatchId();
-  revealed[finalId] = false;
-  const finalEl = makeMatch(FINAL, finalId);
-  finalWrap.appendChild(finalEl);
+  // Final match (with yt link and overlays)
+  const finalYtRow = document.createElement('div');
+  finalYtRow.className = 'match-yt';
+  if (FINAL.yt) {
+    const a = document.createElement('a');
+    a.className = 'yt-link';
+    a.href = FINAL.yt;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.textContent = 'Watch';
+    finalYtRow.appendChild(a);
+  }
 
+  const finalMatchId = newMid();
+  revealState[finalMatchId] = false;
+
+  const finalMatch = document.createElement('div');
+  finalMatch.className = 'final-match';
+  finalMatch.dataset.mid = finalMatchId;
+  finalMatch.appendChild(finalYtRow);
+  finalMatch.appendChild(makeSlotEl(FINAL.top, 'loser',  finalMatchId, false));
+  finalMatch.appendChild((() => { const s=document.createElement('div'); s.className='match-sep'; return s; })());
+  finalMatch.appendChild(makeSlotEl(FINAL.bot, 'loser',  finalMatchId, false));
+
+  // Add overlays to final match slots manually
+  finalMatch.querySelectorAll('.slot').forEach((slot, i) => {
+    const isWinner = (i === 0 && FINAL.winner === FINAL.top.seed) ||
+                     (i === 1 && FINAL.winner === FINAL.bot.seed);
+    if (isWinner) {
+      slot.className = 'slot winner';
+      const ov = document.createElement('div');
+      ov.className = 'reveal-overlay';
+      ov.innerHTML = '<span>click to reveal</span>';
+      ov.addEventListener('click', () => {
+        revealState[finalMatchId] = !revealState[finalMatchId];
+        applyReveal(finalMatchId);
+      });
+      slot.appendChild(ov);
+    }
+  });
+
+  finalWrap.appendChild(finalMatch);
   champCol.appendChild(finalWrap);
 
   bracket.appendChild(leftSide);
   bracket.appendChild(champCol);
-
-  // Apply initial hidden state
-  document.querySelectorAll('.slot[data-match-id]').forEach(slot => {
-    applyReveal(slot.dataset.matchId);
-  });
+  bracket.appendChild(rightSide);
+  bracket.style.display = 'flex';
+  bracket.style.alignItems = 'flex-start';
+  bracket.style.height = (BRACKET_H + LABEL_H) + 'px';
 }
 
 render();
