@@ -32,7 +32,6 @@
   }
   .page-wrap { padding: 2rem 1rem 4rem; }
 
-  /* Nav */
   nav {
     text-align: center;
     margin-bottom: 1.5rem;
@@ -44,7 +43,6 @@
   nav a:hover { color: var(--gold); }
   nav a.active { color: var(--gold); border-bottom: 1px solid var(--gold); }
 
-  /* Header */
   header { text-align: center; margin-bottom: 2rem; }
   .crest { font-size: 2.5rem; line-height: 1; margin-bottom: 0.5rem; }
   h1 {
@@ -60,7 +58,6 @@
     margin: 1rem auto;
   }
 
-  /* Controls */
   .controls {
     display: flex;
     justify-content: center;
@@ -82,7 +79,6 @@
   }
   .btn:hover { background: var(--gold-dim); color: var(--bg-deep); }
 
-  /* Bracket — identical structure to index.html */
   .bracket-outer {
     display: flex;
     align-items: flex-start;
@@ -111,10 +107,7 @@
     justify-content: center;
     flex-shrink: 0;
   }
-  .round-body {
-    position: relative;
-    flex: 1;
-  }
+  .round-body { position: relative; flex: 1; }
   .match {
     position: absolute;
     left: 0;
@@ -122,7 +115,6 @@
     flex-direction: column;
   }
 
-  /* Slots — same as index.html base, plus winner/loser states */
   .slot {
     display: flex;
     align-items: center;
@@ -148,23 +140,20 @@
   .slot:hover { border-color: var(--gold-dim); background: var(--bg-card2); }
   .slot:hover::before { opacity: 1; }
 
-  /* Winner: green left bar, green border */
+  /* Winner styling — applied via JS after reveal */
   .slot.winner {
     background: var(--bg-winner);
     border-color: var(--green);
   }
   .slot.winner::before { background: var(--green); opacity: 1; }
+  .slot.winner:hover { border-color: var(--green); background: var(--bg-winner); }
 
-  /* Loser: dimmed */
+  /* Loser: dimmed, no special border */
   .slot.loser { opacity: 0.45; }
 
-  /* BYE */
   .slot.bye { background: var(--bye-color); border-color: #2e2a20; cursor: default; }
   .slot.bye:hover { border-color: #2e2a20; background: var(--bye-color); }
   .slot.bye:hover::before { opacity: 0; }
-
-  /* Forfeit / Alliance: neutral, no winner styling */
-  .slot.forfeit { opacity: 0.6; }
 
   .seed {
     font-family: 'Cinzel', serif;
@@ -199,7 +188,6 @@
   .slot.bye .seed        { color: var(--text-dim); }
   .match-sep { height: 2px; background: #5a5040; margin: 0 2px; }
 
-  /* YouTube link row — always visible, sits above the match */
   .match-yt {
     height: 16px;
     display: flex;
@@ -227,19 +215,19 @@
     font-family: 'Crimson Pro', serif;
   }
 
-  /* Reveal overlay — covers the slot content with near-opaque bg */
+  /* Reveal overlay */
   .reveal-overlay {
     position: absolute;
     inset: 0;
-    background: #1c1a14f0; /* very opaque — text underneath not readable */
+    background: #1c1a14f2;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background 0.15s;
     z-index: 2;
+    transition: background 0.15s;
   }
-  .reveal-overlay:hover { background: #2a2620f0; }
+  .reveal-overlay:hover { background: #2a2018f2; }
   .reveal-overlay span {
     font-family: 'Cinzel', serif;
     font-size: 0.6rem;
@@ -248,7 +236,6 @@
     pointer-events: none;
   }
 
-  /* Champion / Final column — identical to index.html */
   .champion-col {
     display: flex;
     flex-direction: column;
@@ -289,7 +276,6 @@
     box-shadow: 0 0 20px rgba(201,168,76,0.15);
     position: relative;
     overflow: hidden;
-    cursor: pointer;
   }
   .champion-name {
     font-family: 'Cinzel', serif;
@@ -328,17 +314,16 @@
 
   <div class="bracket-outer" id="bracket"></div>
 </div>
-
 <script>
 // ── Faction lookup ────────────────────────────────────────────────────────
 const F = {
-  DG:'Dragon Guild',   FD:'The Forged',      VG:'Vanguards',
-  FK:'Fallen Kingdom', CO:'Coral Elves',      FO:'The Forged',
-  MV:'Mountain Vargath',EC:'Eternal Council', PE:'Phoenix Elves',
-  WF:'Wandering Forged',SO:'Sand Orcs',       CL:'Cloaks',
-  PD:'Pugnus Dwarves', CG:'Cave Goblins',     TO:'Tundra Orcs',
-  SE:'Savanna Elves',  OD:'Obsidian Dwarves', SH:'Shadow Elves',
-  HE:'Havencall Elves',SA:'Sand Acolytes',    SG:'Sand Goblins',
+  DG:'Dragon Guild',    FD:'The Forged',       VG:'Vanguards',
+  FK:'Fallen Kingdom',  CO:'Coral Elves',       FO:'The Forged',
+  MV:'Mountain Vargath',EC:'Eternal Council',   PE:'Phoenix Elves',
+  WF:'Wandering Forged',SO:'Sand Orcs',         CL:'Cloaks',
+  PD:'Pugnus Dwarves',  CG:'Cave Goblins',      TO:'Tundra Orcs',
+  SE:'Savanna Elves',   OD:'Obsidian Dwarves',  SH:'Shadow Elves',
+  HE:'Havencall Elves', SA:'Sand Acolytes',     SG:'Sand Goblins',
   BR:'Breakers'
 };
 function p(seed, player, faction) {
@@ -346,129 +331,152 @@ function p(seed, player, faction) {
 }
 
 // ── Match data ────────────────────────────────────────────────────────────
-// type: undefined=normal, 'forfeit', 'alliance'
-// winner: seed of winner (both slots shown neutral if alliance)
-// R1: play-in matches — NO reveal needed on either slot (both slots plain)
-// R2+: winner slot gets overlay, loser slot gets loser style
+// In each match object:
+//   top, bot: player objects
+//   winner: seed of the winner
+//   yt: YouTube URL or null
+//   type: undefined | 'forfeit' | 'alliance'
+//
+// "needsOverlay" logic (set per-slot when building):
+//   A slot needs an overlay if the player's PRESENCE in that round is a spoiler.
+//   = they got there by winning a previous match.
+//   Seeds 1-10 in R2 had byes → no overlay.
+//   Play-in winners in R2 → overlay (they earned that slot).
+//   Everyone in R3+ → overlay.
+//   Play-in (R1) slots → never an overlay (starting positions).
 
 const R1 = [
-  // top half feed (paired with top of R2)
-  { top:p(16,'Gamebear','FD'),   bot:p(17,'Shampoo','VG'),      winner:16, yt:'https://youtu.be/o_gfoGQF1G8' },
-  { top:p(15,'Fiddleford','PD'), bot:p(18,'Gamebear','CG'),     winner:18, yt:'https://youtu.be/fbfflQA0PHk' },
-  { top:p(14,'Shampoo','SH'),    bot:p(19,'wwart1020','HE'),    winner:19, yt:'https://youtu.be/c84sirwvjHI' },
+  { top:p(16,'Gamebear','FD'),    bot:p(17,'Shampoo','VG'),     winner:16, yt:'https://youtu.be/o_gfoGQF1G8' },
+  { top:p(15,'Fiddleford','PD'),  bot:p(18,'Gamebear','CG'),    winner:18, yt:'https://youtu.be/fbfflQA0PHk' },
+  { top:p(14,'Shampoo','SH'),     bot:p(19,'wwart1020','HE'),   winner:19, yt:'https://youtu.be/c84sirwvjHI' },
   { top:p(13,'Sunnybrother','MV'),bot:p(20,'Eydir','EC'),       winner:20, yt:'https://youtu.be/K8PUvUMJKo8' },
-  // bottom half feed
-  { top:p(12,'ghhinman','WF'),   bot:p(21,'Wrfr','SO'),         winner:12, yt:'https://youtu.be/0_dzn9mskiI' },
-  { top:p(11,'ggVGcc','SG'),     bot:p(22,'Matiaks','BR'),      winner:22, yt:'https://youtu.be/ZQpUNzNjBq0' },
+  { top:p(12,'ghhinman','WF'),    bot:p(21,'Wrfr','SO'),        winner:12, yt:'https://youtu.be/0_dzn9mskiI' },
+  { top:p(11,'ggVGcc','SG'),      bot:p(22,'Matiaks','BR'),     winner:22, yt:'https://youtu.be/ZQpUNzNjBq0' },
 ];
 
-// Round of 16 — left side (top 4 matches) then right side (bottom 4 matches)
-// Organised as: leftMatches[0..3], rightMatches[0..3]
-// Left side top→bottom
+// R2: seeds 1-10 had byes (no overlay). Seeds 11-22 winners need overlay.
+// BYE_SEEDS: set of seeds that had a first-round bye
+const BYE_SEEDS = new Set([1,2,3,4,5,6,7,8,9,10]);
+
 const R2L = [
-  { top:p(1,'Magnifico','DG'),    bot:p(16,'Gamebear','FD'),    winner:16, yt:'https://youtu.be/VM_RhX8uEE8' },
-  { top:p(8,'Eerie','FK'),        bot:p(9,'Shmeebee','CO'),     winner:9,  yt:'https://youtu.be/QShP53nOgSg' },
-  { top:p(4,'Vexer','FO'),        bot:p(20,'Eydir','EC'),       winner:4,  yt:'https://youtu.be/HMoElt-ngv8' },
-  { top:p(5,'dqi','PE'),          bot:p(12,'ghhinman','WF'),    winner:5,  yt:'https://youtu.be/HubttW_TZX8' },
+  { top:p(1,'Magnifico','DG'),   bot:p(16,'Gamebear','FD'),   winner:16, yt:'https://youtu.be/VM_RhX8uEE8' },
+  { top:p(8,'Eerie','FK'),       bot:p(9,'Shmeebee','CO'),    winner:9,  yt:'https://youtu.be/QShP53nOgSg' },
+  { top:p(4,'Vexer','FO'),       bot:p(20,'Eydir','EC'),      winner:4,  yt:'https://youtu.be/HMoElt-ngv8' },
+  { top:p(5,'dqi','PE'),         bot:p(12,'ghhinman','WF'),   winner:5,  yt:'https://youtu.be/HubttW_TZX8' },
 ];
 const R2R = [
-  { top:p(2,'BoldSerpent','CL'),  bot:p(18,'Gamebear','CG'),   winner:18, yt:'https://youtu.be/09BgRRlNWvY' },
-  { top:p(7,'Nesle','TO'),        bot:p(10,'PetarPvZ','SE'),   winner:7,  yt:null, type:'forfeit' },
-  { top:p(3,'Jexik','OD'),        bot:p(19,'wwart1020','HE'),  winner:3,  yt:'https://youtu.be/eW2HxhsipwE' },
-  { top:p(6,'Devlinfish','SA'),   bot:p(22,'Matiaks','BR'),    winner:6,  yt:'https://youtu.be/luoVFuKt9rw' },
+  { top:p(2,'BoldSerpent','CL'), bot:p(18,'Gamebear','CG'),   winner:18, yt:'https://youtu.be/09BgRRlNWvY' },
+  { top:p(7,'Nesle','TO'),       bot:p(10,'PetarPvZ','SE'),   winner:7,  yt:null, type:'forfeit' },
+  { top:p(3,'Jexik','OD'),       bot:p(19,'wwart1020','HE'),  winner:3,  yt:'https://youtu.be/eW2HxhsipwE' },
+  { top:p(6,'Devlinfish','SA'),  bot:p(22,'Matiaks','BR'),    winner:6,  yt:'https://youtu.be/luoVFuKt9rw' },
 ];
 
-// Quarterfinals
 const R3L = [
-  { top:p(16,'Gamebear','FD'),    bot:p(9,'Shmeebee','CO'),    winner:16, yt:'https://youtu.be/2mq4rNmhHkE' },
-  { top:p(4,'Vexer','FO'),        bot:p(20,'Eydir','EC'),      winner:4,  yt:'https://youtu.be/0_QsoEAlXU0' },
+  { top:p(16,'Gamebear','FD'),   bot:p(9,'Shmeebee','CO'),    winner:16, yt:'https://youtu.be/2mq4rNmhHkE' },
+  { top:p(4,'Vexer','FO'),       bot:p(20,'Eydir','EC'),      winner:4,  yt:'https://youtu.be/0_QsoEAlXU0' },
 ];
 const R3R = [
-  { top:p(2,'BoldSerpent','CL'),  bot:p(7,'Nesle','TO'),       winner:7,  yt:'https://youtu.be/9F2zl-lN74E' },
-  { top:p(19,'wwart1020','HE'),   bot:p(22,'Matiaks','BR'),    winner:19, yt:'https://youtu.be/WBJRoURJFI0' },
+  { top:p(2,'BoldSerpent','CL'), bot:p(7,'Nesle','TO'),       winner:7,  yt:'https://youtu.be/9F2zl-lN74E' },
+  { top:p(19,'wwart1020','HE'),  bot:p(22,'Matiaks','BR'),    winner:19, yt:'https://youtu.be/WBJRoURJFI0' },
 ];
 
-// Semifinals
-const R4L = [{ top:p(16,'Gamebear','FD'), bot:p(4,'Vexer','FO'),   winner:4, yt:'https://youtu.be/lfJ1KTtHZxc' }];
-const R4R = [{ top:p(7,'Nesle','TO'),     bot:p(19,'wwart1020','HE'), winner:7, yt:'https://youtu.be/w_w_krwZ3cs' }];
+const R4L = [{ top:p(16,'Gamebear','FD'), bot:p(4,'Vexer','FO'),      winner:4,  yt:'https://youtu.be/lfJ1KTtHZxc' }];
+const R4R = [{ top:p(7,'Nesle','TO'),     bot:p(19,'wwart1020','HE'), winner:7,  yt:'https://youtu.be/w_w_krwZ3cs' }];
 
-// Final
-const FINAL = { top:p(4,'Vexer','FO'), bot:p(7,'Nesle','TO'), winner:4, yt:'https://youtu.be/TUSupAMTZiY' };
-
+const FINAL    = { top:p(4,'Vexer','FO'), bot:p(7,'Nesle','TO'), winner:4, yt:'https://youtu.be/TUSupAMTZiY' };
 const CHAMPION = p(4,'Vexer','FO');
 
-// ── Layout constants (match index.html) ───────────────────────────────────
+// ── Layout constants ──────────────────────────────────────────────────────
 const SLOT_H    = 46;
 const SEP_H     = 2;
-const YT_H      = 20;   // height reserved above each match for yt link
+const YT_H      = 20;
 const MATCH_H   = SLOT_H * 2 + SEP_H;
-const MATCH_FULL = YT_H + MATCH_H; // total vertical space per match cell
+const MATCH_FULL = YT_H + MATCH_H;
 const LABEL_H   = 28;
-const N_R1      = 8;    // matches per side in round of 16
+const N_R1      = 8;
 const MATCH_GAP = 10;
 const BRACKET_H = N_R1 * (MATCH_H + MATCH_GAP);
 
 // ── Reveal state ─────────────────────────────────────────────────────────
-const revealState = {}; // matchId -> bool
+// Each "spoiler slot" gets a unique id. reveal state tracks whether it's shown.
+// When revealed: show winner styling (green border/bg). When hidden: plain card.
+const slotReveal = {}; // slotId -> bool
+let slotCounter = 0;
+function newSlotId() { return 'slot' + (slotCounter++); }
 
-function applyReveal(matchId) {
-  const shown = revealState[matchId];
-  document.querySelectorAll(`[data-mid="${matchId}"] .reveal-overlay`).forEach(el => {
-    el.style.display = shown ? 'none' : '';
-  });
+function applySlotReveal(slotId) {
+  const el = document.querySelector(`[data-slotid="${slotId}"]`);
+  if (!el) return;
+  const shown = slotReveal[slotId];
+  const ov = el.querySelector('.reveal-overlay');
+  if (ov) ov.style.display = shown ? 'none' : '';
+  // Toggle winner styling
+  if (shown) {
+    el.classList.add('winner');
+  } else {
+    el.classList.remove('winner');
+  }
 }
+
 function revealAll() {
-  Object.keys(revealState).forEach(id => { revealState[id] = true; applyReveal(id); });
-  // also reveal champion
-  const co = document.querySelector('.champion-slot .reveal-overlay');
-  if (co) co.style.display = 'none';
-  document.getElementById('champ-content').style.visibility = 'visible';
+  Object.keys(slotReveal).forEach(id => { slotReveal[id] = true; applySlotReveal(id); });
+  // champion
+  const champOv = document.querySelector('#champ-overlay');
+  if (champOv) champOv.style.display = 'none';
+  const champContent = document.querySelector('#champ-content');
+  if (champContent) champContent.style.visibility = 'visible';
 }
+
 function hideAll() {
-  Object.keys(revealState).forEach(id => { revealState[id] = false; applyReveal(id); });
-  const co = document.querySelector('.champion-slot .reveal-overlay');
-  if (co) co.style.display = '';
-  document.getElementById('champ-content').style.visibility = 'hidden';
+  Object.keys(slotReveal).forEach(id => { slotReveal[id] = false; applySlotReveal(id); });
+  // champion
+  const champOv = document.querySelector('#champ-overlay');
+  if (champOv) champOv.style.display = '';
+  const champContent = document.querySelector('#champ-content');
+  if (champContent) champContent.style.visibility = 'hidden';
 }
 
-let midCounter = 0;
-function newMid() { return 'mid' + (midCounter++); }
-
-// ── DOM builders ─────────────────────────────────────────────────────────
-function makeSlotEl(player, role, matchId, needsOverlay) {
-  // role: 'winner' | 'loser' | 'plain' | 'bye'
+// ── Build a slot element ──────────────────────────────────────────────────
+// spoiler=true  → starts hidden, winner styling revealed on click
+// spoiler=false → always visible, styled as loser (dimmed) or plain
+// isWinner      → this slot won the match (matters for spoiler reveal & loser dim)
+// isBye         → bye slot
+function makeSlot(player, isWinner, isLoser, isBye, spoiler) {
   const div = document.createElement('div');
+  // Start unstyled (no winner class) — winner class added on reveal if spoiler
   let cls = 'slot';
-  if (role === 'winner') cls += ' winner';
-  else if (role === 'loser') cls += ' loser';
-  else if (role === 'bye') cls += ' bye';
+  if (isBye) cls += ' bye';
+  else if (!spoiler && isLoser) cls += ' loser';
+  else if (!spoiler && isWinner) cls += ' winner'; // non-spoiler winner (R1 winner shown plainly... but R1 has no winners shown)
   div.className = cls;
-  if (matchId) div.dataset.mid = matchId;
 
   const seedEl = document.createElement('span');
   seedEl.className = 'seed';
-  seedEl.textContent = role === 'bye' ? '—' : player.seed;
+  seedEl.textContent = isBye ? '—' : player.seed;
 
   const info = document.createElement('div');
   info.className = 'slot-info';
   const nameEl = document.createElement('span');
   nameEl.className = 'player-name';
-  nameEl.textContent = role === 'bye' ? 'BYE' : player.player;
+  nameEl.textContent = isBye ? 'BYE' : player.player;
   const factEl = document.createElement('span');
   factEl.className = 'faction-name';
-  factEl.textContent = role === 'bye' ? '' : player.faction;
+  factEl.textContent = isBye ? '' : player.faction;
   info.appendChild(nameEl);
   info.appendChild(factEl);
   div.appendChild(seedEl);
   div.appendChild(info);
 
-  if (needsOverlay) {
+  if (spoiler) {
+    const slotId = newSlotId();
+    slotReveal[slotId] = false;
+    div.dataset.slotid = slotId;
     const ov = document.createElement('div');
     ov.className = 'reveal-overlay';
     ov.innerHTML = '<span>click to reveal</span>';
     ov.addEventListener('click', () => {
-      revealState[matchId] = !revealState[matchId];
-      applyReveal(matchId);
+      slotReveal[slotId] = !slotReveal[slotId];
+      applySlotReveal(slotId);
     });
     div.appendChild(ov);
   }
@@ -476,16 +484,14 @@ function makeSlotEl(player, role, matchId, needsOverlay) {
   return div;
 }
 
-function makeMatchEl(matchData, isR1) {
-  // isR1: no overlays needed on either slot
-  const matchId = newMid();
-  revealState[matchId] = false;
-
+// ── Build a match element ─────────────────────────────────────────────────
+// r1Match: this is a play-in match (no overlays at all)
+// byeSeeds: set of seeds that had byes (used for R2 only)
+function makeMatch(matchData, spoilerTop, spoilerBot) {
   const wrap = document.createElement('div');
   wrap.className = 'match';
-  wrap.dataset.mid = matchId;
 
-  // YouTube row (always visible)
+  // YouTube / note row (always visible)
   const ytRow = document.createElement('div');
   ytRow.className = 'match-yt';
   if (matchData.yt) {
@@ -511,48 +517,37 @@ function makeMatchEl(matchData, isR1) {
   wrap.appendChild(ytRow);
 
   const isAlliance = matchData.type === 'alliance';
-  const topWins = matchData.winner === matchData.top.seed;
-  const botWins = matchData.winner === matchData.bot.seed;
+  const topWins = !isAlliance && (matchData.winner === matchData.top.seed);
+  const botWins = !isAlliance && (matchData.winner === matchData.bot.seed);
 
-  let topRole, botRole;
-  if (isR1 || isAlliance) {
-    topRole = 'plain'; botRole = 'plain';
-  } else {
-    topRole = topWins ? 'winner' : 'loser';
-    botRole = botWins ? 'winner' : 'loser';
-  }
-
-  // Overlays only on winner slots in R2+ (not R1, not loser, not alliance)
-  const topOverlay = !isR1 && !isAlliance && topWins;
-  const botOverlay = !isR1 && !isAlliance && botWins;
-
-  wrap.appendChild(makeSlotEl(matchData.top, topRole, matchId, topOverlay));
+  // Loser slots are dimmed but never have an overlay — seeing who lost isn't
+  // a spoiler if you don't know who won (the winner slot is the spoiler).
+  wrap.appendChild(makeSlot(matchData.top, topWins, botWins, false, spoilerTop));
   const sep = document.createElement('div');
   sep.className = 'match-sep';
   wrap.appendChild(sep);
-  wrap.appendChild(makeSlotEl(matchData.bot, botRole, matchId, botOverlay));
+  wrap.appendChild(makeSlot(matchData.bot, botWins, topWins, false, spoilerBot));
 
-  return { el: wrap, matchId };
+  return wrap;
 }
 
 // ── Build a bracket side ──────────────────────────────────────────────────
-// rounds: array of match arrays, outermost first (R1 play-in, R2, R3, R4)
-// labels: array of strings
-// isR1Round: index of the play-in round (those get no overlays)
-function buildSide(roundDataArrays, roundLabels) {
+function buildSide(roundDefs) {
+  // roundDefs: array of { label, slots }
+  // slots: array of null | { match, spoilerTop, spoilerBot }
   const side = document.createElement('div');
   side.className = 'bracket-side';
 
-  roundDataArrays.forEach((matches, ri) => {
-    const nMatches = matches.length;
-    const slotH = BRACKET_H / nMatches; // vertical space per match
+  roundDefs.forEach(({ label, slots }) => {
+    const nSlots = slots.length;
+    const slotH = BRACKET_H / nSlots;
 
     const col = document.createElement('div');
     col.className = 'bracket-round';
 
     const lbl = document.createElement('div');
     lbl.className = 'round-label';
-    lbl.textContent = roundLabels[ri];
+    lbl.textContent = label;
     col.appendChild(lbl);
 
     const body = document.createElement('div');
@@ -560,11 +555,10 @@ function buildSide(roundDataArrays, roundLabels) {
     body.style.height = BRACKET_H + 'px';
     body.style.width = (164 + 12) + 'px';
 
-    matches.forEach((matchData, mi) => {
-      const isR1 = (ri === 0); // play-in round
-      const { el } = makeMatchEl(matchData, isR1);
-      // Centre the match (with yt row) within its slot
-      const topPx = mi * slotH + (slotH - MATCH_FULL) / 2;
+    slots.forEach((slot, i) => {
+      if (!slot) return;
+      const el = makeMatch(slot.match, slot.spoilerTop, slot.spoilerBot);
+      const topPx = i * slotH + (slotH - MATCH_FULL) / 2;
       el.style.top = topPx + 'px';
       el.style.left = '6px';
       body.appendChild(el);
@@ -577,85 +571,82 @@ function buildSide(roundDataArrays, roundLabels) {
   return side;
 }
 
+// ── Spoiler logic helpers ─────────────────────────────────────────────────
+// Is this player's presence in this round a spoiler?
+// R1 (play-in): never a spoiler (starting pos)
+// R2: spoiler only if seed is NOT a bye seed (they earned their spot via R1)
+// R3+: always a spoiler
+function r2spoiler(seed) { return !BYE_SEEDS.has(seed); }
+const always = true;
+const never  = false;
+
 // ── Render ────────────────────────────────────────────────────────────────
 function render() {
   const bracket = document.getElementById('bracket');
 
-  // Left side: play-in (R1 top half), R2L, R3L, R4L
-  // R1 has 6 play-in games total; 3 feed left side, 3 feed right side
-  // Left feeds: seeds 13-20 area → R2L matches 2 & 3
-  // Right feeds: seeds 11-22 area → R2R matches 0 & 1... 
-  // Actually R1 matches don't appear as their own round column —
-  // instead show them in a "Play-In" column that only has 4 slots (the 4
-  // that are adjacent to left-side R2 rows 0-3). Rows 0&1 of R2L have bye
-  // feeders (seeds 1,8,4,5 had byes). Only rows 2&3 of R2L had R1 feeders.
-  // So the Play-In column on the left only shows 2 matches (seeds 13v20, 14v19).
-  // Similarly on the right: 2 matches (seeds 15v18, 16v17). And the remaining
-  // 2 R1 matches (11v22, 12v21) fed into R2R rows 2&3.
-  //
-  // To keep alignment clean we use null placeholders and position absolutely.
-
-  // Left side rounds
-  const leftRounds = [
-    // Play-In col: 4 slots, only positions 2 and 3 have matches
-    // We'll use a sparse array trick with null = empty space
-    [null, null, R1[3], R1[2]],   // null=empty, seeds 13v20 at pos2, 14v19 at pos3
-    R2L,
-    R3L,
-    R4L,
+  // Left side
+  // Play-in col has 8 slots (same as R2 count) but only 4 are occupied
+  // (the 4 play-in matches that feed left-side R2 rows 0-3)
+  // Rows 0 & 1 of R2L (seeds 1,8 + 4,5) had byes → no R1 match above them → null
+  // Rows 2 & 3 of R2L (seeds 4,20 + 5,12) → R1 feeds: R1[3](13v20) and R1[4](12v21)
+  const leftDefs = [
+    { label: 'Play-In', slots: [
+      null, null,
+      { match: R1[3], spoilerTop: never, spoilerBot: never },
+      { match: R1[4], spoilerTop: never, spoilerBot: never },
+      null, null,
+      { match: R1[2], spoilerTop: never, spoilerBot: never },
+      { match: R1[1], spoilerTop: never, spoilerBot: never },
+    ]},
+    { label: 'Round of 16', slots: R2L.map(m => ({
+      match: m,
+      spoilerTop: r2spoiler(m.top.seed),
+      spoilerBot: r2spoiler(m.bot.seed),
+    }))},
+    { label: 'Quarterfinal', slots: [
+      { match: R3L[0], spoilerTop: always, spoilerBot: always },
+      null, null, null,
+      { match: R3L[1], spoilerTop: always, spoilerBot: always },
+      null, null, null,
+    ]},
+    { label: 'Semifinal', slots: [
+      null, null,
+      { match: R4L[0], spoilerTop: always, spoilerBot: always },
+      null, null, null, null, null,
+    ]},
   ];
-  const leftLabels = ['Play-In', 'Round of 16', 'Quarterfinal', 'Semifinal'];
 
-  // Right side rounds (will be reversed via flex-direction:row-reverse)
-  const rightRounds = [
-    [null, null, R1[1], R1[0]],   // seeds 15v18 at pos2, 16v17 at pos3
-    R2R,
-    R3R,
-    R4R,
+  const rightDefs = [
+    { label: 'Play-In', slots: [
+      null, null,
+      { match: R1[0], spoilerTop: never, spoilerBot: never },
+      { match: R1[5], spoilerTop: never, spoilerBot: never },
+      null, null,
+      // Note: only 6 play-in matches total; right side gets 2 matching R2R rows 0&1
+      // R2R[0]: 2(bye) vs 18(R1 winner) → R1[1] feeds here
+      // R2R[1]: 7(bye) vs 10(bye) → no R1 feeder
+      null, null,
+    ]},
+    { label: 'Round of 16', slots: R2R.map(m => ({
+      match: m,
+      spoilerTop: r2spoiler(m.top.seed),
+      spoilerBot: r2spoiler(m.bot.seed),
+    }))},
+    { label: 'Quarterfinal', slots: [
+      { match: R3R[0], spoilerTop: always, spoilerBot: always },
+      null, null, null,
+      { match: R3R[1], spoilerTop: always, spoilerBot: always },
+      null, null, null,
+    ]},
+    { label: 'Semifinal', slots: [
+      null, null,
+      { match: R4R[0], spoilerTop: always, spoilerBot: always },
+      null, null, null, null, null,
+    ]},
   ];
-  const rightLabels = ['Play-In', 'Round of 16', 'Quarterfinal', 'Semifinal'];
 
-  // Build sides with null-aware version
-  function buildSideNullable(roundDataArrays, roundLabels) {
-    const side = document.createElement('div');
-    side.className = 'bracket-side';
-
-    roundDataArrays.forEach((matches, ri) => {
-      const nSlots = matches.length; // total slots including nulls
-      const slotH = BRACKET_H / nSlots;
-
-      const col = document.createElement('div');
-      col.className = 'bracket-round';
-
-      const lbl = document.createElement('div');
-      lbl.className = 'round-label';
-      lbl.textContent = roundLabels[ri];
-      col.appendChild(lbl);
-
-      const body = document.createElement('div');
-      body.className = 'round-body';
-      body.style.height = BRACKET_H + 'px';
-      body.style.width = (164 + 12) + 'px';
-
-      matches.forEach((matchData, mi) => {
-        if (!matchData) return; // empty slot — leave space
-        const isR1 = (ri === 0);
-        const { el } = makeMatchEl(matchData, isR1);
-        const topPx = mi * slotH + (slotH - MATCH_FULL) / 2;
-        el.style.top = topPx + 'px';
-        el.style.left = '6px';
-        body.appendChild(el);
-      });
-
-      col.appendChild(body);
-      side.appendChild(col);
-    });
-
-    return side;
-  }
-
-  const leftSide  = buildSideNullable(leftRounds,  leftLabels);
-  const rightSide = buildSideNullable(rightRounds, rightLabels);
+  const leftSide  = buildSide(leftDefs);
+  const rightSide = buildSide(rightDefs);
   rightSide.classList.add('right');
 
   // Champion column
@@ -674,7 +665,10 @@ function render() {
   // Champion box with overlay
   const crownWrap = document.createElement('div');
   crownWrap.className = 'champion-crown-wrap';
-  crownWrap.innerHTML = `<span class="champion-crown">👑</span>`;
+  const crownSpan = document.createElement('span');
+  crownSpan.className = 'champion-crown';
+  crownSpan.textContent = '👑';
+  crownWrap.appendChild(crownSpan);
 
   const champSlot = document.createElement('div');
   champSlot.className = 'champion-slot';
@@ -682,25 +676,23 @@ function render() {
   const champContent = document.createElement('div');
   champContent.id = 'champ-content';
   champContent.style.visibility = 'hidden';
-  champContent.innerHTML = `
-    <div class="champion-name">${CHAMPION.player}</div>
-    <div class="champion-faction">${CHAMPION.faction}</div>
-  `;
+  champContent.innerHTML = `<div class="champion-name">${CHAMPION.player}</div>
+    <div class="champion-faction">${CHAMPION.faction}</div>`;
   champSlot.appendChild(champContent);
 
-  const champOverlay = document.createElement('div');
-  champOverlay.className = 'reveal-overlay';
-  champOverlay.innerHTML = '<span>click to reveal</span>';
-  champOverlay.addEventListener('click', () => {
+  const champOv = document.createElement('div');
+  champOv.id = 'champ-overlay';
+  champOv.className = 'reveal-overlay';
+  champOv.innerHTML = '<span>click to reveal</span>';
+  champOv.addEventListener('click', () => {
     champContent.style.visibility = 'visible';
-    champOverlay.style.display = 'none';
+    champOv.style.display = 'none';
   });
-  champSlot.appendChild(champOverlay);
-
+  champSlot.appendChild(champOv);
   crownWrap.appendChild(champSlot);
   finalWrap.appendChild(crownWrap);
 
-  // Final match (with yt link and overlays)
+  // Final match — both finalists are spoilers
   const finalYtRow = document.createElement('div');
   finalYtRow.className = 'match-yt';
   if (FINAL.yt) {
@@ -713,35 +705,12 @@ function render() {
     finalYtRow.appendChild(a);
   }
 
-  const finalMatchId = newMid();
-  revealState[finalMatchId] = false;
+  const finalEl = makeMatch(FINAL, always, always);
+  // Prepend yt row inside final match
+  finalEl.insertBefore(finalYtRow, finalEl.firstChild);
+  finalEl.className = 'final-match';
 
-  const finalMatch = document.createElement('div');
-  finalMatch.className = 'final-match';
-  finalMatch.dataset.mid = finalMatchId;
-  finalMatch.appendChild(finalYtRow);
-  finalMatch.appendChild(makeSlotEl(FINAL.top, 'loser',  finalMatchId, false));
-  finalMatch.appendChild((() => { const s=document.createElement('div'); s.className='match-sep'; return s; })());
-  finalMatch.appendChild(makeSlotEl(FINAL.bot, 'loser',  finalMatchId, false));
-
-  // Add overlays to final match slots manually
-  finalMatch.querySelectorAll('.slot').forEach((slot, i) => {
-    const isWinner = (i === 0 && FINAL.winner === FINAL.top.seed) ||
-                     (i === 1 && FINAL.winner === FINAL.bot.seed);
-    if (isWinner) {
-      slot.className = 'slot winner';
-      const ov = document.createElement('div');
-      ov.className = 'reveal-overlay';
-      ov.innerHTML = '<span>click to reveal</span>';
-      ov.addEventListener('click', () => {
-        revealState[finalMatchId] = !revealState[finalMatchId];
-        applyReveal(finalMatchId);
-      });
-      slot.appendChild(ov);
-    }
-  });
-
-  finalWrap.appendChild(finalMatch);
+  finalWrap.appendChild(finalEl);
   champCol.appendChild(finalWrap);
 
   bracket.appendChild(leftSide);
