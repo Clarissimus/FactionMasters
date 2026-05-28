@@ -38,8 +38,8 @@
     },
     {
       "faction": "Drakesun Rebellion",
-      "username": "ChipperColeen",
-      "elo": 1430
+      "username": "Askyriel",
+      "elo": 1432
     },
     {
       "faction": "Tundra Orcs",
@@ -87,6 +87,11 @@
       "elo": 1390
     },
     {
+      "faction": "Storm Goblins",
+      "username": "Milbo",
+      "elo": 1387
+    },
+    {
       "faction": "Isle Vekkid",
       "username": "excile2127",
       "elo": 1386
@@ -105,11 +110,6 @@
       "faction": "Mountain Vargath",
       "username": "excile2127",
       "elo": 1373
-    },
-    {
-      "faction": "Storm Goblins",
-      "username": "Milbo",
-      "elo": 1365
     },
     {
       "faction": "Chosen Grove",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-27 12:48 UTC"
+  "fetched_at": "2026-05-28 13:43 UTC"
 }
