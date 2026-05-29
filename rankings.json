@@ -19,7 +19,7 @@
     {
       "faction": "Wayfarers",
       "username": "DeadSans",
-      "elo": 1494
+      "elo": 1508
     },
     {
       "faction": "Spectral Conclave",
@@ -47,6 +47,11 @@
       "elo": 1429
     },
     {
+      "faction": "Fallen Kingdom",
+      "username": "MajesticOnions",
+      "elo": 1419
+    },
+    {
       "faction": "Shimmersea Fae",
       "username": "excile2127",
       "elo": 1419
@@ -62,11 +67,6 @@
       "elo": 1408
     },
     {
-      "faction": "Fallen Kingdom",
-      "username": "tyt123",
-      "elo": 1405
-    },
-    {
       "faction": "Shadow Elves",
       "username": "DrWolf",
       "elo": 1405
@@ -79,7 +79,7 @@
     {
       "faction": "Cave Goblins",
       "username": "DeadSans",
-      "elo": 1396
+      "elo": 1403
     },
     {
       "faction": "Vanguards",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-28 13:43 UTC"
+  "fetched_at": "2026-05-29 12:45 UTC"
 }
