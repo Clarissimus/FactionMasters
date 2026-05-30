@@ -62,6 +62,11 @@
       "elo": 1419
     },
     {
+      "faction": "Cloaks",
+      "username": "MajesticOnions",
+      "elo": 1418
+    },
+    {
       "faction": "Breakers",
       "username": "SneezingMerilious",
       "elo": 1408
@@ -70,16 +75,6 @@
       "faction": "Shadow Elves",
       "username": "DrWolf",
       "elo": 1405
-    },
-    {
-      "faction": "Cloaks",
-      "username": "DrWolf",
-      "elo": 1404
-    },
-    {
-      "faction": "Cave Goblins",
-      "username": "DeadSans",
-      "elo": 1403
     },
     {
       "faction": "Vanguards",
@@ -102,6 +97,11 @@
       "elo": 1378
     },
     {
+      "faction": "Cave Goblins",
+      "username": "pineappleonpizza",
+      "elo": 1374
+    },
+    {
       "faction": "Fungal Dwarves",
       "username": "Orange Lazarus",
       "elo": 1373
@@ -117,11 +117,6 @@
       "elo": 1360
     },
     {
-      "faction": "Skyspear Avians",
-      "username": "Burning_BULLETS",
-      "elo": 1355
-    },
-    {
       "faction": "Sand Goblins",
       "username": "MajesticOnions",
       "elo": 1353
@@ -130,6 +125,11 @@
       "faction": "Swamp Orcs",
       "username": "CH4MP",
       "elo": 1348
+    },
+    {
+      "faction": "Skyspear Avians",
+      "username": "tortugatron",
+      "elo": 1342
     },
     {
       "faction": "Deepwood Groaks",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-29 12:45 UTC"
+  "fetched_at": "2026-05-30 11:16 UTC"
 }
