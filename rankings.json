@@ -27,14 +27,14 @@
       "elo": 1460
     },
     {
+      "faction": "Phoenix Elves",
+      "username": "beanseasly",
+      "elo": 1454
+    },
+    {
       "faction": "Savanna Elves",
       "username": "TastyTeddyBear",
       "elo": 1452
-    },
-    {
-      "faction": "Phoenix Elves",
-      "username": "beanseasly",
-      "elo": 1447
     },
     {
       "faction": "Drakesun Rebellion",
@@ -102,14 +102,14 @@
       "elo": 1374
     },
     {
-      "faction": "Fungal Dwarves",
-      "username": "Orange Lazarus",
-      "elo": 1373
-    },
-    {
       "faction": "Mountain Vargath",
       "username": "excile2127",
       "elo": 1373
+    },
+    {
+      "faction": "Fungal Dwarves",
+      "username": "Solitaire",
+      "elo": 1365
     },
     {
       "faction": "Chosen Grove",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-30 11:16 UTC"
+  "fetched_at": "2026-05-31 11:39 UTC"
 }
