@@ -19,7 +19,7 @@
     {
       "faction": "Wayfarers",
       "username": "DeadSans",
-      "elo": 1508
+      "elo": 1511
     },
     {
       "faction": "Spectral Conclave",
@@ -47,6 +47,11 @@
       "elo": 1429
     },
     {
+      "faction": "Cloaks",
+      "username": "MajesticOnions",
+      "elo": 1419
+    },
+    {
       "faction": "Fallen Kingdom",
       "username": "MajesticOnions",
       "elo": 1419
@@ -60,11 +65,6 @@
       "faction": "The Filth",
       "username": "MajesticOnions",
       "elo": 1419
-    },
-    {
-      "faction": "Cloaks",
-      "username": "MajesticOnions",
-      "elo": 1418
     },
     {
       "faction": "Breakers",
@@ -127,14 +127,14 @@
       "elo": 1348
     },
     {
-      "faction": "Skyspear Avians",
-      "username": "tortugatron",
-      "elo": 1342
-    },
-    {
       "faction": "Deepwood Groaks",
       "username": "DrWolf",
       "elo": 1339
+    },
+    {
+      "faction": "Skyspear Avians",
+      "username": "Burning_BULLETS",
+      "elo": 1331
     },
     {
       "faction": "Obsidian Dwarves",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-05-31 11:39 UTC"
+  "fetched_at": "2026-06-01 15:50 UTC"
 }
