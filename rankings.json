@@ -19,7 +19,7 @@
     {
       "faction": "Wayfarers",
       "username": "DeadSans",
-      "elo": 1511
+      "elo": 1475
     },
     {
       "faction": "Spectral Conclave",
@@ -47,11 +47,6 @@
       "elo": 1429
     },
     {
-      "faction": "Cloaks",
-      "username": "MajesticOnions",
-      "elo": 1419
-    },
-    {
       "faction": "Fallen Kingdom",
       "username": "MajesticOnions",
       "elo": 1419
@@ -65,6 +60,16 @@
       "faction": "The Filth",
       "username": "MajesticOnions",
       "elo": 1419
+    },
+    {
+      "faction": "Cloaks",
+      "username": "MajesticOnions",
+      "elo": 1416
+    },
+    {
+      "faction": "Storm Goblins",
+      "username": "Milbo",
+      "elo": 1409
     },
     {
       "faction": "Breakers",
@@ -82,9 +87,9 @@
       "elo": 1390
     },
     {
-      "faction": "Storm Goblins",
-      "username": "Milbo",
-      "elo": 1387
+      "faction": "Cave Goblins",
+      "username": "DeadSans",
+      "elo": 1386
     },
     {
       "faction": "Isle Vekkid",
@@ -97,11 +102,6 @@
       "elo": 1378
     },
     {
-      "faction": "Cave Goblins",
-      "username": "pineappleonpizza",
-      "elo": 1374
-    },
-    {
       "faction": "Mountain Vargath",
       "username": "excile2127",
       "elo": 1373
@@ -109,7 +109,7 @@
     {
       "faction": "Fungal Dwarves",
       "username": "Solitaire",
-      "elo": 1365
+      "elo": 1371
     },
     {
       "faction": "Chosen Grove",
@@ -127,6 +127,11 @@
       "elo": 1348
     },
     {
+      "faction": "Obsidian Dwarves",
+      "username": "Nozy",
+      "elo": 1347
+    },
+    {
       "faction": "Deepwood Groaks",
       "username": "DrWolf",
       "elo": 1339
@@ -134,11 +139,6 @@
     {
       "faction": "Skyspear Avians",
       "username": "Burning_BULLETS",
-      "elo": 1331
-    },
-    {
-      "faction": "Obsidian Dwarves",
-      "username": "CH4MP",
       "elo": 1315
     },
     {
@@ -149,7 +149,7 @@
     {
       "faction": "High Elves",
       "username": "rdebruys83",
-      "elo": 1283
+      "elo": 1291
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-06-01 15:50 UTC"
+  "fetched_at": "2026-06-02 13:56 UTC"
 }
