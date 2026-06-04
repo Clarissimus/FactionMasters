@@ -19,17 +19,17 @@
     {
       "faction": "Wayfarers",
       "username": "DeadSans",
-      "elo": 1475
+      "elo": 1490
+    },
+    {
+      "faction": "Phoenix Elves",
+      "username": "beanseasly",
+      "elo": 1472
     },
     {
       "faction": "Spectral Conclave",
       "username": "Kezbatron",
       "elo": 1460
-    },
-    {
-      "faction": "Phoenix Elves",
-      "username": "beanseasly",
-      "elo": 1454
     },
     {
       "faction": "Savanna Elves",
@@ -64,7 +64,7 @@
     {
       "faction": "Cloaks",
       "username": "MajesticOnions",
-      "elo": 1416
+      "elo": 1417
     },
     {
       "faction": "Breakers",
@@ -77,14 +77,19 @@
       "elo": 1405
     },
     {
-      "faction": "Vanguards",
-      "username": "LCANELA",
-      "elo": 1390
+      "faction": "Storm Goblins",
+      "username": "Milbo",
+      "elo": 1398
     },
     {
       "faction": "Cave Goblins",
       "username": "DeadSans",
-      "elo": 1386
+      "elo": 1395
+    },
+    {
+      "faction": "Vanguards",
+      "username": "LCANELA",
+      "elo": 1390
     },
     {
       "faction": "Isle Vekkid",
@@ -105,11 +110,6 @@
       "faction": "Fungal Dwarves",
       "username": "Solitaire",
       "elo": 1371
-    },
-    {
-      "faction": "Storm Goblins",
-      "username": "Milbo",
-      "elo": 1368
     },
     {
       "faction": "Chosen Grove",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-06-03 14:24 UTC"
+  "fetched_at": "2026-06-04 12:41 UTC"
 }
