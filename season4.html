@@ -270,21 +270,21 @@ function applyMatchReveal(id) {
     // Green the winner's slot in the previous round
     if (topWins  && r.prevTopEl) {
       r.prevTopEl.classList.add('winner');
-      r.prevBotE1.classList.add('loser');
+      r.prevBotEl.classList.add('loser');
     }
     if (!topWins && r.prevBotEl) { 
       r.prevBotEl.classList.add('winner');
-      r.prevTopE1.classList.add('loser');
+      r.prevTopEl.classList.add('loser');
     }
   } else {
     if (ov) ov.style.display = '';
     if (r.prevTopEl) {
       r.prevTopEl.classList.remove('winner');
-      r.prevBotE1.classList.remove('loser');
+      r.prevBotEl.classList.remove('loser');
     }
     if (r.prevBotEl) {
       r.prevBotEl.classList.remove('winner');
-      r.prevTopE1.classList.remove('loser');
+      r.prevTopEl.classList.remove('loser');
     }
   }
 }
