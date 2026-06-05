@@ -266,27 +266,21 @@ function applyMatchReveal(id) {
   const ov = r.wrapEl.querySelector('.match-spoiler');
   const topWins = r.winnerSeed === r.topEl.__seed;
   if (r.revealed) {
-    if (ov) ov.style.display = 'none';
-    // Green the winner's slot in the previous round
-    if (topWins  && r.prevTopEl) {
-      r.prevTopEl.classList.add('winner');
-      r.prevBotEl.classList.add('loser');
-    }
-    if (!topWins && r.prevBotEl) { 
-      r.prevBotEl.classList.add('winner');
-      r.prevTopEl.classList.add('loser');
-    }
+  if (ov) ov.style.display = 'none';
+  if (topWins) {
+    if (r.prevTopEl) r.prevTopEl.classList.add('winner');
+    if (r.prevBotEl) r.prevBotEl.classList.add('loser');
   } else {
-    if (ov) ov.style.display = '';
-    if (r.prevTopEl) {
-      r.prevTopEl.classList.remove('winner');
-      r.prevBotEl.classList.remove('loser');
-    }
-    if (r.prevBotEl) {
-      r.prevBotEl.classList.remove('winner');
-      r.prevTopEl.classList.remove('loser');
-    }
+    if (r.prevBotEl) r.prevBotEl.classList.add('winner');
+    if (r.prevTopEl) r.prevTopEl.classList.add('loser');
   }
+} else {
+  if (ov) ov.style.display = '';
+  if (r.prevTopEl) r.prevTopEl.classList.remove('winner');
+  if (r.prevBotEl) r.prevBotEl.classList.remove('loser');
+  if (r.prevBotEl) r.prevBotEl.classList.remove('winner');
+  if (r.prevTopEl) r.prevTopEl.classList.remove('loser');
+}
 }
 
 function revealAll() {
