@@ -250,8 +250,8 @@ const SIDE_H  = 4 * BAND;                  // total height of one bracket side
 
 // ── Spoiler / reveal system ───────────────────────────────────────────────
 // Each "match result" is hidden by a single overlay covering both slots.
-// Revealing it: removes overlay, applies .winner to winner slot,
-// applies .loser to loser slot, and applies .winner to winner's slot in prevMatch.
+// Revealing it: removes overlay, applies .winner to winner's slot in prevMatch,
+// and applies .loser to loser's slot in prevMatch
 //
 // matchId -> { wrapEl, topEl, botEl, winnerSeed, prevTopEl, prevBotEl, revealed }
 const matchRegistry = {};
@@ -267,19 +267,25 @@ function applyMatchReveal(id) {
   const topWins = r.winnerSeed === r.topEl.__seed;
   if (r.revealed) {
     if (ov) ov.style.display = 'none';
-    r.topEl.classList.toggle('winner', topWins);
-    r.topEl.classList.toggle('loser',  !topWins);
-    r.botEl.classList.toggle('winner', !topWins);
-    r.botEl.classList.toggle('loser',  topWins);
     // Green the winner's slot in the previous round
-    if (topWins  && r.prevTopEl) r.prevTopEl.classList.add('winner');
-    if (!topWins && r.prevBotEl) r.prevBotEl.classList.add('winner');
+    if (topWins  && r.prevTopEl) {
+      r.prevTopEl.classList.add('winner');
+      r.prevBotE1.classList.add('loser');
+    }
+    if (!topWins && r.prevBotEl) { 
+      r.prevBotEl.classList.add('winner');
+      r.prevTopE1.classList.add('loser');
+    }
   } else {
     if (ov) ov.style.display = '';
-    r.topEl.classList.remove('winner','loser');
-    r.botEl.classList.remove('winner','loser');
-    if (r.prevTopEl) r.prevTopEl.classList.remove('winner');
-    if (r.prevBotEl) r.prevBotEl.classList.remove('winner');
+    if (r.prevTopEl) {
+      r.prevTopEl.classList.remove('winner');
+      r.prevBotE1.classList.remove('loser');
+    }
+    if (r.prevBotEl) {
+      r.prevBotEl.classList.remove('winner');
+      r.prevTopE1.classList.remove('loser');
+    }
   }
 }
 
