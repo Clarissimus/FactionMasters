@@ -23,23 +23,24 @@
     --bye-color:  #242018;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
+  html, body {
     background: var(--bg-deep);
     color: var(--text);
     font-family: 'Crimson Pro', serif;
-    min-height: 100vh;
+    height: 100%;
     overflow-x: auto;
+    overflow-y: auto;
   }
-  .page-wrap { padding: 2rem 1rem 4rem; }
+  .page-wrap { padding: 1rem 1rem 1.5rem; }
   nav {
-    text-align: center; margin-bottom: 1.5rem;
+    text-align: center; margin-bottom: 0.75rem;
     font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.15em;
   }
   nav a { color: var(--gold-dim); text-decoration: none; margin: 0 0.75rem; }
   nav a:hover { color: var(--gold); }
   nav a.active { color: var(--gold); border-bottom: 1px solid var(--gold); }
-  header { text-align: center; margin-bottom: 2rem; }
-  .crest { font-size: 2.5rem; line-height: 1; margin-bottom: 0.5rem; }
+  header { text-align: center; margin-bottom: 0.75rem; }
+  .crest { font-size: 1.8rem; line-height: 1; margin-bottom: 0.3rem; }
   h1 {
     font-family: 'Cinzel Decorative', cursive;
     font-size: clamp(1.2rem, 3vw, 2rem);
@@ -48,9 +49,9 @@
   .divider {
     width: 200px; height: 1px;
     background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
-    margin: 1rem auto;
+    margin: 0.5rem auto;
   }
-  .controls { display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem; }
+  .controls { display: flex; justify-content: center; gap: 1rem; margin-bottom: 1rem; }
   .btn {
     font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.15em;
     text-transform: uppercase; padding: 0.4rem 1.2rem; border-radius: 3px;
@@ -319,8 +320,8 @@ function revealAll() {
   if (co) co.style.display = 'none';
   const cc = document.getElementById('champ-content');
   if (cc) cc.style.visibility = 'visible';
-  // Green the two finalists in their semifinal slots
-  greenFinalistsInSemis();
+  // Green the winner in the Final match (same as clicking champion box)
+  if (window._finalTopEl) window._finalTopEl.classList.add('winner');
 }
 
 function hideAll() {
@@ -333,14 +334,6 @@ function hideAll() {
   if (cc) cc.style.visibility = 'hidden';
   // Remove winner green from Final slots (set by champ box reveal)
   if (window._finalTopEl) window._finalTopEl.classList.remove('winner');
-}
-
-// When the champion box is revealed, green the winner's slot in the Final match.
-// That happens via the normal per-slot mechanism for the final match slots.
-// But we also need to green the finalists' semi slots when reveal-all fires.
-function greenFinalistsInSemis() {
-  // The two Final slots each have a sourceSlotEl pointing into the semis —
-  // already handled by revealAll iterating slotRegistry. Nothing extra needed.
 }
 
 // ---------------------------------------------------------------------------
@@ -697,6 +690,9 @@ function render() {
   bracket.style.display = 'flex';
   bracket.style.alignItems = 'flex-start';
   bracket.style.height = (colH + LABEL_H) + 'px';
+
+  // Store finalist slot reference for revealAll / hideAll
+  window._finalTopEl = w_final._topEl;
 }
 
 render();
