@@ -13,13 +13,13 @@
     },
     {
       "faction": "Guild Dwarves",
-      "username": "GuildMaster",
-      "elo": 1513
+      "username": "Askyriel",
+      "elo": 1520
     },
     {
       "faction": "Wayfarers",
       "username": "DeadSans",
-      "elo": 1490
+      "elo": 1496
     },
     {
       "faction": "Phoenix Elves",
@@ -77,16 +77,6 @@
       "elo": 1405
     },
     {
-      "faction": "Storm Goblins",
-      "username": "Milbo",
-      "elo": 1398
-    },
-    {
-      "faction": "Cave Goblins",
-      "username": "DeadSans",
-      "elo": 1395
-    },
-    {
       "faction": "Vanguards",
       "username": "LCANELA",
       "elo": 1390
@@ -102,14 +92,14 @@
       "elo": 1378
     },
     {
+      "faction": "Cave Goblins",
+      "username": "pineappleonpizza",
+      "elo": 1374
+    },
+    {
       "faction": "Mountain Vargath",
       "username": "excile2127",
       "elo": 1373
-    },
-    {
-      "faction": "Fungal Dwarves",
-      "username": "Solitaire",
-      "elo": 1371
     },
     {
       "faction": "Chosen Grove",
@@ -117,9 +107,19 @@
       "elo": 1360
     },
     {
+      "faction": "Storm Goblins",
+      "username": "Milbo",
+      "elo": 1357
+    },
+    {
       "faction": "Sand Goblins",
       "username": "MajesticOnions",
       "elo": 1353
+    },
+    {
+      "faction": "Fungal Dwarves",
+      "username": "Solitaire",
+      "elo": 1352
     },
     {
       "faction": "Swamp Orcs",
@@ -148,8 +148,8 @@
     },
     {
       "faction": "High Elves",
-      "username": "Orange Lazarus",
-      "elo": 1299
+      "username": "Nozy",
+      "elo": 1301
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-06-04 12:41 UTC"
+  "fetched_at": "2026-06-05 12:32 UTC"
 }
