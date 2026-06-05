@@ -263,7 +263,7 @@ const SIDE_H  = 4 * BAND;
 const slotRegistry = [];   // array so revealAll / hideAll can iterate
 
 function registerSlot(slotEl, seed, sourceSlotEl, startRevealed) {
-  const entry = { slotEl, seed, sourceSlotEl, revealed: startRevealed };
+  const entry = { slotEl, seed, sourceSlotEl, revealed: startRevealed, startRevealed };
   slotRegistry.push(entry);
 
   if (!startRevealed) {
@@ -324,12 +324,15 @@ function revealAll() {
 }
 
 function hideAll() {
-  slotRegistry.forEach(e => { if (e.revealed) hideSlot(e); });
+  // Only hide slots that were originally hidden (startRevealed = false)
+  slotRegistry.forEach(e => { if (!e.startRevealed && e.revealed) hideSlot(e); });
   // Restore champion box
   const co = document.getElementById('champ-ov');
   if (co) co.style.display = '';
   const cc = document.getElementById('champ-content');
   if (cc) cc.style.visibility = 'hidden';
+  // Remove winner green from Final slots (set by champ box reveal)
+  if (window._finalTopEl) window._finalTopEl.classList.remove('winner');
 }
 
 // When the champion box is revealed, green the winner's slot in the Final match.
@@ -677,7 +680,7 @@ function render() {
     champContent.style.visibility = 'visible';
     champOv.style.display = 'none';
     // Green the winner's slot in the Final match
-    // Winner is seed4 (Vexer), who is the top slot of w_final
+    window._finalTopEl = w_final._topEl;
     w_final._topEl.classList.add('winner');
   });
   champSlot.appendChild(champOv);
