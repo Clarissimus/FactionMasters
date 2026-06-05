@@ -267,19 +267,22 @@ function applyMatchReveal(id) {
   const topWins = r.winnerSeed === r.topEl.__seed;
   if (r.revealed) {
   if (ov) ov.style.display = 'none';
-  if (topWins) {
-    if (r.prevTopEl) r.prevTopEl.classList.add('winner');
-    if (r.prevBotEl) r.prevBotEl.classList.add('loser');
-  } else {
-    if (r.prevBotEl) r.prevBotEl.classList.add('winner');
-    if (r.prevTopEl) r.prevTopEl.classList.add('loser');
+  // Green the prev-round slot whose seed matches the winner of this match
+  // Fade the other one
+  if (r.prevTopEl) {
+    const prevTopWins = r.prevTopEl.__seed === r.winnerSeed;
+    r.prevTopEl.classList.toggle('winner', prevTopWins);
+    r.prevTopEl.classList.toggle('loser', !prevTopWins);
+  }
+  if (r.prevBotEl) {
+    const prevBotWins = r.prevBotEl.__seed === r.winnerSeed;
+    r.prevBotEl.classList.toggle('winner', prevBotWins);
+    r.prevBotEl.classList.toggle('loser', !prevBotWins);
   }
 } else {
   if (ov) ov.style.display = '';
-  if (r.prevTopEl) r.prevTopEl.classList.remove('winner');
-  if (r.prevBotEl) r.prevBotEl.classList.remove('loser');
-  if (r.prevBotEl) r.prevBotEl.classList.remove('winner');
-  if (r.prevTopEl) r.prevTopEl.classList.remove('loser');
+  if (r.prevTopEl) { r.prevTopEl.classList.remove('winner'); r.prevTopEl.classList.remove('loser'); }
+  if (r.prevBotEl) { r.prevBotEl.classList.remove('winner'); r.prevBotEl.classList.remove('loser'); }
 }
 }
 
@@ -444,52 +447,32 @@ function addToCol(col, matchWrap, topPx) {
 // ── Render ────────────────────────────────────────────────────────────────
 function render() {
 
-  // ── Build all match elements first ────────────────────────────────────
-  // R1 matches (no spoiler, no prevEl needed)
-  const e_r1_16_17 = buildMatch('r1_16_17', false, null, null);
-  const e_r1_15_18 = buildMatch('r1_15_18', false, null, null);
-  const e_r1_14_19 = buildMatch('r1_14_19', false, null, null);
-  const e_r1_13_20 = buildMatch('r1_13_20', false, null, null);
-  const e_r1_12_21 = buildMatch('r1_12_21', false, null, null);
-  const e_r1_11_22 = buildMatch('r1_11_22', false, null, null);
+// R2 left
+const e_r2_1_16 = buildMatch('r2_1_16', true, null, e_r1_16_17.topEl);  // seed1=bye, seed16=top of r1_16_17
+const e_r2_8_9  = buildMatch('r2_8_9',  true, null, null);               // both byes
+const e_r2_4_20 = buildMatch('r2_4_20', true, null, e_r1_13_20.botEl);  // seed4=bye, seed20=bot of r1_13_20
+const e_r2_5_12 = buildMatch('r2_5_12', true, null, e_r1_12_21.topEl);  // seed5=bye, seed12=top of r1_12_21
 
-  // R2 left — spoilers:
-  // seed1 (bye): prevTopEl=null. seed16 (R1 winner): prevBotEl = e_r1_16_17.topEl (seed16 was top)
-  const e_r2_1_16 = buildMatch('r2_1_16', true, null, e_r1_16_17.topEl);
-  // seed8 (bye), seed9 (bye): no prev els
-  const e_r2_8_9  = buildMatch('r2_8_9',  true, null, null);
-  // seed4 (bye), seed20 (R1 winner — was bot of r1_13_20)
-  const e_r2_4_20 = buildMatch('r2_4_20', true, null, e_r1_13_20.botEl);
-  // seed5 (bye), seed12 (R1 winner — was top of r1_12_21)
-  const e_r2_5_12 = buildMatch('r2_5_12', true, null, e_r1_12_21.topEl);
+// R2 right
+const e_r2_2_18 = buildMatch('r2_2_18', true, null, e_r1_15_18.botEl);  // seed2=bye, seed18=bot of r1_15_18
+const e_r2_7_10 = buildMatch('r2_7_10', true, null, null);               // both byes
+const e_r2_3_19 = buildMatch('r2_3_19', true, null, e_r1_14_19.botEl);  // seed3=bye, seed19=bot of r1_14_19
+const e_r2_6_22 = buildMatch('r2_6_22', true, null, e_r1_11_22.botEl);  // seed6=bye, seed22=bot of r1_11_22
 
-  // R2 right
-  // seed2 (bye), seed18 (R1 winner — was bot of r1_15_18)
-  const e_r2_2_18 = buildMatch('r2_2_18', true, null, e_r1_15_18.botEl);
-  // seed7 (bye), seed10 (bye)
-  const e_r2_7_10 = buildMatch('r2_7_10', true, null, null);
-  // seed3 (bye), seed19 (R1 winner — was bot of r1_14_19)
-  const e_r2_3_19 = buildMatch('r2_3_19', true, null, e_r1_14_19.botEl);
-  // seed6 (bye), seed22 (R1 winner — was bot of r1_11_22)
-  const e_r2_6_22 = buildMatch('r2_6_22', true, null, e_r1_11_22.botEl);
+// R3 left — both prev slots are the two R2 participants
+const e_r3_16_9 = buildMatch('r3_16_9', true, e_r2_1_16.botEl, e_r2_8_9.botEl);    // seed16 advanced as bot, seed9 advanced as bot
+const e_r3_4_5  = buildMatch('r3_4_5',  true, e_r2_4_20.topEl, e_r2_5_12.topEl);   // seed4 advanced as top, seed5 advanced as top
 
-  // R3 left
-  // r3_16_9: seed16 (won r2_1_16 as bot) vs seed9 (won r2_8_9 as bot)
-  const e_r3_16_9 = buildMatch('r3_16_9', true, e_r2_1_16.botEl, e_r2_8_9.botEl);
-  // r3_4_5: seed4 (won r2_4_20 as top) vs seed5 (won r2_5_12 as top)
-  const e_r3_4_5  = buildMatch('r3_4_5',  true, e_r2_4_20.topEl, e_r2_5_12.topEl);
+// R3 right
+const e_r3_2_7  = buildMatch('r3_2_7',  true, e_r2_2_18.topEl, e_r2_7_10.topEl);   // seed2 advanced as top, seed7 advanced as top
+const e_r3_19_6 = buildMatch('r3_19_6', true, e_r2_3_19.botEl, e_r2_6_22.topEl);   // seed19 advanced as bot, seed6 advanced as top
 
-  // R3 right
-  // r3_2_7: seed2 (won r2_2_18 as top) vs seed7 (won r2_7_10 as top)
-  const e_r3_2_7  = buildMatch('r3_2_7',  true, e_r2_2_18.topEl, e_r2_7_10.topEl);
-  // r3_19_6: seed19 (won r2_3_19 as bot) vs seed6 (won r2_6_22 as top)
-  const e_r3_19_6 = buildMatch('r3_19_6', true, e_r2_3_19.botEl, e_r2_6_22.topEl);
+// R4
+const e_r4_16_4 = buildMatch('r4_16_4', true, e_r3_16_9.topEl, e_r3_4_5.topEl);    // seed16 won as top, seed4 won as top
+const e_r4_7_19 = buildMatch('r4_7_19', true, e_r3_2_7.botEl, e_r3_19_6.topEl);   // seed7 won as bot, seed19 won as top
 
-  // R4
-  // r4_16_4: seed16 (won r3_16_9 as top) vs seed4 (won r3_4_5 as top)
-  const e_r4_16_4 = buildMatch('r4_16_4', true, e_r3_16_9.topEl, e_r3_4_5.topEl);
-  // r4_7_19: seed7 (won r3_2_7 as bot) vs seed19 (won r3_19_6 as top)
-  const e_r4_7_19 = buildMatch('r4_7_19', true, e_r3_2_7.botEl, e_r3_19_6.topEl);
+// Final
+const e_final   = buildMatch('final', true, e_r4_16_4.botEl, e_r4_7_19.topEl);   // seed4 won as bot, seed7 won as top
 
   // ── Compute positions ─────────────────────────────────────────────────
   // R2: 4 matches per side, evenly spaced in SIDE_H
