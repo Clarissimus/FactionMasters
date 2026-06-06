@@ -248,22 +248,11 @@ const LABEL_H = 28;
 const BAND    = MATCH_H + GAP;
 const SIDE_H  = 4 * BAND;
 
-// ---------------------------------------------------------------------------
-// Per-slot reveal registry
-//
-// Each entry:
-//   slotEl        – the .slot DOM element that carries the overlay
-//   seed          – the seed number shown in this slot
-//   sourceSlotEl  – the .slot element in the PREVIOUS column that should be
-//                   greened when this slot is revealed (null if none)
-//   revealed      – current state
-// ---------------------------------------------------------------------------
-const slotRegistry = [];   // array so revealAll / hideAll can iterate
+const slotRegistry = [];
 
 function registerSlot(slotEl, seed, sourceSlotEl, startRevealed) {
   const entry = { slotEl, seed, sourceSlotEl, revealed: startRevealed, startRevealed };
   slotRegistry.push(entry);
-
   if (!startRevealed) {
     addOverlay(slotEl, entry);
   }
@@ -271,10 +260,8 @@ function registerSlot(slotEl, seed, sourceSlotEl, startRevealed) {
 }
 
 function addOverlay(slotEl, entry) {
-  // Remove any existing overlay first
   const old = slotEl.querySelector('.slot-overlay');
   if (old) old.remove();
-
   const ov = document.createElement('div');
   ov.className = 'slot-overlay';
   ov.innerHTML = '<span>Reveal</span>';
@@ -292,7 +279,6 @@ function revealSlot(entry) {
     entry._overlay.remove();
     entry._overlay = null;
   }
-  // Green the source slot (where this player came from)
   if (entry.sourceSlotEl) {
     entry.sourceSlotEl.classList.add('winner');
   }
@@ -300,11 +286,9 @@ function revealSlot(entry) {
 
 function hideSlot(entry) {
   entry.revealed = false;
-  // Remove green from source
   if (entry.sourceSlotEl) {
     entry.sourceSlotEl.classList.remove('winner');
   }
-  // Re-add overlay if not already present
   if (!entry._overlay) {
     addOverlay(entry.slotEl, entry);
   }
@@ -312,30 +296,22 @@ function hideSlot(entry) {
 
 function revealAll() {
   slotRegistry.forEach(e => { if (!e.revealed) revealSlot(e); });
-  // Champion box
   const co = document.getElementById('champ-ov');
   if (co) co.style.display = 'none';
   const cc = document.getElementById('champ-content');
   if (cc) cc.style.visibility = 'visible';
-  // Green the winner in the Final match (same as clicking champion box)
   if (window._finalTopEl) window._finalTopEl.classList.add('winner');
 }
 
 function hideAll() {
-  // Only hide slots that were originally hidden (startRevealed = false)
   slotRegistry.forEach(e => { if (!e.startRevealed && e.revealed) hideSlot(e); });
-  // Restore champion box
   const co = document.getElementById('champ-ov');
   if (co) co.style.display = '';
   const cc = document.getElementById('champ-content');
   if (cc) cc.style.visibility = 'hidden';
-  // Remove winner green from Final slots (set by champ box reveal)
   if (window._finalTopEl) window._finalTopEl.classList.remove('winner');
 }
 
-// ---------------------------------------------------------------------------
-// DOM builders
-// ---------------------------------------------------------------------------
 function makeSlotEl(player) {
   const div = document.createElement('div');
   div.className = 'slot';
@@ -375,16 +351,10 @@ function makeYtRow(m) {
   return row;
 }
 
-// Build a match DOM element.
-// topSource / botSource: the .slot DOM elements in the PREVIOUS round that
-//   correspond to top/bot players respectively. When a slot here is revealed,
-//   the matching source slot gets greened.
-// topStartRevealed / botStartRevealed: whether each slot starts without an overlay.
 function buildMatch(matchId, topSource, botSource, topStartRevealed, botStartRevealed) {
   const m = MATCHES[matchId];
   const wrap = document.createElement('div');
   wrap.className = 'match';
-  wrap.style.position = 'relative';
 
   wrap.appendChild(makeYtRow(m));
 
@@ -396,11 +366,9 @@ function buildMatch(matchId, topSource, botSource, topStartRevealed, botStartRev
   wrap.appendChild(sep);
   wrap.appendChild(botEl);
 
-  // Register each slot independently
   const topEntry = registerSlot(topEl, m.top.seed, topSource, topStartRevealed);
   const botEntry = registerSlot(botEl, m.bot.seed, botSource, botStartRevealed);
 
-  // Store references for callers who need to pass these as sources downstream
   wrap._topEl = topEl;
   wrap._botEl = botEl;
   wrap._topEntry = topEntry;
@@ -432,11 +400,7 @@ function addToCol(col, matchWrap, topPx) {
   col._body.appendChild(matchWrap);
 }
 
-// ---------------------------------------------------------------------------
-// Render
-// ---------------------------------------------------------------------------
 function render() {
-  // ── Play-in matches — all slots start revealed (no spoiler for play-in) ───
   const w_r1_16_17 = buildMatch('r1_16_17', null, null, true, true);
   const w_r1_15_18 = buildMatch('r1_15_18', null, null, true, true);
   const w_r1_14_19 = buildMatch('r1_14_19', null, null, true, true);
@@ -444,119 +408,26 @@ function render() {
   const w_r1_12_21 = buildMatch('r1_12_21', null, null, true, true);
   const w_r1_11_22 = buildMatch('r1_11_22', null, null, true, true);
 
-  // ── Round of 16 ───────────────────────────────────────────────────────────
-  // Seeds 1,2,3,4,5,6,7,8 are byes → start revealed.
-  // Seeds coming from play-in → start hidden.
-  //
-  // r2_1_16:  top=seed1 (bye, revealed), bot=seed16 (from r1_16_17, hidden)
-  //   Source for seed16 slot = the slot in r1_16_17 that seed16 occupies = topEl
-  const w_r2_1_16 = buildMatch('r2_1_16',
-    null,                    // seed1 bye — no previous slot to green
-    w_r1_16_17._topEl,       // seed16 came from top of r1_16_17
-    true,                    // seed1 starts revealed
-    false                    // seed16 starts hidden
-  );
-
-  // r2_8_9: top=seed8 (bye), bot=seed9 (bye — seed9 didn't play play-in)
+  const w_r2_1_16 = buildMatch('r2_1_16', null, w_r1_16_17._topEl, true, false);
   const w_r2_8_9  = buildMatch('r2_8_9',  null, null, true, true);
-
-  // r2_4_20: top=seed4 (bye), bot=seed20 (from r1_13_20 bot)
-  const w_r2_4_20 = buildMatch('r2_4_20',
-    null,
-    w_r1_13_20._botEl,       // seed20 came from bot of r1_13_20
-    true,
-    false
-  );
-
-  // r2_5_12: top=seed5 (bye), bot=seed12 (from r1_12_21 top)
-  const w_r2_5_12 = buildMatch('r2_5_12',
-    null,
-    w_r1_12_21._topEl,       // seed12 came from top of r1_12_21
-    true,
-    false
-  );
-
-  // r2_2_18: top=seed2 (bye), bot=seed18 (from r1_15_18 bot)
-  const w_r2_2_18 = buildMatch('r2_2_18',
-    null,
-    w_r1_15_18._botEl,       // seed18 came from bot of r1_15_18
-    true,
-    false
-  );
-
-  // r2_7_10: top=seed7 (bye), bot=seed10 (bye — didn't play play-in)
+  const w_r2_4_20 = buildMatch('r2_4_20', null, w_r1_13_20._botEl, true, false);
+  const w_r2_5_12 = buildMatch('r2_5_12', null, w_r1_12_21._topEl, true, false);
+  const w_r2_2_18 = buildMatch('r2_2_18', null, w_r1_15_18._botEl, true, false);
   const w_r2_7_10 = buildMatch('r2_7_10', null, null, true, true);
+  const w_r2_3_19 = buildMatch('r2_3_19', null, w_r1_14_19._botEl, true, false);
+  const w_r2_6_22 = buildMatch('r2_6_22', null, w_r1_11_22._botEl, true, false);
 
-  // r2_3_19: top=seed3 (bye), bot=seed19 (from r1_14_19 bot)
-  const w_r2_3_19 = buildMatch('r2_3_19',
-    null,
-    w_r1_14_19._botEl,       // seed19 came from bot of r1_14_19
-    true,
-    false
-  );
+  const w_r3_16_9 = buildMatch('r3_16_9', w_r2_1_16._botEl, w_r2_8_9._botEl,   false, false);
+  const w_r3_4_5  = buildMatch('r3_4_5',  w_r2_4_20._topEl, w_r2_5_12._topEl,  false, false);
+  const w_r3_2_7  = buildMatch('r3_2_7',  w_r2_2_18._topEl, w_r2_7_10._topEl,  false, false);
+  const w_r3_19_6 = buildMatch('r3_19_6', w_r2_3_19._botEl, w_r2_6_22._topEl,  false, false);
 
-  // r2_6_22: top=seed6 (bye), bot=seed22 (from r1_11_22 bot)
-  const w_r2_6_22 = buildMatch('r2_6_22',
-    null,
-    w_r1_11_22._botEl,       // seed22 came from bot of r1_11_22
-    true,
-    false
-  );
+  const w_r4_16_4 = buildMatch('r4_16_4', w_r3_16_9._topEl, w_r3_4_5._topEl,   false, false);
+  const w_r4_7_19 = buildMatch('r4_7_19', w_r3_2_7._botEl,  w_r3_19_6._topEl,  false, false);
 
-  // ── Quarterfinals — all slots hidden ──────────────────────────────────────
-  // r3_16_9: top=seed16 (winner of r2_1_16 bot), bot=seed9 (winner of r2_8_9 bot)
-  const w_r3_16_9 = buildMatch('r3_16_9',
-    w_r2_1_16._botEl,        // seed16 came from bot slot of r2_1_16
-    w_r2_8_9._botEl,         // seed9 came from bot slot of r2_8_9
-    false, false
-  );
+  const w_final   = buildMatch('final',   w_r4_16_4._botEl, w_r4_7_19._topEl,  false, false);
 
-  // r3_4_5: top=seed4 (winner of r2_4_20 top), bot=seed5 (winner of r2_5_12 top)
-  const w_r3_4_5  = buildMatch('r3_4_5',
-    w_r2_4_20._topEl,
-    w_r2_5_12._topEl,
-    false, false
-  );
-
-  // r3_2_7: top=seed2 (winner of r2_2_18 top... but winner was seed2, top slot)
-  //         bot=seed7 (winner of r2_7_10 top)
-  const w_r3_2_7  = buildMatch('r3_2_7',
-    w_r2_2_18._topEl,
-    w_r2_7_10._topEl,
-    false, false
-  );
-
-  // r3_19_6: top=seed19 (winner of r2_3_19 bot), bot=seed6 (winner of r2_6_22 top)
-  const w_r3_19_6 = buildMatch('r3_19_6',
-    w_r2_3_19._botEl,
-    w_r2_6_22._topEl,
-    false, false
-  );
-
-  // ── Semifinals — all slots hidden ─────────────────────────────────────────
-  // r4_16_4: top=seed16 (winner of r3_16_9 top), bot=seed4 (winner of r3_4_5 top)
-  const w_r4_16_4 = buildMatch('r4_16_4',
-    w_r3_16_9._topEl,
-    w_r3_4_5._topEl,
-    false, false
-  );
-
-  // r4_7_19: top=seed7 (winner of r3_2_7 bot), bot=seed19 (winner of r3_19_6 top)
-  const w_r4_7_19 = buildMatch('r4_7_19',
-    w_r3_2_7._botEl,
-    w_r3_19_6._topEl,
-    false, false
-  );
-
-  // ── Final — all slots hidden ──────────────────────────────────────────────
-  // final: top=seed4 (winner of r4_16_4 bot), bot=seed7 (winner of r4_7_19 top)
-  const w_final   = buildMatch('final',
-    w_r4_16_4._botEl,
-    w_r4_7_19._topEl,
-    false, false
-  );
-
-  // ── Compute positions ─────────────────────────────────────────────────────
+  // Position calculations
   const r2TopPx = [0, 1, 2, 3].map(i => i * BAND + (BAND - CELL_H) / 2);
 
   function r2SlotCentre(row, isTop) {
@@ -592,7 +463,7 @@ function render() {
   const p_r4_16_4 = midCentre(p_r3_16_9, p_r3_4_5);
   const p_r4_7_19 = midCentre(p_r3_2_7,  p_r3_19_6);
 
-  // ── Build columns ─────────────────────────────────────────────────────────
+  // Build columns
   const colH = SIDE_H;
 
   const colL_r1 = buildCol('Play-In', colH);
@@ -629,7 +500,7 @@ function render() {
   const colR_r4 = buildCol('Semifinal', colH);
   addToCol(colR_r4, w_r4_7_19, p_r4_7_19);
 
-  // ── Assemble sides ────────────────────────────────────────────────────────
+  // Assemble sides
   const leftSide = document.createElement('div');
   leftSide.className = 'bracket-side';
   [colL_r1, colL_r2, colL_r3, colL_r4].forEach(c => leftSide.appendChild(c));
@@ -638,7 +509,10 @@ function render() {
   rightSide.className = 'bracket-side right';
   [colR_r1, colR_r2, colR_r3, colR_r4].forEach(c => rightSide.appendChild(c));
 
-  // ── Champion column ───────────────────────────────────────────────────────
+  // Champion column
+  // FIX 1 (vertical scroll): finalWrap height was colH + LABEL_H (460px),
+  // but champion-col already has a 28px champion-label above it, making
+  // the column 28px taller than the side columns. Use colH only (432px).
   const champCol = document.createElement('div');
   champCol.className = 'champion-col';
   const champLbl = document.createElement('div');
@@ -648,7 +522,7 @@ function render() {
 
   const finalWrap = document.createElement('div');
   finalWrap.className = 'final-match-wrap';
-  finalWrap.style.height = (colH + LABEL_H) + 'px';
+  finalWrap.style.height = colH + 'px'; // FIX: was (colH + LABEL_H)
 
   const crownWrap = document.createElement('div');
   crownWrap.className = 'champion-crown-wrap';
@@ -669,7 +543,6 @@ function render() {
   champOv.addEventListener('click', () => {
     champContent.style.visibility = 'visible';
     champOv.style.display = 'none';
-    // Green the winner's slot in the Final match
     window._finalTopEl = w_final._topEl;
     w_final._topEl.classList.add('winner');
   });
@@ -677,22 +550,19 @@ function render() {
   crownWrap.appendChild(champSlot);
   finalWrap.appendChild(crownWrap);
 
-  // w_final is a .match with position:absolute children — wrap it in a
-  // position:relative block so Firefox renders it correctly
-  const finalMatchHost = document.createElement('div');
-  finalMatchHost.style.position = 'relative';
-  finalMatchHost.style.width = (164 + 12) + 'px';
-  finalMatchHost.style.height = CELL_H + 'px';
-  // w_final has position:absolute set by addToCol — place it at top:0
-  w_final.style.position = 'relative';
-  w_final.style.left = '';
-  w_final.style.top = '';
-  finalMatchHost.appendChild(w_final);
-  finalWrap.appendChild(finalMatchHost);
+  // FIX 2 (Firefox blank bracket): The original code repositioned w_final
+  // from position:absolute to position:relative by clearing inline left/top
+  // and changing position — unreliable in Firefox because the .match CSS
+  // class sets position:absolute and Firefox didn't consistently let inline
+  // styles override it after the element was already laid out.
+  // Fix: keep w_final as a normal flow element (never add it via addToCol),
+  // and use a static flex container rather than absolute positioning.
+  w_final.style.position = 'static';
+  finalWrap.appendChild(w_final);
 
   champCol.appendChild(finalWrap);
 
-  // ── Mount ─────────────────────────────────────────────────────────────────
+  // Mount
   const bracket = document.getElementById('bracket');
   bracket.appendChild(leftSide);
   bracket.appendChild(champCol);
@@ -700,7 +570,6 @@ function render() {
   bracket.style.display = 'flex';
   bracket.style.alignItems = 'flex-start';
 
-  // Store finalist slot reference for revealAll / hideAll
   window._finalTopEl = w_final._topEl;
 }
 
