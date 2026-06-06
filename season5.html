@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faction Masters Season 5 Results</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold:       #d4a843;
+    --gold-light: #f0d878;
+    --gold-dim:   #a07830;
+    --crimson:    #c0392b;
+    --green:      #4a9e6a;
+    --bg-deep:    #1c1a14;
+    --bg-card:    #2a2620;
+    --bg-card2:   #343028;
+    --bg-winner:  #1e2a1a;
+    --text:       #f0e8d0;
+    --text-dim:   #b0a080;
+    --bye-color:  #242018;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg-deep);
+    color: var(--text);
+    font-family: 'Crimson Pro', serif;
+  }
+  .page-wrap { padding: 1rem 1rem 1.5rem; }
+  nav {
+    text-align: center; margin-bottom: 0.75rem;
+    font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.15em;
+  }
+  nav a { color: var(--gold-dim); text-decoration: none; margin: 0 0.75rem; }
+  nav a:hover { color: var(--gold); }
+  nav a.active { color: var(--gold); border-bottom: 1px solid var(--gold); }
+  header { text-align: center; margin-bottom: 0.75rem; }
+  .crest { font-size: 1.8rem; line-height: 1; margin-bottom: 0.3rem; }
+  h1 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: var(--gold); letter-spacing: 0.05em; line-height: 1.2;
+  }
+  .divider {
+    width: 200px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+    margin: 0.5rem auto;
+  }
+  .controls { display: flex; justify-content: center; gap: 1rem; margin-bottom: 1rem; }
+  .btn {
+    font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.15em;
+    text-transform: uppercase; padding: 0.4rem 1.2rem; border-radius: 3px;
+    border: 1px solid var(--gold-dim); background: transparent; color: var(--gold-dim);
+    cursor: pointer; transition: all 0.2s;
+  }
+  .btn:hover { background: var(--gold-dim); color: var(--bg-deep); }
+
+  .bracket-outer {
+    display: flex; align-items: flex-start; justify-content: center;
+    width: 100%;
+  }
+  .bracket-side       { display: flex; flex-direction: row; }
+  .bracket-side.right { flex-direction: row-reverse; }
+  .bracket-round { display: flex; flex-direction: column; flex-shrink: 0; padding: 0 6px; }
+  .round-label {
+    font-family: 'Cinzel', serif; font-size: 0.65rem; color: var(--gold);
+    letter-spacing: 0.15em; text-transform: uppercase; text-align: center;
+    height: 28px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .round-body { position: relative; }
+  .match { position: absolute; left: 6px; display: flex; flex-direction: column; }
+
+  .slot {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--bg-card); border: 2px solid #4a4030;
+    border-radius: 4px; padding: 6px 10px; width: 164px;
+    position: relative; overflow: hidden;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .slot::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+    background: var(--gold-dim); opacity: 0; transition: opacity 0.2s;
+  }
+  .slot:hover { border-color: var(--gold-dim); background: var(--bg-card2); }
+  .slot:hover::before { opacity: 1; }
+  .slot.winner { background: var(--bg-winner); border-color: var(--green); }
+  .slot.winner::before { background: var(--green); opacity: 1; }
+  .slot.winner:hover { background: var(--bg-winner); border-color: var(--green); }
+  .slot.bye { background: var(--bye-color); border-color: #2e2a20; }
+  .slot.bye:hover { border-color: #2e2a20; background: var(--bye-color); }
+  .slot.bye:hover::before { opacity: 0; }
+  .seed {
+    font-family: 'Cinzel', serif; font-size: 0.7rem; color: var(--gold);
+    min-width: 18px; text-align: right; flex-shrink: 0; font-weight: 600;
+  }
+  .slot-info { display: flex; flex-direction: column; overflow: hidden; flex: 1; }
+  .player-name {
+    font-family: 'Cinzel', serif; font-size: 0.72rem; font-weight: 600;
+    color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.3;
+  }
+  .faction-name {
+    font-size: 0.65rem; color: var(--text-dim); white-space: nowrap;
+    overflow: hidden; text-overflow: ellipsis; line-height: 1.2; font-style: italic;
+  }
+  .slot.bye .player-name { color: var(--text-dim); font-style: italic; }
+  .slot.bye .seed { color: var(--text-dim); }
+  .match-sep { height: 2px; background: #5a5040; margin: 0 2px; }
+  .match-yt {
+    height: 16px; display: flex; align-items: center;
+    justify-content: flex-end; padding-right: 2px; margin-bottom: 2px;
+  }
+  .yt-link {
+    font-size: 0.58rem; color: #e05050; text-decoration: none;
+    font-family: 'Cinzel', serif; letter-spacing: 0.05em; opacity: 0.85;
+    transition: opacity 0.2s; white-space: nowrap;
+  }
+  .yt-link:hover { opacity: 1; text-decoration: underline; }
+  .yt-link::before { content: '▶ '; }
+  .match-note { font-size: 0.58rem; color: var(--text-dim); font-style: italic; font-family: 'Crimson Pro', serif; }
+
+  /* Per-slot overlay — covers only that one slot */
+  .slot-overlay {
+    position: absolute; inset: 0;
+    background: #1c1a14f4;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; z-index: 2; border-radius: 2px;
+    transition: background 0.15s;
+  }
+  .slot-overlay:hover { background: #2a2018f4; }
+  .slot-overlay span {
+    font-family: 'Cinzel', serif; font-size: 0.55rem;
+    color: var(--text-dim); letter-spacing: 0.08em; pointer-events: none;
+    text-transform: uppercase;
+  }
+
+  .champion-col {
+    display: flex; flex-direction: column; align-items: center; flex-shrink: 0; padding: 0 14px; align-self: flex-start;
+  }
+  .champion-label {
+    font-family: 'Cinzel', serif; font-size: 0.65rem; color: var(--gold);
+    letter-spacing: 0.25em; text-transform: uppercase; height: 28px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .final-match-wrap {
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 12px;
+  }
+  .final-match { display: flex; flex-direction: column; position: relative; }
+  .champion-crown-wrap { text-align: center; }
+  .champion-crown { font-size: 1.8rem; display: block; margin-bottom: 4px; }
+  .champion-slot {
+    background: linear-gradient(135deg, #22180a, #2e2010);
+    border: 2px solid var(--gold-dim); border-radius: 4px;
+    padding: 10px 14px; text-align: center; width: 164px;
+    box-shadow: 0 0 20px rgba(201,168,76,0.15); position: relative; overflow: hidden;
+  }
+  .champion-name { font-family: 'Cinzel', serif; font-size: 0.85rem; color: var(--gold-light); font-weight: 600; }
+  .champion-faction { font-size: 0.72rem; color: var(--gold-dim); font-style: italic; margin-top: 2px; }
+
+  /* Champion box uses the full-box overlay style */
+  .match-spoiler {
+    position: absolute; inset: 0;
+    background: #1c1a14f4;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; z-index: 2; border-radius: 4px;
+    transition: background 0.15s;
+  }
+  .match-spoiler:hover { background: #2a2018f4; }
+  .match-spoiler span {
+    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    color: var(--text-dim); letter-spacing: 0.1em; pointer-events: none;
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+  <nav>
+    <a href="index.html">Season 8</a>
+    <a href="season7.html">Season 7</a>
+    <a href="season6.html">Season 6</a>
+    <a href="season5.html" class="active">Season 5</a>
+    <a href="season4.html">Season 4</a>
+  </nav>
+  <header>
+    <div class="crest">⚔️</div>
+    <h1>Faction Masters Season 5</h1>
+    <div class="divider"></div>
+  </header>
+  <div class="controls">
+    <button class="btn" onclick="revealAll()">Reveal All</button>
+    <button class="btn" onclick="hideAll()">Hide All</button>
+  </div>
+  <div class="bracket-outer" id="bracket"></div>
+</div>
+<script>
+const F = {
+  DG:'Deepwood Groaks', FD:'Fungal Dwarves',    VG:'Vanguards',
+  FK:'Fallen Kingdom',  CO:'Crimson Order',     FO:'The Forged',
+  MV:'Mountain Vargath',EC:'Eternal Council',   PE:'Phoenix Elves',
+  WF:'Wayfarers',       SO:'Swamp Orcs',        CL:'Cloaks',
+  PD:'Fungal Dwarves',  CG:'Cave Goblins',      TO:'Tundra Orcs',
+  SE:'Savanna Elves',   OD:'Obsidian Dwarves',  SH:'Shadow Elves',
+  HE:'High Elves',      SA:'Skyspear Avians',   SG:'Sand Goblins',
+  BR:'Breakers',        ST:'Storm Goblins',     SF:'Shimmersea Fae'     
+};
+function p(seed, name, fac) { return { seed, name, faction: F[fac]||fac }; }
+
+const MATCHES = {
+  // Play-in
+  r1_16_17: { top:p(16,'subiasmalo','VG'),   bot:p(17,'Orange Lazarus','FK'),winner:16, yt:'https://youtu.be/xR2gw37YUqA' },
+  r1_15_18: { top:p(15,'Run','SA'),          bot:p(18,'Shmeebee','CO'),     winner:15, yt:'https://youtu.be/_GZQAYu6cfU' },
+  r1_14_19: { top:p(14,'massimo','SH'),      bot:p(19,'ghhinman','BR'),     winner:14, yt:'https://youtu.be/rQlIuWCGYGo' },
+  r1_13_20: { top:p(13,'massimo','SG'),      bot:p(20,'Darkbugz','SE'),     winner:13, yt:'https://youtu.be/lh7bJfuTqCs' },
+  r1_12_21: { top:p(12,'dqi','SF'),          bot:p(21,'Jexik','CG'),        winner:12, yt:'https://youtu.be/9q4QwIYUcJs' },
+  r1_11_22: { top:p(11,'Shoots','ST'),       bot:p(22,'Jexik','OD'),        winner:22, yt:'https://youtu.be/mJdi3Vxd3BQ' },
+  r1_9_23:  { top:p(9, 'dqi', 'HE'),         bot:p(23,'tortugatron', 'PD'), winner:9, yt:'https://youtu.be/Y-BllqpA4tc' },
+  r1_10_24: { top:p(10, 'redhawk13', 'CL'),  bot:p(24, 'beanseasly', 'EC'), winner:10, yt:'https://youtu.be/Hj9ehc2tPhI'},
+  // Round of 16 — left (seeds 1,8,4,5)
+  r2_1_16:  { top:p(1,'phil413ican','DG'),   bot:p(16,'subiasmalo','VG'),   winner:1,  yt:'https://youtu.be/HDYx2Iy0xtQ' },
+  r2_8_9:   { top:p(8,'BookishHolleas','WF'),bot:p(9, 'dqi', 'HE'),         winner:9,  yt:'https://youtu.be/c3R9Qrk_lgU' },
+  r2_4_13:  { top:p(4,'snalg','MV'),         bot:p(13,'massimo','SG'),      winner:4,  yt:'https://youtu.be/cCc9IptZB1c' },
+  r2_5_12:  { top:p(5,'SoopaSte123', 'FO'),  bot:p(12,'dqi','SF'),          winner:5,  yt:'https://youtu.be/nzm6pH_oxQw' },
+  // Round of 16 — right (seeds 2,7,3,6)
+  r2_2_15:  { top:p(2,'subiasmalo', 'PE'),   bot:p(15,'Run','SA'),          winner:15, yt: null, type:'forfeit' },
+  r2_7_10:  { top:p(7,'Orange Lazarus','FD'),bot:p(10, 'redhawk13', 'CL'),  winner:10,  yt:'https://youtu.be/VwsAfUj0yes' },
+  r2_3_14:  { top:p(3,'Nesle','TO'),         bot:p(14,'massimo','SH'),      winner:3, yt:'https://youtu.be/SsDhFA7UF_E' },
+  r2_6_11:  { top:p(6,'CH4MP','SO'),         bot:p(11,'Shoots','ST'),       winner:6,  yt:'https://youtu.be/R27KXXIFo9o' },
+  // Quarterfinals
+  r3_1_9:  { top:p(1,'phil413ican','DG'),   bot:p(9, 'dqi', 'HE'),         winner:9, yt:'https://youtu.be/EM9vQEpZqJo' },
+  r3_4_5:   { top:p(4,'snalg','MV'),         bot:p(5,'SoopaSte123', 'FO'),  winner:5,  yt:'https://youtu.be/xbEOIzsc55U' },
+  r3_15_10:   { top:p(15,'Run','SA'),          bot:p(10, 'redhawk13', 'CL'),  winner:15,  yt:'https://youtu.be/TBcY7BRtEpA' },
+  r3_3_6:  { top:p(3,'Nesle','TO'),         bot:p(6,'CH4MP','SO'),         winner:6, yt:'https://youtu.be/rq80NuKPoVI' },
+  // Semifinals
+  r4_9_5:  { top:p(9, 'dqi', 'HE'),     bot:p(5,'SoopaSte123', 'FO'),         winner:4,  yt:'https://youtu.be/kDqPgSaZuiY' },
+  r4_15_6:  { top:p(15,'Run','SA'),         bot:p(6,'CH4MP','SO'),    winner:7,  yt:'https://youtu.be/sP5btjjSaZU' },
+  // Final
+  final:    { top:p(9, 'dqi', 'HE'),         bot:p(15,'Run','SA'),         winner:9,  yt:'https://youtu.be/wa6fSRpN2Y0' },
+};
+const CHAMPION = p(9, 'dqi', 'HE');
+
+const SLOT_H  = 46;
+const SEP_H   = 2;
+const YT_H    = 18;
+const MATCH_H = SLOT_H * 2 + SEP_H;
+const CELL_H  = YT_H + MATCH_H;
+const GAP     = 14;
+const LABEL_H = 28;
+const BAND    = MATCH_H + GAP;
+const SIDE_H  = 4 * BAND;
+
+const slotRegistry = [];
+
+function registerSlot(slotEl, seed, sourceSlotEl, startRevealed) {
+  const entry = { slotEl, seed, sourceSlotEl, revealed: startRevealed, startRevealed };
+  slotRegistry.push(entry);
+  if (!startRevealed) {
+    addOverlay(slotEl, entry);
+  }
+  return entry;
+}
+
+function addOverlay(slotEl, entry) {
+  const old = slotEl.querySelector('.slot-overlay');
+  if (old) old.remove();
+  const ov = document.createElement('div');
+  ov.className = 'slot-overlay';
+  ov.innerHTML = '<span>Reveal</span>';
+  ov.addEventListener('click', (e) => {
+    e.stopPropagation();
+    revealSlot(entry);
+  });
+  slotEl.appendChild(ov);
+  entry._overlay = ov;
+}
+
+function revealSlot(entry) {
+  entry.revealed = true;
+  if (entry._overlay) {
+    entry._overlay.remove();
+    entry._overlay = null;
+  }
+  if (entry.sourceSlotEl) {
+    entry.sourceSlotEl.classList.add('winner');
+  }
+}
+
+function hideSlot(entry) {
+  entry.revealed = false;
+  if (entry.sourceSlotEl) {
+    entry.sourceSlotEl.classList.remove('winner');
+  }
+  if (!entry._overlay) {
+    addOverlay(entry.slotEl, entry);
+  }
+}
+
+function revealAll() {
+  slotRegistry.forEach(e => { if (!e.revealed) revealSlot(e); });
+  const co = document.getElementById('champ-ov');
+  if (co) co.style.display = 'none';
+  const cc = document.getElementById('champ-content');
+  if (cc) cc.style.visibility = 'visible';
+  if (window._finalTopEl) window._finalTopEl.classList.add('winner');
+}
+
+function hideAll() {
+  slotRegistry.forEach(e => { if (!e.startRevealed && e.revealed) hideSlot(e); });
+  const co = document.getElementById('champ-ov');
+  if (co) co.style.display = '';
+  const cc = document.getElementById('champ-content');
+  if (cc) cc.style.visibility = 'hidden';
+  if (window._finalTopEl) window._finalTopEl.classList.remove('winner');
+}
+
+function makeSlotEl(player) {
+  const div = document.createElement('div');
+  div.className = 'slot';
+  div.__seed = player.seed;
+  const seedEl = document.createElement('span');
+  seedEl.className = 'seed';
+  seedEl.textContent = player.seed;
+  const info = document.createElement('div');
+  info.className = 'slot-info';
+  const nameEl = document.createElement('span');
+  nameEl.className = 'player-name';
+  nameEl.textContent = player.name;
+  const factEl = document.createElement('span');
+  factEl.className = 'faction-name';
+  factEl.textContent = player.faction;
+  info.appendChild(nameEl);
+  info.appendChild(factEl);
+  div.appendChild(seedEl);
+  div.appendChild(info);
+  return div;
+}
+
+function makeYtRow(m) {
+  const row = document.createElement('div');
+  row.className = 'match-yt';
+  if (m.yt) {
+    const a = document.createElement('a');
+    a.className = 'yt-link'; a.href = m.yt; a.target = '_blank'; a.rel = 'noopener';
+    a.textContent = 'Watch'; row.appendChild(a);
+  } else if (m.type === 'forfeit') {
+    const s = document.createElement('span'); s.className = 'match-note';
+    s.textContent = 'forfeit — no video'; row.appendChild(s);
+  } else if (m.type === 'alliance') {
+    const s = document.createElement('span'); s.className = 'match-note';
+    s.style.color = 'var(--gold-dim)'; s.textContent = 'faction alliance'; row.appendChild(s);
+  }
+  return row;
+}
+
+function buildMatch(matchId, topSource, botSource, topStartRevealed, botStartRevealed) {
+  const m = MATCHES[matchId];
+  const wrap = document.createElement('div');
+  wrap.className = 'match';
+
+  wrap.appendChild(makeYtRow(m));
+
+  const topEl = makeSlotEl(m.top);
+  const botEl = makeSlotEl(m.bot);
+  const sep = document.createElement('div'); sep.className = 'match-sep';
+
+  wrap.appendChild(topEl);
+  wrap.appendChild(sep);
+  wrap.appendChild(botEl);
+
+  const topEntry = registerSlot(topEl, m.top.seed, topSource, topStartRevealed);
+  const botEntry = registerSlot(botEl, m.bot.seed, botSource, botStartRevealed);
+
+  wrap._topEl = topEl;
+  wrap._botEl = botEl;
+  wrap._topEntry = topEntry;
+  wrap._botEntry = botEntry;
+
+  return wrap;
+}
+
+function buildCol(label, height) {
+  const col = document.createElement('div');
+  col.className = 'bracket-round';
+  const lbl = document.createElement('div');
+  lbl.className = 'round-label';
+  lbl.textContent = label;
+  col.appendChild(lbl);
+  const body = document.createElement('div');
+  body.className = 'round-body';
+  body.style.height = height + 'px';
+  body.style.width = (164 + 12) + 'px';
+  col.appendChild(body);
+  col._body = body;
+  return col;
+}
+
+function addToCol(col, matchWrap, topPx) {
+  matchWrap.style.position = 'absolute';
+  matchWrap.style.left = '6px';
+  matchWrap.style.top = topPx + 'px';
+  col._body.appendChild(matchWrap);
+}
+
+function render() {
+  const w_r1_16_17 = buildMatch('r1_16_17', null, null, true, true);
+  const w_r1_15_18 = buildMatch('r1_15_18', null, null, true, true);
+  const w_r1_14_19 = buildMatch('r1_14_19', null, null, true, true);
+  const w_r1_13_20 = buildMatch('r1_13_20', null, null, true, true);
+  const w_r1_12_21 = buildMatch('r1_12_21', null, null, true, true);
+  const w_r1_11_22 = buildMatch('r1_11_22', null, null, true, true);
+  const w_r1_9_23 = buildMatch('r1_9_23', null, null, true, true);
+  const w_r1_10_24 = buildMatch('r1_10_24', null, null, true, true);
+
+  const w_r2_1_16 = buildMatch('r2_1_16', null, w_r1_16_17._topEl, true, false);
+  const w_r2_8_9  = buildMatch('r2_8_9',  null, w_r1_9_23._topEl, true, false);
+  const w_r2_4_13 = buildMatch('r2_4_13', null, w_r1_13_20._topEl, true, false);
+  const w_r2_5_12 = buildMatch('r2_5_12', null, w_r1_12_21._topEl, true, false);
+  const w_r2_2_15 = buildMatch('r2_2_15', null, w_r1_15_18._topEl, true, false);
+  const w_r2_7_10 = buildMatch('r2_7_10', null, w_r1_10_24._topEl, true, false);
+  const w_r2_3_14 = buildMatch('r2_3_14', null, w_r1_14_19._topEl, true, false);
+  const w_r2_6_11 = buildMatch('r2_6_11', null, w_r1_11_22._topEl, true, false);
+
+  const w_r3_1_9 = buildMatch('r3_1_9', w_r2_1_16._topEl, w_r2_8_9._botEl,   false, false);
+  const w_r3_4_5  = buildMatch('r3_4_5',  w_r2_4_13._topEl, w_r2_5_12._topEl,  false, false);
+  const w_r3_15_10  = buildMatch('r3_15_10',  w_r2_2_15._botEl, w_r2_7_10._botEl,  false, false);
+  const w_r3_3_6 = buildMatch('r3_3_6', w_r2_3_14._topEl, w_r2_6_11._topEl,  false, false);
+
+  const w_r4_9_5 = buildMatch('r4_9_5', w_r3_1_9._botEl, w_r3_4_5._botEl,   false, false);
+  const w_r4_15_6 = buildMatch('r4_15_6', w_r3_15_10._topEl,  w_r3_3_6._botEl,  false, false);
+
+  const w_final   = buildMatch('final',   w_r4_9_5._topEl, w_r4_15_6._topEl,  false, false);
+
+  // Position calculations
+  const r2TopPx = [0, 1, 2, 3].map(i => i * BAND + (BAND - CELL_H) / 2);
+
+  function r2SlotCentre(row, isTop) {
+    return r2TopPx[row] + YT_H + (isTop ? SLOT_H/2 : SLOT_H + SEP_H + SLOT_H/2);
+  }
+  function r1TopFromCentre(c) { return c - YT_H - SLOT_H - SEP_H/2; }
+
+  const p_r1_16_17 = r1TopFromCentre(r2SlotCentre(0, false));
+  const p_r1_9_23  = r1TopFromCentre(r2SlotCentre(1, false));
+  const p_r1_13_20 = r1TopFromCentre(r2SlotCentre(2, false));
+  const p_r1_12_21 = r1TopFromCentre(r2SlotCentre(3, false));
+  const p_r1_15_18 = r1TopFromCentre(r2SlotCentre(0, false));
+  const p_r1_10_24 = r1TopFromCentre(r2SlotCentre(1, false));
+  const p_r1_14_19 = r1TopFromCentre(r2SlotCentre(2, false));
+  const p_r1_11_22 = r1TopFromCentre(r2SlotCentre(3, false));
+
+  function centredBetween(c1, c2) {
+    return (c1 + c2) / 2 - YT_H - MATCH_H / 2;
+  }
+  function r3TopPx(r2rowA, r2rowB) {
+    const cA = r2TopPx[r2rowA] + YT_H + MATCH_H / 2;
+    const cB = r2TopPx[r2rowB] + YT_H + MATCH_H / 2;
+    return centredBetween(cA, cB);
+  }
+  const p_r3_1_9 = r3TopPx(0, 1);
+  const p_r3_4_5  = r3TopPx(2, 3);
+  const p_r3_15_10  = r3TopPx(0, 1);
+  const p_r3_3_6 = r3TopPx(2, 3);
+
+  function midCentre(topA, topB) {
+    const cA = topA + YT_H + MATCH_H / 2;
+    const cB = topB + YT_H + MATCH_H / 2;
+    return centredBetween(cA, cB);
+  }
+  const p_r4_9_5 = midCentre(p_r3_1_9, p_r3_4_5);
+  const p_r4_15_6 = midCentre(p_r3_15_10,  p_r3_3_6);
+
+  // Build columns
+  const colH = SIDE_H;
+
+  const colL_r1 = buildCol('Play-In', colH);
+  addToCol(colL_r1, w_r1_16_17, p_r1_16_17);
+  addToCol(coll_r1, w_r1_9_23, p_r1_9_23);
+  addToCol(colL_r1, w_r1_13_20, p_r1_13_20);
+  addToCol(colL_r1, w_r1_12_21, p_r1_12_21);
+
+  const colL_r2 = buildCol('Round of 16', colH);
+  r2TopPx.forEach((top, i) => {
+    addToCol(colL_r2, [w_r2_1_16, w_r2_8_9, w_r2_4_13, w_r2_5_12][i], top);
+  });
+
+  const colL_r3 = buildCol('Quarterfinal', colH);
+  addToCol(colL_r3, w_r3_1_9, p_r3_1_9);
+  addToCol(colL_r3, w_r3_4_5,  p_r3_4_5);
+
+  const colL_r4 = buildCol('Semifinal', colH);
+  addToCol(colL_r4, w_r4_9_5, p_r4_9_5);
+
+  const colR_r1 = buildCol('Play-In', colH);
+  addToCol(colR_r1, w_r1_15_18, p_r1_15_18);
+  addToCol(colR_r1, w_r1_10_24, p_r1_10_24);
+  addToCol(colR_r1, w_r1_14_19, p_r1_14_19);
+  addToCol(colR_r1, w_r1_11_22, p_r1_11_22);
+
+  const colR_r2 = buildCol('Round of 16', colH);
+  r2TopPx.forEach((top, i) => {
+    addToCol(colR_r2, [w_r2_2_15, w_r2_7_10, w_r2_3_14, w_r2_6_11][i], top);
+  });
+
+  const colR_r3 = buildCol('Quarterfinal', colH);
+  addToCol(colR_r3, w_r3_15_10,  p_r3_15_10);
+  addToCol(colR_r3, w_r3_3_6, p_r3_3_6);
+
+  const colR_r4 = buildCol('Semifinal', colH);
+  addToCol(colR_r4, w_r4_15_6, p_r4_15_6);
+
+  // Assemble sides
+  const leftSide = document.createElement('div');
+  leftSide.className = 'bracket-side';
+  [colL_r1, colL_r2, colL_r3, colL_r4].forEach(c => leftSide.appendChild(c));
+
+  const rightSide = document.createElement('div');
+  rightSide.className = 'bracket-side right';
+  [colR_r1, colR_r2, colR_r3, colR_r4].forEach(c => rightSide.appendChild(c));
+
+  // Champion column
+  // FIX 1 (vertical scroll): finalWrap height was colH + LABEL_H (460px),
+  // but champion-col already has a 28px champion-label above it, making
+  // the column 28px taller than the side columns. Use colH only (432px).
+  const champCol = document.createElement('div');
+  champCol.className = 'champion-col';
+  const champLbl = document.createElement('div');
+  champLbl.className = 'champion-label';
+  champLbl.textContent = 'Final';
+  champCol.appendChild(champLbl);
+
+  const finalWrap = document.createElement('div');
+  finalWrap.className = 'final-match-wrap';
+  finalWrap.style.height = colH + 'px'; // FIX: was (colH + LABEL_H)
+
+  const crownWrap = document.createElement('div');
+  crownWrap.className = 'champion-crown-wrap';
+  const crownSpan = document.createElement('span');
+  crownSpan.className = 'champion-crown'; crownSpan.textContent = '👑';
+  crownWrap.appendChild(crownSpan);
+  const champSlot = document.createElement('div');
+  champSlot.className = 'champion-slot';
+  const champContent = document.createElement('div');
+  champContent.id = 'champ-content';
+  champContent.style.visibility = 'hidden';
+  champContent.innerHTML = `<div class="champion-name">${CHAMPION.name}</div><div class="champion-faction">${CHAMPION.faction}</div>`;
+  champSlot.appendChild(champContent);
+  const champOv = document.createElement('div');
+  champOv.id = 'champ-ov';
+  champOv.className = 'match-spoiler';
+  champOv.innerHTML = '<span>click to reveal</span>';
+  champOv.addEventListener('click', () => {
+    champContent.style.visibility = 'visible';
+    champOv.style.display = 'none';
+    window._finalTopEl = w_final._topEl;
+    w_final._topEl.classList.add('winner');
+  });
+  champSlot.appendChild(champOv);
+  crownWrap.appendChild(champSlot);
+  finalWrap.appendChild(crownWrap);
+
+  // FIX 2 (Firefox blank bracket): The original code repositioned w_final
+  // from position:absolute to position:relative by clearing inline left/top
+  // and changing position — unreliable in Firefox because the .match CSS
+  // class sets position:absolute and Firefox didn't consistently let inline
+  // styles override it after the element was already laid out.
+  // Fix: keep w_final as a normal flow element (never add it via addToCol),
+  // and use a static flex container rather than absolute positioning.
+  w_final.style.position = 'static';
+  finalWrap.appendChild(w_final);
+
+  champCol.appendChild(finalWrap);
+
+  // Mount
+  const bracket = document.getElementById('bracket');
+  bracket.appendChild(leftSide);
+  bracket.appendChild(champCol);
+  bracket.appendChild(rightSide);
+  bracket.style.display = 'flex';
+  bracket.style.alignItems = 'flex-start';
+
+  window._finalTopEl = w_final._topEl;
+}
+
+render();
+</script>
+</body>
+</html>
