@@ -27,9 +27,6 @@
     background: var(--bg-deep);
     color: var(--text);
     font-family: 'Crimson Pro', serif;
-    height: 100%;
-    overflow-x: auto;
-    overflow-y: auto;
   }
   .page-wrap { padding: 1rem 1rem 1.5rem; }
   nav {
@@ -62,7 +59,7 @@
 
   .bracket-outer {
     display: flex; align-items: flex-start; justify-content: center;
-    width: 100%; overflow-x: auto;
+    width: 100%;
   }
   .bracket-side       { display: flex; flex-direction: row; }
   .bracket-side.right { flex-direction: row-reverse; }
@@ -139,7 +136,7 @@
   }
 
   .champion-col {
-    display: flex; flex-direction: column; align-items: center; flex-shrink: 0; padding: 0 14px;
+    display: flex; flex-direction: column; align-items: center; flex-shrink: 0; padding: 0 14px; align-self: flex-start;
   }
   .champion-label {
     font-family: 'Cinzel', serif; font-size: 0.65rem; color: var(--gold);
@@ -147,7 +144,7 @@
     display: flex; align-items: center; justify-content: center;
   }
   .final-match-wrap {
-    flex: 1; display: flex; flex-direction: column;
+    display: flex; flex-direction: column;
     align-items: center; justify-content: center; gap: 12px;
   }
   .final-match { display: flex; flex-direction: column; position: relative; }
@@ -651,7 +648,7 @@ function render() {
 
   const finalWrap = document.createElement('div');
   finalWrap.className = 'final-match-wrap';
-  finalWrap.style.height = colH + 'px';
+  finalWrap.style.height = (colH + LABEL_H) + 'px';
 
   const crownWrap = document.createElement('div');
   crownWrap.className = 'champion-crown-wrap';
@@ -679,7 +676,20 @@ function render() {
   champSlot.appendChild(champOv);
   crownWrap.appendChild(champSlot);
   finalWrap.appendChild(crownWrap);
-  finalWrap.appendChild(w_final);
+
+  // w_final is a .match with position:absolute children — wrap it in a
+  // position:relative block so Firefox renders it correctly
+  const finalMatchHost = document.createElement('div');
+  finalMatchHost.style.position = 'relative';
+  finalMatchHost.style.width = (164 + 12) + 'px';
+  finalMatchHost.style.height = CELL_H + 'px';
+  // w_final has position:absolute set by addToCol — place it at top:0
+  w_final.style.position = 'relative';
+  w_final.style.left = '';
+  w_final.style.top = '';
+  finalMatchHost.appendChild(w_final);
+  finalWrap.appendChild(finalMatchHost);
+
   champCol.appendChild(finalWrap);
 
   // ── Mount ─────────────────────────────────────────────────────────────────
@@ -689,7 +699,6 @@ function render() {
   bracket.appendChild(rightSide);
   bracket.style.display = 'flex';
   bracket.style.alignItems = 'flex-start';
-  bracket.style.height = (colH + LABEL_H) + 'px';
 
   // Store finalist slot reference for revealAll / hideAll
   window._finalTopEl = w_final._topEl;
