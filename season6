@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faction Masters Season 6 Results</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold:       #d4a843;
+    --gold-light: #f0d878;
+    --gold-dim:   #a07830;
+    --crimson:    #c0392b;
+    --green:      #4a9e6a;
+    --bg-deep:    #1c1a14;
+    --bg-card:    #2a2620;
+    --bg-card2:   #343028;
+    --bg-winner:  #1e2a1a;
+    --text:       #f0e8d0;
+    --text-dim:   #b0a080;
+    --bye-color:  #242018;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg-deep); color: var(--text); font-family: 'Crimson Pro', serif; }
+  .page-wrap { padding: 1rem 1rem 1.5rem; }
+  nav { text-align: center; margin-bottom: 0.75rem; font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.15em; }
+  nav a { color: var(--gold-dim); text-decoration: none; margin: 0 0.75rem; }
+  nav a:hover { color: var(--gold); }
+  nav a.active { color: var(--gold); border-bottom: 1px solid var(--gold); }
+  header { text-align: center; margin-bottom: 0.75rem; }
+  .crest { font-size: 1.8rem; line-height: 1; margin-bottom: 0.3rem; }
+  h1 { font-family: 'Cinzel Decorative', cursive; font-size: clamp(1.2rem, 3vw, 2rem); color: var(--gold); letter-spacing: 0.05em; line-height: 1.2; }
+  .divider { width: 200px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold-dim), transparent); margin: 0.5rem auto; }
+  .controls { display: flex; justify-content: center; gap: 1rem; margin-bottom: 1rem; }
+  .btn { font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.4rem 1.2rem; border-radius: 3px; border: 1px solid var(--gold-dim); background: transparent; color: var(--gold-dim); cursor: pointer; transition: all 0.2s; }
+  .btn:hover { background: var(--gold-dim); color: var(--bg-deep); }
+  .bracket-outer { display: flex; align-items: flex-start; justify-content: center; width: 100%; }
+  .bracket-side { display: flex; flex-direction: row; }
+  .bracket-side.right { flex-direction: row-reverse; }
+  .bracket-round { display: flex; flex-direction: column; flex-shrink: 0; padding: 0 6px; }
+  .round-label { font-family: 'Cinzel', serif; font-size: 0.65rem; color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase; text-align: center; height: 28px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .round-body { position: relative; }
+  .match { position: absolute; left: 6px; display: flex; flex-direction: column; }
+  .slot { display: flex; align-items: center; gap: 8px; background: var(--bg-card); border: 2px solid #4a4030; border-radius: 4px; padding: 6px 10px; width: 164px; position: relative; overflow: hidden; transition: border-color 0.2s, background 0.2s; }
+  .slot::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--gold-dim); opacity: 0; transition: opacity 0.2s; }
+  .slot:hover { border-color: var(--gold-dim); background: var(--bg-card2); }
+  .slot:hover::before { opacity: 1; }
+  .slot.winner { background: var(--bg-winner); border-color: var(--green); }
+  .slot.winner::before { background: var(--green); opacity: 1; }
+  .slot.winner:hover { background: var(--bg-winner); border-color: var(--green); }
+  .slot.bye { background: var(--bye-color); border-color: #2e2a20; }
+  .slot.bye:hover { border-color: #2e2a20; background: var(--bye-color); }
+  .slot.bye:hover::before { opacity: 0; }
+  .seed { font-family: 'Cinzel', serif; font-size: 0.7rem; color: var(--gold); min-width: 18px; text-align: right; flex-shrink: 0; font-weight: 600; }
+  .slot-info { display: flex; flex-direction: column; overflow: hidden; flex: 1; }
+  .player-name { font-family: 'Cinzel', serif; font-size: 0.72rem; font-weight: 600; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.3; }
+  .faction-name { font-size: 0.65rem; color: var(--text-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.2; font-style: italic; }
+  .slot.bye .player-name { color: var(--text-dim); font-style: italic; }
+  .slot.bye .seed { color: var(--text-dim); }
+  .match-sep { height: 2px; background: #5a5040; margin: 0 2px; }
+  .match-yt { height: 16px; display: flex; align-items: center; justify-content: flex-end; padding-right: 2px; margin-bottom: 2px; }
+  .yt-link { font-size: 0.58rem; color: #e05050; text-decoration: none; font-family: 'Cinzel', serif; letter-spacing: 0.05em; opacity: 0.85; transition: opacity 0.2s; white-space: nowrap; }
+  .yt-link:hover { opacity: 1; text-decoration: underline; }
+  .yt-link::before { content: '▶ '; }
+  .match-note { font-size: 0.58rem; color: var(--text-dim); font-style: italic; font-family: 'Crimson Pro', serif; }
+  .match-note.alliance { color: var(--gold-dim); font-style: normal; font-family: 'Cinzel', serif; font-size: 0.52rem; letter-spacing: 0.04em; }
+  .slot-overlay { position: absolute; inset: 0; background: #1c1a14f4; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 2; border-radius: 2px; transition: background 0.15s; }
+  .slot-overlay:hover { background: #2a2018f4; }
+  .slot-overlay span { font-family: 'Cinzel', serif; font-size: 0.55rem; color: var(--text-dim); letter-spacing: 0.08em; pointer-events: none; text-transform: uppercase; }
+  .champion-col { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; padding: 0 14px; align-self: flex-start; }
+  .champion-label { font-family: 'Cinzel', serif; font-size: 0.65rem; color: var(--gold); letter-spacing: 0.25em; text-transform: uppercase; height: 28px; display: flex; align-items: center; justify-content: center; }
+  .final-match-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
+  .champion-crown-wrap { text-align: center; }
+  .champion-crown { font-size: 1.8rem; display: block; margin-bottom: 4px; }
+  .champion-slot { background: linear-gradient(135deg, #22180a, #2e2010); border: 2px solid var(--gold-dim); border-radius: 4px; padding: 10px 14px; text-align: center; width: 164px; box-shadow: 0 0 20px rgba(201,168,76,0.15); position: relative; overflow: hidden; }
+  .champion-name { font-family: 'Cinzel', serif; font-size: 0.85rem; color: var(--gold-light); font-weight: 600; }
+  .champion-faction { font-size: 0.72rem; color: var(--gold-dim); font-style: italic; margin-top: 2px; }
+  .match-spoiler { position: absolute; inset: 0; background: #1c1a14f4; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 2; border-radius: 4px; transition: background 0.15s; }
+  .match-spoiler:hover { background: #2a2018f4; }
+  .match-spoiler span { font-family: 'Cinzel', serif; font-size: 0.6rem; color: var(--text-dim); letter-spacing: 0.1em; pointer-events: none; }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+  <nav>
+    <a href="index.html">Season 8</a>
+    <a href="season7.html">Season 7</a>
+    <a href="season6.html" class="active">Season 6</a>
+    <a href="season5.html">Season 5</a>
+    <a href="season4.html">Season 4</a>
+  </nav>
+  <header>
+    <div class="crest">⚔️</div>
+    <h1>Faction Masters Season 6</h1>
+    <div class="divider"></div>
+  </header>
+  <div class="controls">
+    <button class="btn" onclick="revealAll()">Reveal All</button>
+    <button class="btn" onclick="hideAll()">Hide All</button>
+  </div>
+  <div class="bracket-outer" id="bracket"></div>
+</div>
+<script>
+const F = {
+  DG:'Deepwood Groaks', FD:'Fungal Dwarves',   VG:'Vanguards',
+  FK:'Fallen Kingdom',  CO:'Crimson Order',    FO:'The Forged',
+  MV:'Mountain Vargath',EC:'Eternal Council',  PE:'Phoenix Elves',
+  WF:'Wayfarers',       SO:'Swamp Orcs',       CL:'Cloaks',
+  PD:'Fungal Dwarves',  CG:'Cave Goblins',     TO:'Tundra Orcs',
+  SE:'Savanna Elves',   OD:'Obsidian Dwarves', SH:'Shadow Elves',
+  HE:'High Elves',      SA:'Skyspear Avians',  SG:'Sand Goblins',
+  BR:'Breakers',        ST:'Storm Goblins',    SF:'Shimmersea Fae',
+  FL:'The Filth',       CH:'Chosen Grove',
+};
+function p(seed, name, fac) { return { seed, name, faction: F[fac]||fac }; }
+
+const MATCHES = {
+  // PLAY-IN
+  pi_16_17: { top:p(16,'Hari','CO'),              bot:p(17,'DeadSans','BR'),           winner:17, yt:'https://youtu.be/PEHBmUGxHMo' },
+  pi_8_25:  { top:p(8,'CH4MP','PE'),              bot:p(25,'Vexer','DG'),              winner:25, yt:'https://youtu.be/MMULfECSz6E' },
+  pi_9_23:  { top:p(9,'Vexer','FL'),              bot:p(23,'MeddlingMoon','PD'),       winner:9,  yt:'https://youtu.be/qaAWCVR0ECc' },
+  pi_13_20: { top:p(13,'Magnifico','SH'),          bot:p(20,'massimo','SG'),           winner:20, yt:'https://youtu.be/b1-tQsjfMvA' },
+  pi_12_21: { top:p(12,'DeadSans','CG'),          bot:p(21,'Digno','EC'),              winner:21, yt:'https://youtu.be/paoBAXcCAD4' },
+  pi_15_18: { top:p(15,'DeadSans','ST'),          bot:p(18,'Devlinfish','SA'),         winner:15, yt:'https://youtu.be/3Jj7SBjGCfo' },
+  pi_7_26:  { top:p(7,'Orange Lazarus','MV'),     bot:p(26,'TheBeastSlumbers','SF'),  winner:7,  yt:'https://youtu.be/JNvvGSWA0B8' },
+  pi_10_24: { top:p(10,'xKINGx','FO'),            bot:p(24,'Orange Lazarus','VG'),    winner:24, yt:'https://youtu.be/9sSqdtU4mlc' },
+  pi_14_19: { top:p(14,'Dark Thomy','FK'),        bot:p(19,'Orange Lazarus','FD'),    winner:14, yt:'https://youtu.be/QFbKiicWcNI' },
+  pi_11_22: { top:p(11,'PetarPvZ','SE'),          bot:p(22,'CH4MP','SO'),             winner:11, yt:'https://youtu.be/neKWLAEKwYg' },
+  // ROUND OF 16
+  r2_1_17:  { top:p(1,'Shoots','CH'),             bot:p(17,'DeadSans','BR'),           winner:1,  yt:'https://youtu.be/w4aDVlsxStU' },
+  r2_25_9:  { top:p(25,'Vexer','DG'),             bot:p(9,'Vexer','FL'),               winner:25, type:'alliance', yt:null },
+  r2_4_20:  { top:p(4,'Nesle','TO'),              bot:p(20,'massimo','SG'),            winner:20, yt:'https://youtu.be/PrIdSVCbCOI' },
+  r2_5_21:  { top:p(5,'xKINGx','CL'),             bot:p(21,'Digno','EC'),              winner:21, yt:'https://youtu.be/U4dAx97AP_I' },
+  r2_2_15:  { top:p(2,'meee','OD'),               bot:p(15,'DeadSans','ST'),           winner:15, yt:'https://youtu.be/zMLXgLmL1uY' },
+  r2_7_24:  { top:p(7,'Orange Lazarus','MV'),     bot:p(24,'Orange Lazarus','VG'),    winner:7,  type:'alliance', yt:null },
+  r2_3_14:  { top:p(3,'BookishHolleas','WF'),     bot:p(14,'Dark Thomy','FK'),         winner:3,  yt:'https://youtu.be/HBmVnzBOdOc' },
+  r2_6_11:  { top:p(6,'dqi','HE'),                bot:p(11,'PetarPvZ','SE'),           winner:6,  yt:'https://youtu.be/dGL9E6K0BQg' },
+  // QUARTERFINALS
+  r3_1_9:   { top:p(1,'Shoots','CH'),             bot:p(9,'Vexer','DG'),              winner:1,  yt:'https://youtu.be/LOt-l2qnoEw' },
+  r3_20_21: { top:p(20,'massimo','SG'),           bot:p(21,'Digno','EC'),              winner:20, yt:'https://youtu.be/0YMkQLODMdI' },
+  r3_15_7:  { top:p(15,'DeadSans','ST'),          bot:p(7,'Orange Lazarus','MV'),     winner:7,  yt:'https://youtu.be/CX61cYvni-M' },
+  r3_3_6:   { top:p(3,'BookishHolleas','WF'),     bot:p(6,'dqi','HE'),                winner:3,  yt:'https://youtu.be/-Claogw9YWo' },
+  // SEMIFINALS
+  r4_1_20:  { top:p(1,'Shoots','CH'),             bot:p(20,'massimo','SG'),           winner:20, yt:'https://youtu.be/r-ai3DOoeJI' },
+  r4_7_3:   { top:p(7,'Orange Lazarus','MV'),     bot:p(3,'BookishHolleas','WF'),     winner:3,  yt:'https://youtu.be/l-15VJjOeh0' },
+  // FINAL
+  final:    { top:p(20,'massimo','SG'),            bot:p(3,'BookishHolleas','WF'),     winner:20, yt:'https://youtu.be/AP-Xh9i4PI4' },
+};
+
+const CHAMPION = p(20, 'massimo', 'SG');
+
+const SLOT_H = 46, SEP_H = 2, YT_H = 18;
+const MATCH_H = SLOT_H * 2 + SEP_H;
+const GAP = 14;
+const BAND = MATCH_H + GAP;
+const SIDE_ROWS = 4;
+const SIDE_H = SIDE_ROWS * BAND;
+
+const slotRegistry = [];
+
+function registerSlot(slotEl, seed, sourceSlotEl, startRevealed) {
+  const entry = { slotEl, seed, sourceSlotEl, revealed: startRevealed, startRevealed };
+  slotRegistry.push(entry);
+  if (!startRevealed) addOverlay(slotEl, entry);
+  return entry;
+}
+function addOverlay(slotEl, entry) {
+  const old = slotEl.querySelector('.slot-overlay');
+  if (old) old.remove();
+  const ov = document.createElement('div');
+  ov.className = 'slot-overlay';
+  ov.innerHTML = '<span>Reveal</span>';
+  ov.addEventListener('click', e => { e.stopPropagation(); revealSlot(entry); });
+  slotEl.appendChild(ov);
+  entry._overlay = ov;
+}
+function revealSlot(entry) {
+  entry.revealed = true;
+  if (entry._overlay) { entry._overlay.remove(); entry._overlay = null; }
+  if (entry.sourceSlotEl) entry.sourceSlotEl.classList.add('winner');
+}
+function hideSlot(entry) {
+  entry.revealed = false;
+  if (entry.sourceSlotEl) entry.sourceSlotEl.classList.remove('winner');
+  if (!entry._overlay) addOverlay(entry.slotEl, entry);
+}
+function revealAll() {
+  slotRegistry.forEach(e => { if (!e.revealed) revealSlot(e); });
+  const co = document.getElementById('champ-ov'); if (co) co.style.display = 'none';
+  const cc = document.getElementById('champ-content'); if (cc) cc.style.visibility = 'visible';
+  if (window._finalTopEl) window._finalTopEl.classList.add('winner');
+}
+function hideAll() {
+  slotRegistry.forEach(e => { if (!e.startRevealed && e.revealed) hideSlot(e); });
+  const co = document.getElementById('champ-ov'); if (co) co.style.display = '';
+  const cc = document.getElementById('champ-content'); if (cc) cc.style.visibility = 'hidden';
+  if (window._finalTopEl) window._finalTopEl.classList.remove('winner');
+}
+
+function makeSlotEl(player) {
+  const div = document.createElement('div');
+  div.className = 'slot';
+  div.__seed = player.seed;
+  const seedEl = document.createElement('span');
+  seedEl.className = 'seed';
+  seedEl.textContent = player.seed;
+  const info = document.createElement('div');
+  info.className = 'slot-info';
+  const nameEl = document.createElement('span');
+  nameEl.className = 'player-name';
+  nameEl.textContent = player.name;
+  const factEl = document.createElement('span');
+  factEl.className = 'faction-name';
+  factEl.textContent = player.faction;
+  info.appendChild(nameEl);
+  info.appendChild(factEl);
+  div.appendChild(seedEl);
+  div.appendChild(info);
+  return div;
+}
+
+function makeYtRow(m) {
+  const row = document.createElement('div');
+  row.className = 'match-yt';
+  if (m.yt) {
+    const a = document.createElement('a');
+    a.className = 'yt-link'; a.href = m.yt; a.target = '_blank'; a.rel = 'noopener';
+    a.textContent = 'Watch'; row.appendChild(a);
+  } else if (m.type === 'alliance') {
+    const s = document.createElement('span');
+    s.className = 'match-note alliance';
+    s.textContent = 'faction alliance';
+    row.appendChild(s);
+  } else if (m.type === 'forfeit') {
+    const s = document.createElement('span'); s.className = 'match-note';
+    s.textContent = 'forfeit — no video'; row.appendChild(s);
+  }
+  return row;
+}
+
+function buildMatch(matchId, topSource, botSource, topStartRevealed, botStartRevealed) {
+  const m = MATCHES[matchId];
+  const wrap = document.createElement('div');
+  wrap.className = 'match';
+  wrap.appendChild(makeYtRow(m));
+  const topEl = makeSlotEl(m.top);
+  const botEl = makeSlotEl(m.bot);
+  const sep = document.createElement('div'); sep.className = 'match-sep';
+  wrap.appendChild(topEl);
+  wrap.appendChild(sep);
+  wrap.appendChild(botEl);
+  registerSlot(topEl, m.top.seed, topSource, topStartRevealed);
+  registerSlot(botEl, m.bot.seed, botSource, botStartRevealed);
+  wrap._topEl = topEl;
+  wrap._botEl = botEl;
+  return wrap;
+}
+
+function buildCol(label, height) {
+  const col = document.createElement('div');
+  col.className = 'bracket-round';
+  const lbl = document.createElement('div');
+  lbl.className = 'round-label';
+  lbl.textContent = label;
+  col.appendChild(lbl);
+  const body = document.createElement('div');
+  body.className = 'round-body';
+  body.style.height = height + 'px';
+  body.style.width = (164 + 12) + 'px';
+  col.appendChild(body);
+  col._body = body;
+  return col;
+}
+
+function addToCol(col, matchWrap, topPx) {
+  matchWrap.style.position = 'absolute';
+  matchWrap.style.left = '6px';
+  matchWrap.style.top = topPx + 'px';
+  col._body.appendChild(matchWrap);
+}
+
+function render() {
+  // Play-in matches
+  const pi_16_17 = buildMatch('pi_16_17', null, null, true, true);
+  const pi_8_25  = buildMatch('pi_8_25',  null, null, true, true);
+  const pi_9_23  = buildMatch('pi_9_23',  null, null, true, true);
+  const pi_13_20 = buildMatch('pi_13_20', null, null, true, true);
+  const pi_12_21 = buildMatch('pi_12_21', null, null, true, true);
+  const pi_15_18 = buildMatch('pi_15_18', null, null, true, true);
+  const pi_7_26  = buildMatch('pi_7_26',  null, null, true, true);
+  const pi_10_24 = buildMatch('pi_10_24', null, null, true, true);
+  const pi_14_19 = buildMatch('pi_14_19', null, null, true, true);
+  const pi_11_22 = buildMatch('pi_11_22', null, null, true, true);
+
+  // Round of 16
+  // Left: 1vBot(16/17), Top(8/25)vBot(9/23)[alliance], 4vBot(13/20), 5vBot(12/21)
+  const r2_1_17  = buildMatch('r2_1_17',  null,             pi_16_17._botEl, true,  false);
+  const r2_25_9  = buildMatch('r2_25_9',  pi_8_25._botEl,  pi_9_23._topEl,  false, false);
+  const r2_4_20  = buildMatch('r2_4_20',  null,             pi_13_20._botEl, true,  false);
+  const r2_5_21  = buildMatch('r2_5_21',  null,             pi_12_21._botEl, true,  false);
+  // Right: 2vBot(15/18), Top(7/26)vBot(10/24)[alliance], 3vTop(14/19), 6vTop(11/22)
+  const r2_2_15  = buildMatch('r2_2_15',  null,             pi_15_18._topEl, true,  false);
+  const r2_7_24  = buildMatch('r2_7_24',  pi_7_26._topEl,  pi_10_24._botEl, false, false);
+  const r2_3_14  = buildMatch('r2_3_14',  null,             pi_14_19._topEl, true,  false);
+  const r2_6_11  = buildMatch('r2_6_11',  null,             pi_11_22._topEl, true,  false);
+
+  // Quarterfinals
+  const r3_1_9   = buildMatch('r3_1_9',   r2_1_17._topEl,  r2_25_9._topEl,  false, false);
+  const r3_20_21 = buildMatch('r3_20_21', r2_4_20._botEl,  r2_5_21._botEl,  false, false);
+  const r3_15_7  = buildMatch('r3_15_7',  r2_2_15._botEl,  r2_7_24._topEl,  false, false);
+  const r3_3_6   = buildMatch('r3_3_6',   r2_3_14._topEl,  r2_6_11._topEl,  false, false);
+
+  // Semifinals
+  const r4_1_20  = buildMatch('r4_1_20',  r3_1_9._topEl,   r3_20_21._topEl, false, false);
+  const r4_7_3   = buildMatch('r4_7_3',   r3_15_7._botEl,  r3_3_6._topEl,   false, false);
+
+  // Final
+  const w_final  = buildMatch('final',    r4_1_20._botEl,  r4_7_3._botEl,   false, false);
+
+  // Position math
+  // Each side has 4 R16 rows. Play-in matches feed into those rows.
+  // For a match with TWO play-in feeders (alliance rows), the two play-ins stack:
+  //   top play-in centres on the top slot of the R16 match
+  //   bot play-in centres on the bot slot of the R16 match
+  const r2TopPx = [0,1,2,3].map(i => i * BAND + (BAND - (YT_H + MATCH_H)) / 2);
+
+  function slotCentre(rowTop, isTop) {
+    return rowTop + YT_H + (isTop ? SLOT_H/2 : SLOT_H + SEP_H + SLOT_H/2);
+  }
+  function matchTopFromCentre(c) { return c - YT_H - SLOT_H - SEP_H/2; }
+
+  // Row 0: r2_1_17 — seed1 bye top, playin bot → pi_16_17 centred on bot slot
+  const p_pi_16_17 = matchTopFromCentre(slotCentre(r2TopPx[0], false));
+  // Row 1: r2_25_9 — both play-in feeders → pi_8_25 on top slot, pi_9_23 on bot slot
+  const p_pi_8_25  = matchTopFromCentre(slotCentre(r2TopPx[1], true));
+  const p_pi_9_23  = matchTopFromCentre(slotCentre(r2TopPx[1], false));
+  // Row 2: r2_4_20 — seed4 bye top, playin bot → pi_13_20 centred on bot slot
+  const p_pi_13_20 = matchTopFromCentre(slotCentre(r2TopPx[2], false));
+  // Row 3: r2_5_21 — seed5 bye top, playin bot → pi_12_21 centred on bot slot
+  const p_pi_12_21 = matchTopFromCentre(slotCentre(r2TopPx[3], false));
+
+  // Right side play-ins
+  // Row 0: r2_2_15 — seed2 bye top, playin bot → pi_15_18 on bot slot
+  const p_pi_15_18 = matchTopFromCentre(slotCentre(r2TopPx[0], false));
+  // Row 1: r2_7_24 — both play-in → pi_7_26 on top slot, pi_10_24 on bot slot
+  const p_pi_7_26  = matchTopFromCentre(slotCentre(r2TopPx[1], true));
+  const p_pi_10_24 = matchTopFromCentre(slotCentre(r2TopPx[1], false));
+  // Row 2: r2_3_14 — seed3 bye top, playin bot → pi_14_19 on bot slot (actually top feeds r2)
+  const p_pi_14_19 = matchTopFromCentre(slotCentre(r2TopPx[2], false));
+  // Row 3: r2_6_11 — seed6 bye top, playin bot → pi_11_22 on bot slot (actually top feeds r2)
+  const p_pi_11_22 = matchTopFromCentre(slotCentre(r2TopPx[3], false));
+
+  // QF positions: centred between pairs of R16 matches
+  function centredBetween(c1, c2) { return (c1+c2)/2 - YT_H - MATCH_H/2; }
+  function r3Pos(rowA, rowB) {
+    const cA = r2TopPx[rowA] + YT_H + MATCH_H/2;
+    const cB = r2TopPx[rowB] + YT_H + MATCH_H/2;
+    return centredBetween(cA, cB);
+  }
+  const p_r3_1_9   = r3Pos(0, 1);
+  const p_r3_20_21 = r3Pos(2, 3);
+  const p_r3_15_7  = r3Pos(0, 1);
+  const p_r3_3_6   = r3Pos(2, 3);
+
+  // SF positions
+  function sfPos(tA, tB) {
+    const cA = tA + YT_H + MATCH_H/2;
+    const cB = tB + YT_H + MATCH_H/2;
+    return centredBetween(cA, cB);
+  }
+  const p_r4_1_20 = sfPos(p_r3_1_9, p_r3_20_21);
+  const p_r4_7_3  = sfPos(p_r3_15_7, p_r3_3_6);
+
+  const colH = SIDE_H;
+
+  // Build columns
+  const colL_pi = buildCol('Play-In', colH);
+  addToCol(colL_pi, pi_16_17, p_pi_16_17);
+  addToCol(colL_pi, pi_8_25,  p_pi_8_25);
+  addToCol(colL_pi, pi_9_23,  p_pi_9_23);
+  addToCol(colL_pi, pi_13_20, p_pi_13_20);
+  addToCol(colL_pi, pi_12_21, p_pi_12_21);
+
+  const colL_r2 = buildCol('Round of 16', colH);
+  [r2_1_17, r2_25_9, r2_4_20, r2_5_21].forEach((m,i) => addToCol(colL_r2, m, r2TopPx[i]));
+
+  const colL_r3 = buildCol('Quarterfinal', colH);
+  addToCol(colL_r3, r3_1_9,   p_r3_1_9);
+  addToCol(colL_r3, r3_20_21, p_r3_20_21);
+
+  const colL_r4 = buildCol('Semifinal', colH);
+  addToCol(colL_r4, r4_1_20, p_r4_1_20);
+
+  const colR_pi = buildCol('Play-In', colH);
+  addToCol(colR_pi, pi_15_18, p_pi_15_18);
+  addToCol(colR_pi, pi_7_26,  p_pi_7_26);
+  addToCol(colR_pi, pi_10_24, p_pi_10_24);
+  addToCol(colR_pi, pi_14_19, p_pi_14_19);
+  addToCol(colR_pi, pi_11_22, p_pi_11_22);
+
+  const colR_r2 = buildCol('Round of 16', colH);
+  [r2_2_15, r2_7_24, r2_3_14, r2_6_11].forEach((m,i) => addToCol(colR_r2, m, r2TopPx[i]));
+
+  const colR_r3 = buildCol('Quarterfinal', colH);
+  addToCol(colR_r3, r3_15_7, p_r3_15_7);
+  addToCol(colR_r3, r3_3_6,  p_r3_3_6);
+
+  const colR_r4 = buildCol('Semifinal', colH);
+  addToCol(colR_r4, r4_7_3, p_r4_7_3);
+
+  const leftSide = document.createElement('div');
+  leftSide.className = 'bracket-side';
+  [colL_pi, colL_r2, colL_r3, colL_r4].forEach(c => leftSide.appendChild(c));
+
+  const rightSide = document.createElement('div');
+  rightSide.className = 'bracket-side right';
+  [colR_pi, colR_r2, colR_r3, colR_r4].forEach(c => rightSide.appendChild(c));
+
+  // Champion column
+  const champCol = document.createElement('div');
+  champCol.className = 'champion-col';
+  const champLbl = document.createElement('div');
+  champLbl.className = 'champion-label';
+  champLbl.textContent = 'Final';
+  champCol.appendChild(champLbl);
+
+  const finalWrap = document.createElement('div');
+  finalWrap.className = 'final-match-wrap';
+  finalWrap.style.height = colH + 'px';
+
+  const crownWrap = document.createElement('div');
+  crownWrap.className = 'champion-crown-wrap';
+  const crownSpan = document.createElement('span');
+  crownSpan.className = 'champion-crown';
+  crownSpan.textContent = '👑';
+  crownWrap.appendChild(crownSpan);
+  const champSlot = document.createElement('div');
+  champSlot.className = 'champion-slot';
+  const champContent = document.createElement('div');
+  champContent.id = 'champ-content';
+  champContent.style.visibility = 'hidden';
+  champContent.innerHTML = '<div class="champion-name">' + CHAMPION.name + '</div><div class="champion-faction">' + CHAMPION.faction + '</div>';
+  champSlot.appendChild(champContent);
+  const champOv = document.createElement('div');
+  champOv.id = 'champ-ov';
+  champOv.className = 'match-spoiler';
+  champOv.innerHTML = '<span>click to reveal</span>';
+  champOv.addEventListener('click', () => {
+    champContent.style.visibility = 'visible';
+    champOv.style.display = 'none';
+    if (window._finalTopEl) window._finalTopEl.classList.add('winner');
+  });
+  champSlot.appendChild(champOv);
+  crownWrap.appendChild(champSlot);
+  finalWrap.appendChild(crownWrap);
+
+  w_final.style.position = 'static';
+  finalWrap.appendChild(w_final);
+  champCol.appendChild(finalWrap);
+
+  const bracket = document.getElementById('bracket');
+  bracket.appendChild(leftSide);
+  bracket.appendChild(champCol);
+  bracket.appendChild(rightSide);
+  bracket.style.display = 'flex';
+  bracket.style.alignItems = 'flex-start';
+
+  window._finalTopEl = w_final._topEl;
+}
+
+render();
+</script>
+</body>
+</html>
