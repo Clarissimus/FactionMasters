@@ -87,24 +87,24 @@
       "elo": 1386
     },
     {
+      "faction": "Cave Goblins",
+      "username": "DeadSans",
+      "elo": 1382
+    },
+    {
+      "faction": "Storm Goblins",
+      "username": "Milbo",
+      "elo": 1379
+    },
+    {
       "faction": "Polar Dwarves",
       "username": "Elyk",
       "elo": 1378
     },
     {
-      "faction": "Cave Goblins",
-      "username": "pineappleonpizza",
-      "elo": 1374
-    },
-    {
       "faction": "Mountain Vargath",
       "username": "excile2127",
       "elo": 1373
-    },
-    {
-      "faction": "Storm Goblins",
-      "username": "Milbo",
-      "elo": 1360
     },
     {
       "faction": "Chosen Grove",
@@ -137,11 +137,6 @@
       "elo": 1318
     },
     {
-      "faction": "Skyspear Avians",
-      "username": "Burning_BULLETS",
-      "elo": 1315
-    },
-    {
       "faction": "Obsidian Dwarves",
       "username": "CH4MP",
       "elo": 1315
@@ -150,6 +145,11 @@
       "faction": "Eternal Council",
       "username": "SneezingMerilious",
       "elo": 1303
+    },
+    {
+      "faction": "Skyspear Avians",
+      "username": "tortugatron",
+      "elo": 1294
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-06-07 11:44 UTC"
+  "fetched_at": "2026-06-08 14:02 UTC"
 }
