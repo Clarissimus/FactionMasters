@@ -13,8 +13,8 @@
     },
     {
       "faction": "Guild Dwarves",
-      "username": "Askyriel",
-      "elo": 1520
+      "username": "GuildMaster",
+      "elo": 1523
     },
     {
       "faction": "Phoenix Elves",
@@ -142,14 +142,14 @@
       "elo": 1315
     },
     {
+      "faction": "Skyspear Avians",
+      "username": "tortugatron",
+      "elo": 1307
+    },
+    {
       "faction": "Eternal Council",
       "username": "SneezingMerilious",
       "elo": 1303
-    },
-    {
-      "faction": "Skyspear Avians",
-      "username": "tortugatron",
-      "elo": 1294
     },
     {
       "faction": "BYE",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-06-08 14:02 UTC"
+  "fetched_at": "2026-06-09 12:31 UTC"
 }
