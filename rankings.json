@@ -92,11 +92,6 @@
       "elo": 1382
     },
     {
-      "faction": "Storm Goblins",
-      "username": "Milbo",
-      "elo": 1379
-    },
-    {
       "faction": "Polar Dwarves",
       "username": "Elyk",
       "elo": 1378
@@ -132,19 +127,24 @@
       "elo": 1339
     },
     {
+      "faction": "Storm Goblins",
+      "username": "DeadSans",
+      "elo": 1324
+    },
+    {
       "faction": "High Elves",
       "username": "Nozy",
+      "elo": 1318
+    },
+    {
+      "faction": "Skyspear Avians",
+      "username": "tortugatron",
       "elo": 1318
     },
     {
       "faction": "Obsidian Dwarves",
       "username": "CH4MP",
       "elo": 1315
-    },
-    {
-      "faction": "Skyspear Avians",
-      "username": "tortugatron",
-      "elo": 1307
     },
     {
       "faction": "Eternal Council",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-06-09 12:31 UTC"
+  "fetched_at": "2026-06-10 12:51 UTC"
 }
