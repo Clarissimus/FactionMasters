@@ -13,8 +13,8 @@
     },
     {
       "faction": "Guild Dwarves",
-      "username": "GuildMaster",
-      "elo": 1523
+      "username": "Askyriel",
+      "elo": 1527
     },
     {
       "faction": "Phoenix Elves",
@@ -39,7 +39,7 @@
     {
       "faction": "Drakesun Rebellion",
       "username": "Askyriel",
-      "elo": 1432
+      "elo": 1445
     },
     {
       "faction": "Tundra Orcs",
@@ -117,6 +117,11 @@
       "elo": 1353
     },
     {
+      "faction": "Skyspear Avians",
+      "username": "tortugatron",
+      "elo": 1348
+    },
+    {
       "faction": "Swamp Orcs",
       "username": "CH4MP",
       "elo": 1348
@@ -127,19 +132,14 @@
       "elo": 1339
     },
     {
-      "faction": "Storm Goblins",
-      "username": "DeadSans",
+      "faction": "High Elves",
+      "username": "rdebruys83",
       "elo": 1324
     },
     {
-      "faction": "High Elves",
-      "username": "Nozy",
-      "elo": 1318
-    },
-    {
-      "faction": "Skyspear Avians",
-      "username": "tortugatron",
-      "elo": 1318
+      "faction": "Storm Goblins",
+      "username": "DeadSans",
+      "elo": 1324
     },
     {
       "faction": "Obsidian Dwarves",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-06-10 12:51 UTC"
+  "fetched_at": "2026-06-11 13:55 UTC"
 }
