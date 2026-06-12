@@ -7,14 +7,14 @@
       "elo": 1573
     },
     {
+      "faction": "Guild Dwarves",
+      "username": "Askyriel",
+      "elo": 1544
+    },
+    {
       "faction": "The Forged",
       "username": "excile2127",
       "elo": 1543
-    },
-    {
-      "faction": "Guild Dwarves",
-      "username": "Askyriel",
-      "elo": 1527
     },
     {
       "faction": "Phoenix Elves",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-06-11 13:55 UTC"
+  "fetched_at": "2026-06-12 12:51 UTC"
 }
