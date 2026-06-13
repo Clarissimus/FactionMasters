@@ -9,7 +9,7 @@
     {
       "faction": "Guild Dwarves",
       "username": "Askyriel",
-      "elo": 1544
+      "elo": 1555
     },
     {
       "faction": "The Forged",
@@ -134,7 +134,7 @@
     {
       "faction": "High Elves",
       "username": "rdebruys83",
-      "elo": 1324
+      "elo": 1336
     },
     {
       "faction": "Storm Goblins",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-06-12 12:51 UTC"
+  "fetched_at": "2026-06-13 11:50 UTC"
 }
