@@ -127,11 +127,6 @@
       "elo": 1348
     },
     {
-      "faction": "Storm Goblins",
-      "username": "Milbo",
-      "elo": 1343
-    },
-    {
       "faction": "Deepwood Groaks",
       "username": "DrWolf",
       "elo": 1339
@@ -140,6 +135,11 @@
       "faction": "High Elves",
       "username": "rdebruys83",
       "elo": 1336
+    },
+    {
+      "faction": "Storm Goblins",
+      "username": "DeadSans",
+      "elo": 1324
     },
     {
       "faction": "Obsidian Dwarves",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-06-15 15:41 UTC"
+  "fetched_at": "2026-06-16 15:05 UTC"
 }
