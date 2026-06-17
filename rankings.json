@@ -9,17 +9,12 @@
     {
       "faction": "Guild Dwarves",
       "username": "Askyriel",
-      "elo": 1555
+      "elo": 1564
     },
     {
       "faction": "The Forged",
       "username": "excile2127",
       "elo": 1543
-    },
-    {
-      "faction": "Phoenix Elves",
-      "username": "beanseasly",
-      "elo": 1472
     },
     {
       "faction": "Spectral Conclave",
@@ -40,6 +35,11 @@
       "faction": "Drakesun Rebellion",
       "username": "Askyriel",
       "elo": 1445
+    },
+    {
+      "faction": "Phoenix Elves",
+      "username": "beanseasly",
+      "elo": 1438
     },
     {
       "faction": "Tundra Orcs",
@@ -112,6 +112,11 @@
       "elo": 1358
     },
     {
+      "faction": "Storm Goblins",
+      "username": "Milbo",
+      "elo": 1357
+    },
+    {
       "faction": "Sand Goblins",
       "username": "MajesticOnions",
       "elo": 1353
@@ -134,12 +139,7 @@
     {
       "faction": "High Elves",
       "username": "rdebruys83",
-      "elo": 1336
-    },
-    {
-      "faction": "Storm Goblins",
-      "username": "DeadSans",
-      "elo": 1324
+      "elo": 1335
     },
     {
       "faction": "Obsidian Dwarves",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-06-16 15:05 UTC"
+  "fetched_at": "2026-06-17 13:37 UTC"
 }
