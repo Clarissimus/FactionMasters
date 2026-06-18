@@ -37,14 +37,14 @@
       "elo": 1445
     },
     {
-      "faction": "Phoenix Elves",
-      "username": "beanseasly",
-      "elo": 1438
-    },
-    {
       "faction": "Tundra Orcs",
       "username": "GuildMaster",
       "elo": 1429
+    },
+    {
+      "faction": "Phoenix Elves",
+      "username": "CH4MP",
+      "elo": 1420
     },
     {
       "faction": "Fallen Kingdom",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-06-17 13:37 UTC"
+  "fetched_at": "2026-06-18 12:51 UTC"
 }
