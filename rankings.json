@@ -102,8 +102,13 @@
       "elo": 1373
     },
     {
+      "faction": "High Elves",
+      "username": "rdebruys83",
+      "elo": 1361
+    },
+    {
       "faction": "Chosen Grove",
-      "username": "Nozy",
+      "username": "Shoots",
       "elo": 1360
     },
     {
@@ -117,14 +122,14 @@
       "elo": 1357
     },
     {
+      "faction": "Obsidian Dwarves",
+      "username": "Nozy",
+      "elo": 1356
+    },
+    {
       "faction": "Sand Goblins",
       "username": "MajesticOnions",
       "elo": 1353
-    },
-    {
-      "faction": "High Elves",
-      "username": "rdebruys83",
-      "elo": 1351
     },
     {
       "faction": "Skyspear Avians",
@@ -142,11 +147,6 @@
       "elo": 1339
     },
     {
-      "faction": "Obsidian Dwarves",
-      "username": "CH4MP",
-      "elo": 1315
-    },
-    {
       "faction": "Eternal Council",
       "username": "SneezingMerilious",
       "elo": 1303
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-06-20 11:52 UTC"
+  "fetched_at": "2026-06-21 12:07 UTC"
 }
