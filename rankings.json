@@ -2,14 +2,14 @@
   "season": "Season 8",
   "top_players": [
     {
+      "faction": "Guild Dwarves",
+      "username": "Askyriel",
+      "elo": 1575
+    },
+    {
       "faction": "Crimson Order",
       "username": "PowerMove",
       "elo": 1573
-    },
-    {
-      "faction": "Guild Dwarves",
-      "username": "Askyriel",
-      "elo": 1568
     },
     {
       "faction": "The Forged",
@@ -42,6 +42,11 @@
       "elo": 1429
     },
     {
+      "faction": "Breakers",
+      "username": "DeadSans",
+      "elo": 1424
+    },
+    {
       "faction": "Phoenix Elves",
       "username": "CH4MP",
       "elo": 1420
@@ -65,11 +70,6 @@
       "faction": "Cloaks",
       "username": "MajesticOnions",
       "elo": 1416
-    },
-    {
-      "faction": "Breakers",
-      "username": "SneezingMerilious",
-      "elo": 1408
     },
     {
       "faction": "Shadow Elves",
@@ -97,6 +97,11 @@
       "elo": 1378
     },
     {
+      "faction": "Chosen Grove",
+      "username": "Shoots",
+      "elo": 1375
+    },
+    {
       "faction": "Mountain Vargath",
       "username": "excile2127",
       "elo": 1373
@@ -105,11 +110,6 @@
       "faction": "High Elves",
       "username": "rdebruys83",
       "elo": 1361
-    },
-    {
-      "faction": "Chosen Grove",
-      "username": "Shoots",
-      "elo": 1360
     },
     {
       "faction": "Fungal Dwarves",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-06-21 12:07 UTC"
+  "fetched_at": "2026-06-22 15:19 UTC"
 }
