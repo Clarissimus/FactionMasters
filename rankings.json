@@ -47,6 +47,11 @@
       "elo": 1424
     },
     {
+      "faction": "Cloaks",
+      "username": "DrWolf",
+      "elo": 1422
+    },
+    {
       "faction": "Phoenix Elves",
       "username": "CH4MP",
       "elo": 1420
@@ -65,11 +70,6 @@
       "faction": "The Filth",
       "username": "MajesticOnions",
       "elo": 1419
-    },
-    {
-      "faction": "Cloaks",
-      "username": "MajesticOnions",
-      "elo": 1416
     },
     {
       "faction": "Shadow Elves",
@@ -92,14 +92,14 @@
       "elo": 1382
     },
     {
+      "faction": "Chosen Grove",
+      "username": "Shoots",
+      "elo": 1379
+    },
+    {
       "faction": "Polar Dwarves",
       "username": "Elyk",
       "elo": 1378
-    },
-    {
-      "faction": "Chosen Grove",
-      "username": "Shoots",
-      "elo": 1375
     },
     {
       "faction": "Mountain Vargath",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-06-22 15:19 UTC"
+  "fetched_at": "2026-06-23 12:29 UTC"
 }
