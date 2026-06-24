@@ -4,7 +4,7 @@
     {
       "faction": "Guild Dwarves",
       "username": "Askyriel",
-      "elo": 1575
+      "elo": 1583
     },
     {
       "faction": "Crimson Order",
@@ -32,14 +32,14 @@
       "elo": 1452
     },
     {
+      "faction": "Tundra Orcs",
+      "username": "Nesle",
+      "elo": 1450
+    },
+    {
       "faction": "Drakesun Rebellion",
       "username": "Askyriel",
       "elo": 1445
-    },
-    {
-      "faction": "Tundra Orcs",
-      "username": "GuildMaster",
-      "elo": 1429
     },
     {
       "faction": "Breakers",
@@ -162,5 +162,5 @@
       "elo": 0
     }
   ],
-  "fetched_at": "2026-06-23 12:29 UTC"
+  "fetched_at": "2026-06-24 12:15 UTC"
 }
