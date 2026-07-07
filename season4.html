@@ -50,32 +50,32 @@ const F = {
 // ── Match data ─────────────────────────────────────────────────────────────────
 const MATCHES = {
   // Play-in
-  r1_16_17: { top:p(16,'Gamebear','FD'),     bot:p(17,'Shampoo','VG'),      winner:16, yt:'https://youtu.be/o_gfoGQF1G8' },
-  r1_15_18: { top:p(15,'Fiddleford','PD'),   bot:p(18,'Gamebear','CG'),     winner:18, yt:'https://youtu.be/fbfflQA0PHk' },
-  r1_14_19: { top:p(14,'Shampoo','SH'),      bot:p(19,'wwart1020','HE'),    winner:19, yt:'https://youtu.be/c84sirwvjHI' },
-  r1_13_20: { top:p(13,'Sunnybrother','MV'), bot:p(20,'Eydir','EC'),        winner:20, yt:'https://youtu.be/K8PUvUMJKo8' },
-  r1_12_21: { top:p(12,'ghhinman','WF'),     bot:p(21,'Wrfr','SO'),         winner:12, yt:'https://youtu.be/0_dzn9mskiI' },
-  r1_11_22: { top:p(11,'ggVGcc','SG'),       bot:p(22,'Matiaks','BR'),      winner:22, yt:'https://youtu.be/ZQpUNzNjBq0' },
+  game1: { top:p(16,'Gamebear','FD'),     bot:p(17,'Shampoo','VG'),      winner:16, yt:'https://youtu.be/o_gfoGQF1G8' },
+  game4: { top:p(15,'Fiddleford','PD'),   bot:p(18,'Gamebear','CG'),     winner:18, yt:'https://youtu.be/fbfflQA0PHk' },
+  game5: { top:p(14,'Shampoo','SH'),      bot:p(19,'wwart1020','HE'),    winner:19, yt:'https://youtu.be/c84sirwvjHI' },
+  game2: { top:p(13,'Sunnybrother','MV'), bot:p(20,'Eydir','EC'),        winner:20, yt:'https://youtu.be/K8PUvUMJKo8' },
+  game3: { top:p(12,'ghhinman','WF'),     bot:p(21,'Wrfr','SO'),         winner:12, yt:'https://youtu.be/0_dzn9mskiI' },
+  game6: { top:p(11,'ggVGcc','SG'),       bot:p(22,'Matiaks','BR'),      winner:22, yt:'https://youtu.be/ZQpUNzNjBq0' },
   // Round of 16 — left (seeds 1,8,4,5)
-  r2_1_16:  { top:p(1,'Magnifico','DG'),     bot:p(16,'Gamebear','FD'),     winner:16, yt:'https://youtu.be/VM_RhX8uEE8' },
-  r2_8_9:   { top:p(8,'Eerie','FK'),         bot:p(9,'Shmeebee','CO'),      winner:9,  yt:'https://youtu.be/QShP53nOgSg' },
-  r2_4_20:  { top:p(4,'Vexer','FO'),         bot:p(20,'Eydir','EC'),        winner:4,  yt:'https://youtu.be/HMoElt-ngv8' },
-  r2_5_12:  { top:p(5,'dqi','PE'),           bot:p(12,'ghhinman','WF'),     winner:5,  yt:'https://youtu.be/HubttW_TZX8' },
+  game9:  { top:p(1,'Magnifico','DG'),     bot:p(16,'Gamebear','FD'),     winner:16, yt:'https://youtu.be/VM_RhX8uEE8' },
+  game8:   { top:p(8,'Eerie','FK'),         bot:p(9,'Shmeebee','CO'),      winner:9,  yt:'https://youtu.be/QShP53nOgSg' },
+  game10:  { top:p(4,'Vexer','FO'),         bot:p(20,'Eydir','EC'),        winner:4,  yt:'https://youtu.be/HMoElt-ngv8' },
+  game11:  { top:p(5,'dqi','PE'),           bot:p(12,'ghhinman','WF'),     winner:5,  yt:'https://youtu.be/HubttW_TZX8' },
   // Round of 16 — right (seeds 2,7,3,6)
-  r2_2_18:  { top:p(2,'BoldSerpent','CL'),   bot:p(18,'Gamebear','CG'),     winner:2,  yt:'https://youtu.be/09BgRRlNWvY' },
+  game12:  { top:p(2,'BoldSerpent','CL'),   bot:p(18,'Gamebear','CG'),     winner:2,  yt:'https://youtu.be/09BgRRlNWvY' },
   r2_7_10:  { top:p(7,'Nesle','TO'),         bot:p(10,'PetarPvZ','SE'),     winner:7,  yt:null, type:'forfeit' },
-  r2_3_19:  { top:p(3,'Jexik','OD'),         bot:p(19,'wwart1020','HE'),    winner:19, yt:'https://youtu.be/eW2HxhsipwE' },
-  r2_6_22:  { top:p(6,'Devlinfish','SA'),    bot:p(22,'Matiaks','BR'),      winner:6,  yt:'https://youtu.be/luoVFuKt9rw' },
+  game13:  { top:p(3,'Jexik','OD'),         bot:p(19,'wwart1020','HE'),    winner:19, yt:'https://youtu.be/eW2HxhsipwE' },
+  game14:  { top:p(6,'Devlinfish','SA'),    bot:p(22,'Matiaks','BR'),      winner:6,  yt:'https://youtu.be/luoVFuKt9rw' },
   // Quarterfinals
-  r3_16_9:  { top:p(16,'Gamebear','FD'),     bot:p(9,'Shmeebee','CO'),      winner:16, yt:'https://youtu.be/2mq4rNmhHkE' },
-  r3_4_5:   { top:p(4,'Vexer','FO'),         bot:p(5,'dqi','PE'),           winner:4,  yt:'https://youtu.be/0_QsoEAlXU0' },
-  r3_2_7:   { top:p(2,'BoldSerpent','CL'),   bot:p(7,'Nesle','TO'),         winner:7,  yt:'https://youtu.be/9F2zl-lN74E' },
-  r3_19_6:  { top:p(19,'wwart1020','HE'),    bot:p(6,'Devlinfish','SA'),    winner:19, yt:'https://youtu.be/WBJRoURJFI0' },
+  game15:  { top:p(16,'Gamebear','FD'),     bot:p(9,'Shmeebee','CO'),      winner:16, yt:'https://youtu.be/2mq4rNmhHkE' },
+  game16:   { top:p(4,'Vexer','FO'),         bot:p(5,'dqi','PE'),           winner:4,  yt:'https://youtu.be/0_QsoEAIXU0' },
+  game17:   { top:p(2,'BoldSerpent','CL'),   bot:p(7,'Nesle','TO'),         winner:7,  yt:'https://youtu.be/9F2zl-lN74E' },
+  game18:  { top:p(19,'wwart1020','HE'),    bot:p(6,'Devlinfish','SA'),    winner:19, yt:'https://youtu.be/WBJRoURJFI0' },
   // Semifinals
-  r4_16_4:  { top:p(16,'Gamebear','FD'),     bot:p(4,'Vexer','FO'),         winner:4,  yt:'https://youtu.be/lfJ1KTtHZxc' },
-  r4_7_19:  { top:p(7,'Nesle','TO'),         bot:p(19,'wwart1020','HE'),    winner:7,  yt:'https://youtu.be/w_w_krwZ3cs' },
+  game19:  { top:p(16,'Gamebear','FD'),     bot:p(4,'Vexer','FO'),         winner:4,  yt:'https://youtu.be/lfJ1KTtHZxc' },
+  game20:  { top:p(7,'Nesle','TO'),         bot:p(19,'wwart1020','HE'),    winner:7,  yt:'https://youtu.be/w_w_krwZ3cs' },
   // Final
-  final:    { top:p(4,'Vexer','FO'),         bot:p(7,'Nesle','TO'),         winner:4,  yt:'https://youtu.be/TUSupAMTZiY' },
+  game21:    { top:p(4,'Vexer','FO'),         bot:p(7,'Nesle','TO'),         winner:4,  yt:'https://youtu.be/TUSupAMTZiY' },
 };
 
 const CHAMPION = p(4, 'Vexer', 'FO');
@@ -85,88 +85,88 @@ const CHAMPION = p(4, 'Vexer', 'FO');
 // The R16 rows use the engine's default BAND / SIDE_H.
 
 function render() {
-  const w_r1_16_17 = buildMatch('r1_16_17', null, null, true, true);
-  const w_r1_15_18 = buildMatch('r1_15_18', null, null, true, true);
-  const w_r1_14_19 = buildMatch('r1_14_19', null, null, true, true);
-  const w_r1_13_20 = buildMatch('r1_13_20', null, null, true, true);
-  const w_r1_12_21 = buildMatch('r1_12_21', null, null, true, true);
-  const w_r1_11_22 = buildMatch('r1_11_22', null, null, true, true);
+  const w_game1 = buildMatch('game1', null, null, true, true);
+  const w_game4 = buildMatch('game4', null, null, true, true);
+  const w_game5 = buildMatch('game5', null, null, true, true);
+  const w_game2 = buildMatch('game2', null, null, true, true);
+  const w_game3 = buildMatch('game3', null, null, true, true);
+  const w_game6 = buildMatch('game6', null, null, true, true);
 
-  const w_r2_1_16 = buildMatch('r2_1_16', null,              w_r1_16_17._topEl, true,  false);
-  const w_r2_8_9  = buildMatch('r2_8_9',  null,              null,              true,  true);
-  const w_r2_4_20 = buildMatch('r2_4_20', null,              w_r1_13_20._botEl, true,  false);
-  const w_r2_5_12 = buildMatch('r2_5_12', null,              w_r1_12_21._topEl, true,  false);
-  const w_r2_2_18 = buildMatch('r2_2_18', null,              w_r1_15_18._botEl, true,  false);
+  const w_game7 = buildMatch('game7', null,              w_game1._topEl, true,  false);
+  const w_game8  = buildMatch('game8',  null,              null,              true,  true);
+  const w_game9 = buildMatch('game9', null,              w_game2._botEl, true,  false);
+  const w_game10 = buildMatch('game10', null,              w_game3._topEl, true,  false);
+  const w_game12 = buildMatch('game12', null,              w_game4._botEl, true,  false);
   const w_r2_7_10 = buildMatch('r2_7_10', null,              null,              true,  true);
-  const w_r2_3_19 = buildMatch('r2_3_19', null,              w_r1_14_19._botEl, true,  false);
-  const w_r2_6_22 = buildMatch('r2_6_22', null,              w_r1_11_22._botEl, true,  false);
+  const w_game13 = buildMatch('game13', null,              w_game5._botEl, true,  false);
+  const w_game14 = buildMatch('game14', null,              w_game6._botEl, true,  false);
 
-  const w_r3_16_9 = buildMatch('r3_16_9', w_r2_1_16._botEl,  w_r2_8_9._botEl,  false, false);
-  const w_r3_4_5  = buildMatch('r3_4_5',  w_r2_4_20._topEl,  w_r2_5_12._topEl, false, false);
-  const w_r3_2_7  = buildMatch('r3_2_7',  w_r2_2_18._topEl,  w_r2_7_10._topEl, false, false);
-  const w_r3_19_6 = buildMatch('r3_19_6', w_r2_3_19._botEl,  w_r2_6_22._topEl, false, false);
+  const w_game15 = buildMatch('game15', w_game7._botEl,  w_game8._botEl,  false, false);
+  const w_game16  = buildMatch('game16',  w_game9._topEl,  w_game10._topEl, false, false);
+  const w_game17  = buildMatch('game17',  w_game12._topEl,  w_r2_7_10._topEl, false, false);
+  const w_game18 = buildMatch('game18', w_game13._botEl,  w_game14._topEl, false, false);
 
-  const w_r4_16_4 = buildMatch('r4_16_4', w_r3_16_9._topEl,  w_r3_4_5._topEl,  false, false);
-  const w_r4_7_19 = buildMatch('r4_7_19', w_r3_2_7._botEl,   w_r3_19_6._topEl, false, false);
+  const w_game19 = buildMatch('game19', w_game15._topEl,  w_game16._topEl,  false, false);
+  const w_game20 = buildMatch('game20', w_game17._botEl,   w_game18._topEl, false, false);
 
-  const w_final   = buildMatch('final',   w_r4_16_4._botEl,  w_r4_7_19._topEl, false, false);
+  const w_game21   = buildMatch('game21',   w_game19._botEl,  w_game20._topEl, false, false);
 
   // Position calculations
   const r2Tops = r16TopPx();
 
-  const p_r1_16_17 = playInTopFromCentre(r16SlotCentre(r2Tops, 0, false));
-  const p_r1_13_20 = playInTopFromCentre(r16SlotCentre(r2Tops, 2, false));
-  const p_r1_12_21 = playInTopFromCentre(r16SlotCentre(r2Tops, 3, false));
-  const p_r1_15_18 = playInTopFromCentre(r16SlotCentre(r2Tops, 0, false));
-  const p_r1_14_19 = playInTopFromCentre(r16SlotCentre(r2Tops, 2, false));
-  const p_r1_11_22 = playInTopFromCentre(r16SlotCentre(r2Tops, 3, false));
+  const p_game1 = playInTopFromCentre(r16SlotCentre(r2Tops, 0, false));
+  const p_game2 = playInTopFromCentre(r16SlotCentre(r2Tops, 2, false));
+  const p_game3 = playInTopFromCentre(r16SlotCentre(r2Tops, 3, false));
+  const p_game4 = playInTopFromCentre(r16SlotCentre(r2Tops, 0, false));
+  const p_game5 = playInTopFromCentre(r16SlotCentre(r2Tops, 2, false));
+  const p_game6 = playInTopFromCentre(r16SlotCentre(r2Tops, 3, false));
 
-  const p_r3_16_9 = centredBetweenMatches(r2Tops[0], r2Tops[1]);
-  const p_r3_4_5  = centredBetweenMatches(r2Tops[2], r2Tops[3]);
-  const p_r3_2_7  = centredBetweenMatches(r2Tops[0], r2Tops[1]);
-  const p_r3_19_6 = centredBetweenMatches(r2Tops[2], r2Tops[3]);
+  const p_game15 = centredBetweenMatches(r2Tops[0], r2Tops[1]);
+  const p_game16  = centredBetweenMatches(r2Tops[2], r2Tops[3]);
+  const p_game17  = centredBetweenMatches(r2Tops[0], r2Tops[1]);
+  const p_game18 = centredBetweenMatches(r2Tops[2], r2Tops[3]);
 
-  const p_r4_16_4 = centredBetweenMatches(p_r3_16_9, p_r3_4_5);
-  const p_r4_7_19 = centredBetweenMatches(p_r3_2_7,  p_r3_19_6);
+  const p_game19 = centredBetweenMatches(p_game15, p_game16);
+  const p_game20 = centredBetweenMatches(p_game17,  p_game18);
 
   const colH = SIDE_H;
 
   // Left columns
   const colL_r1 = buildCol('Play-In', colH);
-  addToCol(colL_r1, w_r1_16_17, p_r1_16_17);
-  addToCol(colL_r1, w_r1_13_20, p_r1_13_20);
-  addToCol(colL_r1, w_r1_12_21, p_r1_12_21);
+  addToCol(colL_r1, w_game1, p_game1);
+  addToCol(colL_r1, w_game2, p_game2);
+  addToCol(colL_r1, w_game3, p_game3);
 
   const colL_r2 = buildCol('Round of 16', colH);
-  r2Tops.forEach((top, i) => addToCol(colL_r2, [w_r2_1_16, w_r2_8_9, w_r2_4_20, w_r2_5_12][i], top));
+  r2Tops.forEach((top, i) => addToCol(colL_r2, [w_game7, w_game8, w_game9, w_game10][i], top));
 
   const colL_r3 = buildCol('Quarterfinal', colH);
-  addToCol(colL_r3, w_r3_16_9, p_r3_16_9);
-  addToCol(colL_r3, w_r3_4_5,  p_r3_4_5);
+  addToCol(colL_r3, w_game15, p_game15);
+  addToCol(colL_r3, w_game16,  p_game16);
 
   const colL_r4 = buildCol('Semifinal', colH);
-  addToCol(colL_r4, w_r4_16_4, p_r4_16_4);
+  addToCol(colL_r4, w_game19, p_game19);
 
   // Right columns
   const colR_r1 = buildCol('Play-In', colH);
-  addToCol(colR_r1, w_r1_15_18, p_r1_15_18);
-  addToCol(colR_r1, w_r1_14_19, p_r1_14_19);
-  addToCol(colR_r1, w_r1_11_22, p_r1_11_22);
+  addToCol(colR_r1, w_game4, p_game4);
+  addToCol(colR_r1, w_game5, p_game5);
+  addToCol(colR_r1, w_game6, p_game6);
 
   const colR_r2 = buildCol('Round of 16', colH);
-  r2Tops.forEach((top, i) => addToCol(colR_r2, [w_r2_2_18, w_r2_7_10, w_r2_3_19, w_r2_6_22][i], top));
+  r2Tops.forEach((top, i) => addToCol(colR_r2, [w_game12, w_r2_7_10, w_game13, w_game14][i], top));
 
   const colR_r3 = buildCol('Quarterfinal', colH);
-  addToCol(colR_r3, w_r3_2_7,  p_r3_2_7);
-  addToCol(colR_r3, w_r3_19_6, p_r3_19_6);
+  addToCol(colR_r3, w_game17,  p_game17);
+  addToCol(colR_r3, w_game18, p_game18);
 
   const colR_r4 = buildCol('Semifinal', colH);
-  addToCol(colR_r4, w_r4_7_19, p_r4_7_19);
+  addToCol(colR_r4, w_game20, p_game20);
 
   mountBracket(
     [colL_r1, colL_r2, colL_r3, colL_r4],
     [colR_r1, colR_r2, colR_r3, colR_r4],
-    w_final
+    w_game21
   );
 }
 </script>
