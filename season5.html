@@ -92,21 +92,21 @@ function render() {
   const w_game4 = buildMatch('game4', null, null, true, true);
   const w_game5 = buildMatch('game5', null, null, true, true);
   const w_game6 = buildMatch('game6', null, null, true, true);
-  const w_game7 = buildMatch('game5', null, null, true, true);
-  const w_game8 = buildMatch('game5', null, null, true, true);
+  const w_game7 = buildMatch('game7', null, null, true, true);
+  const w_game8 = buildMatch('game8', null, null, true, true);
 
   const w_game9 = buildMatch('game9', null,              w_game1._topEl, true,  false);
-  const w_game10  = buildMatch('game10',  null,             w_game2._topE1, true,  false);
+  const w_game10  = buildMatch('game10',  null,             w_game2._topEl, true,  false);
   const w_game11 = buildMatch('game11', null,              w_game3._topEl, true,  false);
   const w_game12 = buildMatch('game12', null,              w_game4._topEl, true,  false);
   const w_game13 = buildMatch('game13', null,              w_game5._topEl, true,  false);
-  const w_game14 = buildMatch('game14', null,              w_game6._topE1, true,  false);
+  const w_game14 = buildMatch('game14', null,              w_game6._topEl, true,  false);
   const w_game15 = buildMatch('game15', null,              w_game7._topEl, true,  false);
   const w_game16 = buildMatch('game16', null,              w_game8._topEl, true,  false);
 
   const w_game17 = buildMatch('game17', w_game9._topEl,  w_game10._botEl,  false, false);
   const w_game18  = buildMatch('game18',  w_game11._topEl,  w_game12._topEl, false, false);
-  const w_game19  = buildMatch('game19',  w_game13._botEl,  w_game14._topEl, false, false);
+  const w_game19  = buildMatch('game19',  w_game13._botEl,  w_game14._botEl, false, false);
   const w_game20 = buildMatch('game20', w_game15._topEl,  w_game16._topEl, false, false);
 
   const w_game21 = buildMatch('game21', w_game17._botEl,  w_game18._botEl,  false, false);
@@ -173,7 +173,7 @@ function render() {
   mountBracket(
     [colL_r1, colL_r2, colL_r3, colL_r4],
     [colR_r1, colR_r2, colR_r3, colR_r4],
-    w_game21
+    w_game23
   );
 }
 </script>
