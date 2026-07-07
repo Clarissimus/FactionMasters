@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faction Masters Season 4 Results</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<script src="bracket-engine.js"></script>
+</head>
+<body>
+<div class="page-wrap">
+  <nav></nav>
+  <header>
+    <div class="crest">⚔️</div>
+    <h1></h1>
+    <div class="divider"></div>
+  </header>
+  <div class="controls">
+    <button class="btn" onclick="revealAll()">Reveal All</button>
+    <button class="btn" onclick="hideAll()">Hide All</button>
+  </div>
+  <div class="bracket-outer" id="bracket"></div>
+</div>
+<script>
+// ── Season identity ────────────────────────────────────────────────────────────
+const SEASON = 'Faction Masters Season 5';
+
+const NAV = [
+  { label: 'Season 8', href: 'index.html' },
+  { label: 'Season 7', href: 'season7.html' },
+  { label: 'Season 6', href: 'season6.html' },
+  { label: 'Season 5', href: 'season5.html', active: true },
+  { label: 'Season 4', href: 'season4.html' },
+];
+
+// ── Factions ───────────────────────────────────────────────────────────────────
+const F = {
+  DG:'Deepwood Groaks', FD:'Fungal Dwarves',   VG:'Vanguards',
+  FK:'Fallen Kingdom',  CO:'Crimson Order',    FO:'The Forged',
+  MV:'Mountain Vargath',EC:'Eternal Council',  PE:'Phoenix Elves',
+  WF:'Wayfarers',       SO:'Swamp Orcs',       CL:'Cloaks',
+  PD:'Fungal Dwarves',  CG:'Cave Goblins',     TO:'Tundra Orcs',
+  SE:'Savanna Elves',   OD:'Obsidian Dwarves', SH:'Shadow Elves',
+  HE:'High Elves',      SA:'Skyspear Avians',  SG:'Sand Goblins',
+  BR:'Breakers',        ST:'Storm Goblins',    SF:'Shimmersea Fae'
+};
+
+// ── Match data ─────────────────────────────────────────────────────────────────
+const MATCHES = {
+  // Play-in
+  game1: { top:p(16,'subiasmalo','VG'),     bot:p(17,'Orange Lazarus','FK'),      winner:16, yt:'https://youtu.be/xR2gw37YUqA' },
+  game2: { top:p(9,'dqi','HE'),   bot:p(23,'tortugatron','PD'),     winner:9, yt:'https://youtu.be/_GZQAYu6cfU' },
+  game3: { top:p(13,'massimo','SG'),      bot:p(20,'Darkbugz','SE'),    winner:13, yt:'https://youtu.be/rQlIuWCGYGo' },
+  game4: { top:p(12,'dqi','SF'), bot:p(21,'Jexik','CG'),        winner:12, yt:'https://youtu.be/lh7bJfuTqCs' },
+  game5: { top:p(15,'Run','SA'),     bot:p(18,'Shmeebee','CO'),         winner:15, yt:'https://youtu.be/9q4QwIYUcJs' },
+  game6: { top:p(10,'redhawk13','CL'),       bot:p(24,'beanseasly','EC'),      winner:10, yt:'https://youtu.be/mJdi3Vxd3BQ' },
+  game7: { top:p(14,'massimo','SH'),       bot:p(19,'ghhinman','BR'),      winner:14, yt:'https://youtu.be/Y-BllqpA4tc' },
+  game8: { top:p(11,'Shoots','ST'),       bot:p(22,'Jexik','OD'),      winner:11, yt:'https://youtu.be/Hj9ehc2tPhI' },
+  // Round of 16 — left (seeds 1,8,4,5)
+  game9:  { top:p(1,'phil413ican','DG'),     bot:p(16,'subiasmalo','VG'),     winner:1, yt:'https://youtu.be/HDYx2Iy0xtQ' },
+  game10:   { top:p(8,'BookishHolleas','WF'), bot:p(9,'dqi','HE'),      winner:9,  yt:'https://youtu.be/c3R9Qrk_lgU' },
+  game11:  { top:p(4,'snalg','MV'),         bot:p(13,'massimo','SG'),        winner:4,  yt:'https://youtu.be/cCc9IptZB1c' },
+  game12:  { top:p(5,'SoopaSte123','FO'),    bot:p(12,'dqi','SF'),     winner:5,  yt:'https://youtu.be/nzm6pH_oxQw' },
+  // Round of 16 — right (seeds 2,7,3,6)
+  game13:  { top:p(2,'subiasmalo','PE'),   bot:p(15,'Run','SA'),     winner:15,  yt:null, type:'forfeit' },
+  game14:  { top:p(7,'Orange Lazarus','FD'),   bot:p(10,'redhawk13','CL'),     winner:10,  yt:'https://youtu.be/VwsAfUj0yes' },
+  game15:  { top:p(3,'Nesle','TO'),         bot:p(14,'massimo','SH'),    winner:3, yt:'https://youtu.be/SsDhFA7UF_E' },
+  game16:  { top:p(6,'CH4MP','SO'),    bot:p(11,'Shoots','ST'),      winner:6,  yt:'https://youtu.be/R27KXXIFo9o' },
+  // Quarterfinals
+  game17:  { top:p(1,'phil413ican','DG'),     bot:p(9,'dqi','HE'),      winner:9, yt:'https://youtu.be/EM9vQEpZqJo' },
+  game18:   { top:p(4,'snalg','MV'),         bot:p(5,'SoopaSte123','FO'),           winner:5,  yt:'https://youtu.be/xbEOIzsc55U' },
+  game19:   { top:p(15,'Run','SA'),   bot:p(10,'redhawk13','CL'),         winner:15,  yt:'https://youtu.be/TBcY7BRtEpA' },
+  game20:  { top:p(3,'Nesle','TO'),    bot:p(6,'CH4MP','SO'),    winner:6, yt:'https://youtu.be/rq80NuKPoVI0' },
+  // Semifinals
+  game21:  { top:p(9,'dqi','HE'),     bot:p(5,'SoopaSte123','FO'),         winner:9,  yt:'https://youtu.be/kDqPgSaZuiY' },
+  game22:  { top:p(15,'Run','SA'),         bot:p(6,'CH4MP','SO'),    winner:15,  yt:'https://youtu.be/sP5btjjSaZU' },
+  // Final
+  game23:    { top:p(9,'dqi','HE'),         bot:p(15,'Run','SA'),         winner:9,  yt:'https://youtu.be/wa6fSRpN2Y0' },
+};
+
+const CHAMPION = p(9,'dqi','HE');
+
+// ── Layout ─────────────────────────────────────────────────────────────────────
+// The R16 rows use the engine's default BAND / SIDE_H.
+
+function render() {
+  const w_game1 = buildMatch('game1', null, null, true, true);
+  const w_game2 = buildMatch('game2', null, null, true, true);
+  const w_game3 = buildMatch('game3', null, null, true, true);
+  const w_game4 = buildMatch('game4', null, null, true, true);
+  const w_game5 = buildMatch('game5', null, null, true, true);
+  const w_game6 = buildMatch('game6', null, null, true, true);
+  const w_game7 = buildMatch('game5', null, null, true, true);
+  const w_game8 = buildMatch('game5', null, null, true, true);
+
+  const w_game9 = buildMatch('game9', null,              w_game1._topEl, true,  false);
+  const w_game10  = buildMatch('game10',  null,             w_game2._topE1, true,  true);
+  const w_game11 = buildMatch('game11', null,              w_game3._topEl, true,  false);
+  const w_game12 = buildMatch('game12', null,              w_game4._topEl, true,  false);
+  const w_game13 = buildMatch('game13', null,              w_game5._topEl, true,  false);
+  const w_game14 = buildMatch('game14', null,              w_game6._topE1, true,  true);
+  const w_game15 = buildMatch('game15', null,              w_game7._topEl, true,  false);
+  const w_game16 = buildMatch('game16', null,              w_game8._topEl, true,  false);
+
+  const w_game17 = buildMatch('game17', w_game9._topEl,  w_game10._botEl,  false, false);
+  const w_game18  = buildMatch('game18',  w_game11._topEl,  w_game12._topEl, false, false);
+  const w_game19  = buildMatch('game19',  w_game13._botEl,  w_game14._topEl, false, false);
+  const w_game20 = buildMatch('game20', w_game15._topEl,  w_game16._topEl, false, false);
+
+  const w_game21 = buildMatch('game21', w_game17._botEl,  w_game18._botEl,  false, false);
+  const w_game22 = buildMatch('game22', w_game19._topEl,   w_game20._botEl, false, false);
+
+  const w_game23   = buildMatch('game23',   w_game21._topEl,  w_game20._topEl, false, false);
+
+  // Position calculations
+  const r2Tops = r16TopPx();
+
+  const p_game1 = playInTopFromCentre(r16SlotCentre(r2Tops, 0, false));
+  const p_game2 = playInTopFromCentre(r16SlotCentre(r2Tops, 2, false));
+  const p_game3 = playInTopFromCentre(r16SlotCentre(r2Tops, 3, false));
+  const p_game4 = playInTopFromCentre(r16SlotCentre(r2Tops, 0, false));
+  const p_game5 = playInTopFromCentre(r16SlotCentre(r2Tops, 2, false));
+  const p_game6 = playInTopFromCentre(r16SlotCentre(r2Tops, 3, false));
+
+  const p_game15 = centredBetweenMatches(r2Tops[0], r2Tops[1]);
+  const p_game16  = centredBetweenMatches(r2Tops[2], r2Tops[3]);
+  const p_game17  = centredBetweenMatches(r2Tops[0], r2Tops[1]);
+  const p_game18 = centredBetweenMatches(r2Tops[2], r2Tops[3]);
+
+  const p_game19 = centredBetweenMatches(p_game15, p_game16);
+  const p_game20 = centredBetweenMatches(p_game17,  p_game18);
+
+  const colH = SIDE_H;
+
+  // Left columns
+  const colL_r1 = buildCol('Play-In', colH);
+  addToCol(colL_r1, w_game1, p_game1);
+  addToCol(colL_r1, w_game2, p_game2);
+  addToCol(colL_r1, w_game3, p_game3);
+
+  const colL_r2 = buildCol('Round of 16', colH);
+  r2Tops.forEach((top, i) => addToCol(colL_r2, [w_game9, w_game8, w_game10, w_game11][i], top));
+
+  const colL_r3 = buildCol('Quarterfinal', colH);
+  addToCol(colL_r3, w_game15, p_game15);
+  addToCol(colL_r3, w_game16,  p_game16);
+
+  const colL_r4 = buildCol('Semifinal', colH);
+  addToCol(colL_r4, w_game19, p_game19);
+
+  // Right columns
+  const colR_r1 = buildCol('Play-In', colH);
+  addToCol(colR_r1, w_game4, p_game4);
+  addToCol(colR_r1, w_game5, p_game5);
+  addToCol(colR_r1, w_game6, p_game6);
+
+  const colR_r2 = buildCol('Round of 16', colH);
+  r2Tops.forEach((top, i) => addToCol(colR_r2, [w_game12, w_r2_7_10, w_game13, w_game14][i], top));
+
+  const colR_r3 = buildCol('Quarterfinal', colH);
+  addToCol(colR_r3, w_game17,  p_game17);
+  addToCol(colR_r3, w_game18, p_game18);
+
+  const colR_r4 = buildCol('Semifinal', colH);
+  addToCol(colR_r4, w_game20, p_game20);
+
+  mountBracket(
+    [colL_r1, colL_r2, colL_r3, colL_r4],
+    [colR_r1, colR_r2, colR_r3, colR_r4],
+    w_game21
+  );
+}
+</script>
+</body>
+</html>
