@@ -92,8 +92,8 @@ function render() {
   const w_game3 = buildMatch('game3', null, null, true, true);
   const w_game6 = buildMatch('game6', null, null, true, true);
 
-  const w_game8 = buildMatch('game8', null,              w_game1._topEl, true,  false);
-  const w_game9  = buildMatch('game9',  null,              null,              true,  true);
+  const w_game9 = buildMatch('game8', null,              w_game1._topEl, true,  false);
+  const w_game8  = buildMatch('game9',  null,              null,              true,  true);
   const w_game10 = buildMatch('game10', null,              w_game2._botEl, true,  false);
   const w_game11 = buildMatch('game11', null,              w_game3._topEl, true,  false);
   const w_game12 = buildMatch('game12', null,              w_game4._botEl, true,  false);
@@ -101,8 +101,8 @@ function render() {
   const w_game13 = buildMatch('game13', null,              w_game5._botEl, true,  false);
   const w_game14 = buildMatch('game14', null,              w_game6._botEl, true,  false);
 
-  const w_game15 = buildMatch('game15', w_game7._botEl,  w_game8._botEl,  false, false);
-  const w_game16  = buildMatch('game16',  w_game9._topEl,  w_game10._topEl, false, false);
+  const w_game15 = buildMatch('game15', w_game9._botEl,  w_game8._botEl,  false, false);
+  const w_game16  = buildMatch('game16',  w_game10._topEl,  w_game11._topEl, false, false);
   const w_game17  = buildMatch('game17',  w_game12._topEl,  w_r2_7_10._topEl, false, false);
   const w_game18 = buildMatch('game18', w_game13._botEl,  w_game14._topEl, false, false);
 
@@ -138,7 +138,7 @@ function render() {
   addToCol(colL_r1, w_game3, p_game3);
 
   const colL_r2 = buildCol('Round of 16', colH);
-  r2Tops.forEach((top, i) => addToCol(colL_r2, [w_game7, w_game8, w_game9, w_game10][i], top));
+  r2Tops.forEach((top, i) => addToCol(colL_r2, [w_game9, w_game8, w_game10, w_game11][i], top));
 
   const colL_r3 = buildCol('Quarterfinal', colH);
   addToCol(colL_r3, w_game15, p_game15);
