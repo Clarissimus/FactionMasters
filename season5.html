@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Faction Masters Season 4 Results</title>
+<title>Faction Masters Season 5 Results</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
@@ -139,32 +139,34 @@ function render() {
   addToCol(colL_r1, w_game1, p_game1);
   addToCol(colL_r1, w_game2, p_game2);
   addToCol(colL_r1, w_game3, p_game3);
+  addToCol(colL_r1, w_game4, p_game4);
 
   const colL_r2 = buildCol('Round of 16', colH);
-  r2Tops.forEach((top, i) => addToCol(colL_r2, [w_game9, w_game8, w_game10, w_game11][i], top));
+  r2Tops.forEach((top, i) => addToCol(colL_r2, [w_game9, w_game10, w_game11, w_game12][i], top));
 
   const colL_r3 = buildCol('Quarterfinal', colH);
-  addToCol(colL_r3, w_game15, p_game15);
-  addToCol(colL_r3, w_game16,  p_game16);
+  addToCol(colL_r3, w_game17, p_game17);
+  addToCol(colL_r3, w_game18,  p_game18);
 
   const colL_r4 = buildCol('Semifinal', colH);
-  addToCol(colL_r4, w_game19, p_game19);
+  addToCol(colL_r4, w_game21, p_game21);
 
   // Right columns
   const colR_r1 = buildCol('Play-In', colH);
-  addToCol(colR_r1, w_game4, p_game4);
   addToCol(colR_r1, w_game5, p_game5);
   addToCol(colR_r1, w_game6, p_game6);
+  addToCol(colR_r1, w_game7, p_game7);
+  addToCol(colR_r1, w_game8, p_game8);
 
   const colR_r2 = buildCol('Round of 16', colH);
-  r2Tops.forEach((top, i) => addToCol(colR_r2, [w_game12, w_r2_7_10, w_game13, w_game14][i], top));
+  r2Tops.forEach((top, i) => addToCol(colR_r2, [w_game13, w_game14, w_game15, w_game16][i], top));
 
   const colR_r3 = buildCol('Quarterfinal', colH);
-  addToCol(colR_r3, w_game17,  p_game17);
-  addToCol(colR_r3, w_game18, p_game18);
+  addToCol(colR_r3, w_game19,  p_game19);
+  addToCol(colR_r3, w_game20, p_game20);
 
   const colR_r4 = buildCol('Semifinal', colH);
-  addToCol(colR_r4, w_game20, p_game20);
+  addToCol(colR_r4, w_game22, p_game22);
 
   mountBracket(
     [colL_r1, colL_r2, colL_r3, colL_r4],
