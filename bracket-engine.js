@@ -307,6 +307,11 @@ function makeYtRow(m) {
     s.className = 'match-note';
     s.textContent = 'forfeit — no video';
     row.appendChild(s);
+  } else if (m.type === 'no_game') {
+    const s = document.createElement('span');
+    s.className = 'match-note';
+    s.textContent = 'No Game Played';
+    row.appendChild(s);
   }
   return row;
 }
