@@ -15,7 +15,7 @@
  *   buildMatch(matchId, topSource, botSource, topRevealed, botRevealed)
  *   buildCol(label, height)
  *   addToCol(col, matchWrap, topPx)
- *   mountBracket(leftCols, rightCols, w_final)
+ *   mountBracket(leftCols, rightCols, w_final, sideHeight)
  *   SLOT_H, SEP_H, YT_H, MATCH_H, CELL_H, GAP, LABEL_H, BAND, SIDE_H
  */
 
@@ -209,7 +209,7 @@ const CELL_H  = YT_H + MATCH_H;
 const GAP     = 14;
 const LABEL_H = 28;
 const BAND    = MATCH_H + GAP;
-const SIDE_H  = 4 * BAND;
+const SIDE_H  = 4 * BAND; // default anchor size (Round of 16, 4 matches/side) — season files may override
 
 // ─── Player helper ────────────────────────────────────────────────────────────
 function p(seed, name, fac) {
@@ -355,17 +355,21 @@ function addToCol(col, matchWrap, topPx) {
 }
 
 /**
- * mountBracket(leftCols, rightCols, w_final)
+ * mountBracket(leftCols, rightCols, w_final, sideHeight)
  *
  * Handles the champion column and final bracket assembly so render()
  * doesn't have to repeat this boilerplate every season.
  *
- * leftCols  – array of column elements, innermost last  [pi, r16, qf, sf]
- * rightCols – same order as leftCols (engine will reverse for display)
- * w_final   – the final match element from buildMatch()
+ * leftCols   – array of column elements, innermost last  [pi, r16, qf, sf]
+ * rightCols  – same order as leftCols (engine will reverse for display)
+ * w_final    – the final match element from buildMatch()
+ * sideHeight – (optional) actual height of the bracket sides for this season.
+ *              Defaults to SIDE_H (4-match anchor round) for back-compat with
+ *              season files that don't pass it. Seasons with a bigger anchor
+ *              round (e.g. Round of 32) should pass their own computed height.
  */
-function mountBracket(leftCols, rightCols, w_final) {
-  const colH = SIDE_H;
+function mountBracket(leftCols, rightCols, w_final, sideHeight) {
+  const colH = sideHeight || SIDE_H;
 
   const leftSide = document.createElement('div');
   leftSide.className = 'bracket-side';
@@ -435,12 +439,24 @@ function mountBracket(leftCols, rightCols, w_final) {
 
 // ─── Shared position helpers ──────────────────────────────────────────────────
 
-/** Top-px positions for the 4 round-of-16 rows */
-function r16TopPx() {
-  return [0, 1, 2, 3].map(i => i * BAND + (BAND - CELL_H) / 2);
+/**
+ * Top-px positions for the anchor round rows (the fixed convergence round
+ * that play-in matches feed into — "Round of 16" by default, 4 matches/side).
+ * Pass a different numMatches for seasons whose anchor round is bigger
+ * (e.g. 8 for a "Round of 32").
+ */
+function anchorTopPx(numMatches) {
+  const n = numMatches || 4;
+  return Array.from({ length: n }, (_, i) => i * BAND + (BAND - CELL_H) / 2);
 }
 
-/** Centre (px from col top) of the top or bottom slot in a given R16 row */
+// Back-compat alias — existing season files call r16TopPx() with no args
+// and get the original 4-row behavior unchanged.
+function r16TopPx() {
+  return anchorTopPx(4);
+}
+
+/** Centre (px from col top) of the top or bottom slot in a given anchor-round row */
 function r16SlotCentre(r2Tops, row, isTop) {
   return r2Tops[row] + YT_H + (isTop ? SLOT_H / 2 : SLOT_H + SEP_H + SLOT_H / 2);
 }
