@@ -4,17 +4,12 @@
     {
       "faction": "Guild Dwarves",
       "username": "Askyriel",
-      "elo": 1389
-    },
-    {
-      "faction": "Savanna Elves",
-      "username": "HiddenKoji",
-      "elo": 1383
+      "elo": 1387
     },
     {
       "faction": "Chosen Grove",
       "username": "Shoots",
-      "elo": 1369
+      "elo": 1370
     },
     {
       "faction": "Spectral Conclave",
@@ -22,29 +17,34 @@
       "elo": 1365
     },
     {
+      "faction": "Savanna Elves",
+      "username": "HiddenKoji",
+      "elo": 1363
+    },
+    {
+      "faction": "Storm Goblins",
+      "username": "Milbo",
+      "elo": 1358
+    },
+    {
       "faction": "Crimson Order",
       "username": "HiddenKoji",
       "elo": 1345
     },
     {
-      "faction": "Storm Goblins",
-      "username": "Milbo",
-      "elo": 1339
+      "faction": "Wayfarers",
+      "username": "xyzzzj",
+      "elo": 1338
     },
     {
       "faction": "Obsidian Dwarves",
       "username": "Nozy",
-      "elo": 1335
+      "elo": 1334
     },
     {
       "faction": "Isle Vekkid",
       "username": "excile2127",
-      "elo": 1322
-    },
-    {
-      "faction": "Wayfarers",
-      "username": "xyzzzj",
-      "elo": 1321
+      "elo": 1320
     },
     {
       "faction": "Breakers",
@@ -54,12 +54,7 @@
     {
       "faction": "Drakesun Rebellion",
       "username": "M1ne",
-      "elo": 1316
-    },
-    {
-      "faction": "Cave Goblins",
-      "username": "DeadSans",
-      "elo": 1301
+      "elo": 1315
     },
     {
       "faction": "The Forged",
@@ -69,27 +64,32 @@
     {
       "faction": "Phoenix Elves",
       "username": "CH4MP",
-      "elo": 1283
+      "elo": 1282
     },
     {
       "faction": "Tundra Orcs",
       "username": "Nesle",
-      "elo": 1282
+      "elo": 1281
     },
     {
       "faction": "Eternal Council",
       "username": "excile2127",
-      "elo": 1267
+      "elo": 1268
     },
     {
       "faction": "Mountain Vargath",
       "username": "onebe",
-      "elo": 1259
+      "elo": 1256
     },
     {
-      "faction": "Vanguards",
-      "username": "LCANELA",
-      "elo": 1251
+      "faction": "The Filth",
+      "username": "Loki",
+      "elo": 1250
+    },
+    {
+      "faction": "Cave Goblins",
+      "username": "DeadSans",
+      "elo": 1233
     },
     {
       "faction": "High Elves",
@@ -97,39 +97,39 @@
       "elo": 1229
     },
     {
-      "faction": "The Filth",
-      "username": "GuyTarsech",
-      "elo": 1226
+      "faction": "Thornhold Drey",
+      "username": "MajesticOnions",
+      "elo": 1225
     },
     {
       "faction": "Fallen Kingdom",
       "username": "ONEMISS",
-      "elo": 1224
+      "elo": 1222
     },
     {
       "faction": "Skyspear Avians",
       "username": "narookoo",
-      "elo": 1223
-    },
-    {
-      "faction": "Thornhold Drey",
-      "username": "MajesticOnions",
-      "elo": 1223
+      "elo": 1222
     },
     {
       "faction": "Fungal Dwarves",
       "username": "Orange Lazarus",
-      "elo": 1218
+      "elo": 1216
+    },
+    {
+      "faction": "Vanguards",
+      "username": "LCANELA",
+      "elo": 1216
     },
     {
       "faction": "Shimmersea Fae",
       "username": "Nozy",
-      "elo": 1217
+      "elo": 1216
     },
     {
       "faction": "Sand Goblins",
       "username": "CH4MP",
-      "elo": 1215
+      "elo": 1214
     },
     {
       "faction": "Moonsteppe Wolves",
@@ -144,23 +144,23 @@
     {
       "faction": "Swamp Orcs",
       "username": "Jerry204",
-      "elo": 1177
+      "elo": 1178
     },
     {
       "faction": "Cloaks",
-      "username": "rdebruys83",
-      "elo": 1165
+      "username": "PeterAU",
+      "elo": 1176
     },
     {
       "faction": "Shadow Elves",
-      "username": "CH4MP",
-      "elo": 1162
+      "username": "rdebruys83",
+      "elo": 1161
     },
     {
       "faction": "Deepwood Groaks",
-      "username": "GuyTarsech",
+      "username": "Lebirk",
       "elo": 1107
     }
   ],
-  "fetched_at": "2026-07-07 12:23 UTC"
+  "fetched_at": "2026-07-08 11:43 UTC"
 }
