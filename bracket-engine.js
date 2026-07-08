@@ -17,6 +17,16 @@
  *   addToCol(col, matchWrap, topPx)
  *   mountBracket(leftCols, rightCols, w_final, sideHeight)
  *   SLOT_H, SEP_H, YT_H, MATCH_H, CELL_H, GAP, LABEL_H, BAND, SIDE_H
+ *
+ * In-progress seasons — representing "not yet known":
+ *   A competitor slot that isn't determined yet: set `top: null` or `bot: null`
+ *   in that match's MATCHES entry (instead of calling p(...)). It renders as a
+ *   blank dashed box with no spoiler/reveal mechanic. Once the real result is
+ *   known, just replace null with a normal p(seed, name, fac) call.
+ *   A match with no video yet: simply omit `yt` (and `type`) from that match's
+ *   MATCHES entry — the video row renders blank until you add a yt URL later.
+ *   An undetermined champion: set `const CHAMPION = null;` — the crown slot
+ *   renders as a blank dashed placeholder until you set it to a real p(...).
  */
 
 // ─── Inject shared CSS ────────────────────────────────────────────────────────
@@ -103,6 +113,15 @@
   .slot.bye { background: var(--bye-color); border-color: #2e2a20; }
   .slot.bye:hover { border-color: #2e2a20; background: var(--bye-color); }
   .slot.bye:hover::before { opacity: 0; }
+  .slot.slot-tbd {
+    background: transparent; border-style: dashed; border-color: #4a4030;
+    cursor: default;
+  }
+  .slot.slot-tbd:hover { background: transparent; border-color: #4a4030; }
+  .slot.slot-tbd::before { display: none; }
+  .champion-slot.champion-slot-tbd {
+    border-style: dashed; box-shadow: none; min-height: 46px;
+  }
   .seed {
     font-family: 'Cinzel', serif; font-size: 0.7rem; color: var(--gold);
     min-width: 18px; text-align: right; flex-shrink: 0; font-weight: 600;
@@ -255,7 +274,9 @@ function revealAll() {
   if (co) co.style.display = 'none';
   const cc = document.getElementById('champ-content');
   if (cc) cc.style.visibility = 'visible';
-  if (window._finalTopEl) window._finalTopEl.classList.add('winner');
+  if (window._finalTopEl && !window._finalTopEl.classList.contains('slot-tbd')) {
+    window._finalTopEl.classList.add('winner');
+  }
 }
 
 function hideAll() {
@@ -270,6 +291,11 @@ function hideAll() {
 // ─── DOM builders ─────────────────────────────────────────────────────────────
 function makeSlotEl(player) {
   const div = document.createElement('div');
+  if (!player) {
+    // Not yet determined — render a blank placeholder box, no spoiler mechanic.
+    div.className = 'slot slot-tbd';
+    return div;
+  }
   div.className = 'slot';
   div.__seed = player.seed;
   const seedEl = document.createElement('span');
@@ -327,8 +353,8 @@ function buildMatch(matchId, topSource, botSource, topStartRevealed, botStartRev
   wrap.appendChild(topEl);
   wrap.appendChild(sep);
   wrap.appendChild(botEl);
-  const topEntry = registerSlot(topEl, m.top.seed, topSource, topStartRevealed);
-  const botEntry = registerSlot(botEl, m.bot.seed, botSource, botStartRevealed);
+  const topEntry = m.top ? registerSlot(topEl, m.top.seed, topSource, topStartRevealed) : null;
+  const botEntry = m.bot ? registerSlot(botEl, m.bot.seed, botSource, botStartRevealed) : null;
   wrap._topEl = topEl;
   wrap._botEl = botEl;
   wrap._topEntry = topEntry;
@@ -406,24 +432,31 @@ function mountBracket(leftCols, rightCols, w_final, sideHeight) {
   const champSlot = document.createElement('div');
   champSlot.className = 'champion-slot';
 
-  const champContent = document.createElement('div');
-  champContent.id = 'champ-content';
-  champContent.style.visibility = 'hidden';
-  champContent.innerHTML =
-    '<div class="champion-name">' + CHAMPION.name + '</div>' +
-    '<div class="champion-faction">' + CHAMPION.faction + '</div>';
-  champSlot.appendChild(champContent);
+  if (CHAMPION) {
+    const champContent = document.createElement('div');
+    champContent.id = 'champ-content';
+    champContent.style.visibility = 'hidden';
+    champContent.innerHTML =
+      '<div class="champion-name">' + CHAMPION.name + '</div>' +
+      '<div class="champion-faction">' + CHAMPION.faction + '</div>';
+    champSlot.appendChild(champContent);
 
-  const champOv = document.createElement('div');
-  champOv.id = 'champ-ov';
-  champOv.className = 'match-spoiler';
-  champOv.innerHTML = '<span>click to reveal</span>';
-  champOv.addEventListener('click', () => {
-    champContent.style.visibility = 'visible';
-    champOv.style.display = 'none';
-    if (window._finalTopEl) window._finalTopEl.classList.add('winner');
-  });
-  champSlot.appendChild(champOv);
+    const champOv = document.createElement('div');
+    champOv.id = 'champ-ov';
+    champOv.className = 'match-spoiler';
+    champOv.innerHTML = '<span>click to reveal</span>';
+    champOv.addEventListener('click', () => {
+      champContent.style.visibility = 'visible';
+      champOv.style.display = 'none';
+      if (window._finalTopEl && !window._finalTopEl.classList.contains('slot-tbd')) {
+        window._finalTopEl.classList.add('winner');
+      }
+    });
+    champSlot.appendChild(champOv);
+  } else {
+    // Champion not yet determined — blank dashed placeholder, no reveal mechanic.
+    champSlot.classList.add('champion-slot-tbd');
+  }
   crownWrap.appendChild(champSlot);
   finalWrap.appendChild(crownWrap);
 
