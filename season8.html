@@ -7,6 +7,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<script>
+  // Season 8 has THREE Round-of-16 rows per side with no bye (rows 1, 2, and
+  // 3 — only row 0 has a bye), so most of the play-in column needs stacked
+  // pairs. This is the tightest season yet for vertical room; these values
+  // are checked to leave an 8px+ gap even in that worst case. Tune if needed.
+  const GAP_OVERRIDE = 150;
+  const PLAYIN_STACK_OFFSET_OVERRIDE = 60;
+</script>
 <script src="bracket-engine.js"></script>
 </head>
 <body>
@@ -28,8 +36,7 @@
 const SEASON = 'Faction Masters Season 8';
 
 const NAV = [
-  { label: 'Season 9', href: 'index.html' },
-  { label: 'Season 8', href: 'season8.html', active: true },
+  { label: 'Season 8', href: 'index.html', active: true },
   { label: 'Season 7', href: 'season7.html' },
   { label: 'Season 6', href: 'season6.html' },
   { label: 'Season 5', href: 'season5.html' },
@@ -48,7 +55,7 @@ const F = {
   HE:'High Elves',      SA:'Skyspear Avians',  SG:'Sand Goblins',
   BR:'Breakers',        ST:'Storm Goblins',    SF:'Shimmersea Fae',
   FL:'The Filth',       CH:'Chosen Grove',     IV:'Isle Vekkid',
-  SC:'Spectral Conclave', GD:'Guild Dwarves',   DR:'Drakesun Rebellion'
+  SC:'Spectral Conclave'
 };
 
 // ── Match data ─────────────────────────────────────────────────────────────────
@@ -169,20 +176,20 @@ function render() {
   const r2Tops = r16TopPx();
 
   const p_game1 = playInTopFromCentre(r16SlotCentre(r2Tops, 0, false));
-  const p_game2 = playInTopFromCentre(r16SlotCentre(r2Tops, 1, true));
-  const p_game3 = playInTopFromCentre(r16SlotCentre(r2Tops, 1, false));
-  const p_game4 = playInTopFromCentre(r16SlotCentre(r2Tops, 2, true));
-  const p_game5 = playInTopFromCentre(r16SlotCentre(r2Tops, 2, false));
-  const p_game6 = playInTopFromCentre(r16SlotCentre(r2Tops, 3, true));
-  const p_game7 = playInTopFromCentre(r16SlotCentre(r2Tops, 3, false));
+  const p_game2 = playInTopFromCentre(stackedPlayInCentre(r2Tops, 1, true));
+  const p_game3 = playInTopFromCentre(stackedPlayInCentre(r2Tops, 1, false));
+  const p_game4 = playInTopFromCentre(stackedPlayInCentre(r2Tops, 2, true));
+  const p_game5 = playInTopFromCentre(stackedPlayInCentre(r2Tops, 2, false));
+  const p_game6 = playInTopFromCentre(stackedPlayInCentre(r2Tops, 3, true));
+  const p_game7 = playInTopFromCentre(stackedPlayInCentre(r2Tops, 3, false));
 
   const p_game8  = playInTopFromCentre(r16SlotCentre(r2Tops, 0, false));
-  const p_game9  = playInTopFromCentre(r16SlotCentre(r2Tops, 1, true));
-  const p_game10 = playInTopFromCentre(r16SlotCentre(r2Tops, 1, false));
-  const p_game11 = playInTopFromCentre(r16SlotCentre(r2Tops, 2, true));
-  const p_game12 = playInTopFromCentre(r16SlotCentre(r2Tops, 2, false));
-  const p_game13 = playInTopFromCentre(r16SlotCentre(r2Tops, 3, true));
-  const p_game14 = playInTopFromCentre(r16SlotCentre(r2Tops, 3, false));
+  const p_game9  = playInTopFromCentre(stackedPlayInCentre(r2Tops, 1, true));
+  const p_game10 = playInTopFromCentre(stackedPlayInCentre(r2Tops, 1, false));
+  const p_game11 = playInTopFromCentre(stackedPlayInCentre(r2Tops, 2, true));
+  const p_game12 = playInTopFromCentre(stackedPlayInCentre(r2Tops, 2, false));
+  const p_game13 = playInTopFromCentre(stackedPlayInCentre(r2Tops, 3, true));
+  const p_game14 = playInTopFromCentre(stackedPlayInCentre(r2Tops, 3, false));
 
   const p_game23 = centredBetweenMatches(r2Tops[0], r2Tops[1]);
   const p_game24 = centredBetweenMatches(r2Tops[2], r2Tops[3]);
