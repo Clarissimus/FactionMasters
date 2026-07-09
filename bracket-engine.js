@@ -84,7 +84,7 @@
   .bracket-outer {
     display: flex; align-items: flex-start; justify-content: flex-start; width: 100%;
   }
-  .bracket-side       { display: flex; flex-direction: row; }
+  .bracket-side       { display: flex; flex-direction: row; flex-shrink: 0; }
   .bracket-side.right { flex-direction: row-reverse; }
   .bracket-round { display: flex; flex-direction: column; flex-shrink: 0; padding: 0 6px; }
   .round-label {
