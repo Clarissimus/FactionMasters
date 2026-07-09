@@ -7,6 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<script>
+  // Season 6 has one Round-of-16 row per side with no bye (row 1 — both
+  // slots fed by play-in winners), so those two play-in matches need extra
+  // room to avoid overlapping. Tune these two values if it still looks off.
+  const GAP_OVERRIDE = 150;
+  const PLAYIN_STACK_OFFSET_OVERRIDE = 60;
+</script>
 <script src="bracket-engine.js"></script>
 </head>
 <body>
@@ -28,8 +35,7 @@
 const SEASON = 'Faction Masters Season 6';
 
 const NAV = [
-  { label: 'Season 9', href: 'index.html' },
-  { label: 'Season 8', href: 'season8.html' },
+  { label: 'Season 8', href: 'index.html' },
   { label: 'Season 7', href: 'season7.html' },
   { label: 'Season 6', href: 'season6.html', active: true },
   { label: 'Season 5', href: 'season5.html' },
@@ -74,7 +80,7 @@ const MATCHES = {
   game17:{ top:p(3,'BookishHolleas','WF'),bot:p(14,'Dark Thomy','FK'),      winner:3,  yt:'https://youtu.be/HBmVnzBOdOc' },
   game18:{ top:p(6,'dqi','HE'),           bot:p(11,'PetarPvZ','SE'),        winner:11, yt:'https://youtu.be/dGL9E6K0BQg' },
   // Quarterfinals
-  game19:{ top:p(1,'Shoots','CH'),        bot:p(9,'Vexer','DG'),         winner:1,  yt:'https://youtu.be/LOf-l2qnoEw' },
+  game19:{ top:p(1,'Shoots','CH'),        bot:p(9,'Vexer','FL/DG'),         winner:1,  yt:'https://youtu.be/LOf-l2qnoEw' },
   game20:{ top:p(20,'massimo','SG'),      bot:p(21,'Digno','EC'),           winner:20, yt:'https://youtu.be/0YMkQLODMdI' },
   game21:{ top:p(15,'DeadSans','ST'),     bot:p(7,'Orange Lazarus','MV'),   winner:7,  yt:'https://youtu.be/CX61cYvni-M' },
   game22:{ top:p(3,'BookishHolleas','WF'),bot:p(11,'PetarPvZ','SE'),        winner:3,  yt:'https://youtu.be/-Claogw9YWo' },
@@ -136,14 +142,14 @@ function render() {
   const r2Tops = r16TopPx();
 
   const p_game1 = playInTopFromCentre(r16SlotCentre(r2Tops, 0, false));
-  const p_game2 = playInTopFromCentre(r16SlotCentre(r2Tops, 1, true));
-  const p_game3 = playInTopFromCentre(r16SlotCentre(r2Tops, 1, false));
+  const p_game2 = playInTopFromCentre(stackedPlayInCentre(r2Tops, 1, true));
+  const p_game3 = playInTopFromCentre(stackedPlayInCentre(r2Tops, 1, false));
   const p_game4 = playInTopFromCentre(r16SlotCentre(r2Tops, 2, false));
   const p_game5 = playInTopFromCentre(r16SlotCentre(r2Tops, 3, false));
 
   const p_game6 = playInTopFromCentre(r16SlotCentre(r2Tops, 0, false));
-  const p_game7 = playInTopFromCentre(r16SlotCentre(r2Tops, 1, true));
-  const p_game8 = playInTopFromCentre(r16SlotCentre(r2Tops, 1, false));
+  const p_game7 = playInTopFromCentre(stackedPlayInCentre(r2Tops, 1, true));
+  const p_game8 = playInTopFromCentre(stackedPlayInCentre(r2Tops, 1, false));
   const p_game9 = playInTopFromCentre(r16SlotCentre(r2Tops, 2, false));
   const p_game10 = playInTopFromCentre(r16SlotCentre(r2Tops, 3, false));
 
