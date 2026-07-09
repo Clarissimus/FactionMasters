@@ -82,7 +82,7 @@
   }
   .btn:hover { background: var(--gold-dim); color: var(--bg-deep); }
   .bracket-outer {
-    display: flex; align-items: flex-start; justify-content: safe center; width: 100%;
+    display: flex; align-items: flex-start; justify-content: flex-start; width: 100%;
   }
   .bracket-side       { display: flex; flex-direction: row; }
   .bracket-side.right { flex-direction: row-reverse; }
@@ -217,7 +217,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Run the season's render function
   if (typeof render === 'function') render();
+
+  // Centre the bracket only when it actually fits the viewport; otherwise
+  // left-align it so every column stays reachable by scrolling. (Plain
+  // `justify-content: center` on a flex row wider than its container
+  // strands the left-side overflow outside scrollable range — the browser
+  // splits the overflow evenly on both sides of the centred content, and
+  // native scrolling can only ever reach the "start" edge of the box, not
+  // the space created by centring past it. `justify-content: safe center`
+  // is the spec-correct fix for this but support is inconsistent across
+  // browsers/versions, so we do the equivalent check in JS instead, which
+  // works everywhere.)
+  adjustBracketAlignment();
+  window.addEventListener('resize', adjustBracketAlignment);
 });
+
+function adjustBracketAlignment() {
+  const outer = document.getElementById('bracket');
+  if (!outer) return;
+  // Measure natural content width against the available width. scrollWidth
+  // reflects the full unclipped content regardless of the current
+  // justify-content value, so this is safe to call repeatedly (e.g. on
+  // resize) without needing to reset anything first.
+  const contentWidth = outer.scrollWidth;
+  const containerWidth = outer.parentElement.clientWidth;
+  outer.style.justifyContent = (contentWidth <= containerWidth) ? 'center' : 'flex-start';
+}
 
 // ─── Layout constants ─────────────────────────────────────────────────────────
 // GAP and PLAYIN_STACK_OFFSET can both be overridden per season. In your
