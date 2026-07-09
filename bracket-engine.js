@@ -82,7 +82,7 @@
   }
   .btn:hover { background: var(--gold-dim); color: var(--bg-deep); }
   .bracket-outer {
-    display: flex; align-items: flex-start; justify-content: center; width: 100%;
+    display: flex; align-items: flex-start; justify-content: safe center; width: 100%;
   }
   .bracket-side       { display: flex; flex-direction: row; }
   .bracket-side.right { flex-direction: row-reverse; }
