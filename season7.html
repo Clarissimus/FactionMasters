@@ -7,6 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<script>
+  // Season 7 has two Round-of-16 rows per side with no bye (rows 1 and 3 —
+  // both slots fed by play-in winners), so those play-in matches need extra
+  // room to avoid overlapping. Tune these two values if it still looks off.
+  const GAP_OVERRIDE = 150;
+  const PLAYIN_STACK_OFFSET_OVERRIDE = 60;
+</script>
 <script src="bracket-engine.js"></script>
 </head>
 <body>
@@ -28,8 +35,7 @@
 const SEASON = 'Faction Masters Season 7';
 
 const NAV = [
-  { label: 'Season 9', href: 'index.html' },
-  { label: 'Season 8', href: 'season8.html' },
+  { label: 'Season 8', href: 'index.html' },
   { label: 'Season 7', href: 'season7.html', active: true },
   { label: 'Season 6', href: 'season6.html' },
   { label: 'Season 5', href: 'season5.html' },
@@ -63,7 +69,7 @@ const MATCHES = {
   game7: { top:p(15,'Orange Lazarus','SE'),bot:p(18,'BazzoFormidable','FO'),winner:15, yt:'https://youtu.be/Fwe6XoeB9x8' },
   game8: { top:p(7,'Nesle','TO'),          bot:p(26,'DemiAce','CO'),        winner:7,  yt:'https://youtu.be/elOtv4y0ifA' },
   game9: { top:p(10,'rdebruys83','HE'),    bot:p(23,'Phexar','FD'),         winner:10, yt:'https://youtu.be/zhFwvQmIViQ' },
-  game10:{ top:p(14,'AstroWild','FL'),     bot:p(19,'Milbo','ST'),          winner:14, yt:'https://youtu.be/ztwMe-muouc' },
+  game10:{ top:p(14,'AstroWild','FL'),     bot:p(19,'Milbo','SG'),          winner:14, yt:'https://youtu.be/ztwMe-muouc' },
   game11:{ top:p(6,'Shoots','CH'),         bot:p(27,'Snikkit2nd','CG'),     winner:27, yt:'https://youtu.be/iw1bPsB599s' },
   game12:{ top:p(11,'Magnifico','SH'),     bot:p(22,'GuildMaster','EC'),    winner:22, yt:'https://youtu.be/lpFCJbBZB3Y' },
   // Round of 16 — left (seeds 1,8,4,5)
@@ -77,18 +83,18 @@ const MATCHES = {
   game19:{ top:p(3,'meee','OD'),           bot:p(14,'AstroWild','FL'),      winner:3,  yt:'https://youtu.be/VzLM9ZksYKl' },
   game20:{ top:p(27,'Snikkit2nd','CG'),    bot:p(22,'GuildMaster','EC'),    winner:22, yt:'https://youtu.be/P6rljPFr2z0' },
   // Quarterfinals
-  game21:{ top:p(1,'Nesle','SA'),          bot:p(25,'DeadRef','FK'),        winner:1,  yt:'https://youtu.be/_l4qF8jcsoM' },
+  game21:{ top:p(1,'Nesle','SA'),          bot:p(25,'DeadRef','FK'),        winner:1,  yt:'https://youtu.be/l4qF8jcsoM' },
   game22:{ top:p(4,'excile2127','MV'),     bot:p(5,'snalg','DG'),           winner:4,  yt:'https://youtu.be/S1gypHVSg9Q' },
   game23:{ top:p(15,'Orange Lazarus','SE'),bot:p(7,'Nesle','TO'),           winner:7,  yt:'https://youtu.be/No_xOpzoNJY' },
   game24:{ top:p(3,'meee','OD'),           bot:p(22,'GuildMaster','EC'),    winner:22, yt:'https://youtu.be/e-fS4tw8Oq4' },
   // Semifinals
-  game25:{ top:p(1,'Nesle','IV'),          bot:p(4,'excile2127','MV'),      winner:5,  yt:'https://youtu.be/SDZYAzt0kBw' },
+  game25:{ top:p(1,'Nesle','IV'),          bot:p(5,'excile2127','MV'),      winner:5,  yt:'https://youtu.be/SDZYAzt0kBw' },
   game26:{ top:p(7,'Nesle','TO'),          bot:p(22,'GuildMaster','EC'),    winner:7,  yt:'https://youtu.be/RoJubFvMeYI' },
   // Final
-  game27:{ top:p(4,'excile2127','MV'),     bot:p(7,'Nesle','TO'),           winner:5,  yt:'https://youtu.be/h1DYSXUidis' },
+  game27:{ top:p(5,'excile2127','MV'),     bot:p(7,'Nesle','TO'),           winner:5,  yt:'https://youtu.be/h1DYSXUidis' },
 };
 
-const CHAMPION = p(4,'excile2127','MV');
+const CHAMPION = p(5,'excile2127','MV');
 
 // ── Layout ─────────────────────────────────────────────────────────────────────
 // Season 7 has 6 play-in matches per side. R16 rows 1 and 3 (0-indexed) on each
@@ -141,18 +147,18 @@ function render() {
   const r2Tops = r16TopPx();
 
   const p_game1 = playInTopFromCentre(r16SlotCentre(r2Tops, 0, false));
-  const p_game2 = playInTopFromCentre(r16SlotCentre(r2Tops, 1, true));
-  const p_game3 = playInTopFromCentre(r16SlotCentre(r2Tops, 1, false));
+  const p_game2 = playInTopFromCentre(stackedPlayInCentre(r2Tops, 1, true));
+  const p_game3 = playInTopFromCentre(stackedPlayInCentre(r2Tops, 1, false));
   const p_game4 = playInTopFromCentre(r16SlotCentre(r2Tops, 2, false));
-  const p_game5 = playInTopFromCentre(r16SlotCentre(r2Tops, 3, true));
-  const p_game6 = playInTopFromCentre(r16SlotCentre(r2Tops, 3, false));
+  const p_game5 = playInTopFromCentre(stackedPlayInCentre(r2Tops, 3, true));
+  const p_game6 = playInTopFromCentre(stackedPlayInCentre(r2Tops, 3, false));
 
   const p_game7  = playInTopFromCentre(r16SlotCentre(r2Tops, 0, false));
-  const p_game8  = playInTopFromCentre(r16SlotCentre(r2Tops, 1, true));
-  const p_game9  = playInTopFromCentre(r16SlotCentre(r2Tops, 1, false));
+  const p_game8  = playInTopFromCentre(stackedPlayInCentre(r2Tops, 1, true));
+  const p_game9  = playInTopFromCentre(stackedPlayInCentre(r2Tops, 1, false));
   const p_game10 = playInTopFromCentre(r16SlotCentre(r2Tops, 2, false));
-  const p_game11 = playInTopFromCentre(r16SlotCentre(r2Tops, 3, true));
-  const p_game12 = playInTopFromCentre(r16SlotCentre(r2Tops, 3, false));
+  const p_game11 = playInTopFromCentre(stackedPlayInCentre(r2Tops, 3, true));
+  const p_game12 = playInTopFromCentre(stackedPlayInCentre(r2Tops, 3, false));
 
   const p_game21 = centredBetweenMatches(r2Tops[0], r2Tops[1]);
   const p_game22 = centredBetweenMatches(r2Tops[2], r2Tops[3]);
