@@ -220,15 +220,32 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // ─── Layout constants ─────────────────────────────────────────────────────────
+// GAP and PLAYIN_STACK_OFFSET can both be overridden per season. In your
+// season's HTML <head>, BEFORE the `<script src="bracket-engine.js">` tag,
+// add:
+//   <script>
+//     const GAP_OVERRIDE = 150;                 // spacing between R16/QF/SF rows
+//     const PLAYIN_STACK_OFFSET_OVERRIDE = 60;   // spread between two play-in
+//   </script>                                    // matches stacked on one row
+// Only needed for seasons where a Round-of-16 row has NO bye (both slots fed
+// by play-in winners) — that's when two play-in match boxes have to share one
+// row's vertical space, and the defaults below may not leave enough room.
 const SLOT_H  = 46;
 const SEP_H   = 2;
 const YT_H    = 18;
 const MATCH_H = SLOT_H * 2 + SEP_H;
 const CELL_H  = YT_H + MATCH_H;
-const GAP     = 14;
+const GAP     = (typeof GAP_OVERRIDE !== 'undefined') ? GAP_OVERRIDE : 14;
 const LABEL_H = 28;
 const BAND    = MATCH_H + GAP;
 const SIDE_H  = 4 * BAND; // default anchor size (Round of 16, 4 matches/side) — season files may override
+
+// Vertical distance (px) from a Round-of-16 row's centre to where each of two
+// stacked play-in matches gets anchored, for rows with no bye. Needs to be at
+// least CELL_H/2 (~56px) so the two play-in boxes (each CELL_H tall) don't
+// overlap each other; GAP needs enough room on top of that so a row's boxes
+// don't bleed into the row above/below. See stackedPlayInCentre() below.
+const PLAYIN_STACK_OFFSET = (typeof PLAYIN_STACK_OFFSET_OVERRIDE !== 'undefined') ? PLAYIN_STACK_OFFSET_OVERRIDE : 60;
 
 // ─── Player helper ────────────────────────────────────────────────────────────
 function p(seed, name, fac) {
@@ -497,6 +514,21 @@ function r16TopPx() {
 /** Centre (px from col top) of the top or bottom slot in a given anchor-round row */
 function r16SlotCentre(r2Tops, row, isTop) {
   return r2Tops[row] + YT_H + (isTop ? SLOT_H / 2 : SLOT_H + SEP_H + SLOT_H / 2);
+}
+
+/**
+ * Centre (px from col top) to anchor one of TWO play-in matches that are
+ * both feeding a single Round-of-16 row with no bye (both slots come from
+ * play-in winners). Use this instead of r16SlotCentre() for those rows —
+ * r16SlotCentre() is fine for a row with only one play-in (paired with a
+ * bye), but two full-height play-in match boxes can't both fit centred on
+ * r16SlotCentre()'s top/bottom slot positions (only ~48px apart) without
+ * overlapping. This spreads them out by PLAYIN_STACK_OFFSET instead, which
+ * is independent of the actual R16 slot positions and tunable per season.
+ */
+function stackedPlayInCentre(r2Tops, row, isTop) {
+  const rowCentre = r2Tops[row] + CELL_H / 2;
+  return isTop ? rowCentre - PLAYIN_STACK_OFFSET : rowCentre + PLAYIN_STACK_OFFSET;
 }
 
 /** Top-px for a play-in match that should centre on a given pixel */
