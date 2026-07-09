@@ -489,7 +489,7 @@ function mountBracket(leftCols, rightCols, w_final, sideHeight) {
   bracket.style.display = 'flex';
   bracket.style.alignItems = 'flex-start';
 
-  window._finalTopEl = w_final._topEl;
+  window._finalWinnerEl = w_final._winnerEl || w_final._topEl;
 }
 
 // ─── Shared position helpers ──────────────────────────────────────────────────
