@@ -4,22 +4,22 @@
     {
       "faction": "Guild Dwarves",
       "username": "Dr Doom",
-      "elo": 1388
+      "elo": 1406
+    },
+    {
+      "faction": "Tundra Orcs",
+      "username": "Nesle",
+      "elo": 1398
     },
     {
       "faction": "Chosen Grove",
       "username": "Shoots",
-      "elo": 1379
+      "elo": 1378
     },
     {
       "faction": "Wayfarers",
       "username": "xyzzzj",
       "elo": 1373
-    },
-    {
-      "faction": "Cave Goblins",
-      "username": "DeadSans",
-      "elo": 1371
     },
     {
       "faction": "Savanna Elves",
@@ -29,17 +29,17 @@
     {
       "faction": "Spectral Conclave",
       "username": "Dr Doom",
-      "elo": 1355
+      "elo": 1354
     },
     {
       "faction": "Crimson Order",
       "username": "HiddenKoji",
-      "elo": 1346
+      "elo": 1347
     },
     {
-      "faction": "Tundra Orcs",
-      "username": "Nesle",
-      "elo": 1340
+      "faction": "Cave Goblins",
+      "username": "DeadSans",
+      "elo": 1333
     },
     {
       "faction": "Obsidian Dwarves",
@@ -47,39 +47,39 @@
       "elo": 1333
     },
     {
-      "faction": "Storm Goblins",
-      "username": "Milbo",
-      "elo": 1329
-    },
-    {
       "faction": "Phoenix Elves",
       "username": "CH4MP",
-      "elo": 1326
+      "elo": 1322
     },
     {
       "faction": "Drakesun Rebellion",
       "username": "M1ne",
-      "elo": 1317
-    },
-    {
-      "faction": "Isle Vekkid",
-      "username": "excile2127",
-      "elo": 1316
+      "elo": 1315
     },
     {
       "faction": "Breakers",
       "username": "Lime",
-      "elo": 1313
+      "elo": 1314
+    },
+    {
+      "faction": "Isle Vekkid",
+      "username": "excile2127",
+      "elo": 1314
+    },
+    {
+      "faction": "Storm Goblins",
+      "username": "Milbo",
+      "elo": 1297
     },
     {
       "faction": "The Filth",
       "username": "Loki",
-      "elo": 1301
+      "elo": 1284
     },
     {
       "faction": "Thornhold Drey",
       "username": "Lime",
-      "elo": 1283
+      "elo": 1282
     },
     {
       "faction": "Eternal Council",
@@ -89,7 +89,7 @@
     {
       "faction": "The Forged",
       "username": "rdebruys83",
-      "elo": 1259
+      "elo": 1262
     },
     {
       "faction": "Mountain Vargath",
@@ -97,54 +97,54 @@
       "elo": 1254
     },
     {
+      "faction": "Vanguards",
+      "username": "glokta",
+      "elo": 1243
+    },
+    {
       "faction": "Skyspear Avians",
       "username": "Run",
-      "elo": 1233
+      "elo": 1232
     },
     {
       "faction": "Moonsteppe Wolves",
       "username": "excile2127",
-      "elo": 1223
+      "elo": 1222
     },
     {
-      "faction": "Shimmersea Fae",
-      "username": "Nozy",
-      "elo": 1222
+      "faction": "High Elves",
+      "username": "rdebruys83",
+      "elo": 1217
     },
     {
       "faction": "Fallen Kingdom",
       "username": "Putzki",
-      "elo": 1214
-    },
-    {
-      "faction": "Cloaks",
-      "username": "rdebruys83",
-      "elo": 1212
+      "elo": 1213
     },
     {
       "faction": "Fungal Dwarves",
       "username": "Orange Lazarus",
-      "elo": 1211
+      "elo": 1213
     },
     {
       "faction": "Sand Goblins",
       "username": "CH4MP",
-      "elo": 1211
+      "elo": 1212
     },
     {
-      "faction": "High Elves",
+      "faction": "Shimmersea Fae",
       "username": "Nozy",
-      "elo": 1207
+      "elo": 1212
     },
     {
       "faction": "Swamp Orcs",
       "username": "Jerry204",
-      "elo": 1199
+      "elo": 1200
     },
     {
-      "faction": "Vanguards",
-      "username": "Nozy",
-      "elo": 1198
+      "faction": "Shadow Elves",
+      "username": "Imrahil",
+      "elo": 1195
     },
     {
       "faction": "Polar Dwarves",
@@ -152,15 +152,15 @@
       "elo": 1189
     },
     {
-      "faction": "Shadow Elves",
-      "username": "Imrahil",
-      "elo": 1184
+      "faction": "Cloaks",
+      "username": "Elyk",
+      "elo": 1171
     },
     {
       "faction": "Deepwood Groaks",
       "username": "Pursewarden",
-      "elo": 1117
+      "elo": 1116
     }
   ],
-  "fetched_at": "2026-07-14 11:21 UTC"
+  "fetched_at": "2026-07-15 11:25 UTC"
 }
