@@ -4,7 +4,7 @@
     {
       "faction": "Guild Dwarves",
       "username": "SandDanGlokta",
-      "elo": 1451
+      "elo": 1468
     },
     {
       "faction": "Tundra Orcs",
@@ -14,27 +14,27 @@
     {
       "faction": "Chosen Grove",
       "username": "Shoots",
-      "elo": 1377
+      "elo": 1376
     },
     {
       "faction": "Savanna Elves",
       "username": "HiddenKoji",
-      "elo": 1367
+      "elo": 1366
     },
     {
       "faction": "Wayfarers",
       "username": "xyzzzj",
-      "elo": 1364
+      "elo": 1365
     },
     {
       "faction": "Breakers",
       "username": "Lime",
-      "elo": 1360
+      "elo": 1358
     },
     {
       "faction": "Spectral Conclave",
       "username": "SandDanGlokta",
-      "elo": 1352
+      "elo": 1350
     },
     {
       "faction": "Crimson Order",
@@ -52,9 +52,9 @@
       "elo": 1331
     },
     {
-      "faction": "Phoenix Elves",
-      "username": "CH4MP",
-      "elo": 1316
+      "faction": "Storm Goblins",
+      "username": "Milbo",
+      "elo": 1318
     },
     {
       "faction": "Drakesun Rebellion",
@@ -62,29 +62,24 @@
       "elo": 1315
     },
     {
+      "faction": "Phoenix Elves",
+      "username": "CH4MP",
+      "elo": 1306
+    },
+    {
       "faction": "Isle Vekkid",
       "username": "excile2127",
-      "elo": 1304
+      "elo": 1303
     },
     {
       "faction": "Thornhold Drey",
       "username": "Lime",
-      "elo": 1298
-    },
-    {
-      "faction": "Storm Goblins",
-      "username": "Milbo",
-      "elo": 1286
+      "elo": 1299
     },
     {
       "faction": "Vanguards",
       "username": "glokta",
-      "elo": 1261
-    },
-    {
-      "faction": "The Forged",
-      "username": "rdebruys83",
-      "elo": 1259
+      "elo": 1281
     },
     {
       "faction": "Eternal Council",
@@ -92,29 +87,29 @@
       "elo": 1258
     },
     {
-      "faction": "Skyspear Avians",
-      "username": "narookoo",
-      "elo": 1258
-    },
-    {
-      "faction": "Cloaks",
-      "username": "rdebruys83",
-      "elo": 1257
-    },
-    {
       "faction": "Moonsteppe Wolves",
       "username": "excile2127",
       "elo": 1257
     },
     {
-      "faction": "Mountain Vargath",
-      "username": "onebe",
-      "elo": 1253
+      "faction": "Cloaks",
+      "username": "rdebruys83",
+      "elo": 1256
     },
     {
-      "faction": "High Elves",
-      "username": "SandDanGlokta",
-      "elo": 1247
+      "faction": "Skyspear Avians",
+      "username": "narookoo",
+      "elo": 1256
+    },
+    {
+      "faction": "The Forged",
+      "username": "rdebruys83",
+      "elo": 1254
+    },
+    {
+      "faction": "Mountain Vargath",
+      "username": "onebe",
+      "elo": 1252
     },
     {
       "faction": "The Filth",
@@ -122,9 +117,14 @@
       "elo": 1237
     },
     {
+      "faction": "High Elves",
+      "username": "SandDanGlokta",
+      "elo": 1212
+    },
+    {
       "faction": "Sand Goblins",
       "username": "CH4MP",
-      "elo": 1210
+      "elo": 1209
     },
     {
       "faction": "Fallen Kingdom",
@@ -132,14 +132,24 @@
       "elo": 1207
     },
     {
-      "faction": "Polar Dwarves",
-      "username": "Ratatosk",
-      "elo": 1188
+      "faction": "Deepwood Groaks",
+      "username": "Pursewarden",
+      "elo": 1204
     },
     {
       "faction": "Shimmersea Fae",
-      "username": "Nozy",
-      "elo": 1187
+      "username": "rdebruys83",
+      "elo": 1204
+    },
+    {
+      "faction": "Shadow Elves",
+      "username": "Imrahil",
+      "elo": 1193
+    },
+    {
+      "faction": "Polar Dwarves",
+      "username": "Ratatosk",
+      "elo": 1186
     },
     {
       "faction": "Fungal Dwarves",
@@ -147,20 +157,10 @@
       "elo": 1185
     },
     {
-      "faction": "Shadow Elves",
-      "username": "Imrahil",
-      "elo": 1178
-    },
-    {
       "faction": "Swamp Orcs",
       "username": "Jerry204",
-      "elo": 1165
-    },
-    {
-      "faction": "Deepwood Groaks",
-      "username": "DrWolf",
-      "elo": 1145
+      "elo": 1166
     }
   ],
-  "fetched_at": "2026-07-21 11:43 UTC"
+  "fetched_at": "2026-07-22 11:43 UTC"
 }
