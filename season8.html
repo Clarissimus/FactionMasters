@@ -82,7 +82,7 @@ const F = {
 
 const MATCHES = {
   // Play-in — left side (seeds feeding R16 groups 1,8,4,5)
-  game1:  { top:p(16,'LCANELA','VG'),      bot:p(17,'excile2127','IV') },
+  game1:  { top:p(16,'LCANELA','VG'),      bot:p(17,'excile2127','IV'), winner:17},
   game2:  { top:p(8,'Ratatosk','TO'),      bot:p(25,'CH4MP','SO'), winner:8, yt:'https://youtu.be/PpPI_X38sDA' },
   game3:  { top:p(9,'DeadSans','BR'),      bot:p(24,'MajesticOnions','SG') },
   game4:  { top:p(4,'Kezbatron','SC'),      bot:p(29,'SneezingMerilous','EC'), winner:4, yt:'https://youtu.be/1HipUaDAzug' },
@@ -90,10 +90,10 @@ const MATCHES = {
   game6:  { top:p(5,'TastyTeddyBear','SE'),      bot:p(28,'Woof','WF') },
   game7:  { top:p(12,'MajesticOnions','FK'),      bot:p(21,'Orange Lazarus','FD') },
   // Play-in — right side (seeds feeding R16 groups 2,7,3,6)
-  game8:  { top:p(15,'Nozy','CH'),      bot:p(18,'DeadSans','CG') },
+  game8:  { top:p(15,'Nozy','CH'),      bot:p(18,'DeadSans','CG'), winner:18},
   game9:  { top:p(7,'MajesticOnions','CL'),      bot:p(26,'tortugatron','SA') },
   game10: { top:p(10,'CH4MP','PE'),      bot:p(23,'Nozy','OD') },
-  game11: { top:p(3,'Monk3ylord','CO'),      bot:p(30,'Ratatosk','PD') },
+  game11: { top:p(3,'Monk3ylord','CO'),      bot:p(30,'Ratatosk','PD'), winner:30, yt:'https://youtu.be/8ov8eWHYEBs' },
   game12: { top:p(14,'CH4MP','SH'),      bot:p(19,'excile2127','MV'), winner:14, yt:'https://youtu.be/p3L8yhBz1n4' },
   game13: { top:p(6,'Aksyriel','DR'),      bot:p(27,'DrWolf','DG') },
   game14: { top:p(11,'excile2127','SF'),      bot:p(22,'Milbo','ST') },
@@ -106,7 +106,7 @@ const MATCHES = {
   game18: { top: null, bot: null },
   // Round of 16 — right (seeds 2,7,3,6). Only seed 2 has a bye (top slot
   // of game19).
-  game19: { top: p(2, 'excile2127', 'FO'), bot: null },
+  game19: { top: p(2, 'excile2127', 'FO'), bot:p(18,'DeadSans','CG'), winner:2 },
   game20: { top: null, bot: null },
   game21: { top: null, bot: p(14,'CH4MP','SH') },
   game22: { top: null, bot: null },
