@@ -4,12 +4,17 @@
     {
       "faction": "Guild Dwarves",
       "username": "SandDanGlokta",
-      "elo": 1489
+      "elo": 1490
+    },
+    {
+      "faction": "Drakesun Rebellion",
+      "username": "AlexTheGreat",
+      "elo": 1440
     },
     {
       "faction": "Tundra Orcs",
       "username": "Nesle",
-      "elo": 1433
+      "elo": 1432
     },
     {
       "faction": "Wayfarers",
@@ -17,24 +22,14 @@
       "elo": 1424
     },
     {
-      "faction": "Drakesun Rebellion",
-      "username": "AlexTheGreat",
-      "elo": 1416
-    },
-    {
       "faction": "Chosen Grove",
       "username": "Shoots",
-      "elo": 1387
+      "elo": 1386
     },
     {
       "faction": "Savanna Elves",
       "username": "HiddenKoji",
-      "elo": 1364
-    },
-    {
-      "faction": "Spectral Conclave",
-      "username": "SandDanGlokta",
-      "elo": 1351
+      "elo": 1362
     },
     {
       "faction": "Crimson Order",
@@ -44,16 +39,11 @@
     {
       "faction": "Breakers",
       "username": "Lime",
-      "elo": 1340
+      "elo": 1338
     },
     {
       "faction": "Cave Goblins",
       "username": "DeadSans",
-      "elo": 1330
-    },
-    {
-      "faction": "Vanguards",
-      "username": "glokta",
       "elo": 1328
     },
     {
@@ -62,14 +52,24 @@
       "elo": 1328
     },
     {
+      "faction": "Spectral Conclave",
+      "username": "onebe",
+      "elo": 1326
+    },
+    {
+      "faction": "Vanguards",
+      "username": "glokta",
+      "elo": 1316
+    },
+    {
+      "faction": "Moonsteppe Wolves",
+      "username": "SandDanGlokta",
+      "elo": 1301
+    },
+    {
       "faction": "Thornhold Drey",
       "username": "Lime",
       "elo": 1296
-    },
-    {
-      "faction": "High Elves",
-      "username": "SandDanGlokta",
-      "elo": 1284
     },
     {
       "faction": "Phoenix Elves",
@@ -77,19 +77,14 @@
       "elo": 1279
     },
     {
-      "faction": "Moonsteppe Wolves",
-      "username": "SandDanGlokta",
-      "elo": 1269
+      "faction": "Eternal Council",
+      "username": "KLANE",
+      "elo": 1267
     },
     {
       "faction": "Cloaks",
       "username": "rdebruys83",
-      "elo": 1253
-    },
-    {
-      "faction": "Eternal Council",
-      "username": "excile2127",
-      "elo": 1251
+      "elo": 1252
     },
     {
       "faction": "Mountain Vargath",
@@ -97,64 +92,69 @@
       "elo": 1249
     },
     {
-      "faction": "Storm Goblins",
-      "username": "Milbo",
-      "elo": 1245
+      "faction": "High Elves",
+      "username": "SandDanGlokta",
+      "elo": 1246
     },
     {
       "faction": "Skyspear Avians",
       "username": "narookoo",
-      "elo": 1240
+      "elo": 1237
+    },
+    {
+      "faction": "Sand Goblins",
+      "username": "RonaldReagan",
+      "elo": 1234
     },
     {
       "faction": "The Filth",
       "username": "Loki",
-      "elo": 1235
+      "elo": 1234
     },
     {
       "faction": "Isle Vekkid",
       "username": "excile2127",
-      "elo": 1235
+      "elo": 1230
     },
     {
       "faction": "The Forged",
       "username": "rdebruys83",
-      "elo": 1225
+      "elo": 1227
     },
     {
       "faction": "Shadow Elves",
       "username": "Imrahil",
-      "elo": 1219
+      "elo": 1226
+    },
+    {
+      "faction": "Storm Goblins",
+      "username": "Milbo",
+      "elo": 1216
     },
     {
       "faction": "Fallen Kingdom",
       "username": "LordFunkadelic",
-      "elo": 1217
-    },
-    {
-      "faction": "Sand Goblins",
-      "username": "MajesticOnions",
-      "elo": 1205
+      "elo": 1214
     },
     {
       "faction": "Swamp Orcs",
       "username": "Jerry204",
-      "elo": 1188
+      "elo": 1200
     },
     {
       "faction": "Polar Dwarves",
       "username": "Ratatosk",
-      "elo": 1183
+      "elo": 1182
     },
     {
       "faction": "Fungal Dwarves",
       "username": "Weaverism",
-      "elo": 1180
+      "elo": 1179
     },
     {
       "faction": "Shimmersea Fae",
       "username": "rdebruys83",
-      "elo": 1165
+      "elo": 1164
     },
     {
       "faction": "Deepwood Groaks",
@@ -162,5 +162,5 @@
       "elo": 1141
     }
   ],
-  "fetched_at": "2026-07-30 11:47 UTC"
+  "fetched_at": "2026-07-31 11:54 UTC"
 }
