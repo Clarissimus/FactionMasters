@@ -4,7 +4,7 @@
     {
       "faction": "Guild Dwarves",
       "username": "SandDanGlokta",
-      "elo": 1489
+      "elo": 1488
     },
     {
       "faction": "Tundra Orcs",
@@ -12,19 +12,19 @@
       "elo": 1433
     },
     {
-      "faction": "Wayfarers",
-      "username": "xyzzzj",
-      "elo": 1422
-    },
-    {
       "faction": "Drakesun Rebellion",
       "username": "AlexTheGreat",
-      "elo": 1407
+      "elo": 1412
+    },
+    {
+      "faction": "Wayfarers",
+      "username": "xyzzzj",
+      "elo": 1404
     },
     {
       "faction": "Chosen Grove",
       "username": "Shoots",
-      "elo": 1386
+      "elo": 1385
     },
     {
       "faction": "Savanna Elves",
@@ -32,14 +32,14 @@
       "elo": 1362
     },
     {
-      "faction": "Crimson Order",
-      "username": "HiddenKoji",
-      "elo": 1343
+      "faction": "Spectral Conclave",
+      "username": "onebe",
+      "elo": 1350
     },
     {
-      "faction": "Spectral Conclave",
-      "username": "SandDanGlokta",
-      "elo": 1337
+      "faction": "Crimson Order",
+      "username": "HiddenKoji",
+      "elo": 1344
     },
     {
       "faction": "Breakers",
@@ -54,7 +54,7 @@
     {
       "faction": "Moonsteppe Wolves",
       "username": "SandDanGlokta",
-      "elo": 1320
+      "elo": 1319
     },
     {
       "faction": "Thornhold Drey",
@@ -64,22 +64,22 @@
     {
       "faction": "Cave Goblins",
       "username": "DeadSans",
-      "elo": 1290
+      "elo": 1287
     },
     {
       "faction": "Phoenix Elves",
       "username": "CH4MP",
-      "elo": 1280
-    },
-    {
-      "faction": "Eternal Council",
-      "username": "KLANE",
-      "elo": 1274
+      "elo": 1279
     },
     {
       "faction": "High Elves",
       "username": "SandDanGlokta",
-      "elo": 1258
+      "elo": 1276
+    },
+    {
+      "faction": "Eternal Council",
+      "username": "KLANE",
+      "elo": 1273
     },
     {
       "faction": "Shadow Elves",
@@ -89,7 +89,7 @@
     {
       "faction": "Cloaks",
       "username": "rdebruys83",
-      "elo": 1251
+      "elo": 1250
     },
     {
       "faction": "Mountain Vargath",
@@ -97,9 +97,9 @@
       "elo": 1248
     },
     {
-      "faction": "Skyspear Avians",
-      "username": "narookoo",
-      "elo": 1237
+      "faction": "Fallen Kingdom",
+      "username": "LordFunkadelic",
+      "elo": 1244
     },
     {
       "faction": "The Filth",
@@ -107,23 +107,18 @@
       "elo": 1234
     },
     {
-      "faction": "Swamp Orcs",
-      "username": "Jerry204",
-      "elo": 1225
+      "faction": "Skyspear Avians",
+      "username": "Run",
+      "elo": 1232
     },
     {
-      "faction": "Isle Vekkid",
-      "username": "excile2127",
-      "elo": 1225
+      "faction": "Swamp Orcs",
+      "username": "Jerry204",
+      "elo": 1224
     },
     {
       "faction": "Vanguards",
       "username": "Pursewarden",
-      "elo": 1223
-    },
-    {
-      "faction": "Fallen Kingdom",
-      "username": "Putzki",
       "elo": 1218
     },
     {
@@ -132,19 +127,19 @@
       "elo": 1214
     },
     {
+      "faction": "The Forged",
+      "username": "BazzoFormidable",
+      "elo": 1213
+    },
+    {
+      "faction": "Isle Vekkid",
+      "username": "excile2127",
+      "elo": 1211
+    },
+    {
       "faction": "Sand Goblins",
       "username": "Solitaire",
       "elo": 1206
-    },
-    {
-      "faction": "The Forged",
-      "username": "BazzoFormidable",
-      "elo": 1195
-    },
-    {
-      "faction": "Polar Dwarves",
-      "username": "Ratatosk",
-      "elo": 1181
     },
     {
       "faction": "Fungal Dwarves",
@@ -152,15 +147,20 @@
       "elo": 1179
     },
     {
+      "faction": "Polar Dwarves",
+      "username": "Ratatosk",
+      "elo": 1179
+    },
+    {
       "faction": "Shimmersea Fae",
       "username": "rdebruys83",
-      "elo": 1165
+      "elo": 1163
     },
     {
       "faction": "Deepwood Groaks",
       "username": "Jerry204",
-      "elo": 1141
+      "elo": 1142
     }
   ],
-  "fetched_at": "2026-08-01 11:12 UTC"
+  "fetched_at": "2026-08-02 11:12 UTC"
 }
