@@ -4,32 +4,32 @@
     {
       "faction": "Guild Dwarves",
       "username": "SandDanGlokta",
-      "elo": 1485
-    },
-    {
-      "faction": "Spectral Conclave",
-      "username": "SandDanGlokta",
-      "elo": 1417
+      "elo": 1484
     },
     {
       "faction": "Drakesun Rebellion",
       "username": "AlexTheGreat",
-      "elo": 1404
+      "elo": 1434
+    },
+    {
+      "faction": "Spectral Conclave",
+      "username": "SandDanGlokta",
+      "elo": 1374
     },
     {
       "faction": "Savanna Elves",
       "username": "HiddenKoji",
-      "elo": 1353
+      "elo": 1352
     },
     {
       "faction": "Crimson Order",
       "username": "HiddenKoji",
-      "elo": 1344
+      "elo": 1342
     },
     {
       "faction": "High Elves",
       "username": "SandDanGlokta",
-      "elo": 1329
+      "elo": 1330
     },
     {
       "faction": "Wayfarers",
@@ -37,14 +37,14 @@
       "elo": 1329
     },
     {
-      "faction": "Chosen Grove",
-      "username": "Shoots",
-      "elo": 1328
-    },
-    {
       "faction": "Tundra Orcs",
       "username": "Nesle",
-      "elo": 1327
+      "elo": 1326
+    },
+    {
+      "faction": "Chosen Grove",
+      "username": "Shoots",
+      "elo": 1325
     },
     {
       "faction": "Eternal Council",
@@ -52,49 +52,49 @@
       "elo": 1320
     },
     {
+      "faction": "Fallen Kingdom",
+      "username": "Dark-Thomy",
+      "elo": 1313
+    },
+    {
       "faction": "Moonsteppe Wolves",
       "username": "SandDanGlokta",
-      "elo": 1314
+      "elo": 1313
     },
     {
       "faction": "Breakers",
       "username": "DeadSans",
-      "elo": 1307
+      "elo": 1306
     },
     {
       "faction": "Phoenix Elves",
-      "username": "HiddenKoji",
-      "elo": 1298
+      "username": "CH4MP",
+      "elo": 1293
     },
     {
-      "faction": "Fallen Kingdom",
-      "username": "Dark-Thomy",
+      "faction": "Cloaks",
+      "username": "glokta",
       "elo": 1289
     },
     {
       "faction": "Thornhold Drey",
       "username": "Neesh",
-      "elo": 1289
+      "elo": 1288
+    },
+    {
+      "faction": "Polar Dwarves",
+      "username": "david.long.974",
+      "elo": 1281
     },
     {
       "faction": "Swamp Orcs",
       "username": "Jerry204",
-      "elo": 1273
-    },
-    {
-      "faction": "Cloaks",
-      "username": "glokta",
       "elo": 1272
     },
     {
       "faction": "Obsidian Dwarves",
       "username": "HiddenKoji",
       "elo": 1272
-    },
-    {
-      "faction": "Polar Dwarves",
-      "username": "david.long.974",
-      "elo": 1269
     },
     {
       "faction": "Sand Goblins",
@@ -104,7 +104,7 @@
     {
       "faction": "Skyspear Avians",
       "username": "Run",
-      "elo": 1243
+      "elo": 1242
     },
     {
       "faction": "Shadow Elves",
@@ -112,29 +112,29 @@
       "elo": 1239
     },
     {
+      "faction": "Cave Goblins",
+      "username": "DeadSans",
+      "elo": 1236
+    },
+    {
+      "faction": "Vanguards",
+      "username": "Pursewarden",
+      "elo": 1220
+    },
+    {
       "faction": "The Forged",
       "username": "BazzoFormidable",
-      "elo": 1221
+      "elo": 1220
     },
     {
       "faction": "The Filth",
       "username": "Loki",
-      "elo": 1221
+      "elo": 1220
     },
     {
       "faction": "Mountain Vargath",
       "username": "onebe",
-      "elo": 1213
-    },
-    {
-      "faction": "Cave Goblins",
-      "username": "DeadSans",
-      "elo": 1212
-    },
-    {
-      "faction": "Vanguards",
-      "username": "glokta",
-      "elo": 1210
+      "elo": 1216
     },
     {
       "faction": "Storm Goblins",
@@ -149,12 +149,12 @@
     {
       "faction": "Isle Vekkid",
       "username": "Azlarr",
-      "elo": 1181
+      "elo": 1191
     },
     {
       "faction": "Fungal Dwarves",
       "username": "Weaverism",
-      "elo": 1157
+      "elo": 1154
     },
     {
       "faction": "Shimmersea Fae",
@@ -162,5 +162,5 @@
       "elo": 1153
     }
   ],
-  "fetched_at": "2026-08-28 21:03 UTC"
+  "fetched_at": "2026-08-29 14:53 UTC"
 }
