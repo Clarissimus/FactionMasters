@@ -4,12 +4,12 @@
     {
       "faction": "Guild Dwarves",
       "username": "SandDanGlokta",
-      "elo": 1484
+      "elo": 1494
     },
     {
       "faction": "Drakesun Rebellion",
       "username": "AlexTheGreat",
-      "elo": 1434
+      "elo": 1402
     },
     {
       "faction": "Spectral Conclave",
@@ -19,17 +19,17 @@
     {
       "faction": "Savanna Elves",
       "username": "HiddenKoji",
-      "elo": 1352
+      "elo": 1351
     },
     {
       "faction": "Crimson Order",
       "username": "HiddenKoji",
-      "elo": 1342
+      "elo": 1334
     },
     {
       "faction": "High Elves",
       "username": "SandDanGlokta",
-      "elo": 1330
+      "elo": 1329
     },
     {
       "faction": "Wayfarers",
@@ -39,7 +39,7 @@
     {
       "faction": "Tundra Orcs",
       "username": "Nesle",
-      "elo": 1326
+      "elo": 1327
     },
     {
       "faction": "Chosen Grove",
@@ -52,24 +52,24 @@
       "elo": 1320
     },
     {
+      "faction": "Moonsteppe Wolves",
+      "username": "dqi",
+      "elo": 1320
+    },
+    {
       "faction": "Fallen Kingdom",
       "username": "Dark-Thomy",
       "elo": 1313
     },
     {
-      "faction": "Moonsteppe Wolves",
-      "username": "SandDanGlokta",
+      "faction": "Phoenix Elves",
+      "username": "HiddenKoji",
       "elo": 1313
     },
     {
       "faction": "Breakers",
       "username": "DeadSans",
       "elo": 1306
-    },
-    {
-      "faction": "Phoenix Elves",
-      "username": "CH4MP",
-      "elo": 1293
     },
     {
       "faction": "Cloaks",
@@ -99,7 +99,7 @@
     {
       "faction": "Sand Goblins",
       "username": "Solitaire",
-      "elo": 1250
+      "elo": 1248
     },
     {
       "faction": "Skyspear Avians",
@@ -107,19 +107,9 @@
       "elo": 1242
     },
     {
-      "faction": "Shadow Elves",
-      "username": "Imrahil",
-      "elo": 1239
-    },
-    {
       "faction": "Cave Goblins",
       "username": "DeadSans",
-      "elo": 1236
-    },
-    {
-      "faction": "Vanguards",
-      "username": "Pursewarden",
-      "elo": 1220
+      "elo": 1237
     },
     {
       "faction": "The Forged",
@@ -127,14 +117,14 @@
       "elo": 1220
     },
     {
-      "faction": "The Filth",
-      "username": "Loki",
-      "elo": 1220
+      "faction": "Vanguards",
+      "username": "Pursewarden",
+      "elo": 1219
     },
     {
-      "faction": "Mountain Vargath",
-      "username": "onebe",
-      "elo": 1216
+      "faction": "The Filth",
+      "username": "Loki",
+      "elo": 1219
     },
     {
       "faction": "Storm Goblins",
@@ -142,19 +132,29 @@
       "elo": 1206
     },
     {
+      "faction": "Mountain Vargath",
+      "username": "onebe",
+      "elo": 1203
+    },
+    {
+      "faction": "Shadow Elves",
+      "username": "Imrahil",
+      "elo": 1202
+    },
+    {
       "faction": "Deepwood Groaks",
       "username": "DrWolf",
-      "elo": 1197
+      "elo": 1196
     },
     {
       "faction": "Isle Vekkid",
       "username": "Azlarr",
-      "elo": 1191
+      "elo": 1190
     },
     {
       "faction": "Fungal Dwarves",
       "username": "Weaverism",
-      "elo": 1154
+      "elo": 1153
     },
     {
       "faction": "Shimmersea Fae",
@@ -162,5 +162,5 @@
       "elo": 1153
     }
   ],
-  "fetched_at": "2026-08-29 14:53 UTC"
+  "fetched_at": "2026-08-30 14:37 UTC"
 }
