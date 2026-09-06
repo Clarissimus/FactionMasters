@@ -107,14 +107,14 @@ const MATCHES = {
   // Round of 16 — right (seeds 2,7,3,6). Only seed 2 has a bye (top slot
   // of game19).
   game19: { top: p(2, 'excile2127', 'FO'), bot:p(18,'DeadSans','CG'), winner:2, yt: 'https://youtu.be/KYy8BDnRT30' },
-  game20: { top: p(26,'tortugatron','SA'), bot: p(10,'CH4MP','PE') },
-  game21: { top: p(30,'Ratatosk','PD'), bot: p(14,'CH4MP','SH') },
+  game20: { top: p(26,'tortugatron','SA'), bot: p(10,'CH4MP','PE'), winner:10, yt: 'https://youtu.be/_mcEU_I3ULM' },
+  game21: { top: p(30,'Ratatosk','PD'), bot: p(14,'CH4MP','SH'), winner:14, yt: 'https://youtu.be/x2I4jGEIT7U' },
   game22: { top: null, bot: p(11,'excile2127','SF') },
   // Quarterfinals
   game23: { top: p(17,'excile2127','IV'), bot: p(8,'Ratatosk','TO') },
   game24: { top: p(4,'Kezbatron','SC'), bot: p(12,'MajesticOnions','FK') },
-  game25: { top: p(2, 'excile2127', 'FO'), bot: null },
-  game26: { top: null, bot: null },
+  game25: { top: p(2, 'excile2127', 'FO'), bot: p(10,'CH4MP','PE') },
+  game26: { top: bot: p(14,'CH4MP','SH'), bot: null },
   // Semifinals
   game27: { top: null, bot: null },
   game28: { top: null, bot: null },
@@ -163,8 +163,8 @@ function render() {
   // Quarterfinals
   const w_game23 = buildMatch('game23', w_game15._botEl, w_game16._topEl, false, false);
   const w_game24 = buildMatch('game24', w_game17._topEl, w_game18._botEl, false, false);
-  const w_game25 = buildMatch('game25', w_game19._topEl, w_game20._topEl, false, false);
-  const w_game26 = buildMatch('game26', w_game21._topEl, w_game22._topEl, false, false);
+  const w_game25 = buildMatch('game25', w_game19._topEl, w_game20._botEl, false, false);
+  const w_game26 = buildMatch('game26', w_game21._botEl, w_game22._topEl, false, false);
 
   // Semifinals
   const w_game27 = buildMatch('game27', w_game23._topEl, w_game24._topEl, false, false);
