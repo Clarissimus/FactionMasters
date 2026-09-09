@@ -95,7 +95,7 @@ const MATCHES = {
   game10: { top:p(10,'CH4MP','PE'),      bot:p(23,'Nozy','OD'), winner:10, yt:'https://youtu.be/ELfpynXxnBc' },
   game11: { top:p(3,'Monk3ylord','CO'),      bot:p(30,'Ratatosk','PD'), winner:30, yt:'https://youtu.be/8ov8eWHYEBs' },
   game12: { top:p(14,'CH4MP','SH'),      bot:p(19,'excile2127','MV'), winner:14, yt:'https://youtu.be/p3L8yhBz1n4' },
-  game13: { top:p(6,'Aksyriel','DR'),      bot:p(27,'DrWolf','DG') },
+  game13: { top:p(6,'Aksyriel','DR'),      bot:p(27,'DrWolf','DG'), winner:27, yt:'https://youtu.be/vcXtax-J6mw' },
   game14: { top:p(11,'excile2127','SF'),      bot:p(22,'Milbo','ST'), winner:11, yt:'https://youtu.be/KfjKKoTi8V0' },
   // Round of 16 — left (seeds 1,8,4,5). Only seed 1 has a bye this season
   // (top slot of game15) — the other three left rows are two play-in
@@ -109,7 +109,7 @@ const MATCHES = {
   game19: { top: p(2, 'excile2127', 'FO'), bot:p(18,'DeadSans','CG'), winner:2, yt: 'https://youtu.be/KYy8BDnRT30' },
   game20: { top: p(26,'tortugatron','SA'), bot: p(10,'CH4MP','PE'), winner:10, yt: 'https://youtu.be/_mcEU_I3ULM' },
   game21: { top: p(30,'Ratatosk','PD'), bot: p(14,'CH4MP','SH'), winner:14, yt: 'https://youtu.be/x2I4jGEIT7U' },
-  game22: { top: null, bot: p(11,'excile2127','SF') },
+  game22: { top: (27,'DrWolf','DG'), bot: p(11,'excile2127','SF') },
   // Quarterfinals
   game23: { top: p(17,'excile2127','IV'), bot: p(8,'Ratatosk','TO'), winner:17, yt: 'https://youtu.be/fM_jgG83CCg' },
   game24: { top: p(4,'Kezbatron','SC'), bot: p(12,'MajesticOnions','FK') },
@@ -158,7 +158,7 @@ function render() {
   const w_game19 = buildMatch('game19', null,             w_game8._botEl, true,  false);
   const w_game20 = buildMatch('game20', w_game9._botEl,   w_game10._topEl, false, false);
   const w_game21 = buildMatch('game21', w_game11._botEl,  w_game12._topEl, false, false);
-  const w_game22 = buildMatch('game22', w_game13._topEl,  w_game14._topEl, false, false);
+  const w_game22 = buildMatch('game22', w_game13._botEl,  w_game14._topEl, false, false);
 
   // Quarterfinals
   const w_game23 = buildMatch('game23', w_game15._botEl, w_game16._topEl, false, false);
