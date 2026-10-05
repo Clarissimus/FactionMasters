@@ -4,7 +4,7 @@
     {
       "faction": "Cloaks",
       "username": "glokta",
-      "elo": 1535
+      "elo": 1564
     },
     {
       "faction": "Crimson Order",
@@ -37,19 +37,19 @@
       "elo": 1378
     },
     {
-      "faction": "Drakesun Rebellion",
-      "username": "kasper",
-      "elo": 1344
-    },
-    {
       "faction": "Sand Goblins",
       "username": "MajesticOnions",
-      "elo": 1340
+      "elo": 1369
     },
     {
       "faction": "Tundra Orcs",
       "username": "Nesle",
       "elo": 1331
+    },
+    {
+      "faction": "Drakesun Rebellion",
+      "username": "kasper",
+      "elo": 1324
     },
     {
       "faction": "Moonsteppe Wolves",
@@ -92,6 +92,11 @@
       "elo": 1296
     },
     {
+      "faction": "Storm Goblins",
+      "username": "zavorio",
+      "elo": 1274
+    },
+    {
       "faction": "The Filth",
       "username": "M1ne",
       "elo": 1269
@@ -104,17 +109,17 @@
     {
       "faction": "Deepwood Groaks",
       "username": "Lebirk",
-      "elo": 1248
+      "elo": 1249
+    },
+    {
+      "faction": "The Forged",
+      "username": "BazzoFormidable",
+      "elo": 1247
     },
     {
       "faction": "Swamp Orcs",
       "username": "Jerry204",
       "elo": 1245
-    },
-    {
-      "faction": "Storm Goblins",
-      "username": "rdebruys83",
-      "elo": 1235
     },
     {
       "faction": "Skyspear Avians",
@@ -127,14 +132,14 @@
       "elo": 1223
     },
     {
-      "faction": "The Forged",
-      "username": "BazzoFormidable",
-      "elo": 1217
-    },
-    {
       "faction": "Wayfarers",
       "username": "xyzzzj",
       "elo": 1216
+    },
+    {
+      "faction": "Isle Vekkid",
+      "username": "Myrddin",
+      "elo": 1189
     },
     {
       "faction": "Polar Dwarves",
@@ -142,25 +147,20 @@
       "elo": 1188
     },
     {
-      "faction": "Isle Vekkid",
-      "username": "Azlarr",
-      "elo": 1179
-    },
-    {
       "faction": "Shimmersea Fae",
       "username": "M1ne",
       "elo": 1178
     },
     {
+      "faction": "Fungal Dwarves",
+      "username": "crimsonsun_2000",
+      "elo": 1172
+    },
+    {
       "faction": "Mountain Vargath",
       "username": "xyzMike",
       "elo": 1163
-    },
-    {
-      "faction": "Fungal Dwarves",
-      "username": "Weaverism",
-      "elo": 1154
     }
   ],
-  "fetched_at": "2026-10-04 11:34 UTC"
+  "fetched_at": "2026-10-05 13:07 UTC"
 }
