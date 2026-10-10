@@ -32,6 +32,11 @@
       "elo": 1403
     },
     {
+      "faction": "Drakesun Rebellion",
+      "username": "kasper",
+      "elo": 1387
+    },
+    {
       "faction": "Breakers",
       "username": "Radlaz",
       "elo": 1378
@@ -39,22 +44,17 @@
     {
       "faction": "Sand Goblins",
       "username": "MajesticOnions",
-      "elo": 1366
-    },
-    {
-      "faction": "Drakesun Rebellion",
-      "username": "kasper",
-      "elo": 1365
-    },
-    {
-      "faction": "Wayfarers",
-      "username": "HiddenKoji",
-      "elo": 1363
+      "elo": 1337
     },
     {
       "faction": "Tundra Orcs",
       "username": "Nesle",
-      "elo": 1331
+      "elo": 1329
+    },
+    {
+      "faction": "Wayfarers",
+      "username": "HiddenKoji",
+      "elo": 1329
     },
     {
       "faction": "Moonsteppe Wolves",
@@ -82,6 +82,11 @@
       "elo": 1307
     },
     {
+      "faction": "Deepwood Groaks",
+      "username": "HiddenKoji",
+      "elo": 1307
+    },
+    {
       "faction": "High Elves",
       "username": "SandDanGlokta",
       "elo": 1302
@@ -102,11 +107,6 @@
       "elo": 1280
     },
     {
-      "faction": "Deepwood Groaks",
-      "username": "DrWolf",
-      "elo": 1277
-    },
-    {
       "faction": "Obsidian Dwarves",
       "username": "HiddenKoji",
       "elo": 1263
@@ -117,6 +117,11 @@
       "elo": 1254
     },
     {
+      "faction": "Isle Vekkid",
+      "username": "KenAA",
+      "elo": 1253
+    },
+    {
       "faction": "Swamp Orcs",
       "username": "Jerry204",
       "elo": 1245
@@ -125,11 +130,6 @@
       "faction": "Chosen Grove",
       "username": "ShatteredWall",
       "elo": 1241
-    },
-    {
-      "faction": "Isle Vekkid",
-      "username": "KenAA",
-      "elo": 1240
     },
     {
       "faction": "Storm Goblins",
@@ -149,18 +149,18 @@
     {
       "faction": "Fungal Dwarves",
       "username": "crimsonsun_2000",
-      "elo": 1159
-    },
-    {
-      "faction": "Shimmersea Fae",
-      "username": "Nozy",
-      "elo": 1159
+      "elo": 1177
     },
     {
       "faction": "Polar Dwarves",
       "username": "QDOGGG",
       "elo": 1151
+    },
+    {
+      "faction": "Shimmersea Fae",
+      "username": "Nozy",
+      "elo": 1145
     }
   ],
-  "fetched_at": "2026-10-09 12:20 UTC"
+  "fetched_at": "2026-10-10 11:38 UTC"
 }
