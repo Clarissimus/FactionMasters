@@ -17,6 +17,11 @@
       "elo": 1455
     },
     {
+      "faction": "Drakesun Rebellion",
+      "username": "kasper",
+      "elo": 1418
+    },
+    {
       "faction": "Cave Goblins",
       "username": "DeadSans",
       "elo": 1406
@@ -32,29 +37,24 @@
       "elo": 1403
     },
     {
-      "faction": "Drakesun Rebellion",
-      "username": "kasper",
-      "elo": 1387
-    },
-    {
       "faction": "Breakers",
       "username": "Radlaz",
       "elo": 1378
     },
     {
-      "faction": "Sand Goblins",
-      "username": "MajesticOnions",
-      "elo": 1337
+      "faction": "Wayfarers",
+      "username": "HiddenKoji",
+      "elo": 1329
     },
     {
       "faction": "Tundra Orcs",
       "username": "Nesle",
-      "elo": 1329
+      "elo": 1327
     },
     {
-      "faction": "Wayfarers",
-      "username": "HiddenKoji",
-      "elo": 1329
+      "faction": "Sand Goblins",
+      "username": "MajesticOnions",
+      "elo": 1322
     },
     {
       "faction": "Moonsteppe Wolves",
@@ -82,11 +82,6 @@
       "elo": 1307
     },
     {
-      "faction": "Deepwood Groaks",
-      "username": "HiddenKoji",
-      "elo": 1307
-    },
-    {
       "faction": "High Elves",
       "username": "SandDanGlokta",
       "elo": 1302
@@ -104,12 +99,17 @@
     {
       "faction": "The Filth",
       "username": "M1ne",
-      "elo": 1280
+      "elo": 1294
+    },
+    {
+      "faction": "Deepwood Groaks",
+      "username": "HiddenKoji",
+      "elo": 1281
     },
     {
       "faction": "Obsidian Dwarves",
-      "username": "HiddenKoji",
-      "elo": 1263
+      "username": "CH4MP",
+      "elo": 1268
     },
     {
       "faction": "The Forged",
@@ -133,8 +133,8 @@
     },
     {
       "faction": "Storm Goblins",
-      "username": "rdebruys83",
-      "elo": 1235
+      "username": "zavorio",
+      "elo": 1239
     },
     {
       "faction": "Skyspear Avians",
@@ -158,9 +158,9 @@
     },
     {
       "faction": "Shimmersea Fae",
-      "username": "Nozy",
-      "elo": 1145
+      "username": "M1ne",
+      "elo": 1126
     }
   ],
-  "fetched_at": "2026-10-10 11:38 UTC"
+  "fetched_at": "2026-10-11 11:51 UTC"
 }
