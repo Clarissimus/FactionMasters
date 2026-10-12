@@ -52,9 +52,19 @@
       "elo": 1327
     },
     {
+      "faction": "High Elves",
+      "username": "AlexTheGreat",
+      "elo": 1323
+    },
+    {
       "faction": "Sand Goblins",
       "username": "MajesticOnions",
-      "elo": 1322
+      "elo": 1320
+    },
+    {
+      "faction": "The Filth",
+      "username": "M1ne",
+      "elo": 1317
     },
     {
       "faction": "Moonsteppe Wolves",
@@ -82,8 +92,8 @@
       "elo": 1307
     },
     {
-      "faction": "High Elves",
-      "username": "SandDanGlokta",
+      "faction": "Isle Vekkid",
+      "username": "Azlarr",
       "elo": 1302
     },
     {
@@ -97,14 +107,9 @@
       "elo": 1296
     },
     {
-      "faction": "The Filth",
-      "username": "M1ne",
-      "elo": 1294
-    },
-    {
       "faction": "Deepwood Groaks",
-      "username": "HiddenKoji",
-      "elo": 1281
+      "username": "DrWolf",
+      "elo": 1277
     },
     {
       "faction": "Obsidian Dwarves",
@@ -117,9 +122,9 @@
       "elo": 1254
     },
     {
-      "faction": "Isle Vekkid",
-      "username": "KenAA",
-      "elo": 1253
+      "faction": "Storm Goblins",
+      "username": "zavorio",
+      "elo": 1248
     },
     {
       "faction": "Swamp Orcs",
@@ -130,11 +135,6 @@
       "faction": "Chosen Grove",
       "username": "ShatteredWall",
       "elo": 1241
-    },
-    {
-      "faction": "Storm Goblins",
-      "username": "zavorio",
-      "elo": 1239
     },
     {
       "faction": "Skyspear Avians",
@@ -159,8 +159,8 @@
     {
       "faction": "Shimmersea Fae",
       "username": "M1ne",
-      "elo": 1126
+      "elo": 1139
     }
   ],
-  "fetched_at": "2026-10-11 11:51 UTC"
+  "fetched_at": "2026-10-12 13:59 UTC"
 }
