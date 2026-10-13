@@ -4,7 +4,7 @@
     {
       "faction": "Cloaks",
       "username": "glokta",
-      "elo": 1594
+      "elo": 1554
     },
     {
       "faction": "Crimson Order",
@@ -49,17 +49,12 @@
     {
       "faction": "Tundra Orcs",
       "username": "Nesle",
-      "elo": 1327
+      "elo": 1328
     },
     {
       "faction": "High Elves",
       "username": "AlexTheGreat",
       "elo": 1323
-    },
-    {
-      "faction": "Sand Goblins",
-      "username": "MajesticOnions",
-      "elo": 1320
     },
     {
       "faction": "The Filth",
@@ -92,14 +87,19 @@
       "elo": 1307
     },
     {
-      "faction": "Isle Vekkid",
-      "username": "Azlarr",
-      "elo": 1302
+      "faction": "Storm Goblins",
+      "username": "zavorio",
+      "elo": 1304
     },
     {
       "faction": "Thornhold Drey",
       "username": "XIX",
       "elo": 1301
+    },
+    {
+      "faction": "Sand Goblins",
+      "username": "SerLoseaLot",
+      "elo": 1299
     },
     {
       "faction": "Phoenix Elves",
@@ -122,9 +122,9 @@
       "elo": 1254
     },
     {
-      "faction": "Storm Goblins",
-      "username": "zavorio",
-      "elo": 1248
+      "faction": "Isle Vekkid",
+      "username": "KenAA",
+      "elo": 1253
     },
     {
       "faction": "Swamp Orcs",
@@ -142,19 +142,19 @@
       "elo": 1230
     },
     {
-      "faction": "Mountain Vargath",
-      "username": "onebe",
-      "elo": 1182
-    },
-    {
       "faction": "Fungal Dwarves",
       "username": "crimsonsun_2000",
-      "elo": 1177
+      "elo": 1190
     },
     {
       "faction": "Polar Dwarves",
       "username": "QDOGGG",
-      "elo": 1151
+      "elo": 1183
+    },
+    {
+      "faction": "Mountain Vargath",
+      "username": "onebe",
+      "elo": 1168
     },
     {
       "faction": "Shimmersea Fae",
@@ -162,5 +162,5 @@
       "elo": 1139
     }
   ],
-  "fetched_at": "2026-10-12 13:59 UTC"
+  "fetched_at": "2026-10-13 13:15 UTC"
 }
