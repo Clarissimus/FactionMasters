@@ -44,17 +44,12 @@
     {
       "faction": "Sand Goblins",
       "username": "MajesticOnions",
-      "elo": 1340
-    },
-    {
-      "faction": "Storm Goblins",
-      "username": "zavorio",
-      "elo": 1336
+      "elo": 1358
     },
     {
       "faction": "High Elves",
       "username": "AlexTheGreat",
-      "elo": 1332
+      "elo": 1352
     },
     {
       "faction": "Wayfarers",
@@ -69,7 +64,7 @@
     {
       "faction": "The Filth",
       "username": "M1ne",
-      "elo": 1317
+      "elo": 1328
     },
     {
       "faction": "Moonsteppe Wolves",
@@ -102,14 +97,29 @@
       "elo": 1301
     },
     {
+      "faction": "Storm Goblins",
+      "username": "zavorio",
+      "elo": 1297
+    },
+    {
       "faction": "Phoenix Elves",
       "username": "HiddenKoji",
       "elo": 1296
     },
     {
+      "faction": "Deepwood Groaks",
+      "username": "HiddenKoji",
+      "elo": 1279
+    },
+    {
+      "faction": "Swamp Orcs",
+      "username": "Jerry204",
+      "elo": 1273
+    },
+    {
       "faction": "The Forged",
       "username": "excile2127",
-      "elo": 1285
+      "elo": 1266
     },
     {
       "faction": "Obsidian Dwarves",
@@ -120,16 +130,6 @@
       "faction": "Isle Vekkid",
       "username": "KenAA",
       "elo": 1253
-    },
-    {
-      "faction": "Deepwood Groaks",
-      "username": "DrWolf",
-      "elo": 1249
-    },
-    {
-      "faction": "Swamp Orcs",
-      "username": "Jerry204",
-      "elo": 1245
     },
     {
       "faction": "Chosen Grove",
@@ -147,14 +147,14 @@
       "elo": 1190
     },
     {
+      "faction": "Polar Dwarves",
+      "username": "QDOGGG",
+      "elo": 1179
+    },
+    {
       "faction": "Mountain Vargath",
       "username": "onebe",
       "elo": 1165
-    },
-    {
-      "faction": "Polar Dwarves",
-      "username": "QDOGGG",
-      "elo": 1143
     },
     {
       "faction": "Shimmersea Fae",
@@ -162,5 +162,5 @@
       "elo": 1125
     }
   ],
-  "fetched_at": "2026-10-14 10:54 UTC"
+  "fetched_at": "2026-10-15 10:36 UTC"
 }
