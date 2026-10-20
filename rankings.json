@@ -22,14 +22,14 @@
       "elo": 1455
     },
     {
+      "faction": "Shadow Elves",
+      "username": "Imrahil",
+      "elo": 1412
+    },
+    {
       "faction": "Cave Goblins",
       "username": "DeadSans",
       "elo": 1406
-    },
-    {
-      "faction": "Shadow Elves",
-      "username": "excile2127",
-      "elo": 1403
     },
     {
       "faction": "Sand Goblins",
@@ -117,6 +117,11 @@
       "elo": 1263
     },
     {
+      "faction": "Storm Goblins",
+      "username": "zavorio",
+      "elo": 1255
+    },
+    {
       "faction": "Isle Vekkid",
       "username": "KenAA",
       "elo": 1253
@@ -125,11 +130,6 @@
       "faction": "Chosen Grove",
       "username": "ShatteredWall",
       "elo": 1241
-    },
-    {
-      "faction": "Storm Goblins",
-      "username": "zavorio",
-      "elo": 1237
     },
     {
       "faction": "Skyspear Avians",
@@ -147,14 +147,14 @@
       "elo": 1179
     },
     {
-      "faction": "Mountain Vargath",
-      "username": "onebe",
-      "elo": 1165
+      "faction": "Fungal Dwarves",
+      "username": "crimsonsun_2000",
+      "elo": 1175
     },
     {
-      "faction": "Fungal Dwarves",
-      "username": "Ratatosk",
-      "elo": 1162
+      "faction": "Mountain Vargath",
+      "username": "onebe",
+      "elo": 1168
     },
     {
       "faction": "Shimmersea Fae",
@@ -162,5 +162,5 @@
       "elo": 1134
     }
   ],
-  "fetched_at": "2026-10-19 11:40 UTC"
+  "fetched_at": "2026-10-20 10:42 UTC"
 }
