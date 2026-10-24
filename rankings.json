@@ -12,14 +12,14 @@
       "elo": 1490
     },
     {
-      "faction": "Cloaks",
-      "username": "glokta",
-      "elo": 1467
-    },
-    {
       "faction": "Guild Dwarves",
       "username": "SandDanGlokta",
       "elo": 1455
+    },
+    {
+      "faction": "Cloaks",
+      "username": "glokta",
+      "elo": 1454
     },
     {
       "faction": "Sand Goblins",
@@ -47,6 +47,11 @@
       "elo": 1376
     },
     {
+      "faction": "The Forged",
+      "username": "excile2127",
+      "elo": 1374
+    },
+    {
       "faction": "High Elves",
       "username": "AlexTheGreat",
       "elo": 1352
@@ -60,11 +65,6 @@
       "faction": "Thornhold Drey",
       "username": "DrDrey",
       "elo": 1332
-    },
-    {
-      "faction": "The Forged",
-      "username": "excile2127",
-      "elo": 1330
     },
     {
       "faction": "Tundra Orcs",
@@ -102,14 +102,14 @@
       "elo": 1307
     },
     {
-      "faction": "Fallen Kingdom",
-      "username": "chimp",
-      "elo": 1303
-    },
-    {
       "faction": "Phoenix Elves",
       "username": "Meiga",
       "elo": 1303
+    },
+    {
+      "faction": "Fallen Kingdom",
+      "username": "Dark-Thomy",
+      "elo": 1296
     },
     {
       "faction": "Obsidian Dwarves",
@@ -122,14 +122,14 @@
       "elo": 1253
     },
     {
+      "faction": "Swamp Orcs",
+      "username": "CH4MP",
+      "elo": 1252
+    },
+    {
       "faction": "Chosen Grove",
       "username": "ShatteredWall",
       "elo": 1241
-    },
-    {
-      "faction": "Swamp Orcs",
-      "username": "CH4MP",
-      "elo": 1237
     },
     {
       "faction": "Storm Goblins",
@@ -144,12 +144,12 @@
     {
       "faction": "Fungal Dwarves",
       "username": "crimsonsun_2000",
-      "elo": 1175
+      "elo": 1192
     },
     {
       "faction": "Mountain Vargath",
       "username": "onebe",
-      "elo": 1165
+      "elo": 1168
     },
     {
       "faction": "Polar Dwarves",
@@ -162,5 +162,5 @@
       "elo": 1134
     }
   ],
-  "fetched_at": "2026-10-23 10:45 UTC"
+  "fetched_at": "2026-10-24 10:01 UTC"
 }
