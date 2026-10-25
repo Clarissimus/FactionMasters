@@ -37,6 +37,11 @@
       "elo": 1409
     },
     {
+      "faction": "The Forged",
+      "username": "excile2127",
+      "elo": 1394
+    },
+    {
       "faction": "Spectral Conclave",
       "username": "DeadSans",
       "elo": 1383
@@ -47,19 +52,14 @@
       "elo": 1376
     },
     {
-      "faction": "The Forged",
-      "username": "excile2127",
-      "elo": 1374
+      "faction": "The Filth",
+      "username": "TseeAiry",
+      "elo": 1358
     },
     {
       "faction": "High Elves",
       "username": "AlexTheGreat",
       "elo": 1352
-    },
-    {
-      "faction": "The Filth",
-      "username": "TseeAiry",
-      "elo": 1343
     },
     {
       "faction": "Thornhold Drey",
@@ -78,8 +78,8 @@
     },
     {
       "faction": "Deepwood Groaks",
-      "username": "Lebirk",
-      "elo": 1327
+      "username": "HiddenKoji",
+      "elo": 1322
     },
     {
       "faction": "Moonsteppe Wolves",
@@ -102,14 +102,19 @@
       "elo": 1307
     },
     {
+      "faction": "Fallen Kingdom",
+      "username": "LordFunkadelic",
+      "elo": 1306
+    },
+    {
       "faction": "Phoenix Elves",
       "username": "Meiga",
       "elo": 1303
     },
     {
-      "faction": "Fallen Kingdom",
-      "username": "Dark-Thomy",
-      "elo": 1296
+      "faction": "Swamp Orcs",
+      "username": "CH4MP",
+      "elo": 1278
     },
     {
       "faction": "Obsidian Dwarves",
@@ -120,11 +125,6 @@
       "faction": "Isle Vekkid",
       "username": "KenAA",
       "elo": 1253
-    },
-    {
-      "faction": "Swamp Orcs",
-      "username": "CH4MP",
-      "elo": 1252
     },
     {
       "faction": "Chosen Grove",
@@ -144,7 +144,7 @@
     {
       "faction": "Fungal Dwarves",
       "username": "crimsonsun_2000",
-      "elo": 1192
+      "elo": 1200
     },
     {
       "faction": "Mountain Vargath",
@@ -162,5 +162,5 @@
       "elo": 1134
     }
   ],
-  "fetched_at": "2026-10-24 10:01 UTC"
+  "fetched_at": "2026-10-25 10:27 UTC"
 }
