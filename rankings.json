@@ -2,19 +2,19 @@
   "season": "Season 9",
   "top_players": [
     {
+      "faction": "Drakesun Rebellion",
+      "username": "kasper",
+      "elo": 1536
+    },
+    {
       "faction": "Crimson Order",
       "username": "HiddenKoji",
       "elo": 1534
     },
     {
-      "faction": "Drakesun Rebellion",
-      "username": "kasper",
-      "elo": 1525
-    },
-    {
       "faction": "Cloaks",
       "username": "glokta",
-      "elo": 1467
+      "elo": 1478
     },
     {
       "faction": "Guild Dwarves",
@@ -27,14 +27,14 @@
       "elo": 1424
     },
     {
+      "faction": "The Forged",
+      "username": "excile2127",
+      "elo": 1416
+    },
+    {
       "faction": "Shadow Elves",
       "username": "Imrahil",
       "elo": 1412
-    },
-    {
-      "faction": "The Forged",
-      "username": "excile2127",
-      "elo": 1410
     },
     {
       "faction": "Breakers",
@@ -52,14 +52,14 @@
       "elo": 1376
     },
     {
+      "faction": "Deepwood Groaks",
+      "username": "HiddenKoji",
+      "elo": 1353
+    },
+    {
       "faction": "High Elves",
       "username": "AlexTheGreat",
       "elo": 1352
-    },
-    {
-      "faction": "Deepwood Groaks",
-      "username": "HiddenKoji",
-      "elo": 1335
     },
     {
       "faction": "Thornhold Drey",
@@ -82,9 +82,14 @@
       "elo": 1329
     },
     {
+      "faction": "Savanna Elves",
+      "username": "SILVANAGI",
+      "elo": 1327
+    },
+    {
       "faction": "Tundra Orcs",
       "username": "Nesle",
-      "elo": 1325
+      "elo": 1324
     },
     {
       "faction": "Moonsteppe Wolves",
@@ -100,11 +105,6 @@
       "faction": "Vanguards",
       "username": "Nesle",
       "elo": 1310
-    },
-    {
-      "faction": "Savanna Elves",
-      "username": "HiddenKoji",
-      "elo": 1307
     },
     {
       "faction": "Swamp Orcs",
@@ -138,8 +138,8 @@
     },
     {
       "faction": "Skyspear Avians",
-      "username": "Dunakanyar",
-      "elo": 1233
+      "username": "zzjmike17",
+      "elo": 1230
     },
     {
       "faction": "Fungal Dwarves",
@@ -149,7 +149,7 @@
     {
       "faction": "Mountain Vargath",
       "username": "onebe",
-      "elo": 1165
+      "elo": 1167
     },
     {
       "faction": "Polar Dwarves",
@@ -162,5 +162,5 @@
       "elo": 1134
     }
   ],
-  "fetched_at": "2026-10-27 11:19 UTC"
+  "fetched_at": "2026-10-28 11:52 UTC"
 }
