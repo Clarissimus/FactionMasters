@@ -143,13 +143,13 @@
     },
     {
       "faction": "Fungal Dwarves",
-      "username": "crimsonsun_2000",
-      "elo": 1200
+      "username": "Ratatosk",
+      "elo": 1214
     },
     {
       "faction": "Mountain Vargath",
       "username": "onebe",
-      "elo": 1167
+      "elo": 1165
     },
     {
       "faction": "Polar Dwarves",
@@ -162,5 +162,5 @@
       "elo": 1134
     }
   ],
-  "fetched_at": "2026-10-28 11:52 UTC"
+  "fetched_at": "2026-10-29 12:00 UTC"
 }
