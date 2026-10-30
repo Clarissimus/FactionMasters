@@ -14,7 +14,7 @@
     {
       "faction": "Cloaks",
       "username": "glokta",
-      "elo": 1478
+      "elo": 1488
     },
     {
       "faction": "Guild Dwarves",
@@ -62,6 +62,16 @@
       "elo": 1352
     },
     {
+      "faction": "The Filth",
+      "username": "TseeAiry",
+      "elo": 1336
+    },
+    {
+      "faction": "Fallen Kingdom",
+      "username": "Dark-Thomy",
+      "elo": 1334
+    },
+    {
       "faction": "Thornhold Drey",
       "username": "DrDrey",
       "elo": 1332
@@ -70,11 +80,6 @@
       "faction": "Phoenix Elves",
       "username": "CH4MP",
       "elo": 1331
-    },
-    {
-      "faction": "The Filth",
-      "username": "M1ne",
-      "elo": 1330
     },
     {
       "faction": "Wayfarers",
@@ -110,11 +115,6 @@
       "faction": "Swamp Orcs",
       "username": "CH4MP",
       "elo": 1297
-    },
-    {
-      "faction": "Fallen Kingdom",
-      "username": "Dark-Thomy",
-      "elo": 1296
     },
     {
       "faction": "Obsidian Dwarves",
@@ -153,8 +153,8 @@
     },
     {
       "faction": "Polar Dwarves",
-      "username": "QDOGGG",
-      "elo": 1146
+      "username": "MeddlingMoon",
+      "elo": 1140
     },
     {
       "faction": "Shimmersea Fae",
@@ -162,5 +162,5 @@
       "elo": 1134
     }
   ],
-  "fetched_at": "2026-10-29 12:00 UTC"
+  "fetched_at": "2026-10-30 11:54 UTC"
 }
