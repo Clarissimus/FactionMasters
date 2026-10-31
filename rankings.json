@@ -4,7 +4,7 @@
     {
       "faction": "Drakesun Rebellion",
       "username": "kasper",
-      "elo": 1536
+      "elo": 1545
     },
     {
       "faction": "Crimson Order",
@@ -14,7 +14,7 @@
     {
       "faction": "Cloaks",
       "username": "glokta",
-      "elo": 1488
+      "elo": 1513
     },
     {
       "faction": "Guild Dwarves",
@@ -33,8 +33,8 @@
     },
     {
       "faction": "Shadow Elves",
-      "username": "Imrahil",
-      "elo": 1412
+      "username": "excile2127",
+      "elo": 1414
     },
     {
       "faction": "Breakers",
@@ -62,11 +62,6 @@
       "elo": 1352
     },
     {
-      "faction": "The Filth",
-      "username": "TseeAiry",
-      "elo": 1336
-    },
-    {
       "faction": "Fallen Kingdom",
       "username": "Dark-Thomy",
       "elo": 1334
@@ -82,6 +77,11 @@
       "elo": 1331
     },
     {
+      "faction": "The Filth",
+      "username": "M1ne",
+      "elo": 1330
+    },
+    {
       "faction": "Wayfarers",
       "username": "HiddenKoji",
       "elo": 1329
@@ -94,7 +94,7 @@
     {
       "faction": "Tundra Orcs",
       "username": "Nesle",
-      "elo": 1324
+      "elo": 1325
     },
     {
       "faction": "Moonsteppe Wolves",
@@ -118,8 +118,8 @@
     },
     {
       "faction": "Obsidian Dwarves",
-      "username": "HiddenKoji",
-      "elo": 1263
+      "username": "CH4MP",
+      "elo": 1278
     },
     {
       "faction": "Storm Goblins",
@@ -149,7 +149,7 @@
     {
       "faction": "Mountain Vargath",
       "username": "onebe",
-      "elo": 1165
+      "elo": 1168
     },
     {
       "faction": "Polar Dwarves",
@@ -162,5 +162,5 @@
       "elo": 1134
     }
   ],
-  "fetched_at": "2026-10-30 11:54 UTC"
+  "fetched_at": "2026-10-31 11:28 UTC"
 }
