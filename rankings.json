@@ -64,7 +64,7 @@
     {
       "faction": "Fallen Kingdom",
       "username": "Dark-Thomy",
-      "elo": 1334
+      "elo": 1349
     },
     {
       "faction": "Thornhold Drey",
@@ -137,19 +137,19 @@
       "elo": 1241
     },
     {
+      "faction": "Fungal Dwarves",
+      "username": "Ratatosk",
+      "elo": 1232
+    },
+    {
       "faction": "Skyspear Avians",
       "username": "zzjmike17",
       "elo": 1230
     },
     {
-      "faction": "Fungal Dwarves",
-      "username": "Ratatosk",
-      "elo": 1214
-    },
-    {
       "faction": "Mountain Vargath",
       "username": "onebe",
-      "elo": 1168
+      "elo": 1165
     },
     {
       "faction": "Polar Dwarves",
@@ -162,5 +162,5 @@
       "elo": 1134
     }
   ],
-  "fetched_at": "2026-10-31 11:28 UTC"
+  "fetched_at": "2026-11-01 12:23 UTC"
 }
