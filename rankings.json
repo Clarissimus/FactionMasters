@@ -14,7 +14,7 @@
     {
       "faction": "Cloaks",
       "username": "glokta",
-      "elo": 1513
+      "elo": 1473
     },
     {
       "faction": "Guild Dwarves",
@@ -62,11 +62,6 @@
       "elo": 1352
     },
     {
-      "faction": "Fallen Kingdom",
-      "username": "Dark-Thomy",
-      "elo": 1349
-    },
-    {
       "faction": "Thornhold Drey",
       "username": "DrDrey",
       "elo": 1332
@@ -82,6 +77,11 @@
       "elo": 1330
     },
     {
+      "faction": "Fallen Kingdom",
+      "username": "AstroWild",
+      "elo": 1329
+    },
+    {
       "faction": "Wayfarers",
       "username": "HiddenKoji",
       "elo": 1329
@@ -94,7 +94,7 @@
     {
       "faction": "Tundra Orcs",
       "username": "Nesle",
-      "elo": 1325
+      "elo": 1324
     },
     {
       "faction": "Moonsteppe Wolves",
@@ -162,5 +162,5 @@
       "elo": 1134
     }
   ],
-  "fetched_at": "2026-11-01 12:23 UTC"
+  "fetched_at": "2026-11-02 14:19 UTC"
 }
