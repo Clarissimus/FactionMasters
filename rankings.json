@@ -2,19 +2,19 @@
   "season": "Season 9",
   "top_players": [
     {
-      "faction": "Drakesun Rebellion",
-      "username": "kasper",
-      "elo": 1545
-    },
-    {
       "faction": "Crimson Order",
       "username": "HiddenKoji",
       "elo": 1534
     },
     {
+      "faction": "Drakesun Rebellion",
+      "username": "kasper",
+      "elo": 1514
+    },
+    {
       "faction": "Cloaks",
       "username": "glokta",
-      "elo": 1473
+      "elo": 1505
     },
     {
       "faction": "Guild Dwarves",
@@ -94,7 +94,7 @@
     {
       "faction": "Tundra Orcs",
       "username": "Nesle",
-      "elo": 1324
+      "elo": 1325
     },
     {
       "faction": "Moonsteppe Wolves",
@@ -149,7 +149,7 @@
     {
       "faction": "Mountain Vargath",
       "username": "onebe",
-      "elo": 1165
+      "elo": 1167
     },
     {
       "faction": "Polar Dwarves",
@@ -162,5 +162,5 @@
       "elo": 1134
     }
   ],
-  "fetched_at": "2026-11-02 14:19 UTC"
+  "fetched_at": "2026-11-03 13:20 UTC"
 }
