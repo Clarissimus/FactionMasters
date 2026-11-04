@@ -7,14 +7,14 @@
       "elo": 1534
     },
     {
-      "faction": "Drakesun Rebellion",
-      "username": "kasper",
+      "faction": "Cloaks",
+      "username": "glokta",
       "elo": 1514
     },
     {
-      "faction": "Cloaks",
-      "username": "glokta",
-      "elo": 1505
+      "faction": "Drakesun Rebellion",
+      "username": "kasper",
+      "elo": 1514
     },
     {
       "faction": "Guild Dwarves",
@@ -149,7 +149,7 @@
     {
       "faction": "Mountain Vargath",
       "username": "onebe",
-      "elo": 1167
+      "elo": 1165
     },
     {
       "faction": "Polar Dwarves",
@@ -162,5 +162,5 @@
       "elo": 1134
     }
   ],
-  "fetched_at": "2026-11-03 13:20 UTC"
+  "fetched_at": "2026-11-04 13:31 UTC"
 }
