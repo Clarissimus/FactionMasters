@@ -9,7 +9,7 @@
     {
       "faction": "Cloaks",
       "username": "glokta",
-      "elo": 1514
+      "elo": 1526
     },
     {
       "faction": "Drakesun Rebellion",
@@ -62,6 +62,11 @@
       "elo": 1352
     },
     {
+      "faction": "The Filth",
+      "username": "TseeAiry",
+      "elo": 1340
+    },
+    {
       "faction": "Wayfarers",
       "username": "Cersei",
       "elo": 1334
@@ -75,11 +80,6 @@
       "faction": "Phoenix Elves",
       "username": "CH4MP",
       "elo": 1331
-    },
-    {
-      "faction": "The Filth",
-      "username": "M1ne",
-      "elo": 1330
     },
     {
       "faction": "Fallen Kingdom",
@@ -149,7 +149,7 @@
     {
       "faction": "Mountain Vargath",
       "username": "onebe",
-      "elo": 1168
+      "elo": 1165
     },
     {
       "faction": "Polar Dwarves",
@@ -162,5 +162,5 @@
       "elo": 1134
     }
   ],
-  "fetched_at": "2026-11-05 13:45 UTC"
+  "fetched_at": "2026-11-06 13:29 UTC"
 }
