@@ -78,7 +78,7 @@
     },
     {
       "faction": "Phoenix Elves",
-      "username": "CH4MP",
+      "username": "HiddenKoji",
       "elo": 1331
     },
     {
@@ -94,7 +94,7 @@
     {
       "faction": "Tundra Orcs",
       "username": "Nesle",
-      "elo": 1326
+      "elo": 1327
     },
     {
       "faction": "Moonsteppe Wolves",
@@ -153,8 +153,8 @@
     },
     {
       "faction": "Mountain Vargath",
-      "username": "a825134073",
-      "elo": 1180
+      "username": "onebe",
+      "elo": 1165
     },
     {
       "faction": "Polar Dwarves",
@@ -162,5 +162,5 @@
       "elo": 1148
     }
   ],
-  "fetched_at": "2026-11-09 14:46 UTC"
+  "fetched_at": "2026-11-10 13:59 UTC"
 }
