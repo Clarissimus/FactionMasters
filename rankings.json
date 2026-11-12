@@ -47,11 +47,6 @@
       "elo": 1383
     },
     {
-      "faction": "Phoenix Elves",
-      "username": "HiddenKoji",
-      "elo": 1377
-    },
-    {
       "faction": "Cave Goblins",
       "username": "DeadSans",
       "elo": 1376
@@ -72,9 +67,19 @@
       "elo": 1342
     },
     {
+      "faction": "Fallen Kingdom",
+      "username": "Dark-Thomy",
+      "elo": 1340
+    },
+    {
       "faction": "Thornhold Drey",
       "username": "KuKoNutz",
       "elo": 1340
+    },
+    {
+      "faction": "Savanna Elves",
+      "username": "DrWolf",
+      "elo": 1337
     },
     {
       "faction": "Wayfarers",
@@ -82,19 +87,14 @@
       "elo": 1334
     },
     {
-      "faction": "Fallen Kingdom",
-      "username": "AstroWild",
-      "elo": 1329
-    },
-    {
-      "faction": "Savanna Elves",
-      "username": "SILVANAGI",
-      "elo": 1327
+      "faction": "Phoenix Elves",
+      "username": "CH4MP",
+      "elo": 1331
     },
     {
       "faction": "Tundra Orcs",
       "username": "Nesle",
-      "elo": 1327
+      "elo": 1326
     },
     {
       "faction": "Moonsteppe Wolves",
@@ -154,7 +154,7 @@
     {
       "faction": "Mountain Vargath",
       "username": "onebe",
-      "elo": 1165
+      "elo": 1168
     },
     {
       "faction": "Polar Dwarves",
@@ -162,5 +162,5 @@
       "elo": 1148
     }
   ],
-  "fetched_at": "2026-11-11 13:16 UTC"
+  "fetched_at": "2026-11-12 14:21 UTC"
 }
