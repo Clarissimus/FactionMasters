@@ -62,6 +62,11 @@
       "elo": 1352
     },
     {
+      "faction": "Phoenix Elves",
+      "username": "HiddenKoji",
+      "elo": 1342
+    },
+    {
       "faction": "The Filth",
       "username": "M1ne",
       "elo": 1342
@@ -87,11 +92,6 @@
       "elo": 1334
     },
     {
-      "faction": "Phoenix Elves",
-      "username": "CH4MP",
-      "elo": 1331
-    },
-    {
       "faction": "Tundra Orcs",
       "username": "Nesle",
       "elo": 1326
@@ -114,12 +114,12 @@
     {
       "faction": "Swamp Orcs",
       "username": "CH4MP",
-      "elo": 1297
+      "elo": 1309
     },
     {
       "faction": "Obsidian Dwarves",
       "username": "CH4MP",
-      "elo": 1278
+      "elo": 1292
     },
     {
       "faction": "Storm Goblins",
@@ -162,5 +162,5 @@
       "elo": 1148
     }
   ],
-  "fetched_at": "2026-11-12 14:21 UTC"
+  "fetched_at": "2026-11-13 13:41 UTC"
 }
