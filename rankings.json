@@ -42,6 +42,11 @@
       "elo": 1409
     },
     {
+      "faction": "Phoenix Elves",
+      "username": "HiddenKoji",
+      "elo": 1396
+    },
+    {
       "faction": "Spectral Conclave",
       "username": "DeadSans",
       "elo": 1383
@@ -62,19 +67,9 @@
       "elo": 1352
     },
     {
-      "faction": "Phoenix Elves",
-      "username": "HiddenKoji",
-      "elo": 1342
-    },
-    {
       "faction": "The Filth",
       "username": "M1ne",
       "elo": 1342
-    },
-    {
-      "faction": "Fallen Kingdom",
-      "username": "Dark-Thomy",
-      "elo": 1340
     },
     {
       "faction": "Thornhold Drey",
@@ -92,9 +87,14 @@
       "elo": 1334
     },
     {
+      "faction": "Fallen Kingdom",
+      "username": "AstroWild",
+      "elo": 1329
+    },
+    {
       "faction": "Tundra Orcs",
       "username": "Nesle",
-      "elo": 1326
+      "elo": 1327
     },
     {
       "faction": "Moonsteppe Wolves",
@@ -132,6 +132,11 @@
       "elo": 1253
     },
     {
+      "faction": "Skyspear Avians",
+      "username": "Dunakanyar",
+      "elo": 1241
+    },
+    {
       "faction": "Chosen Grove",
       "username": "ShatteredWall",
       "elo": 1241
@@ -142,11 +147,6 @@
       "elo": 1232
     },
     {
-      "faction": "Skyspear Avians",
-      "username": "zzjmike17",
-      "elo": 1230
-    },
-    {
       "faction": "Shimmersea Fae",
       "username": "excile2127",
       "elo": 1195
@@ -154,7 +154,7 @@
     {
       "faction": "Mountain Vargath",
       "username": "onebe",
-      "elo": 1168
+      "elo": 1167
     },
     {
       "faction": "Polar Dwarves",
@@ -162,5 +162,5 @@
       "elo": 1148
     }
   ],
-  "fetched_at": "2026-11-13 13:41 UTC"
+  "fetched_at": "2026-11-14 12:45 UTC"
 }
