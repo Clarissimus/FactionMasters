@@ -12,14 +12,14 @@
       "elo": 1514
     },
     {
-      "faction": "Cloaks",
-      "username": "glokta",
-      "elo": 1459
-    },
-    {
       "faction": "Guild Dwarves",
       "username": "SandDanGlokta",
       "elo": 1455
+    },
+    {
+      "faction": "Cloaks",
+      "username": "glokta",
+      "elo": 1441
     },
     {
       "faction": "Sand Goblins",
@@ -43,8 +43,8 @@
     },
     {
       "faction": "Phoenix Elves",
-      "username": "HiddenKoji",
-      "elo": 1396
+      "username": "CH4MP",
+      "elo": 1384
     },
     {
       "faction": "Spectral Conclave",
@@ -94,7 +94,7 @@
     {
       "faction": "Tundra Orcs",
       "username": "Nesle",
-      "elo": 1327
+      "elo": 1326
     },
     {
       "faction": "Moonsteppe Wolves",
@@ -132,19 +132,19 @@
       "elo": 1253
     },
     {
-      "faction": "Skyspear Avians",
-      "username": "Dunakanyar",
-      "elo": 1241
-    },
-    {
       "faction": "Chosen Grove",
       "username": "ShatteredWall",
       "elo": 1241
     },
     {
       "faction": "Fungal Dwarves",
-      "username": "Ratatosk",
-      "elo": 1232
+      "username": "crimsonsun_2000",
+      "elo": 1234
+    },
+    {
+      "faction": "Skyspear Avians",
+      "username": "zzjmike17",
+      "elo": 1230
     },
     {
       "faction": "Shimmersea Fae",
@@ -162,5 +162,5 @@
       "elo": 1148
     }
   ],
-  "fetched_at": "2026-11-14 12:45 UTC"
+  "fetched_at": "2026-11-15 13:13 UTC"
 }
