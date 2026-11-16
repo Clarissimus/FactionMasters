@@ -138,8 +138,8 @@
     },
     {
       "faction": "Fungal Dwarves",
-      "username": "crimsonsun_2000",
-      "elo": 1234
+      "username": "Bibadune",
+      "elo": 1233
     },
     {
       "faction": "Skyspear Avians",
@@ -154,7 +154,7 @@
     {
       "faction": "Mountain Vargath",
       "username": "onebe",
-      "elo": 1167
+      "elo": 1168
     },
     {
       "faction": "Polar Dwarves",
@@ -162,5 +162,5 @@
       "elo": 1148
     }
   ],
-  "fetched_at": "2026-11-15 13:13 UTC"
+  "fetched_at": "2026-11-16 14:22 UTC"
 }
