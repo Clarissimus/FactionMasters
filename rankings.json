@@ -44,7 +44,7 @@
     {
       "faction": "Phoenix Elves",
       "username": "CH4MP",
-      "elo": 1384
+      "elo": 1388
     },
     {
       "faction": "Spectral Conclave",
@@ -57,6 +57,16 @@
       "elo": 1376
     },
     {
+      "faction": "Fallen Kingdom",
+      "username": "Dark-Thomy",
+      "elo": 1367
+    },
+    {
+      "faction": "The Filth",
+      "username": "M1ne",
+      "elo": 1356
+    },
+    {
       "faction": "Deepwood Groaks",
       "username": "HiddenKoji",
       "elo": 1353
@@ -65,11 +75,6 @@
       "faction": "High Elves",
       "username": "AlexTheGreat",
       "elo": 1352
-    },
-    {
-      "faction": "The Filth",
-      "username": "M1ne",
-      "elo": 1342
     },
     {
       "faction": "Thornhold Drey",
@@ -85,11 +90,6 @@
       "faction": "Wayfarers",
       "username": "Cersei",
       "elo": 1334
-    },
-    {
-      "faction": "Fallen Kingdom",
-      "username": "AstroWild",
-      "elo": 1329
     },
     {
       "faction": "Tundra Orcs",
@@ -149,12 +149,12 @@
     {
       "faction": "Shimmersea Fae",
       "username": "excile2127",
-      "elo": 1195
+      "elo": 1214
     },
     {
       "faction": "Mountain Vargath",
       "username": "onebe",
-      "elo": 1168
+      "elo": 1167
     },
     {
       "faction": "Polar Dwarves",
@@ -162,5 +162,5 @@
       "elo": 1148
     }
   ],
-  "fetched_at": "2026-11-16 14:22 UTC"
+  "fetched_at": "2026-11-17 15:14 UTC"
 }
