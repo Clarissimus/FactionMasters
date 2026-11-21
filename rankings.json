@@ -12,14 +12,19 @@
       "elo": 1514
     },
     {
+      "faction": "Cloaks",
+      "username": "glokta",
+      "elo": 1462
+    },
+    {
       "faction": "Guild Dwarves",
       "username": "SandDanGlokta",
       "elo": 1455
     },
     {
-      "faction": "Cloaks",
-      "username": "glokta",
-      "elo": 1441
+      "faction": "Phoenix Elves",
+      "username": "HiddenKoji",
+      "elo": 1440
     },
     {
       "faction": "Sand Goblins",
@@ -40,11 +45,6 @@
       "faction": "Breakers",
       "username": "DeadSans",
       "elo": 1409
-    },
-    {
-      "faction": "Phoenix Elves",
-      "username": "HiddenKoji",
-      "elo": 1406
     },
     {
       "faction": "Spectral Conclave",
@@ -77,14 +77,14 @@
       "elo": 1352
     },
     {
+      "faction": "Savanna Elves",
+      "username": "SILVANAGI",
+      "elo": 1345
+    },
+    {
       "faction": "Thornhold Drey",
       "username": "KuKoNutz",
       "elo": 1340
-    },
-    {
-      "faction": "Savanna Elves",
-      "username": "DrWolf",
-      "elo": 1337
     },
     {
       "faction": "Wayfarers",
@@ -94,12 +94,12 @@
     {
       "faction": "Tundra Orcs",
       "username": "Nesle",
-      "elo": 1327
+      "elo": 1328
     },
     {
       "faction": "Moonsteppe Wolves",
-      "username": "XIX",
-      "elo": 1315
+      "username": "dqi",
+      "elo": 1319
     },
     {
       "faction": "Eternal Council",
@@ -132,11 +132,6 @@
       "elo": 1253
     },
     {
-      "faction": "Shimmersea Fae",
-      "username": "excile2127",
-      "elo": 1246
-    },
-    {
       "faction": "Chosen Grove",
       "username": "ShatteredWall",
       "elo": 1241
@@ -152,6 +147,11 @@
       "elo": 1230
     },
     {
+      "faction": "Shimmersea Fae",
+      "username": "excile2127",
+      "elo": 1219
+    },
+    {
       "faction": "Mountain Vargath",
       "username": "onebe",
       "elo": 1165
@@ -162,5 +162,5 @@
       "elo": 1148
     }
   ],
-  "fetched_at": "2026-11-20 14:39 UTC"
+  "fetched_at": "2026-11-21 13:56 UTC"
 }
