@@ -52,6 +52,11 @@
       "elo": 1383
     },
     {
+      "faction": "The Filth",
+      "username": "AstroWild",
+      "elo": 1379
+    },
+    {
       "faction": "Fallen Kingdom",
       "username": "Dark-Thomy",
       "elo": 1377
@@ -60,11 +65,6 @@
       "faction": "Cave Goblins",
       "username": "DeadSans",
       "elo": 1376
-    },
-    {
-      "faction": "The Filth",
-      "username": "M1ne",
-      "elo": 1356
     },
     {
       "faction": "Deepwood Groaks",
@@ -92,14 +92,14 @@
       "elo": 1334
     },
     {
-      "faction": "Tundra Orcs",
-      "username": "Nesle",
-      "elo": 1328
-    },
-    {
       "faction": "Moonsteppe Wolves",
       "username": "dqi",
-      "elo": 1319
+      "elo": 1331
+    },
+    {
+      "faction": "Tundra Orcs",
+      "username": "Nesle",
+      "elo": 1327
     },
     {
       "faction": "Eternal Council",
@@ -149,12 +149,12 @@
     {
       "faction": "Shimmersea Fae",
       "username": "excile2127",
-      "elo": 1219
+      "elo": 1194
     },
     {
       "faction": "Mountain Vargath",
       "username": "onebe",
-      "elo": 1165
+      "elo": 1168
     },
     {
       "faction": "Polar Dwarves",
@@ -162,5 +162,5 @@
       "elo": 1148
     }
   ],
-  "fetched_at": "2026-11-21 13:56 UTC"
+  "fetched_at": "2026-11-22 13:49 UTC"
 }
