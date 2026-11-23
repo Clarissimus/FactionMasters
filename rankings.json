@@ -14,7 +14,7 @@
     {
       "faction": "Cloaks",
       "username": "glokta",
-      "elo": 1462
+      "elo": 1496
     },
     {
       "faction": "Guild Dwarves",
@@ -99,7 +99,7 @@
     {
       "faction": "Tundra Orcs",
       "username": "Nesle",
-      "elo": 1327
+      "elo": 1329
     },
     {
       "faction": "Eternal Council",
@@ -122,6 +122,11 @@
       "elo": 1292
     },
     {
+      "faction": "Shimmersea Fae",
+      "username": "excile2127",
+      "elo": 1282
+    },
+    {
       "faction": "Storm Goblins",
       "username": "zavorio",
       "elo": 1254
@@ -132,24 +137,19 @@
       "elo": 1253
     },
     {
+      "faction": "Fungal Dwarves",
+      "username": "Bibadune",
+      "elo": 1248
+    },
+    {
       "faction": "Chosen Grove",
       "username": "ShatteredWall",
       "elo": 1241
     },
     {
-      "faction": "Fungal Dwarves",
-      "username": "Bibadune",
-      "elo": 1233
-    },
-    {
       "faction": "Skyspear Avians",
       "username": "zzjmike17",
       "elo": 1230
-    },
-    {
-      "faction": "Shimmersea Fae",
-      "username": "excile2127",
-      "elo": 1194
     },
     {
       "faction": "Mountain Vargath",
@@ -162,5 +162,5 @@
       "elo": 1148
     }
   ],
-  "fetched_at": "2026-11-22 13:49 UTC"
+  "fetched_at": "2026-11-23 16:56 UTC"
 }
