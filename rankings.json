@@ -2,6 +2,11 @@
   "season": "Season 9",
   "top_players": [
     {
+      "faction": "Cloaks",
+      "username": "glokta",
+      "elo": 1536
+    },
+    {
       "faction": "Crimson Order",
       "username": "HiddenKoji",
       "elo": 1534
@@ -10,11 +15,6 @@
       "faction": "Drakesun Rebellion",
       "username": "kasper",
       "elo": 1514
-    },
-    {
-      "faction": "Cloaks",
-      "username": "glokta",
-      "elo": 1496
     },
     {
       "faction": "Guild Dwarves",
@@ -99,6 +99,11 @@
     {
       "faction": "Tundra Orcs",
       "username": "Nesle",
+      "elo": 1330
+    },
+    {
+      "faction": "Shimmersea Fae",
+      "username": "excile2127",
       "elo": 1329
     },
     {
@@ -122,24 +127,19 @@
       "elo": 1292
     },
     {
-      "faction": "Shimmersea Fae",
-      "username": "excile2127",
-      "elo": 1282
+      "faction": "Fungal Dwarves",
+      "username": "Bibadune",
+      "elo": 1286
+    },
+    {
+      "faction": "Isle Vekkid",
+      "username": "Azlarr",
+      "elo": 1269
     },
     {
       "faction": "Storm Goblins",
       "username": "zavorio",
       "elo": 1254
-    },
-    {
-      "faction": "Isle Vekkid",
-      "username": "KenAA",
-      "elo": 1253
-    },
-    {
-      "faction": "Fungal Dwarves",
-      "username": "Bibadune",
-      "elo": 1248
     },
     {
       "faction": "Chosen Grove",
@@ -154,7 +154,7 @@
     {
       "faction": "Mountain Vargath",
       "username": "onebe",
-      "elo": 1168
+      "elo": 1165
     },
     {
       "faction": "Polar Dwarves",
@@ -162,5 +162,5 @@
       "elo": 1148
     }
   ],
-  "fetched_at": "2026-11-23 16:56 UTC"
+  "fetched_at": "2026-11-24 16:45 UTC"
 }
