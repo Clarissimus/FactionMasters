@@ -4,7 +4,7 @@
     {
       "faction": "Cloaks",
       "username": "glokta",
-      "elo": 1536
+      "elo": 1541
     },
     {
       "faction": "Crimson Order",
@@ -97,14 +97,14 @@
       "elo": 1331
     },
     {
-      "faction": "Tundra Orcs",
-      "username": "Nesle",
-      "elo": 1329
-    },
-    {
       "faction": "Shimmersea Fae",
       "username": "excile2127",
       "elo": 1329
+    },
+    {
+      "faction": "Tundra Orcs",
+      "username": "Nesle",
+      "elo": 1328
     },
     {
       "faction": "Eternal Council",
@@ -122,9 +122,9 @@
       "elo": 1309
     },
     {
-      "faction": "Isle Vekkid",
-      "username": "Azlarr",
-      "elo": 1298
+      "faction": "Fungal Dwarves",
+      "username": "Bibadune",
+      "elo": 1300
     },
     {
       "faction": "Obsidian Dwarves",
@@ -132,9 +132,9 @@
       "elo": 1292
     },
     {
-      "faction": "Fungal Dwarves",
-      "username": "Bibadune",
-      "elo": 1260
+      "faction": "Isle Vekkid",
+      "username": "Azlarr",
+      "elo": 1269
     },
     {
       "faction": "Storm Goblins",
@@ -162,5 +162,5 @@
       "elo": 1148
     }
   ],
-  "fetched_at": "2026-11-25 16:32 UTC"
+  "fetched_at": "2026-11-26 16:05 UTC"
 }
