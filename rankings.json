@@ -4,7 +4,7 @@
     {
       "faction": "Cloaks",
       "username": "glokta",
-      "elo": 1541
+      "elo": 1548
     },
     {
       "faction": "Crimson Order",
@@ -27,6 +27,11 @@
       "elo": 1440
     },
     {
+      "faction": "Shadow Elves",
+      "username": "Imrahil",
+      "elo": 1428
+    },
+    {
       "faction": "Sand Goblins",
       "username": "MajesticOnions",
       "elo": 1424
@@ -35,11 +40,6 @@
       "faction": "The Forged",
       "username": "excile2127",
       "elo": 1416
-    },
-    {
-      "faction": "Shadow Elves",
-      "username": "excile2127",
-      "elo": 1414
     },
     {
       "faction": "Breakers",
@@ -122,6 +122,11 @@
       "elo": 1309
     },
     {
+      "faction": "Storm Goblins",
+      "username": "zavorio",
+      "elo": 1302
+    },
+    {
       "faction": "Fungal Dwarves",
       "username": "Bibadune",
       "elo": 1300
@@ -134,12 +139,7 @@
     {
       "faction": "Isle Vekkid",
       "username": "Azlarr",
-      "elo": 1269
-    },
-    {
-      "faction": "Storm Goblins",
-      "username": "zavorio",
-      "elo": 1254
+      "elo": 1258
     },
     {
       "faction": "Chosen Grove",
@@ -162,5 +162,5 @@
       "elo": 1148
     }
   ],
-  "fetched_at": "2026-11-26 16:05 UTC"
+  "fetched_at": "2026-11-27 15:53 UTC"
 }
